@@ -87,7 +87,7 @@
             <div class="bg-white p-6 rounded-2xl shadow-lg">
               <h3 class="text-lg font-semibold text-roma-800 mb-4">Contatti Diretti</h3>
               <div class="space-y-3 text-sm">
-                <a href="mailto:romacaputmundiguesthouse@gmail.com" class="flex items-center text-roma-600 hover:underline">
+                <a href="mailto:info@romacaputmundiapt.it" class="flex items-center text-roma-600 hover:underline">
                   <MailIcon class="mr-2 h-4 w-4" />
                   info@romacaputmundiapt.it
                 </a>
