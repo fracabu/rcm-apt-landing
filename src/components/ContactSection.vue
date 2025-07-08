@@ -260,7 +260,7 @@
                 <div class="flex items-center">
                   <MessageCircleIcon class="text-roma-600 mr-3 h-5 w-5" />
                   <a href="https://wa.me/393123456789" class="text-roma-600 hover:underline">
-                    WhatsApp: +39 312 345 6789
+                    WhatsApp: +39 320 49 33 807
                   </a>
                 </div>
                 <div class="flex items-center">
