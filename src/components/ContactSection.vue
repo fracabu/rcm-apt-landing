@@ -366,7 +366,7 @@
             <ul class="space-y-1 text-roma-700">
               <li class="flex items-center">
                 <MessageCircleIcon class="mr-2 h-4 w-4" />
-                <strong>WhatsApp:</strong> +39 320 49 33 807
+                <strong>WhatsApp:</strong> +39 312 345 6789
               </li>
               <li class="flex items-center">
                 <MailIcon class="mr-2 h-4 w-4" />
