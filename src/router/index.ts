@@ -22,7 +22,7 @@ const router = createRouter({
       component: PrivacyPage
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to, _, savedPosition) {
     if (to.hash) {
       return {
         el: to.hash,
