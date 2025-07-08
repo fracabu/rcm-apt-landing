@@ -21,10 +21,12 @@
           @click="openLightbox(index)"
         >
           <img 
-            :src="image.src" 
+            :src="image.src"
+            :onerror="`this.src='${image.fallback}'`"
             :alt="image.alt"
             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             :class="index === 0 ? 'h-96 md:h-full' : 'h-64'"
+            loading="lazy"
           >
           <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <div class="w-12 h-12 bg-roma-600 rounded-full flex items-center justify-center">
@@ -46,7 +48,8 @@
     <div v-if="lightboxOpen" class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" @click="closeLightbox">
       <div class="relative max-w-4xl max-h-full">
         <img 
-          :src="images[currentImageIndex].src" 
+          :src="images[currentImageIndex].src"
+          :onerror="`this.src='${images[currentImageIndex].fallback}'`"
           :alt="images[currentImageIndex].alt"
           class="max-w-full max-h-full object-contain"
         >
@@ -96,34 +99,34 @@ const currentImageIndex = ref(0)
 // Esempio: src: '/images/soggiorno.jpg' invece di URL Pexels
 const images = [
   {
-    src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Soggiorno con divano letto e TV con Netflix e Sky'
-    // Per usare le tue foto: src: '/images/soggiorno.jpg'
-  },
-  {
-    src: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: '/images/camera.jpg',
+    fallback: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Camera da letto matrimoniale large'
-    // Per usare le tue foto: src: '/images/camera.jpg'
   },
   {
-    src: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: '/images/soggiorno.jpg',
+    fallback: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Soggiorno con divano letto e TV con Netflix e Sky'
+  },
+    {
+    src: '/images/cucina.jpg',
+    fallback: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Cucina attrezzata con frigorifero e macchina da caffè'
-    // Per usare le tue foto: src: '/images/cucina.jpg'
   },
   {
-    src: 'https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: '/images/bagno.jpg',
+    fallback: 'https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Bagno con doccia e bidet'
-    // Per usare le tue foto: src: '/images/bagno.jpg'
   },
   {
-    src: 'https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: '/images/balcone.jpg',
+    fallback: 'https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Balcone con vista giardino'
-    // Per usare le tue foto: src: '/images/balcone.jpg'
   },
   {
-    src: 'https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: '/images/pranzo.jpg',
+    fallback: 'https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Zona pranzo e relax'
-    // Per usare le tue foto: src: '/images/pranzo.jpg'
   }
 ]
 
