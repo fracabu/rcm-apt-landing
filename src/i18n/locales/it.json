@@ -16,7 +16,7 @@
       "parking": "Parcheggio Gratuito"
     },
     "cta": "Prenota Direttamente",
-    "guarantee": "Miglior prezzo garantito - Pagamento con bonifico",
+    "guarantee": "Miglior prezzo garantito - Bonifico o PayPal",
     "trust": {
       "rating": "9.2/10 Eccellente",
       "size": "50m² Bilocale", 
@@ -122,7 +122,7 @@
       "guests": "Numero Ospiti",
       "message": "Messaggio",
       "message_placeholder": "Raccontaci qualcosa in più sul tuo soggiorno...",
-      "submit": "Invia Richiesta",
+      "submit": "🚀 Invia Richiesta",
       "submitting": "Invio in corso...",
       "guests_options": {
         "1": "1 Ospite",
@@ -142,9 +142,24 @@
     "benefits": {
       "title": "Vantaggi Prenotazione Diretta",
       "price": "Miglior prezzo garantito - nessuna commissione di intermediazione",
-      "payment": "Pagamento sicuro - bonifico bancario prima dell'arrivo",
+      "payment": "Pagamenti flessibili - bonifico bancario o PayPal",
       "multilingual": "Host multilingue - Italiano, Inglese, Spagnolo, Francese",
       "family": "Gestione familiare - Famiglia romana di fiducia"
+    },
+    "payment": {
+      "title": "Metodi di Pagamento",
+      "bank_transfer": {
+        "title": "Bonifico Bancario",
+        "description": "Sconto 3% - Pagamento sicuro direttamente sul nostro conto",
+        "benefit": "Nessuna commissione aggiuntiva"
+      },
+      "paypal": {
+        "title": "PayPal",
+        "description": "Pagamento rapido e sicuro con protezione acquirente",
+        "benefits": "Accettato in tutto il mondo · Protezione transazioni"
+      },
+      "security": "Pagamento sicuro al 100% - Riceverai i dettagli di pagamento dopo la conferma disponibilità",
+      "paypal_refund": "PayPal: I rimborsi PayPal vengono processati entro 24-48 ore"
     },
     "direct": {
       "title": "Contatti Diretti",

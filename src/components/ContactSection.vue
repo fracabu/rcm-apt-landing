@@ -184,8 +184,8 @@
                   <span><strong>Miglior prezzo garantito</strong> - nessuna commissione di intermediazione</span>
                 </li>
                 <li class="flex items-start">
-                  <HandshakeIcon class="text-roma-red-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
-                  <span><strong>Pagamento sicuro</strong> - bonifico bancario prima dell'arrivo</span>
+                  <CreditCardIcon class="text-roma-red-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                  <span><strong>Pagamenti flessibili</strong> - bonifico bancario o PayPal</span>
                 </li>
                 <li class="flex items-start">
                   <ZapIcon class="text-roma-gold-400 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -198,6 +198,55 @@
               </ul>
             </div>
 
+            <!-- Payment Methods -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-roma-100">
+              <h3 class="text-xl font-semibold text-roma-800 mb-4 flex items-center">
+                <CreditCardIcon class="mr-2 h-5 w-5 text-roma-600" />
+                Metodi di Pagamento
+              </h3>
+              <div class="space-y-4">
+                <!-- Bank Transfer -->
+                <div class="flex items-start p-3 bg-green-50 rounded-lg border border-green-200">
+                  <BuildingIcon class="mr-3 h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-semibold text-green-800">Bonifico Bancario</h4>
+                    <p class="text-sm text-green-700">
+                      <strong>Sconto 3%</strong> - Pagamento sicuro direttamente sul nostro conto
+                    </p>
+                    <p class="text-xs text-green-600 mt-1">
+                      ✓ Nessuna commissione aggiuntiva
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- PayPal -->
+                <div class="flex items-start p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <div class="mr-3 mt-0.5 flex-shrink-0">
+                    <svg class="h-5 w-5 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.26-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.9.9 0 0 0-.895.765l-1.274 8.067a.641.641 0 0 0 .633.74h4.606a.9.9 0 0 0 .895-.765l.792-5.019h2.19c4.292 0 7.658-1.747 8.647-6.797.03-.149.054-.294.077-.437.292-1.867-.002-3.137-1.012-4.287a5.81 5.81 0 0 0-1.683-1.187z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-blue-800">PayPal</h4>
+                    <p class="text-sm text-blue-700">
+                      Pagamento rapido e sicuro con protezione acquirente
+                    </p>
+                    <p class="text-xs text-blue-600 mt-1">
+                      ✓ Accettato in tutto il mondo · ✓ Protezione transazioni
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4 p-3 bg-neutral-50 rounded-lg">
+                <p class="text-sm text-neutral-600 flex items-center">
+                  <ShieldCheckIcon class="mr-2 h-4 w-4 text-green-600" />
+                  <span>
+                    <strong>Pagamento sicuro al 100%</strong> - Riceverai i dettagli di pagamento dopo la conferma disponibilità
+                  </span>
+                </p>
+              </div>
+            </div>
             <!-- Direct Contact -->
             <div class="bg-white p-6 rounded-2xl shadow-lg">
               <h3 class="text-xl font-semibold text-roma-800 mb-4">Contatti Diretti</h3>
@@ -205,13 +254,13 @@
                 <div class="flex items-center">
                   <MailIcon class="text-roma-600 mr-3 h-5 w-5" />
                   <a href="mailto:romacaputmundiguesthouse@gmail.com" class="text-roma-600 hover:underline">
-                    info@romacaputmundiapt.it
+                    romacaputmundiguesthouse@gmail.com
                   </a>
                 </div>
                 <div class="flex items-center">
                   <MessageCircleIcon class="text-roma-600 mr-3 h-5 w-5" />
                   <a href="https://wa.me/393123456789" class="text-roma-600 hover:underline">
-                    WhatsApp: +39 320 49 33 807
+                    WhatsApp: +39 312 345 6789
                   </a>
                 </div>
                 <div class="flex items-center">
@@ -317,13 +366,18 @@
             <ul class="space-y-1 text-roma-700">
               <li class="flex items-center">
                 <MessageCircleIcon class="mr-2 h-4 w-4" />
-                <strong>WhatsApp:</strong> +39 312 345 6789
+                <strong>WhatsApp:</strong> +39 320 49 33 807
               </li>
               <li class="flex items-center">
                 <MailIcon class="mr-2 h-4 w-4" />
                 <strong>Email:</strong> info@romacaputmundiapt.it
               </li>
             </ul>
+            <div class="mt-3 p-2 bg-blue-50 rounded border border-blue-200">
+              <p class="text-xs text-blue-700">
+                <strong>PayPal:</strong> I rimborsi PayPal vengono processati entro 24-48 ore
+              </p>
+            </div>
           </div>
           
           <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
@@ -360,7 +414,8 @@ import {
   CheckCircleIcon, 
   XCircleIcon, 
   DollarSignIcon, 
-  HandshakeIcon, 
+  CreditCardIcon,
+  BuildingIcon,
   ZapIcon, 
   HomeIcon, 
   MailIcon, 

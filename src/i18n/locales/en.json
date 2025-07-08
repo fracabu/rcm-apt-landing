@@ -16,7 +16,7 @@
       "parking": "Free Parking"
     },
     "cta": "Book Directly",
-    "guarantee": "Best price guaranteed - Bank transfer payment",
+    "guarantee": "Best price guaranteed - Bank transfer or PayPal",
     "trust": {
       "rating": "9.2/10 Excellent",
       "size": "50m² Two-room",
@@ -142,9 +142,24 @@
     "benefits": {
       "title": "Direct Booking Benefits",
       "price": "Best price guaranteed - no intermediation commission",
-      "payment": "Secure payment - bank transfer before arrival",
+      "payment": "Flexible payments - bank transfer or PayPal",
       "multilingual": "Multilingual host - Italian, English, Spanish, French",
       "family": "Family management - Trusted Roman family"
+    },
+    "payment": {
+      "title": "Payment Methods",
+      "bank_transfer": {
+        "title": "Bank Transfer",
+        "description": "3% discount - Secure payment directly to our account",
+        "benefit": "No additional fees"
+      },
+      "paypal": {
+        "title": "PayPal",
+        "description": "Fast and secure payment with buyer protection",
+        "benefits": "Accepted worldwide · Transaction protection"
+      },
+      "security": "100% secure payment - You will receive payment details after availability confirmation",
+      "paypal_refund": "PayPal: PayPal refunds are processed within 24-48 hours"
     },
     "direct": {
       "title": "Direct Contacts",
