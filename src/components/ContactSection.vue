@@ -334,16 +334,16 @@
               <h4 class="text-lg font-semibold text-roma-800 mb-4">Perché Sceglierci</h4>
               <div class="space-y-3">
                 <div class="flex items-center justify-between p-3 bg-roma-50 rounded-lg">
-                  <span class="text-sm font-medium text-roma-800">Ospiti Soddisfatti</span>
-                  <span class="text-2xl font-bold text-roma-600">98%</span>
+                  <span class="text-sm font-medium text-roma-800">Valutazione Media</span>
+                  <span class="text-2xl font-bold text-roma-600">4.8★</span>
                 </div>
                 <div class="flex items-center justify-between p-3 bg-roma-50 rounded-lg">
                   <span class="text-sm font-medium text-roma-800">Risposta Veloce</span>
                   <span class="text-2xl font-bold text-roma-600">&lt;2h</span>
                 </div>
                 <div class="flex items-center justify-between p-3 bg-roma-50 rounded-lg">
-                  <span class="text-sm font-medium text-roma-800">Anni di Esperienza</span>
-                  <span class="text-2xl font-bold text-roma-600">10+</span>
+                  <span class="text-sm font-medium text-roma-800">Lingue Parlate</span>
+                  <span class="text-2xl font-bold text-roma-600">4</span>
                 </div>
               </div>
             </div>
@@ -453,8 +453,7 @@ import {
   HomeIcon, 
   MailIcon, 
   MessageCircleIcon, 
-  ClockIcon, 
-  BookOpenIcon,
+  ClockIcon,
   ShieldCheckIcon,
   ShieldIcon,
   CheckIcon,
