@@ -4,7 +4,13 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <!-- Company Info -->
         <div>
-          <h3 class="text-xl font-serif font-bold mb-4">Rome Apartment Appiano FS</h3>
+           <div class="flex items-center space-x-2">
+          <img 
+            src="/rcmlanding logo.png" 
+            alt="Roma Caput Mundi Logo" 
+            class="h-20 w-20 md:h-24 md:w-24"
+          >
+        </div>
           <p class="text-roma-200 mb-4">
             Bilocale 50m² nella tranquilla Balduina. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. 
             WiFi veloce, Netflix, Sky e tutti i comfort per un soggiorno perfetto.
@@ -37,18 +43,18 @@
             <div class="flex items-center">
               <MailIcon class="mr-2 h-4 w-4" />
               <a href="mailto:romacaputmundiguesthouse@gmail.com" class="hover:text-roma-gold-400 transition-colors">
-                romacaputmundiguesthouse@gmail.com
+                info@romacaputmundiapt.it
               </a>
             </div>
             <div class="flex items-center">
               <PhoneIcon class="mr-2 h-4 w-4" />
               <a href="https://wa.me/393123456789" class="hover:text-roma-gold-400 transition-colors">
-                +39 312 345 6789
+                +39 320 49 33 807
               </a>
             </div>
             <div class="flex items-center">
               <MapPinIcon class="mr-2 h-4 w-4" />
-              <span>Balduina, Roma</span>
+              <span>Via Romeo Rodriguez Pereira n.33 - 00136 - Roma</span>
             </div>
             <div class="flex items-center">
               <ClockIcon class="mr-2 h-4 w-4" />
@@ -85,7 +91,7 @@
         <span class="text-roma-gold-400">{{ getMonthlyVisitors() }}</span> questo mese
       </div>
       <div class="text-roma-300 text-sm">
-        {{ $t('footer.developed') }} <HeartIcon class="inline h-4 w-4 text-red-400" /> da <strong class="text-roma-gold-400">CodeCraftStudio</strong>
+        {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong>
       </div>
       <div class="flex items-center justify-center space-x-2">
         <strong>Rome Apartment Appiano FS</strong>

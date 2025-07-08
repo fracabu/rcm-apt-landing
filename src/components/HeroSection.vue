@@ -5,7 +5,7 @@
       <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22><g fill-rule=%22evenodd%22><g fill=%22%23000000%22 fill-opacity=%220.1%22><polygon points=%2250,0 60,10 50,20%22/><polygon points=%2250,40 60,50 50,60%22/><polygon points=%220,50 10,60 0,70%22/><polygon points=%2210,0 20,10 10,20%22/></g></g></svg>')"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative">
+    <div class="container my-10 mx-auto px-4 relative">
       <div class="max-w-4xl mx-auto text-center">
         <!-- Main Headline -->
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-roma-800 mb-6 animate-fade-in">
