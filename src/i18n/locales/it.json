@@ -1,0 +1,243 @@
+{
+  "nav": {
+    "services": "Servizi",
+    "photos": "Foto", 
+    "reviews": "Recensioni",
+    "contacts": "Contatti",
+    "availability": "Disponibilità"
+  },
+  "hero": {
+    "title": "Rome Apartment Appiano FS",
+    "subtitle": "WiFi Netflix Sky - 2 fermate da San Pietro",
+    "description": "Bilocale 50m² nella tranquilla Balduina. Perfetto per coppie, famiglie e smart worker. A soli 100 metri dalla stazione Appiano FS.",
+    "features": {
+      "station": "100m da Stazione FS",
+      "streaming": "Netflix & Sky",
+      "parking": "Parcheggio Gratuito"
+    },
+    "cta": "Prenota Direttamente",
+    "guarantee": "Miglior prezzo garantito - Pagamento con bonifico",
+    "trust": {
+      "rating": "9.2/10 Eccellente",
+      "size": "50m² Bilocale", 
+      "guests": "Fino a 4 ospiti"
+    }
+  },
+  "services": {
+    "title": "Servizi e Dotazioni",
+    "subtitle": "Tutto quello che serve per un soggiorno confortevole nella tranquilla Balduina",
+    "items": {
+      "wifi": {
+        "title": "WiFi Veloce Gratuito",
+        "description": "Connessione internet ad alta velocità per smart working"
+      },
+      "streaming": {
+        "title": "Netflix, Sky & Prime Video", 
+        "description": "TV con tutti i servizi streaming per il tuo intrattenimento"
+      },
+      "kitchen": {
+        "title": "Cucina Completamente Attrezzata",
+        "description": "Frigorifero, macchina da caffè e tutti gli utensili necessari"
+      },
+      "climate": {
+        "title": "Aria Condizionata & Riscaldamento",
+        "description": "Climatizzazione per il massimo comfort in ogni stagione"
+      },
+      "parking": {
+        "title": "Parcheggio Gratuito",
+        "description": "Parcheggio gratuito in strada per la tua auto"
+      },
+      "balcony": {
+        "title": "Balcone Vista Giardino",
+        "description": "Spazio esterno privato per rilassarsi all'aria aperta"
+      },
+      "station": {
+        "title": "Stazione a 100 metri",
+        "description": "Stazione Appiano FS raggiungibile in 1 minuto a piedi"
+      },
+      "cleaning": {
+        "title": "Pulizia Impeccabile",
+        "description": "Pulizia professionale e sanificazione ad ogni cambio ospiti"
+      },
+      "pets": {
+        "title": "Animali Domestici Benvenuti",
+        "description": "I tuoi amici a quattro zampe sono i benvenuti (ciotole incluse)"
+      }
+    },
+    "location": {
+      "title": "Posizione Eccellente (9.7/10)",
+      "subtitle": "Nella tranquilla Balduina, con collegamenti diretti per il Vaticano",
+      "distances": {
+        "station": "Stazione Appiano",
+        "vatican": "San Pietro", 
+        "museums": "Musei Vaticani",
+        "airport": "Aeroporto FCO"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Scopri il Bilocale",
+    "subtitle": "50m² di comfort nella tranquilla Balduina - Camera matrimoniale, soggiorno e balcone vista giardino",
+    "cta": "Prenota il Tuo Soggiorno",
+    "images": {
+      "living": "Soggiorno con divano letto e TV con Netflix e Sky",
+      "bedroom": "Camera da letto matrimoniale large",
+      "kitchen": "Cucina attrezzata con frigorifero e macchina da caffè",
+      "bathroom": "Bagno con doccia e bidet",
+      "balcony": "Balcone con vista giardino",
+      "dining": "Zona pranzo e relax"
+    }
+  },
+  "reviews": {
+    "title": "Recensioni Reali dei Nostri Ospiti",
+    "subtitle": "Punteggio 9.2/10 Eccellente su Booking.com - 12 recensioni verificate",
+    "badges": {
+      "booking": "Booking.com",
+      "cleanliness": "Pulizia 10/10",
+      "location": "Posizione 9.7/10",
+      "verified": "12 Recensioni",
+      "impeccable": "Impeccabile",
+      "excellent": "Eccellente",
+      "verified_label": "Verificate"
+    },
+    "cta": "Diventa il Prossimo Ospite Felice",
+    "trip_types": {
+      "couple": "Coppia",
+      "family": "Famiglia", 
+      "solo": "Solo",
+      "business": "Lavoro"
+    }
+  },
+  "contact": {
+    "title": "Richiedi Disponibilità",
+    "subtitle": "Contattaci direttamente per ricevere la <strong>miglior tariffa</strong> e pagare con bonifico bancario.",
+    "checkin_info": "Check-in 15:00-22:00, Check-out 08:00-11:00.",
+    "form": {
+      "title": "Richiedi Disponibilità",
+      "name": "Nome Completo",
+      "phone": "Telefono",
+      "email": "Email",
+      "checkin": "Check-in",
+      "checkout": "Check-out", 
+      "guests": "Numero Ospiti",
+      "message": "Messaggio",
+      "message_placeholder": "Raccontaci qualcosa in più sul tuo soggiorno...",
+      "submit": "🚀 Invia Richiesta",
+      "submitting": "Invio in corso...",
+      "guests_options": {
+        "1": "1 Ospite",
+        "2": "2 Ospiti", 
+        "3": "3 Ospiti",
+        "4": "4 Ospiti"
+      }
+    },
+    "success": {
+      "title": "Richiesta Inviata!",
+      "message": "Ti contatteremo entro 2 ore con la miglior offerta."
+    },
+    "error": {
+      "title": "Errore",
+      "message": "Si è verificato un errore. Riprova o contattaci direttamente."
+    },
+    "benefits": {
+      "title": "Vantaggi Prenotazione Diretta",
+      "price": "Miglior prezzo garantito - nessuna commissione di intermediazione",
+      "payment": "Pagamento sicuro - bonifico bancario prima dell'arrivo",
+      "multilingual": "Host multilingue - Italiano, Inglese, Spagnolo, Francese",
+      "family": "Gestione familiare - Famiglia romana di fiducia"
+    },
+    "direct": {
+      "title": "Contatti Diretti",
+      "email": "romacaputmundiguesthouse@gmail.com",
+      "whatsapp": "WhatsApp: +39 312 345 6789",
+      "support": "Assistenza 24/7"
+    },
+    "platforms": {
+      "title": "Ci trovi anche su:",
+      "license": "Licenza: 058091-CAV-12914, IT058091B4DGY9ABNC"
+    },
+    "cancellation": {
+      "title": "Politica di Cancellazione",
+      "checkbox": "Ho letto e accetto la politica di cancellazione riportata sul sito.",
+      "full_refund": "Rimborso Completo (100%)",
+      "full_refund_desc": "In caso di disdetta dopo il pagamento con bonifico, l'importo versato verrà interamente rimborsato fino a 7 giorni prima dell'arrivo.",
+      "penalty": "Penale di Cancellazione", 
+      "penalty_desc": "Per cancellazioni effettuate oltre questo termine, sarà trattenuta la prima notte a titolo di penale.",
+      "how_to_refund": "Come Richiedere un Rimborso",
+      "how_to_refund_desc": "Per richiedere un rimborso, contattaci tramite:",
+      "legal_protection": "Tutela Legale",
+      "legal_protection_desc": "Questa politica ti tutela in caso di contestazioni e garantisce trasparenza nel processo di prenotazione e cancellazione.",
+      "understood": "Ho Capito"
+    }
+  },
+  "footer": {
+    "description": "Bilocale 50m² nella tranquilla Balduina. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. WiFi veloce, Netflix, Sky e tutti i comfort per un soggiorno perfetto.",
+    "links": {
+      "title": "Link Utili",
+      "services": "Servizi",
+      "gallery": "Galleria Foto",
+      "reviews": "Recensioni", 
+      "contacts": "Contatti",
+      "privacy": "Privacy Policy",
+      "admin": "Area Admin"
+    },
+    "contact": {
+      "title": "Contatti",
+      "location": "Balduina, Roma",
+      "checkin": "Check-in 15:00-22:00",
+      "checkout": "Check-out entro le 11:00"
+    },
+    "copyright": "© 2024 Rome Apartment Appiano FS. Licenza: 058091-CAV-12914, IT058091B4DGY9ABNC",
+    "visitors": "visitatori",
+    "this_month": "questo mese",
+    "developed": "Sviluppato con ❤️ da",
+    "tagline": "Il tuo bilocale nella tranquilla Balduina"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effective_date": "Data di entrata in vigore:",
+    "back_to_home": "← Rome Apartment Appiano FS"
+  },
+  "admin": {
+    "title": "Area Admin",
+    "subtitle": "Gestione prenotazioni Rome Apartment Appiano FS",
+    "logout": "Logout",
+    "login": {
+      "title": "Accesso Admin",
+      "subtitle": "Inserisci le credenziali per accedere",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Accedi",
+      "submitting": "Accesso in corso...",
+      "error": "Credenziali non valide. Riprova."
+    },
+    "stats": {
+      "total_bookings": "Prenotazioni Totali",
+      "this_month": "Questo Mese", 
+      "total_guests": "Ospiti Totali"
+    },
+    "bookings": {
+      "title": "Prenotazioni Recenti",
+      "loading": "Caricamento prenotazioni...",
+      "empty": "Nessuna prenotazione trovata",
+      "table": {
+        "client": "Cliente",
+        "dates": "Date",
+        "guests": "Ospiti", 
+        "contact": "Contatto",
+        "request_date": "Data Richiesta",
+        "nights": "notti",
+        "send_email": "Invia Email"
+      }
+    }
+  },
+  "common": {
+    "required": "*",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "close": "Chiudi",
+    "next": "Avanti",
+    "previous": "Indietro"
+  }
+}

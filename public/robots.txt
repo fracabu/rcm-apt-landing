@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://romacaputmundiapt.it/sitemap.xml
+
+# Disallow admin area
+Disallow: /admin
+
+# Allow important pages
+Allow: /
+Allow: /privacy
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

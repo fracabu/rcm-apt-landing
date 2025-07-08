@@ -1,0 +1,172 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus states for accessibility */
+.focus-visible\:ring-2:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #c41e3a;
+}
+
+/* 3D Button Styles - Joshua Comeau inspired */
+.btn-3d {
+  position: relative;
+  background: linear-gradient(135deg, #8E1F2F 0%, #7a1a28 100%); /* Rosso Roma */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 
+    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(142, 31, 47, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.btn-3d:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 
+    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
+    0 6px 12px rgba(142, 31, 47, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-3d:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: 
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(142, 31, 47, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-3d:focus-visible {
+  outline: 3px solid rgba(142, 31, 47, 0.5);
+  outline-offset: 2px;
+}
+
+/* Size variants */
+.btn-3d-lg {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+.btn-3d-md {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.btn-3d-sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+/* Secondary 3D Button */
+.btn-3d-secondary {
+  background: linear-gradient(135deg, #F0BC42 0%, #d97706 100%); /* Giallo Roma */
+  box-shadow: 
+    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(240, 188, 66, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-3d-secondary:hover {
+  box-shadow: 
+    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
+    0 6px 12px rgba(240, 188, 66, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-3d-secondary:active {
+  box-shadow: 
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(240, 188, 66, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Text selection */
+::selection {
+  background-color: #fce7ea; /* Rosa Roma chiaro */
+  color: #8E1F2F;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .btn-3d-lg {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  
+  .btn-3d-md {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

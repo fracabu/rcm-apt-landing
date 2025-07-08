@@ -1,0 +1,243 @@
+{
+  "nav": {
+    "services": "Services",
+    "photos": "Photos",
+    "reviews": "Reviews", 
+    "contacts": "Contacts",
+    "availability": "Availability"
+  },
+  "hero": {
+    "title": "Rome Apartment Appiano FS",
+    "subtitle": "WiFi Netflix Sky - 2 stops from St. Peter's",
+    "description": "50m² two-room apartment in quiet Balduina. Perfect for couples, families and smart workers. Just 100 meters from Appiano FS station.",
+    "features": {
+      "station": "100m from FS Station",
+      "streaming": "Netflix & Sky",
+      "parking": "Free Parking"
+    },
+    "cta": "Book Directly",
+    "guarantee": "Best price guaranteed - Bank transfer payment",
+    "trust": {
+      "rating": "9.2/10 Excellent",
+      "size": "50m² Two-room",
+      "guests": "Up to 4 guests"
+    }
+  },
+  "services": {
+    "title": "Services & Amenities",
+    "subtitle": "Everything you need for a comfortable stay in quiet Balduina",
+    "items": {
+      "wifi": {
+        "title": "Free High-Speed WiFi",
+        "description": "High-speed internet connection for smart working"
+      },
+      "streaming": {
+        "title": "Netflix, Sky & Prime Video",
+        "description": "TV with all streaming services for your entertainment"
+      },
+      "kitchen": {
+        "title": "Fully Equipped Kitchen",
+        "description": "Refrigerator, coffee machine and all necessary utensils"
+      },
+      "climate": {
+        "title": "Air Conditioning & Heating",
+        "description": "Climate control for maximum comfort in every season"
+      },
+      "parking": {
+        "title": "Free Parking",
+        "description": "Free street parking for your car"
+      },
+      "balcony": {
+        "title": "Garden View Balcony",
+        "description": "Private outdoor space to relax in the fresh air"
+      },
+      "station": {
+        "title": "Station 100 meters away",
+        "description": "Appiano FS station reachable in 1 minute on foot"
+      },
+      "cleaning": {
+        "title": "Impeccable Cleaning",
+        "description": "Professional cleaning and sanitization at every guest change"
+      },
+      "pets": {
+        "title": "Pets Welcome",
+        "description": "Your four-legged friends are welcome (bowls included)"
+      }
+    },
+    "location": {
+      "title": "Excellent Location (9.7/10)",
+      "subtitle": "In quiet Balduina, with direct connections to the Vatican",
+      "distances": {
+        "station": "Appiano Station",
+        "vatican": "St. Peter's",
+        "museums": "Vatican Museums", 
+        "airport": "FCO Airport"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Discover the Apartment",
+    "subtitle": "50m² of comfort in quiet Balduina - Double bedroom, living room and garden view balcony",
+    "cta": "Book Your Stay",
+    "images": {
+      "living": "Living room with sofa bed and TV with Netflix and Sky",
+      "bedroom": "Large double bedroom",
+      "kitchen": "Equipped kitchen with refrigerator and coffee machine",
+      "bathroom": "Bathroom with shower and bidet",
+      "balcony": "Garden view balcony",
+      "dining": "Dining and relaxation area"
+    }
+  },
+  "reviews": {
+    "title": "Real Reviews from Our Guests",
+    "subtitle": "9.2/10 Excellent score on Booking.com - 12 verified reviews",
+    "badges": {
+      "booking": "Booking.com",
+      "cleanliness": "Cleanliness 10/10",
+      "location": "Location 9.7/10",
+      "verified": "12 Reviews",
+      "impeccable": "Impeccable",
+      "excellent": "Excellent",
+      "verified_label": "Verified"
+    },
+    "cta": "Become the Next Happy Guest",
+    "trip_types": {
+      "couple": "Couple",
+      "family": "Family",
+      "solo": "Solo",
+      "business": "Business"
+    }
+  },
+  "contact": {
+    "title": "Check Availability",
+    "subtitle": "Contact us directly to receive the <strong>best rate</strong> and pay by bank transfer.",
+    "checkin_info": "Check-in 3:00 PM-10:00 PM, Check-out 8:00 AM-11:00 AM.",
+    "form": {
+      "title": "Check Availability",
+      "name": "Full Name",
+      "phone": "Phone",
+      "email": "Email",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "guests": "Number of Guests",
+      "message": "Message",
+      "message_placeholder": "Tell us more about your stay...",
+      "submit": "🚀 Send Request",
+      "submitting": "Sending...",
+      "guests_options": {
+        "1": "1 Guest",
+        "2": "2 Guests",
+        "3": "3 Guests", 
+        "4": "4 Guests"
+      }
+    },
+    "success": {
+      "title": "Request Sent!",
+      "message": "We will contact you within 2 hours with the best offer."
+    },
+    "error": {
+      "title": "Error",
+      "message": "An error occurred. Please try again or contact us directly."
+    },
+    "benefits": {
+      "title": "Direct Booking Benefits",
+      "price": "Best price guaranteed - no intermediation commission",
+      "payment": "Secure payment - bank transfer before arrival",
+      "multilingual": "Multilingual host - Italian, English, Spanish, French",
+      "family": "Family management - Trusted Roman family"
+    },
+    "direct": {
+      "title": "Direct Contacts",
+      "email": "romacaputmundiguesthouse@gmail.com",
+      "whatsapp": "WhatsApp: +39 312 345 6789",
+      "support": "24/7 Support"
+    },
+    "platforms": {
+      "title": "You can also find us on:",
+      "license": "License: 058091-CAV-12914, IT058091B4DGY9ABNC"
+    },
+    "cancellation": {
+      "title": "Cancellation Policy",
+      "checkbox": "I have read and accept the cancellation policy stated on the site.",
+      "full_refund": "Full Refund (100%)",
+      "full_refund_desc": "In case of cancellation after bank transfer payment, the amount paid will be fully refunded up to 7 days before arrival.",
+      "penalty": "Cancellation Penalty",
+      "penalty_desc": "For cancellations made beyond this term, the first night will be retained as a penalty.",
+      "how_to_refund": "How to Request a Refund",
+      "how_to_refund_desc": "To request a refund, contact us via:",
+      "legal_protection": "Legal Protection",
+      "legal_protection_desc": "This policy protects you in case of disputes and ensures transparency in the booking and cancellation process.",
+      "understood": "Understood"
+    }
+  },
+  "footer": {
+    "description": "50m² two-room apartment in quiet Balduina. 100m from Appiano FS station, 2 stops from St. Peter's. High-speed WiFi, Netflix, Sky and all comforts for a perfect stay.",
+    "links": {
+      "title": "Useful Links",
+      "services": "Services",
+      "gallery": "Photo Gallery",
+      "reviews": "Reviews",
+      "contacts": "Contacts",
+      "privacy": "Privacy Policy",
+      "admin": "Admin Area"
+    },
+    "contact": {
+      "title": "Contacts",
+      "location": "Balduina, Rome",
+      "checkin": "Check-in 3:00 PM-10:00 PM",
+      "checkout": "Check-out by 11:00 AM"
+    },
+    "copyright": "© 2024 Rome Apartment Appiano FS. License: 058091-CAV-12914, IT058091B4DGY9ABNC",
+    "visitors": "visitors",
+    "this_month": "this month",
+    "developed": "Developed with ❤️ by",
+    "tagline": "Your two-room apartment in quiet Balduina"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effective_date": "Effective date:",
+    "back_to_home": "← Rome Apartment Appiano FS"
+  },
+  "admin": {
+    "title": "Admin Area",
+    "subtitle": "Rome Apartment Appiano FS booking management",
+    "logout": "Logout",
+    "login": {
+      "title": "Admin Access",
+      "subtitle": "Enter credentials to access",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "submitting": "Logging in...",
+      "error": "Invalid credentials. Please try again."
+    },
+    "stats": {
+      "total_bookings": "Total Bookings",
+      "this_month": "This Month",
+      "total_guests": "Total Guests"
+    },
+    "bookings": {
+      "title": "Recent Bookings",
+      "loading": "Loading bookings...",
+      "empty": "No bookings found",
+      "table": {
+        "client": "Client",
+        "dates": "Dates",
+        "guests": "Guests",
+        "contact": "Contact",
+        "request_date": "Request Date",
+        "nights": "nights",
+        "send_email": "Send Email"
+      }
+    }
+  },
+  "common": {
+    "required": "*",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
