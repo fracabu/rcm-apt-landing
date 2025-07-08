@@ -254,7 +254,7 @@
                 <div class="flex items-center">
                   <MailIcon class="text-roma-600 mr-3 h-5 w-5" />
                   <a href="mailto:romacaputmundiguesthouse@gmail.com" class="text-roma-600 hover:underline">
-                    romacaputmundiguesthouse@gmail.com
+                    info@romacaputmundiapt.it
                   </a>
                 </div>
                 <div class="flex items-center">
