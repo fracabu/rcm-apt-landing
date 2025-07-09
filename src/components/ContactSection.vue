@@ -430,7 +430,6 @@ import { ref, computed } from 'vue'
 import { 
   RocketIcon, 
   CheckCircleIcon, 
-  XCircleIcon, 
   DollarSignIcon, 
   CreditCardIcon,
   BuildingIcon,
