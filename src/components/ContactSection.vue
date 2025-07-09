@@ -91,7 +91,7 @@
                   <MailIcon class="mr-2 h-4 w-4" />
                   info@romacaputmundiapt.it
                 </a>
-                <a href="https://wa.me/393123456789" class="flex items-center text-roma-600 hover:underline">
+                <a href="https://wa.me/393204933807" class="flex items-center text-roma-600 hover:underline">
                   <MessageCircleIcon class="mr-2 h-4 w-4" />
                   +39 320 49 33 807
                 </a>
@@ -241,37 +241,23 @@
 
               <button
                 type="submit"
-                :disabled="isSubmitting || !form.acceptPolicy"
+                :disabled="!form.acceptPolicy"
                 class="w-full btn-3d btn-3d-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
-                <span v-if="isSubmitting" class="flex items-center">
-                  <LoaderIcon class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" />
-                  Invio in corso...
-                </span>
-                <span v-else class="flex items-center">
+                <span class="flex items-center">
                   <RocketIcon class="mr-2 h-4 w-4" />
                   Invia Richiesta
                 </span>
               </button>
             </form>
 
-            <!-- Success/Error Messages -->
+            <!-- Success Message -->
             <div v-if="showSuccess" class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
               <div class="flex items-center text-sm">
                 <CheckCircleIcon class="text-green-500 h-5 w-5 mr-2" />
                 <div>
-                  <p class="text-green-800 font-semibold">Richiesta Inviata!</p>
-                  <p class="text-green-700 text-xs">Ti contatteremo entro 2 ore.</p>
-                </div>
-              </div>
-            </div>
-
-            <div v-if="showError" class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-              <div class="flex items-center text-sm">
-                <XCircleIcon class="text-red-500 h-5 w-5 mr-2" />
-                <div>
-                  <p class="text-red-800 font-semibold">Errore</p>
-                  <p class="text-red-700 text-xs">{{ errorMessage }}</p>
+                  <p class="text-green-800 font-semibold">Email aperta!</p>
+                  <p class="text-green-700 text-xs">Completa l'invio dal tuo client email.</p>
                 </div>
               </div>
             </div>
@@ -351,7 +337,7 @@
         </div>
       </div>
 
-      <!-- Cancellation Policy Modal (unchanged) -->
+      <!-- Cancellation Policy Modal -->
       <div v-if="showCancellationPolicy" class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" @click="showCancellationPolicy = false">
         <div class="bg-white rounded-2xl p-6 max-w-2xl max-h-[80vh] overflow-y-auto" @click.stop>
           <div class="flex items-center justify-between mb-4">
@@ -398,7 +384,7 @@
               <ul class="space-y-1 text-roma-700">
                 <li class="flex items-center">
                   <MessageCircleIcon class="mr-2 h-4 w-4" />
-                  <strong>WhatsApp:</strong> +39 312 345 6789
+                  <strong>WhatsApp:</strong> +39 320 49 33 807
                 </li>
                 <li class="flex items-center">
                   <MailIcon class="mr-2 h-4 w-4" />
@@ -442,7 +428,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { 
-  LoaderIcon, 
   RocketIcon, 
   CheckCircleIcon, 
   XCircleIcon, 
@@ -460,7 +445,6 @@ import {
   AlertTriangleIcon,
   XIcon
 } from 'lucide-vue-next'
-import { addBooking } from '../stores/bookings'
 
 const form = ref({
   name: '',
@@ -473,10 +457,7 @@ const form = ref({
   acceptPolicy: false
 })
 
-const isSubmitting = ref(false)
 const showSuccess = ref(false)
-const showError = ref(false)
-const errorMessage = ref('')
 const showCancellationPolicy = ref(false)
 
 const minDate = computed(() => {
@@ -484,7 +465,7 @@ const minDate = computed(() => {
   return today.toISOString().split('T')[0]
 })
 
-const submitForm = async () => {
+const submitForm = () => {
   // Crea oggetto e corpo email
   const subject = `Richiesta disponibilità - ${form.value.name}`
   const body = `
@@ -514,7 +495,7 @@ Inviato da romacaputmundiapt.it
   // Mostra messaggio di successo
   showSuccess.value = true
   
-  // Reset form dopo 2 secondi
+  // Reset form dopo 3 secondi
   setTimeout(() => {
     form.value = {
       name: '',
@@ -527,6 +508,6 @@ Inviato da romacaputmundiapt.it
       acceptPolicy: false
     }
     showSuccess.value = false
-  }, 2000)
+  }, 3000)
 }
 </script>
