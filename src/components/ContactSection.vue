@@ -485,28 +485,37 @@ const minDate = computed(() => {
 })
 
 const submitForm = async () => {
-  isSubmitting.value = true
-  showError.value = false
-  showSuccess.value = false
+  // Crea oggetto e corpo email
+  const subject = `Richiesta disponibilità - ${form.value.name}`
+  const body = `
+RICHIESTA DISPONIBILITÀ
 
-  try {
-    // Save to Firestore
-    await addBooking({
-      name: form.value.name,
-      email: form.value.email,
-      phone: form.value.phone,
-      message: form.value.message,
-      checkIn: form.value.checkIn,
-      checkOut: form.value.checkOut,
-      guests: Number(form.value.guests)
-    })
+Nome: ${form.value.name}
+Email: ${form.value.email}
+Telefono: ${form.value.phone}
 
-    // TODO: Implementare invio email tramite Cloud Function
-    // await sendEmail(form.value)
+Check-in: ${form.value.checkIn}
+Check-out: ${form.value.checkOut}
+Ospiti: ${form.value.guests}
 
-    showSuccess.value = true
-    
-    // Reset form
+Messaggio:
+${form.value.message}
+
+---
+Inviato da romacaputmundiapt.it
+  `.trim()
+
+  // Crea link mailto
+  const mailtoLink = `mailto:info@romacaputmundiapt.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  
+  // Apri client email
+  window.location.href = mailtoLink
+  
+  // Mostra messaggio di successo
+  showSuccess.value = true
+  
+  // Reset form dopo 2 secondi
+  setTimeout(() => {
     form.value = {
       name: '',
       email: '',
@@ -517,23 +526,7 @@ const submitForm = async () => {
       guests: 2,
       acceptPolicy: false
     }
-
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      showSuccess.value = false
-    }, 5000)
-
-  } catch (error) {
-    console.error('Errore nell\'invio della richiesta:', error)
-    showError.value = true
-    errorMessage.value = 'Si è verificato un errore. Riprova o contattaci direttamente.'
-    
-    // Hide error message after 5 seconds
-    setTimeout(() => {
-      showError.value = false
-    }, 5000)
-  } finally {
-    isSubmitting.value = false
-  }
+    showSuccess.value = false
+  }, 2000)
 }
 </script>
