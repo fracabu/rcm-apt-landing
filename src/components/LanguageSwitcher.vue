@@ -66,12 +66,14 @@ const switchLanguage = (langCode: string) => {
 
 const updatePageTitle = (lang: string) => {
   const titles = {
-    it: 'Rome Apartment Appiano FS - WiFi Netflix Sky - 2 fermate da San Pietro',
-    en: 'Rome Apartment Appiano FS - WiFi Netflix Sky - 2 stops from St. Peter\'s'
+    // NUOVO TITOLO IN ITALIANO
+    it: 'Casa Vacanze Roma Vaticano | Appartamento con Parcheggio Gratuito',
+    
+    // NUOVO TITOLO IN INGLESE
+    en: 'Rome Apartment Near Vatican | with Free Parking & WiFi'
   }
   document.title = titles[lang as keyof typeof titles] || titles.it
 }
-
 // Close dropdown when clicking outside
 const handleClickOutside = (event: Event) => {
   const target = event.target as HTMLElement
