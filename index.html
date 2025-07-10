@@ -67,49 +67,87 @@
     
     <!-- Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  "name": "Casa Vacanze Roma Vaticano",
+  "description": "Bilocale 50m² nella tranquilla Balduina, a 100m dalla stazione Appiano FS e 2 fermate da San Pietro.",
+  "image": [
+    "https://romacaputmundiapt.it/images/camera.jpg",
+    "https://romacaputmundiapt.it/images/soggiorno.jpg",
+    "https://romacaputmundiapt.it/images/cucina.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Appiano, Roma", /* <-- È bene aggiungere una via, anche se generica */
+    "addressLocality": "Roma",
+    "addressRegion": "Lazio",
+    "postalCode": "00136",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.9213", /* <-- Usa coordinate precise se possibile */
+    "longitude": "12.4435"
+  },
+  "telephone": "+39 320 4933807",
+  "email": "info@romacaputmundiapt.it",
+  "url": "https://romacaputmundiapt.it",
+  "priceRange": "€€",
+  "starRating": {
+    "@type": "Rating",
+    "ratingValue": "9.2",
+    "bestRating": "10"
+  },
+  "amenityFeature": [
     {
-      "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
-      "name": "Casa Vacanze Roma Vaticano",
-      "description": "Bilocale 50m² nella tranquilla Balduina, a 100m dalla stazione Appiano FS e 2 fermate da San Pietro.",
-      "image": [
-        "https://romacaputmundiapt.it/images/camera.jpg",
-        "https://romacaputmundiapt.it/images/soggiorno.jpg",
-        "https://romacaputmundiapt.it/images/cucina.jpg"
-       ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Roma - Balduina",
-        "addressRegion": "Lazio",
-        "addressCountry": "IT",
-        "postalCode": "00136"
-      },
-      "telephone": "+39 320 4933807",
-      "email": "info@romacaputmundiapt.it",
-      "url": "https://romacaputmundiapt.it",
-      "priceRange": "€€",
-      "starRating": {
-        "@type": "Rating",
-        "ratingValue": "9.2",
-        "bestRating": "10"
-      },
-      "amenityFeature": [
-        "WiFi veloce gratuito",
-        "Netflix, Sky, Prime Video",
-        "Aria condizionata",
-        "Cucina completamente attrezzata",
-        "Parcheggio gratuito",
-        "Balcone con vista giardino",
-        "Stazione ferroviaria a 100m"
-      ],
-      "checkinTime": "15:00",
-      "checkoutTime": "11:00",
-      "petsAllowed": true,
-      "smokingAllowed": false,
-      "numberOfRooms": "2",
-      "floorSize": "50 metri quadrati"
+      "@type": "LocationFeatureSpecification",
+      "name": "WiFi veloce gratuito",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Netflix, Sky, Prime Video",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Aria condizionata",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Cucina completamente attrezzata",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parcheggio gratuito",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Balcone con vista giardino",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Stazione ferroviaria a 100m",
+      "value": true
     }
-    </script>
+  ],
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "petsAllowed": true,
+  "smokingAllowed": false,
+  "numberOfRooms": 2,
+  "floorSize": {
+    "@type": "QuantitativeValue",
+    "value": 50,
+    "unitCode": "MTK" /* "MTK" è il codice standard per Metro Quadrato */
+  }
+}
+</script>
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
