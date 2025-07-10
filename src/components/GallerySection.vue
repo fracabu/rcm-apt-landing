@@ -94,7 +94,7 @@ const currentImageIndex = ref(0)
 // ISTRUZIONI PER SOSTITUIRE LE FOTO:
 // 1. Carica le tue foto nella cartella /public/images/
 // 2. Sostituisci gli URL qui sotto con i percorsi delle tue foto
-// Esempio: src: '/images/soggiorno.jpg' invece di URL Pexels
+// Usando i file che hai caricato nella cartella
 const images = [
   {
     src: '/images/soggiorno.jpg',

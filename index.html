@@ -2,59 +2,70 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon-64x64.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- ======================================================= -->
     <!--                  SEO META TAGS (OTTIMIZZATI)              -->
     <!-- ======================================================= -->
     
-    <!-- Il Titolo principale che appare su Google. Conciso e d'impatto. -->
-    <!-- <title>Appartamento Roma Appiano | WiFi & Netflix a 2 fermate da S. Pietro</title> -->
-     <title>Casa Vacanze Roma Vaticano | Appartamento con Parcheggio Gratuito</title>
+    <title>Casa Vacanze Roma Vaticano | Appartamento con Parcheggio Gratuito</title>
     
-    <!-- La descrizione che appare sotto il titolo su Google. -->
     <meta name="description" content="Bilocale 50m² nella tranquilla Balduina. WiFi veloce, Netflix, Sky, aria condizionata. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. Punteggio 9.2/10." />
+    
+    <!-- Keywords per SEO locale -->
+    <meta name="keywords" content="casa vacanze roma, appartamento roma vaticano, affitto breve roma, alloggio roma balduina, appartamento san pietro, parcheggio gratuito roma, wifi netflix sky" />
+    
+    <!-- Geo-localizzazione per SEO locale -->
+    <meta name="geo.region" content="IT-RM" />
+    <meta name="geo.placename" content="Roma, Balduina" />
+    <meta name="geo.position" content="41.9028;12.4964" />
+    <meta name="ICBM" content="41.9028, 12.4964" />
     
     <!-- ======================================================= -->
     <!--            OPEN GRAPH / SOCIAL (OTTIMIZZATI)              -->
     <!-- ======================================================= -->
     
-    <!-- Titolo che appare quando condividi il link su Facebook, WhatsApp, etc. -->
-    <meta property="og:title" content="Rome Apartment Appiano FS - WiFi, Netflix & Sky" />
+    <!-- Il titolo che appare quando condividi su Facebook/WhatsApp. -->
+    <meta property="og:title" content="Casa Vacanze Roma Vaticano | Appartamento con Parcheggio Gratuito" />
     
-    <!-- Descrizione che appare sui social. -->
-    <meta property="og:description" content="Bilocale 50m² nella Balduina, a 2 fermate da San Pietro. WiFi veloce, Netflix, Sky, aria condizionata e parcheggio. Punteggio 9.2/10." />
+    <!-- La descrizione che appare sui social. -->
+    <meta property="og:description" content="Bilocale 50m² nella Balduina, a 2 fermate da San Pietro. WiFi veloce, Netflix, Sky, aria condizionata. Punteggio 9.2/10." />
     
-    <!-- Tipo di contenuto. "website" è corretto. -->
+    <!-- Tipo di contenuto. -->
     <meta property="og:type" content="website" />
     
     <!-- L'URL canonico del tuo sito. -->
     <meta property="og:url" content="https://romacaputmundiapt.it" />
     
-    <!-- === LA FOTO REALE CHE APPARE SUI SOCIAL (MODIFICA CHIAVE) === -->
+    <!-- Immagine principale per social -->
     <meta property="og:image" content="https://romacaputmundiapt.it/images/soggiorno.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Soggiorno appartamento Roma Vaticano con Netflix e Sky" />
     
     <!-- ======================================================= -->
     <!--             TWITTER CARD (OTTIMIZZATI)                    -->
     <!-- ======================================================= -->
     
-    <!-- Dice a Twitter di usare un'anteprima con immagine grande. -->
+    <!-- Tipo di card Twitter. -->
     <meta name="twitter:card" content="summary_large_image" />
     
     <!-- Titolo su Twitter. -->
-    <meta name="twitter:title" content="Rome Apartment Appiano FS - Vicino San Pietro" />
+    <meta name="twitter:title" content="Casa Vacanze Roma Vaticano" />
     
     <!-- Descrizione su Twitter. -->
     <meta name="twitter:description" content="Bilocale 50m² nella Balduina, a 2 fermate da San Pietro. WiFi, Netflix, Sky inclusi!" />
     
-    <!-- === LA FOTO REALE CHE APPARE SU TWITTER (MODIFICA CHIAVE) === -->
+    <!-- Immagine per Twitter -->
     <meta name="twitter:image" content="https://romacaputmundiapt.it/images/soggiorno.jpg" />
+    <meta name="twitter:image:alt" content="Soggiorno appartamento Roma Vaticano" />
     
     <!-- ======================================================= -->
     <!--          DATI STRUTTURATI / SCHEMA (OTTIMIZZATI)          -->
     <!-- ======================================================= -->
     
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,18 +73,26 @@
       "name": "Casa Vacanze Roma Vaticano",
       "description": "Bilocale 50m² nella tranquilla Balduina, a 100m dalla stazione Appiano FS e 2 fermate da San Pietro.",
       "image": [
-        "https://romacaputmundiapt.it/images/camera.jpg",
         "https://romacaputmundiapt.it/images/soggiorno.jpg",
+        "https://romacaputmundiapt.it/images/camera.jpg",
         "https://romacaputmundiapt.it/images/cucina.jpg"
        ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Roma - Balduina",
-        "addressCountry": "IT"
+        "addressRegion": "Lazio",
+        "addressCountry": "IT",
+        "postalCode": "00136"
       },
-      "telephone": "+39 320 4933807", // <-- INSERISCI QUI IL TUO VERO NUMERO
-      "email": "info@romacaputmundiapt.it", // <-- INSERISCI QUI LA TUA VERA EMAIL
+      "telephone": "+39 320 4933807",
+      "email": "info@romacaputmundiapt.it",
+      "url": "https://romacaputmundiapt.it",
       "priceRange": "€€",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "9.2",
+        "bestRating": "10"
+      },
       "amenityFeature": [
         "WiFi veloce gratuito",
         "Netflix, Sky, Prime Video",
@@ -82,25 +101,25 @@
         "Parcheggio gratuito",
         "Balcone con vista giardino",
         "Stazione ferroviaria a 100m"
-      ]
+      ],
+      "checkinTime": "15:00",
+      "checkoutTime": "11:00",
+      "petsAllowed": true,
+      "smokingAllowed": false,
+      "numberOfRooms": "2",
+      "floorSize": "50 metri quadrati"
     }
     </script>
     
-    <!-- ======================================================= -->
-    <!--                  ICONE E PRESTAZIONI                      -->
-    <!-- ======================================================= -->
-    
-    <!-- Favicon per vari dispositivi -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     
     <!-- Preconnect per velocizzare il caricamento dei font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Ho rimosso il preconnect a Pexels perché non lo usi più qui -->
+    <link rel="preconnect" href="https://romacaputmundiapt.it">
     
   </head>
   <body>
