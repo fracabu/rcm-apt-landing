@@ -22,7 +22,6 @@
         >
           <img 
             :src="image.src"
-            :onerror="`this.src='${image.fallback}'`"
             :alt="image.alt"
             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             :class="index === 0 ? 'h-96 md:h-full' : 'h-64'"
@@ -49,7 +48,6 @@
       <div class="relative max-w-4xl max-h-full">
         <img 
           :src="images[currentImageIndex].src"
-          :onerror="`this.src='${images[currentImageIndex].fallback}'`"
           :alt="images[currentImageIndex].alt"
           class="max-w-full max-h-full object-contain"
         >
@@ -99,33 +97,27 @@ const currentImageIndex = ref(0)
 // Esempio: src: '/images/soggiorno.jpg' invece di URL Pexels
 const images = [
   {
+    src: '/images/soggiorno.jpg',
+    alt: 'Soggiorno con divano letto e TV con Netflix e Sky'
+  },
+  {
     src: '/images/camera.jpg',
-    fallback: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Camera da letto matrimoniale large'
   },
   {
-    src: '/images/soggiorno.jpg',
-    fallback: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Soggiorno con divano letto e TV con Netflix e Sky'
-  },
-    {
     src: '/images/cucina.jpg',
-    fallback: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Cucina attrezzata con frigorifero e macchina da caffè'
   },
   {
     src: '/images/bagno.jpg',
-    fallback: 'https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Bagno con doccia e bidet'
   },
   {
     src: '/images/balcone.jpg',
-    fallback: 'https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Balcone con vista giardino'
   },
   {
     src: '/images/pranzo.jpg',
-    fallback: 'https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Zona pranzo e relax'
   }
 ]
