@@ -66,10 +66,11 @@
     <!-- ======================================================= -->
     
     <!-- Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VacationRental",
+  "@id": "https://romacaputmundiapt.it/",
   "name": "Casa Vacanze Roma Vaticano",
   "description": "Bilocale 50m² nella tranquilla Balduina, a 100m dalla stazione Appiano FS e 2 fermate da San Pietro.",
   "image": [
@@ -79,7 +80,7 @@
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Via Appiano, Roma", /* <-- È bene aggiungere una via, anche se generica */
+    "streetAddress": "Via Appiano",
     "addressLocality": "Roma",
     "addressRegion": "Lazio",
     "postalCode": "00136",
@@ -87,55 +88,19 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "41.9213", /* <-- Usa coordinate precise se possibile */
+    "latitude": "41.9213",
     "longitude": "12.4435"
   },
   "telephone": "+39 320 4933807",
   "email": "info@romacaputmundiapt.it",
   "url": "https://romacaputmundiapt.it",
   "priceRange": "€€",
-  "starRating": {
-    "@type": "Rating",
+  "aggregateRating": {
+    "@type": "AggregateRating",
     "ratingValue": "9.2",
-    "bestRating": "10"
+    "bestRating": "10",
+    "reviewCount": "15"
   },
-  "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "WiFi veloce gratuito",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Netflix, Sky, Prime Video",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Aria condizionata",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Cucina completamente attrezzata",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Parcheggio gratuito",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Balcone con vista giardino",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Stazione ferroviaria a 100m",
-      "value": true
-    }
-  ],
   "checkinTime": "15:00",
   "checkoutTime": "11:00",
   "petsAllowed": true,
@@ -144,8 +109,16 @@
   "floorSize": {
     "@type": "QuantitativeValue",
     "value": 50,
-    "unitCode": "MTK" /* "MTK" è il codice standard per Metro Quadrato */
-  }
+    "unitCode": "MTK"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "WiFi veloce gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Netflix, Sky, Prime Video", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Aria condizionata", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Cucina completamente attrezzata", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parcheggio gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Balcone con vista giardino", "value": true }
+  ]
 }
 </script>
     
