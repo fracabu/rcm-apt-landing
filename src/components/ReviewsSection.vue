@@ -7,7 +7,7 @@
           Recensioni Reali dei Nostri Ospiti
         </h2>
         <p class="text-neutral-600 max-w-2xl mx-auto">
-          Punteggio 9.2/10 Eccellente su Booking.com - 12 recensioni verificate
+          Punteggio 9.4/10 Eccellente - 12 recensioni verificate su Booking.com
         </p>
       </div>
 
@@ -56,8 +56,15 @@
           <div class="flex items-center space-x-2">
             <StarIcon class="text-roma-gold-400 h-8 w-8" />
             <div>
-              <div class="font-bold text-lg">9.2</div>
+              <div class="font-bold text-lg">9.4</div>
               <div class="text-sm">Booking.com</div>
+            </div>
+          </div>
+          <div class="flex items-center space-x-2">
+            <CheckCircleIcon class="text-roma-gold-400 h-8 w-8" />
+            <div>
+              <div class="font-bold text-lg">Staff 10/10</div>
+              <div class="text-sm">Eccellente</div>
             </div>
           </div>
           <div class="flex items-center space-x-2">
@@ -70,7 +77,7 @@
           <div class="flex items-center space-x-2">
             <MapPinIcon class="text-roma-red-600 h-8 w-8" />
             <div>
-              <div class="font-bold text-lg">Posizione 9.7/10</div>
+              <div class="font-bold text-lg">Posizione 9.6/10</div>
               <div class="text-sm">Eccellente</div>
             </div>
           </div>
@@ -100,70 +107,136 @@ import { StarIcon, CheckCircleIcon, MapPinIcon, UsersIcon } from 'lucide-vue-nex
 const reviews = [
   {
     id: 1,
-    name: "Marco R.",
+    name: "Frigerio",
     country: "Italia",
     rating: 10,
     score: 10,
-    date: "Novembre 2023",
-    nights: "2 notti",
-    type: "Coppia",
-    comment: "Appartamento fantastico nel cuore di Roma! Posizione perfetta per visitare tutti i monumenti principali a piedi. Pulizia impeccabile e host molto disponibile.",
+    date: "Giugno 2025",
+    nights: "1 notte",
+    type: "Famiglia",
+    comment: "SUPERCONSIGLIATO: Dell'appartamento ci è piaciuto veramente tutto. Dalla posizione comoda con tutti i servizi di trasporto, volendo c'è anche una ciclabile che arriva fino al Vaticano. Comodissimo per chi vuole visitare il centro di Roma e per raggiungere lo stadio Olimpico. Appartamento nuovo, con tutti i servizi, molto pulito. Il proprietario molto accogliente e gentile.",
     featured: true
   },
   {
     id: 2,
-    name: "Sarah M.",
-    country: "Francia",
-    rating: 9,
-    score: 9.5,
-    date: "Ottobre 2023",
-    nights: "3 notti",
+    name: "Federica",
+    country: "Italia", 
+    rating: 10,
+    score: 10,
+    date: "Giugno 2025",
+    nights: "1 notte",
     type: "Famiglia",
-    comment: "Séjour parfait! L'appartement est exactement comme sur les photos. Très propre et bien équipé. La localisation est idéale pour explorer Rome."
+    comment: "Ci siamo innamorati di questo appartamento appena entrati. Luminoso, super pulito e ben arredato. Per non parlare della disponibilità di Francesco, il proprietario, ha soddisfatto ogni nostra esigenza."
   },
   {
     id: 3,
-    name: "James K.",
-    country: "UK",
+    name: "Alessandra",
+    country: "Italia",
     rating: 10,
     score: 10,
-    date: "Settembre 2023",
-    nights: "4 notti",
-    type: "Coppia",
-    comment: "Outstanding location right in the heart of Rome. The apartment was spotless and had everything we needed. Would definitely stay again!"
+    date: "Aprile 2025", 
+    nights: "1 notte",
+    type: "Solo",
+    comment: "L'appartamento è nuovo, pulitissimo e dotato di ogni comfort. Ha anche un ampio balcone dal quale abbiamo apprezzato l'aria fresca e fruzzantina della serata. Il proprietario, molto simpatico e disponibile, ci ha accolto di persona. La casa si trova in una posizione molto centrale ma silenziosa."
   },
   {
     id: 4,
-    name: "Anna L.",
-    country: "Germania",
-    rating: 9,
-    score: 9.2,
-    date: "Agosto 2023",
-    nights: "2 notti",
-    type: "Solo",
-    comment: "Perfekte Lage mitten in Rom! Die Wohnung war sauber und gut ausgestattet. Der Gastgeber war sehr hilfsbereit."
+    name: "Janaka",
+    country: "Svezia",
+    rating: 10,
+    score: 10,
+    date: "Giugno 2025",
+    nights: "6 notti",
+    type: "Famiglia",
+    comment: "Det bästa boendet som vi har bott i. Jätte rent och nu renoverad lägenhet. Ganska stor lägenhet. Man kände hemma direkt. Det fanns allt du behövde i lägenheten. Hyres värdarna var hjälpsamma och ordnar allt du behöver. BÄSTA BOENDET i ROM!"
   },
   {
     id: 5,
-    name: "Carlos S.",
-    country: "Spagna",
-    rating: 10,
-    score: 10,
-    date: "Luglio 2023",
-    nights: "5 notti",
-    type: "Famiglia",
-    comment: "Ubicación increíble en el centro histórico de Roma. El apartamento estaba impecable y tenía todo lo necesario para una estancia perfecta."
+    name: "Motlagh",
+    country: "Iran",
+    rating: 9,
+    score: 9.0,
+    date: "Maggio 2025",
+    nights: "6 notti",
+    type: "Solo",
+    comment: "I had a wonderful stay at Roma Caput Mundi Apartment. The location is great! Within just 5 minutes of walking, you can reach the train station. There's also a lovely square nearby with easy access to a pharmacy, ice cream shops, restaurants. The hosts were kind and welcoming—especially Francesco, who was so helpful."
   },
   {
     id: 6,
-    name: "Lisa W.",
-    country: "USA",
+    name: "Fabio", 
+    country: "Italia",
     rating: 9,
-    score: 9.8,
-    date: "Giugno 2023",
-    nights: "3 notti",
+    score: 9.0,
+    date: "Marzo 2025",
+    nights: "1 notte",
+    type: "Famiglia",
+    comment: "Posizione dell'appartamento ottima perché abbastanza vicina alla stazione ferroviaria Appiano Proba Petronia. Proprietario molto cordiale ed affabile nelle richieste. Appartamento funzionale e molto pulito che ha decisamente soddisfatto le nostre aspettative."
+  },
+  {
+    id: 7,
+    name: "Roberto",
+    country: "Italia",
+    rating: 10,
+    score: 10,
+    date: "Maggio 2025", 
+    nights: "1 notte",
+    type: "Solo",
+    comment: "Appartamento accogliente, pulito, silenzioso, curato e con tutti i comfort necessari per un soggiorno perfetto a Roma."
+  },
+  {
+    id: 8,
+    name: "Giorgio",
+    country: "Italia",
+    rating: 9,
+    score: 9.0,
+    date: "Maggio 2025",
+    nights: "3 notti", 
+    type: "Famiglia",
+    comment: "Pulizia, spazi e cortesia del proprietario. Casa accessoriata con tutto quello che serve per un soggiorno confortevole."
+  },
+  {
+    id: 9,
+    name: "Mazzariol", 
+    country: "Italia",
+    rating: 9,
+    score: 9.0,
+    date: "Maggio 2025",
+    nights: "1 notte",
+    type: "Famiglia", 
+    comment: "Arredato con cura, pulizia approfondita, personale gentilissimo e puntuale. Esperienza davvero positiva, lo consigliamo vivamente."
+  },
+  {
+    id: 10,
+    name: "Mirko",
+    country: "Italia",
+    rating: 10,
+    score: 10,
+    date: "Maggio 2025",
+    nights: "2 notti",
+    type: "Famiglia",
+    comment: null
+  },
+  {
+    id: 11,
+    name: "Ciari", 
+    country: "Italia",
+    rating: 7,
+    score: 7.0,
+    date: "Giugno 2025",
+    nights: "1 notte",
     type: "Coppia",
-    comment: "Amazing apartment in the perfect location! We could walk to the Pantheon, Trevi Fountain, and Spanish Steps. Highly recommend!"
+    comment: null
+  },
+  {
+    id: 12,
+    name: "Victoriia",
+    country: "Ucraina", 
+    rating: 10,
+    score: 10,
+    date: "Aprile 2025",
+    nights: "2 notti",
+    type: "Famiglia",
+    comment: "Все було дуже добре, дуже милий господар (Tutto è stato molto buono, proprietario molto gentile)"
   }
 ];
 </script>
