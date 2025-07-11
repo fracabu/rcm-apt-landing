@@ -96,13 +96,13 @@ const currentImageIndex = ref(0)
 // 2. Sostituisci gli URL qui sotto con i percorsi delle tue foto
 // Usando i file che hai caricato nella cartella
 const images = [
+    {
+    src: '/images/camera.jpg',
+    alt: 'Camera da letto matrimoniale large'
+  },
   {
     src: '/images/soggiorno.jpg',
     alt: 'Soggiorno con divano letto e TV con Netflix e Sky'
-  },
-  {
-    src: '/images/camera.jpg',
-    alt: 'Camera da letto matrimoniale large'
   },
   {
     src: '/images/cucina.jpg',
