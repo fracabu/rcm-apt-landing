@@ -1,15 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage - Priorità massima -->
   <url>
     <loc>https://romacaputmundiapt.it/</loc>
-    <lastmod>2025-07-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://romacaputmundiapt.it/images/camera.jpg</image:loc>
+      <image:title>Camera matrimoniale Rome Apartment Appiano FS</image:title>
+      <image:caption>Bilocale 50m² nella Balduina, WiFi Netflix Sky, 2 fermate da San Pietro</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://romacaputmundiapt.it/images/soggiorno.jpg</image:loc>
+      <image:title>Soggiorno con divano letto e Smart TV</image:title>
+      <image:caption>Soggiorno accogliente con Netflix, Sky e aria condizionata</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://romacaputmundiapt.it/images/cucina.jpg</image:loc>
+      <image:title>Cucina attrezzata appartamento Roma</image:title>
+      <image:caption>Cucina completamente attrezzata con frigorifero e macchina caffè</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://romacaputmundiapt.it/images/balcone.jpg</image:loc>
+      <image:title>Balcone con vista giardino</image:title>
+      <image:caption>Balcone privato con vista su giardino tranquillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://romacaputmundiapt.it/images/bagno.jpg</image:loc>
+      <image:title>Bagno con doccia appartamento Roma</image:title>
+      <image:caption>Bagno moderno con doccia e tutti i comfort</image:caption>
+    </image:image>
   </url>
+
+  <!-- Privacy Policy -->
   <url>
     <loc>https://romacaputmundiapt.it/privacy</loc>
-    <lastmod>2025-07-09</lastmod>
+    <lastmod>2025-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Admin Area -->
+  <url>
+    <loc>https://romacaputmundiapt.it/admin</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Sezioni della Homepage (per SEO avanzato) -->
+  <url>
+    <loc>https://romacaputmundiapt.it/#servizi</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://romacaputmundiapt.it/#gallery</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://romacaputmundiapt.it/#recensioni</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://romacaputmundiapt.it/#contatti</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
