@@ -2,78 +2,135 @@ import { ref } from 'vue'
 import { useStorage } from '@vueuse/core'
 
 export const visitorCount = ref(0)
+export const todayVisitors = ref(0)
+export const monthlyVisitors = ref(0)
 
-// Contatore visitatori reale con persistenza locale
+// Contatore visitatori reale - SOLO visite autentiche
 export const initVisitorCounter = () => {
-  // Usa useStorage per persistenza reattiva
-  const storedCount = useStorage('siteVisitorCount', 1247) // Numero base realistico
+  const storedCount = useStorage('siteVisitorCount', 0) // Parte da ZERO
   const lastVisit = useStorage('lastVisitTimestamp', 0)
   const sessionId = useStorage('currentSessionId', '')
+  const dailyVisits = useStorage('dailyVisitCount', 0)
+  const lastVisitDate = useStorage('lastVisitDate', '')
+  const monthlyVisits = useStorage('monthlyVisitCount', 0)
+  const lastMonthReset = useStorage('lastMonthReset', '')
   
   const now = Date.now()
+  const today = new Date().toDateString()
+  const currentMonth = new Date().getMonth() + new Date().getFullYear() * 12
   const currentSessionId = `${now}-${Math.random().toString(36).substr(2, 9)}`
   const sessionTimeout = 30 * 60 * 1000 // 30 minuti
   
-  // Incrementa solo per nuove sessioni (dopo 30 minuti di inattività)
+  // Reset contatore giornaliero se è un nuovo giorno
+  if (lastVisitDate.value !== today) {
+    dailyVisits.value = 0
+    lastVisitDate.value = today
+  }
+  
+  // Reset contatore mensile se è un nuovo mese
+  if (lastMonthReset.value !== currentMonth.toString()) {
+    monthlyVisits.value = 0
+    lastMonthReset.value = currentMonth.toString()
+  }
+  
+  // Incrementa SOLO per visite reali (nuove sessioni)
   if (!lastVisit.value || 
       (now - lastVisit.value) > sessionTimeout || 
       sessionId.value !== currentSessionId) {
     
     storedCount.value += 1
+    dailyVisits.value += 1
+    monthlyVisits.value += 1
     sessionId.value = currentSessionId
     lastVisit.value = now
+    
+    console.log('🎯 Nuova visita reale registrata:', {
+      totale: storedCount.value,
+      oggi: dailyVisits.value,
+      mese: monthlyVisits.value
+    })
   }
   
   visitorCount.value = storedCount.value
+  todayVisitors.value = dailyVisits.value
+  monthlyVisitors.value = monthlyVisits.value
 }
 
-// Simula crescita organica realistica del traffico
-export const simulateOrganicGrowth = () => {
-  const storedCount = useStorage('siteVisitorCount', 1247)
-  const lastGrowthUpdate = useStorage('lastGrowthUpdate', Date.now())
-  const now = Date.now()
-  const daysSinceLastUpdate = Math.floor((now - lastGrowthUpdate.value) / (24 * 60 * 60 * 1000))
-  
-  if (daysSinceLastUpdate > 0) {
-    // Crescita giornaliera realistica: 15-45 visitatori al giorno
-    const dailyGrowth = Math.floor(Math.random() * 30) + 15
-    storedCount.value += dailyGrowth * daysSinceLastUpdate
-    lastGrowthUpdate.value = now
-    visitorCount.value = storedCount.value
+// Formatta i numeri per display
+export const formatVisitorCount = (count: number): string => {
+  if (count >= 1000000) {
+    return `${(count / 1000000).toFixed(1)}M`
+  } else if (count >= 1000) {
+    return `${(count / 1000).toFixed(1)}k`
   }
+  return count.toString()
 }
 
 // Incrementa manualmente il contatore (per test o eventi speciali)
 export const incrementVisitorCount = () => {
-  const storedCount = useStorage('siteVisitorCount', 1247)
+  const storedCount = useStorage('siteVisitorCount', 0)
+  const dailyVisits = useStorage('dailyVisitCount', 0)
+  const monthlyVisits = useStorage('monthlyVisitCount', 0)
+  
   storedCount.value += 1
+  dailyVisits.value += 1
+  monthlyVisits.value += 1
+  
   visitorCount.value = storedCount.value
+  todayVisitors.value = dailyVisits.value
+  monthlyVisitors.value = monthlyVisits.value
+  
+  console.log('✅ Contatore incrementato manualmente')
 }
 
-// Reset del contatore (solo per admin)
-export const resetVisitorCount = (newCount: number = 0) => {
-  const storedCount = useStorage('siteVisitorCount', 1247)
-  storedCount.value = newCount
-  visitorCount.value = newCount
+// Reset completo di tutti i contatori
+export const resetAllCounters = () => {
+  // Rimuovi tutti i dati dal localStorage
+  localStorage.removeItem('siteVisitorCount')
+  localStorage.removeItem('dailyVisitCount') 
+  localStorage.removeItem('monthlyVisitCount')
+  localStorage.removeItem('lastVisitDate')
+  localStorage.removeItem('lastMonthReset')
+  localStorage.removeItem('lastVisitTimestamp')
+  localStorage.removeItem('currentSessionId')
+  localStorage.removeItem('lastGrowthUpdate') // Rimuovi anche vecchi dati fake
+  
+  // Reset valori reattivi
+  visitorCount.value = 0
+  todayVisitors.value = 0
+  monthlyVisitors.value = 0
+  
+  console.log('🗑️ Tutti i contatori sono stati resettati a zero')
 }
 
-// Ottieni statistiche dettagliate
+// Ottieni statistiche dettagliate (per debug o admin)
 export const getVisitorStats = () => {
-  const storedCount = useStorage('siteVisitorCount', 1247)
+  const storedCount = useStorage('siteVisitorCount', 0)
   const lastVisit = useStorage('lastVisitTimestamp', 0)
   const sessionId = useStorage('currentSessionId', '')
+  const dailyVisits = useStorage('dailyVisitCount', 0)
+  const monthlyVisits = useStorage('monthlyVisitCount', 0)
   
   return {
     totalVisitors: storedCount.value,
+    todayVisitors: dailyVisits.value,
+    monthlyVisitors: monthlyVisits.value,
     lastVisit: lastVisit.value ? new Date(lastVisit.value) : null,
     currentSession: sessionId.value,
     isNewSession: !sessionId.value || (Date.now() - lastVisit.value) > 30 * 60 * 1000
   }
 }
 
-export const formatVisitorCount = (count: number): string => {
-  if (count >= 1000) {
-    return `${(count / 1000).toFixed(1)}k`
-  }
-  return count.toString()
+// Verifica se il visitatore è già stato contato oggi
+export const isVisitorCountedToday = () => {
+  const lastVisit = useStorage('lastVisitTimestamp', 0)
+  const sessionTimeout = 30 * 60 * 1000
+  return lastVisit.value && (Date.now() - lastVisit.value) <= sessionTimeout
+}
+
+// Per admin - visualizza tutte le statistiche
+export const debugVisitorInfo = () => {
+  const stats = getVisitorStats()
+  console.table(stats)
+  return stats
 }

@@ -36,13 +36,13 @@
           <div class="space-y-2 text-roma-200">
             <div class="flex items-center">
               <MailIcon class="mr-2 h-4 w-4" />
-              <a href="mailto:romacaputmundiguesthouse@gmail.com" class="hover:text-roma-gold-400 transition-colors">
+              <a href="mailto:info@romacaputmundiapt.it" class="hover:text-roma-gold-400 transition-colors">
                info@romacaputmundiapt.it
               </a>
             </div>
             <div class="flex items-center">
               <PhoneIcon class="mr-2 h-4 w-4" />
-              <a href="https://wa.me/393123456789" class="hover:text-roma-gold-400 transition-colors">
+              <a href="https://wa.me/393204933807" class="hover:text-roma-gold-400 transition-colors">
                 +39 320 49 33 807
               </a>
             </div>
@@ -81,8 +81,9 @@
     <div class="text-center mt-6 space-y-2">
       <div class="text-roma-400 text-xs">
         <UsersIcon class="inline h-3 w-3 mr-1" />
-        {{ formatVisitorCount(visitorCount) }} {{ $t('footer.visitors') }} · 
-        <span class="text-roma-gold-400">{{ getMonthlyVisitors() }}</span> questo mese
+        {{ formatVisitorCount(visitorCount) }} visitatori totali · 
+        <span class="text-roma-gold-400">{{ todayVisitors }}</span> oggi ·
+        <span class="text-roma-gold-400">{{ formatVisitorCount(monthlyVisitors) }}</span> questo mese
       </div>
       <div class="text-roma-300 text-sm">
         {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong>
@@ -111,19 +112,13 @@ import {
 } from 'lucide-vue-next'
 import { 
   visitorCount, 
+  todayVisitors,
+  monthlyVisitors,
   initVisitorCounter, 
-  formatVisitorCount,
-  simulateOrganicGrowth 
+  formatVisitorCount
 } from '../stores/visitors'
 
-const getMonthlyVisitors = () => {
-  // Stima realistica: 20-30% del traffico totale nell'ultimo mese
-  const monthlyEstimate = Math.floor(visitorCount.value * 0.25)
-  return formatVisitorCount(monthlyEstimate)
-}
-
 onMounted(() => {
-  initVisitorCounter()
-  simulateOrganicGrowth()
+  initVisitorCounter() // Solo contatore reale, nessuna simulazione
 })
 </script>
