@@ -4,126 +4,126 @@
     "photos": "Foto", 
     "reviews": "Recensioni",
     "contacts": "Contatti",
-    "availability": "Disponibilità"
+    "availability": "Verifica Disponibilità"
   },
   "hero": {
-    "title": "Roma Appartamento Appiano FS",
-    "subtitle": "WiFi Netflix Sky - 2 fermate da San Pietro",
-    "description": "Bilocale 50m² nella tranquilla Balduina. Perfetto per coppie, famiglie e smart worker. A soli 100 metri dalla stazione Appiano FS.",
+    "title": "Casa Vacanze Roma Appartamento Vaticano",
+    "subtitle": "Affitto Breve Balduina - WiFi Netflix Sky - 2 fermate San Pietro",
+    "description": "Casa vacanze Roma vicino Vaticano. Appartamento turistico 50m² in affitto breve nella tranquilla Balduina con parcheggio gratuito, WiFi, Netflix, Sky. Perfetto per turisti che visitano San Pietro e Musei Vaticani.",
     "features": {
       "station": "100m da Stazione FS",
-      "streaming": "Netflix & Sky",
-      "parking": "Parcheggio Gratuito"
+      "streaming": "Netflix & Sky Inclusi",
+      "parking": "Parcheggio Gratuito Roma"
     },
-    "cta": "Prenota Direttamente",
-    "guarantee": "Miglior prezzo garantito - Bonifico o PayPal",
+    "cta": "Prenota Diretto - Miglior Prezzo",
+    "guarantee": "Miglior prezzo garantito - Prenotazione diretta risparmia",
     "trust": {
-      "rating": "9.2/10 Eccellente",
-      "size": "50m² Bilocale", 
+      "rating": "9.2/10 Recensioni Eccellenti",
+      "size": "50m² Casa Vacanze",
       "guests": "Fino a 4 ospiti"
     }
   },
   "services": {
-    "title": "Servizi e Dotazioni",
-    "subtitle": "Tutto quello che serve per un soggiorno confortevole nella tranquilla Balduina",
+    "title": "Appartamento Roma Servizi e Dotazioni",
+    "subtitle": "Casa vacanze Roma con tutti i comfort nella tranquilla Balduina vicino Vaticano",
     "items": {
       "wifi": {
-        "title": "WiFi Veloce Gratuito",
-        "description": "Connessione internet ad alta velocità per smart working"
+        "title": "WiFi Veloce Gratuito Internet",
+        "description": "Connessione internet veloce perfetta per smart working e streaming"
       },
       "streaming": {
-        "title": "Netflix, Sky & Prime Video", 
-        "description": "TV con tutti i servizi streaming per il tuo intrattenimento"
+        "title": "Netflix, Sky & Prime Video Inclusi", 
+        "description": "Smart TV con tutti i servizi streaming per il tuo soggiorno Roma"
       },
       "kitchen": {
         "title": "Cucina Completamente Attrezzata",
-        "description": "Frigorifero, macchina da caffè e tutti gli utensili necessari"
+        "description": "Frigorifero, macchina da caffè e tutti gli utensili per la tua casa vacanze"
       },
       "climate": {
         "title": "Aria Condizionata & Riscaldamento",
-        "description": "Climatizzazione per il massimo comfort in ogni stagione"
+        "description": "Climatizzazione per il massimo comfort durante il soggiorno Roma"
       },
       "parking": {
-        "title": "Parcheggio Gratuito",
-        "description": "Parcheggio gratuito in strada per la tua auto"
+        "title": "Parcheggio Gratuito Roma Centro",
+        "description": "Parcheggio gratuito per la tua auto vicino alla casa vacanze"
       },
       "balcony": {
-        "title": "Balcone Vista Giardino",
-        "description": "Spazio esterno privato per rilassarsi all'aria aperta"
+        "title": "Balcone Privato Vista Giardino",
+        "description": "Spazio esterno per rilassarsi durante il soggiorno appartamento Roma"
       },
       "station": {
-        "title": "Stazione a 100 metri",
-        "description": "Stazione Appiano FS raggiungibile in 1 minuto a piedi"
+        "title": "Stazione Treno 100m",
+        "description": "Stazione Appiano FS - collegamento diretto Vaticano e centro Roma"
       },
       "cleaning": {
-        "title": "Pulizia Impeccabile",
-        "description": "Pulizia professionale e sanificazione ad ogni cambio ospiti"
+        "title": "Pulizia Professionale Appartamento",
+        "description": "Pulizia impeccabile e sanificazione per ogni ospite casa vacanze"
       },
       "pets": {
-        "title": "Animali Domestici Benvenuti",
-        "description": "I tuoi amici a quattro zampe sono i benvenuti (ciotole incluse)"
+        "title": "Appartamento Pet-Friendly",
+        "description": "I tuoi animali sono benvenuti nella nostra casa vacanze Roma (ciotole incluse)"
       }
     },
     "location": {
-      "title": "Posizione Eccellente (9.7/10)",
-      "subtitle": "Nella tranquilla Balduina, con collegamenti diretti per il Vaticano",
+      "title": "Posizione Eccellente Vicino Vaticano (9.7/10)",
+      "subtitle": "Balduina tranquilla con collegamenti diretti San Pietro e attrazioni Roma",
       "distances": {
-        "station": "Stazione Appiano",
-        "vatican": "San Pietro", 
+        "station": "Stazione Appiano FS",
+        "vatican": "Basilica San Pietro", 
         "museums": "Musei Vaticani",
-        "airport": "Aeroporto FCO"
+        "airport": "Aeroporto Roma Fiumicino"
       }
     }
   },
   "gallery": {
-    "title": "Scopri il Bilocale",
-    "subtitle": "50m² di comfort nella tranquilla Balduina - Camera matrimoniale, soggiorno e balcone vista giardino",
-    "cta": "Prenota il Tuo Soggiorno",
+    "title": "Casa Vacanze Roma Galleria Foto",
+    "subtitle": "50m² appartamento turistico Balduina - Camera matrimoniale, soggiorno e balcone vista giardino",
+    "cta": "Prenota la Tua Vacanza Roma",
     "images": {
-      "living": "Soggiorno con divano letto e TV con Netflix e Sky",
-      "bedroom": "Camera da letto matrimoniale large",
-      "kitchen": "Cucina attrezzata con frigorifero e macchina da caffè",
-      "bathroom": "Bagno con doccia e bidet",
-      "balcony": "Balcone con vista giardino",
-      "dining": "Zona pranzo e relax"
+      "living": "Soggiorno con divano letto e Smart TV con Netflix e Sky",
+      "bedroom": "Camera matrimoniale confortevole appartamento Roma",
+      "kitchen": "Cucina attrezzata con frigorifero e macchina caffè italiana",
+      "bathroom": "Bagno pulito con doccia e bidet",
+      "balcony": "Balcone privato con vista giardino",
+      "dining": "Zona pranzo perfetta per pasti vacanza Roma"
     }
   },
   "reviews": {
-    "title": "Recensioni Reali dei Nostri Ospiti",
-    "subtitle": "Punteggio 9.2/10 Eccellente su Booking.com - 12 recensioni verificate",
+    "title": "Recensioni Ospiti Reali - Casa Vacanze Roma",
+    "subtitle": "Punteggio 9.2/10 Eccellente su Booking.com - 12 recensioni verificate visitatori Roma",
     "badges": {
-      "booking": "Booking.com",
+      "booking": "Booking.com Verificato",
       "cleanliness": "Pulizia 10/10",
       "location": "Posizione 9.7/10",
-      "verified": "12 Recensioni",
+      "verified": "12 Recensioni Verificate",
       "impeccable": "Impeccabile",
       "excellent": "Eccellente",
-      "verified_label": "Verificate"
+      "verified_label": "Verificate da Booking.com"
     },
-    "cta": "Diventa il Prossimo Ospite Felice",
+    "cta": "Prenota la Tua Vacanza Roma Ora",
     "trip_types": {
       "couple": "Coppia",
       "family": "Famiglia", 
-      "solo": "Solo",
-      "business": "Lavoro"
+      "solo": "Viaggiatore Singolo",
+      "business": "Viaggio Lavoro"
     }
   },
   "contact": {
-    "title": "Richiedi Disponibilità",
-    "subtitle": "Contattaci direttamente per ricevere la <strong>miglior tariffa</strong> e pagare con bonifico bancario.",
+    "title": "Verifica Disponibilità Appartamento Roma",
+    "subtitle": "Contattaci direttamente per le <strong>migliori tariffe casa vacanze</strong> e opzioni pagamento sicure.",
     "checkin_info": "Check-in 15:00-22:00, Check-out 08:00-11:00.",
     "form": {
-      "title": "Richiedi Disponibilità",
+      "title": "Prenota Casa Vacanze Roma",
       "name": "Nome Completo",
-      "phone": "Telefono",
-      "email": "Email",
-      "checkin": "Check-in",
-      "checkout": "Check-out", 
+      "phone": "Numero Telefono",
+      "email": "Indirizzo Email",
+      "checkin": "Data Check-in",
+      "checkout": "Data Check-out", 
       "guests": "Numero Ospiti",
-      "message": "Messaggio",
-      "message_placeholder": "Raccontaci qualcosa in più sul tuo soggiorno...",
-      "submit": "🚀 Invia Richiesta",
-      "submitting": "Invio in corso...",
+      "message": "Richieste Speciali",
+      "message_placeholder": "Raccontaci i tuoi piani per la vacanza Roma...",
+      "submit": "🚀 Invia Richiesta Prenotazione",
+      "submitting": "Invio Richiesta...",
       "guests_options": {
         "1": "1 Ospite",
         "2": "2 Ospiti", 
@@ -132,125 +132,125 @@
       }
     },
     "success": {
-      "title": "Richiesta Inviata!",
-      "message": "Ti contatteremo entro 2 ore con la miglior offerta."
+      "title": "Richiesta Prenotazione Inviata!",
+      "message": "Ti contatteremo entro 2 ore con la miglior offerta casa vacanze Roma."
     },
     "error": {
-      "title": "Errore",
-      "message": "Si è verificato un errore. Riprova o contattaci direttamente."
+      "title": "Errore Prenotazione",
+      "message": "Si è verificato un errore. Riprova o contattaci su WhatsApp."
     },
     "benefits": {
       "title": "Vantaggi Prenotazione Diretta",
-      "price": "Miglior prezzo garantito - nessuna commissione di intermediazione",
+      "price": "Migliori tariffe casa vacanze - nessuna commissione prenotazione",
       "payment": "Pagamenti flessibili - bonifico bancario o PayPal",
       "multilingual": "Host multilingue - Italiano, Inglese, Spagnolo, Francese",
-      "family": "Gestione familiare - Famiglia romana di fiducia"
+      "family": "Gestione familiare - host Roma di fiducia"
     },
     "payment": {
-      "title": "Metodi di Pagamento",
+      "title": "Metodi Pagamento Sicuri",
       "bank_transfer": {
-        "title": "Bonifico Bancario",
-        "description": "Sconto 3% - Pagamento sicuro direttamente sul nostro conto",
-        "benefit": "Nessuna commissione aggiuntiva"
+        "title": "Bonifico Bancario (Sconto 3%)",
+        "description": "Pagamento sicuro direttamente sul conto casa vacanze Roma",
+        "benefit": "Nessuna commissione prenotazione aggiuntiva"
       },
       "paypal": {
-        "title": "PayPal",
-        "description": "Pagamento rapido e sicuro con protezione acquirente",
+        "title": "PayPal Mondiale",
+        "description": "Pagamento rapido e sicuro con protezione acquirente internazionale",
         "benefits": "Accettato in tutto il mondo · Protezione transazioni"
       },
-      "security": "Pagamento sicuro al 100% - Riceverai i dettagli di pagamento dopo la conferma disponibilità",
-      "paypal_refund": "PayPal: I rimborsi PayPal vengono processati entro 24-48 ore"
+      "security": "Pagamento sicuro 100% - Dettagli pagamento inviati dopo conferma disponibilità",
+      "paypal_refund": "Rimborsi PayPal processati entro 24-48 ore"
     },
     "direct": {
-      "title": "Contatti Diretti",
+      "title": "Contatto Diretto Host Roma",
       "email": "info@romacaputmundiapt.it",
       "whatsapp": "WhatsApp: +39 320 49 33 807",
-      "support": "Assistenza 24/7"
+      "support": "Supporto Vacanza Roma 24/7"
     },
     "platforms": {
-      "title": "Ci trovi anche su:",
-      "license": "Licenza: 058091-CAV-12914, IT058091B4DGY9ABNC"
+      "title": "Disponibile anche su piattaforme prenotazione:",
+      "license": "Licenza Ufficiale: 058091-CAV-12914, IT058091B4DGY9ABNC"
     },
     "cancellation": {
-      "title": "Politica di Cancellazione",
-      "checkbox": "Ho letto e accetto la politica di cancellazione riportata sul sito.",
+      "title": "Politica Cancellazione Casa Vacanze Roma",
+      "checkbox": "Accetto la politica di cancellazione per questo appartamento Roma.",
       "full_refund": "Rimborso Completo (100%)",
-      "full_refund_desc": "In caso di disdetta dopo il pagamento con bonifico, l'importo versato verrà interamente rimborsato fino a 7 giorni prima dell'arrivo.",
-      "penalty": "Penale di Cancellazione", 
-      "penalty_desc": "Per cancellazioni effettuate oltre questo termine, sarà trattenuta la prima notte a titolo di penale.",
-      "how_to_refund": "Come Richiedere un Rimborso",
-      "how_to_refund_desc": "Per richiedere un rimborso, contattaci tramite:",
+      "full_refund_desc": "Pagamenti bonifico rimborsati completamente fino a 7 giorni prima arrivo Roma.",
+      "penalty": "Penale Cancellazione", 
+      "penalty_desc": "Cancellazioni entro 7 giorni: prima notte trattenuta come penale.",
+      "how_to_refund": "Come Richiedere Rimborso",
+      "how_to_refund_desc": "Contatta il nostro team casa vacanze Roma tramite:",
       "legal_protection": "Tutela Legale",
-      "legal_protection_desc": "Questa politica ti tutela in caso di contestazioni e garantisce trasparenza nel processo di prenotazione e cancellazione.",
+      "legal_protection_desc": "Questa politica protegge la tua prenotazione vacanza Roma e garantisce processo cancellazione trasparente.",
       "understood": "Ho Capito"
     }
   },
   "footer": {
-    "description": "Bilocale 50m² nella tranquilla Balduina. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. WiFi veloce, Netflix, Sky e tutti i comfort per un soggiorno perfetto.",
+    "description": "Casa vacanze Roma vicino Vaticano. Appartamento turistico 50m² in Balduina tranquilla, 100m da stazione Appiano FS, 2 fermate San Pietro. WiFi veloce, Netflix, Sky e tutti i comfort per la tua perfetta vacanza Roma.",
     "links": {
-      "title": "Link Utili",
-      "services": "Servizi",
-      "gallery": "Galleria Foto",
-      "reviews": "Recensioni", 
-      "contacts": "Contatti",
+      "title": "Link Casa Vacanze Roma",
+      "services": "Servizi Appartamento",
+      "gallery": "Foto Appartamento Roma",
+      "reviews": "Recensioni Ospiti", 
+      "contacts": "Contatti Host Roma",
       "privacy": "Privacy Policy",
-      "admin": "Area Admin"
+      "admin": "Gestione Proprietà"
     },
     "contact": {
-      "title": "Contatti",
-      "location": "Balduina, Roma",
+      "title": "Contatti Appartamento Roma",
+      "location": "Balduina, Roma, Italia",
       "checkin": "Check-in 15:00-22:00",
       "checkout": "Check-out entro le 11:00"
     },
-    "copyright": "© 2024 Rome Apartment Appiano FS. Licenza: 058091-CAV-12914, IT058091B4DGY9ABNC",
-    "visitors": "visitatori",
-    "this_month": "questo mese",
-    "developed": "Sviluppato con ❤️ da",
-    "tagline": "Il tuo bilocale nella tranquilla Balduina"
+    "copyright": "© 2024 Rome Apartment Appiano FS. Licenza Ufficiale: 058091-CAV-12914, IT058091B4DGY9ABNC",
+    "visitors": "visitatori casa vacanze Roma",
+    "this_month": "prenotazioni questo mese",
+    "developed": "Sito vacanza Roma sviluppato con ❤️ da",
+    "tagline": "La tua perfetta casa vacanze Roma vicino Vaticano"
   },
   "privacy": {
-    "title": "Privacy Policy",
+    "title": "Privacy Policy Casa Vacanze Roma",
     "effective_date": "Data di entrata in vigore:",
-    "back_to_home": "← Rome Apartment Appiano FS"
+    "back_to_home": "← Torna ad Appartamento Roma"
   },
   "admin": {
-    "title": "Area Admin",
-    "subtitle": "Gestione prenotazioni Rome Apartment Appiano FS",
+    "title": "Admin Casa Vacanze Roma",
+    "subtitle": "Gestione prenotazioni appartamento e ospiti Roma",
     "logout": "Logout",
     "login": {
-      "title": "Accesso Admin",
-      "subtitle": "Inserisci le credenziali per accedere",
-      "email": "Email",
+      "title": "Accesso Gestione Proprietà",
+      "subtitle": "Amministrazione casa vacanze Roma",
+      "email": "Email Admin",
       "password": "Password",
-      "submit": "Accedi",
+      "submit": "Accedi Pannello Admin",
       "submitting": "Accesso in corso...",
       "error": "Credenziali non valide. Riprova."
     },
     "stats": {
-      "total_bookings": "Prenotazioni Totali",
+      "total_bookings": "Prenotazioni Totali Roma",
       "this_month": "Questo Mese", 
-      "total_guests": "Ospiti Totali"
+      "total_guests": "Ospiti Vacanza Totali"
     },
     "bookings": {
-      "title": "Prenotazioni Recenti",
-      "loading": "Caricamento prenotazioni...",
-      "empty": "Nessuna prenotazione trovata",
+      "title": "Prenotazioni Recenti Vacanza Roma",
+      "loading": "Caricamento prenotazioni ospiti...",
+      "empty": "Nessuna prenotazione Roma trovata",
       "table": {
-        "client": "Cliente",
-        "dates": "Date",
-        "guests": "Ospiti", 
-        "contact": "Contatto",
-        "request_date": "Data Richiesta",
-        "nights": "notti",
-        "send_email": "Invia Email"
+        "client": "Nome Ospite",
+        "dates": "Date Soggiorno Roma",
+        "guests": "Numero Ospiti", 
+        "contact": "Contatto Ospite",
+        "request_date": "Data Prenotazione",
+        "nights": "notti a Roma",
+        "send_email": "Contatta Ospite"
       }
     }
   },
   "common": {
-    "required": "*",
-    "loading": "Caricamento...",
-    "error": "Errore",
-    "success": "Successo",
+    "required": "Campo obbligatorio *",
+    "loading": "Caricamento info appartamento Roma...",
+    "error": "Errore Prenotazione",
+    "success": "Prenotazione Successo",
     "close": "Chiudi",
     "next": "Avanti",
     "previous": "Indietro"

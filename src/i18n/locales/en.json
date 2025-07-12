@@ -1,256 +1,256 @@
 {
   "nav": {
     "services": "Services",
-    "photos": "Photos",
-    "reviews": "Reviews", 
+    "photos": "Photos", 
+    "reviews": "Reviews",
     "contacts": "Contacts",
-    "availability": "Availability"
+    "availability": "Check Availability"
   },
   "hero": {
-    "title": "Rome Apartment Near Vatican",
-    "subtitle": "WiFi Netflix Sky - 2 stops from St. Peter's",
-    "description": "50m² two-room apartment in quiet Balduina. Perfect for couples, families and smart workers. Just 100 meters from Appiano FS station.",
+    "title": "Rome Vacation Rental Near Vatican",
+    "subtitle": "Holiday Apartment with WiFi Netflix Sky - 2 stops from St. Peter's",
+    "description": "Holiday apartment Rome near Vatican. 50m² vacation rental in quiet Balduina with free parking, WiFi, Netflix, Sky. Perfect for tourists visiting St. Peter's Basilica and Vatican Museums.",
     "features": {
       "station": "100m from FS Station",
-      "streaming": "Netflix & Sky",
-      "parking": "Free Parking"
+      "streaming": "Netflix & Sky Included",
+      "parking": "Free Street Parking"
     },
-    "cta": "Book Directly",
-    "guarantee": "Best price guaranteed - Bank transfer or PayPal",
+    "cta": "Book Direct - Best Rates",
+    "guarantee": "Best price guaranteed - Direct booking saves money",
     "trust": {
-      "rating": "9.2/10 Excellent",
-      "size": "50m² Two-room",
+      "rating": "9.2/10 Excellent Reviews",
+      "size": "50m² Holiday Apartment",
       "guests": "Up to 4 guests"
     }
   },
   "services": {
-    "title": "Services & Amenities",
-    "subtitle": "Everything you need for a comfortable stay in quiet Balduina",
+    "title": "Rome Apartment Amenities & Services",
+    "subtitle": "Everything you need for your Rome vacation in quiet Balduina near Vatican",
     "items": {
       "wifi": {
-        "title": "Free High-Speed WiFi",
-        "description": "High-speed internet connection for smart working"
+        "title": "Free High-Speed WiFi Internet",
+        "description": "Fast internet connection perfect for remote work and streaming"
       },
       "streaming": {
-        "title": "Netflix, Sky & Prime Video",
-        "description": "TV with all streaming services for your entertainment"
+        "title": "Netflix, Sky & Prime Video Included",
+        "description": "Smart TV with all streaming services for entertainment during your Rome stay"
       },
       "kitchen": {
         "title": "Fully Equipped Kitchen",
-        "description": "Refrigerator, coffee machine and all necessary utensils"
+        "description": "Refrigerator, coffee machine and all cooking utensils for your vacation rental"
       },
       "climate": {
         "title": "Air Conditioning & Heating",
-        "description": "Climate control for maximum comfort in every season"
+        "description": "Climate control for maximum comfort during your Rome holiday"
       },
       "parking": {
-        "title": "Free Parking",
-        "description": "Free street parking for your car"
+        "title": "Free Street Parking Rome",
+        "description": "Free parking for your car near the vacation rental"
       },
       "balcony": {
-        "title": "Garden View Balcony",
-        "description": "Private outdoor space to relax in the fresh air"
+        "title": "Private Garden View Balcony",
+        "description": "Outdoor space to relax during your Rome apartment stay"
       },
       "station": {
-        "title": "Station 100 meters away",
-        "description": "Appiano FS station reachable in 1 minute on foot"
+        "title": "Train Station 100m Away",
+        "description": "Appiano FS station - direct connection to Vatican and Rome center"
       },
       "cleaning": {
-        "title": "Impeccable Cleaning",
-        "description": "Professional cleaning and sanitization at every guest change"
+        "title": "Professional Cleaning Service",
+        "description": "Impeccable cleaning and sanitization for every vacation rental guest"
       },
       "pets": {
-        "title": "Pets Welcome",
-        "description": "Your four-legged friends are welcome (bowls included)"
+        "title": "Pet-Friendly Accommodation",
+        "description": "Your pets are welcome in our Rome vacation rental (bowls included)"
       }
     },
     "location": {
-      "title": "Excellent Location (9.7/10)",
-      "subtitle": "In quiet Balduina, with direct connections to the Vatican",
+      "title": "Excellent Location Near Vatican (9.7/10)",
+      "subtitle": "Quiet Balduina neighborhood with direct connections to St. Peter's and Rome attractions",
       "distances": {
-        "station": "Appiano Station",
-        "vatican": "St. Peter's",
-        "museums": "Vatican Museums", 
-        "airport": "FCO Airport"
+        "station": "Appiano FS Station",
+        "vatican": "St. Peter's Basilica",
+        "museums": "Vatican Museums",
+        "airport": "Rome Fiumicino Airport"
       }
     }
   },
   "gallery": {
-    "title": "Discover the Apartment",
-    "subtitle": "50m² of comfort in quiet Balduina - Double bedroom, living room and garden view balcony",
-    "cta": "Book Your Stay",
+    "title": "Rome Vacation Rental Photo Gallery",
+    "subtitle": "50m² holiday apartment in quiet Balduina - Double bedroom, living room and garden view balcony",
+    "cta": "Book Your Rome Holiday",
     "images": {
-      "living": "Living room with sofa bed and TV with Netflix and Sky",
-      "bedroom": "Large double bedroom",
-      "kitchen": "Equipped kitchen with refrigerator and coffee machine",
-      "bathroom": "Bathroom with shower and bidet",
-      "balcony": "Garden view balcony",
-      "dining": "Dining and relaxation area"
+      "living": "Living room with sofa bed and Smart TV with Netflix and Sky",
+      "bedroom": "Comfortable double bedroom in Rome apartment",
+      "kitchen": "Equipped kitchen with refrigerator and Italian coffee machine",
+      "bathroom": "Clean bathroom with shower and bidet",
+      "balcony": "Private balcony with garden view",
+      "dining": "Dining area perfect for Rome vacation meals"
     }
   },
   "reviews": {
-    "title": "Real Reviews from Our Guests",
-    "subtitle": "9.2/10 Excellent score on Booking.com - 12 verified reviews",
+    "title": "Real Guest Reviews - Rome Vacation Rental",
+    "subtitle": "9.2/10 Excellent rating on Booking.com - 12 verified reviews from Rome visitors",
     "badges": {
-      "booking": "Booking.com",
+      "booking": "Booking.com Verified",
       "cleanliness": "Cleanliness 10/10",
       "location": "Location 9.7/10",
-      "verified": "12 Reviews",
+      "verified": "12 Verified Reviews",
       "impeccable": "Impeccable",
       "excellent": "Excellent",
-      "verified_label": "Verified"
+      "verified_label": "Verified by Booking.com"
     },
-    "cta": "Become the Next Happy Guest",
+    "cta": "Book Your Rome Vacation Now",
     "trip_types": {
       "couple": "Couple",
       "family": "Family",
-      "solo": "Solo",
-      "business": "Business"
+      "solo": "Solo Traveler",
+      "business": "Business Travel"
     }
   },
   "contact": {
-    "title": "Check Availability",
-    "subtitle": "Contact us directly to receive the <strong>best rate</strong> and pay by bank transfer.",
+    "title": "Check Rome Apartment Availability",
+    "subtitle": "Contact us directly for the <strong>best vacation rental rates</strong> and secure payment options.",
     "checkin_info": "Check-in 3:00 PM-10:00 PM, Check-out 8:00 AM-11:00 AM.",
     "form": {
-      "title": "Check Availability",
+      "title": "Book Rome Vacation Rental",
       "name": "Full Name",
-      "phone": "Phone",
-      "email": "Email",
-      "checkin": "Check-in",
-      "checkout": "Check-out",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "checkin": "Check-in Date",
+      "checkout": "Check-out Date", 
       "guests": "Number of Guests",
-      "message": "Message",
-      "message_placeholder": "Tell us more about your stay...",
-      "submit": "🚀 Send Request",
-      "submitting": "Sending...",
+      "message": "Special Requests",
+      "message_placeholder": "Tell us about your Rome vacation plans...",
+      "submit": "🚀 Send Booking Request",
+      "submitting": "Sending Request...",
       "guests_options": {
         "1": "1 Guest",
         "2": "2 Guests",
-        "3": "3 Guests", 
+        "3": "3 Guests",
         "4": "4 Guests"
       }
     },
     "success": {
-      "title": "Request Sent!",
-      "message": "We will contact you within 2 hours with the best offer."
+      "title": "Booking Request Sent!",
+      "message": "We will contact you within 2 hours with the best Rome vacation rental offer."
     },
     "error": {
-      "title": "Error",
-      "message": "An error occurred. Please try again or contact us directly."
+      "title": "Booking Error",
+      "message": "An error occurred. Please try again or WhatsApp us directly."
     },
     "benefits": {
       "title": "Direct Booking Benefits",
-      "price": "Best price guaranteed - no intermediation commission",
+      "price": "Best vacation rental rates - no booking fees",
       "payment": "Flexible payments - bank transfer or PayPal",
       "multilingual": "Multilingual host - Italian, English, Spanish, French",
-      "family": "Family management - Trusted Roman family"
+      "family": "Family-run accommodation - trusted Rome hosts"
     },
     "payment": {
-      "title": "Payment Methods",
+      "title": "Secure Payment Methods",
       "bank_transfer": {
-        "title": "Bank Transfer",
-        "description": "3% discount - Secure payment directly to our account",
-        "benefit": "No additional fees"
+        "title": "Bank Transfer (3% Discount)",
+        "description": "Secure payment directly to our Rome vacation rental account",
+        "benefit": "No additional booking fees"
       },
       "paypal": {
-        "title": "PayPal",
-        "description": "Fast and secure payment with buyer protection",
+        "title": "PayPal Worldwide",
+        "description": "Fast and secure payment with international buyer protection",
         "benefits": "Accepted worldwide · Transaction protection"
       },
-      "security": "100% secure payment - You will receive payment details after availability confirmation",
-      "paypal_refund": "PayPal: PayPal refunds are processed within 24-48 hours"
+      "security": "100% secure payment - Payment details sent after availability confirmation",
+      "paypal_refund": "PayPal refunds processed within 24-48 hours"
     },
     "direct": {
-      "title": "Direct Contacts",
-      "email": "romacaputmundiguesthouse@gmail.com",
-      "whatsapp": "WhatsApp: +39 312 345 6789",
-      "support": "24/7 Support"
+      "title": "Direct Contact Rome Hosts",
+      "email": "info@romacaputmundiapt.it",
+      "whatsapp": "WhatsApp: +39 320 49 33 807",
+      "support": "24/7 Rome Vacation Support"
     },
     "platforms": {
-      "title": "You can also find us on:",
-      "license": "License: 058091-CAV-12914, IT058091B4DGY9ABNC"
+      "title": "Also available on booking platforms:",
+      "license": "Official License: 058091-CAV-12914, IT058091B4DGY9ABNC"
     },
     "cancellation": {
-      "title": "Cancellation Policy",
-      "checkbox": "I have read and accept the cancellation policy stated on the site.",
+      "title": "Rome Vacation Rental Cancellation Policy",
+      "checkbox": "I accept the cancellation policy for this Rome accommodation.",
       "full_refund": "Full Refund (100%)",
-      "full_refund_desc": "In case of cancellation after bank transfer payment, the amount paid will be fully refunded up to 7 days before arrival.",
-      "penalty": "Cancellation Penalty",
-      "penalty_desc": "For cancellations made beyond this term, the first night will be retained as a penalty.",
-      "how_to_refund": "How to Request a Refund",
-      "how_to_refund_desc": "To request a refund, contact us via:",
+      "full_refund_desc": "Bank transfer payments fully refunded up to 7 days before your Rome arrival.",
+      "penalty": "Cancellation Fee",
+      "penalty_desc": "Cancellations within 7 days: first night retained as penalty.",
+      "how_to_refund": "How to Request Refund",
+      "how_to_refund_desc": "Contact our Rome vacation rental team via:",
       "legal_protection": "Legal Protection",
-      "legal_protection_desc": "This policy protects you in case of disputes and ensures transparency in the booking and cancellation process.",
-      "understood": "Understood"
+      "legal_protection_desc": "This policy protects your Rome vacation booking and ensures transparent cancellation process.",
+      "understood": "I Understand"
     }
   },
   "footer": {
-    "description": "50m² two-room apartment in quiet Balduina. 100m from Appiano FS station, 2 stops from St. Peter's. High-speed WiFi, Netflix, Sky and all comforts for a perfect stay.",
+    "description": "Rome vacation rental near Vatican. 50m² holiday apartment in quiet Balduina, 100m from Appiano FS station, 2 stops from St. Peter's. High-speed WiFi, Netflix, Sky and all amenities for your perfect Rome holiday.",
     "links": {
-      "title": "Useful Links",
-      "services": "Services",
-      "gallery": "Photo Gallery",
-      "reviews": "Reviews",
-      "contacts": "Contacts",
+      "title": "Rome Vacation Rental Links",
+      "services": "Apartment Services",
+      "gallery": "Rome Apartment Photos",
+      "reviews": "Guest Reviews",
+      "contacts": "Contact Rome Hosts",
       "privacy": "Privacy Policy",
-      "admin": "Admin Area"
+      "admin": "Property Management"
     },
     "contact": {
-      "title": "Contacts",
-      "location": "Balduina, Rome",
+      "title": "Rome Accommodation Contact",
+      "location": "Balduina, Rome, Italy",
       "checkin": "Check-in 3:00 PM-10:00 PM",
       "checkout": "Check-out by 11:00 AM"
     },
-    "copyright": "© 2024 Rome Apartment Appiano FS. License: 058091-CAV-12914, IT058091B4DGY9ABNC",
-    "visitors": "visitors",
-    "this_month": "this month",
-    "developed": "Developed with ❤️ by",
-    "tagline": "Your two-room apartment in quiet Balduina"
+    "copyright": "© 2024 Rome Apartment Appiano FS. Official License: 058091-CAV-12914, IT058091B4DGY9ABNC",
+    "visitors": "visitors to our Rome vacation rental",
+    "this_month": "bookings this month",
+    "developed": "Rome vacation website developed with ❤️ by",
+    "tagline": "Your perfect Rome vacation rental near Vatican"
   },
   "privacy": {
-    "title": "Privacy Policy",
+    "title": "Rome Vacation Rental Privacy Policy",
     "effective_date": "Effective date:",
-    "back_to_home": "← Rome Apartment Appiano FS"
+    "back_to_home": "← Back to Rome Apartment"
   },
   "admin": {
-    "title": "Admin Area",
-    "subtitle": "Rome Apartment Appiano FS booking management",
+    "title": "Rome Vacation Rental Admin",
+    "subtitle": "Manage Rome apartment bookings and guests",
     "logout": "Logout",
     "login": {
-      "title": "Admin Access",
-      "subtitle": "Enter credentials to access",
-      "email": "Email",
+      "title": "Property Management Access",
+      "subtitle": "Rome vacation rental administration",
+      "email": "Admin Email",
       "password": "Password",
-      "submit": "Login",
+      "submit": "Access Admin Panel",
       "submitting": "Logging in...",
       "error": "Invalid credentials. Please try again."
     },
     "stats": {
-      "total_bookings": "Total Bookings",
+      "total_bookings": "Total Rome Bookings",
       "this_month": "This Month",
-      "total_guests": "Total Guests"
+      "total_guests": "Total Vacation Guests"
     },
     "bookings": {
-      "title": "Recent Bookings",
-      "loading": "Loading bookings...",
-      "empty": "No bookings found",
+      "title": "Recent Rome Vacation Bookings",
+      "loading": "Loading guest bookings...",
+      "empty": "No Rome bookings found",
       "table": {
-        "client": "Client",
-        "dates": "Dates",
-        "guests": "Guests",
-        "contact": "Contact",
-        "request_date": "Request Date",
-        "nights": "nights",
-        "send_email": "Send Email"
+        "client": "Guest Name",
+        "dates": "Rome Stay Dates",
+        "guests": "Number of Guests",
+        "contact": "Guest Contact",
+        "request_date": "Booking Date",
+        "nights": "nights in Rome",
+        "send_email": "Contact Guest"
       }
     }
   },
   "common": {
-    "required": "*",
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
+    "required": "Required field *",
+    "loading": "Loading Rome apartment info...",
+    "error": "Booking Error",
+    "success": "Booking Success",
     "close": "Close",
     "next": "Next",
     "previous": "Previous"
