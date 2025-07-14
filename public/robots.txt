@@ -4,12 +4,13 @@ Allow: /
 # Sitemap
 Sitemap: https://romacaputmundiapt.it/sitemap.xml
 
-# Disallow admin area
+# Disallow admin area (privato)
 Disallow: /admin
 
-# Allow important pages
+# Allow important pages (esplicito)
 Allow: /
 Allow: /privacy
+Allow: /images/
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
