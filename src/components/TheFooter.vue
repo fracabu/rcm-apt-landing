@@ -87,7 +87,8 @@
         <span class="text-roma-gold-400">{{ formatVisitorCount(monthlyVisitors) }}</span> questo mese
       </div>
       <div class="text-roma-300 text-sm">
-        {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong>
+        {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong> ·
+        Photo by <a href="https://www.pexels.com/it-it/foto/persone-in-concerto-1763075/" target="_blank" rel="noopener" class="text-roma-gold-400 hover:text-roma-gold-300">Sebastian Ervi</a> on Pexels
       </div>
       <div class="flex items-center justify-center space-x-2">
         <strong>Rome Apartment Appiano FS</strong>

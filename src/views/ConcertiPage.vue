@@ -6,8 +6,8 @@
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
-          src="/images/soggiorno.jpg" 
-          alt="Concerti Roma" 
+          src="/images/concerto.jpg" 
+          alt="Persone in concerto a Roma - Foto di Sebastian Ervi" 
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/60"></div>
