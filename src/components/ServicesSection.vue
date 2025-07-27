@@ -66,7 +66,6 @@ import {
   TvIcon, 
   HomeIcon, 
   SnowflakeIcon, 
-  CarIcon, 
   TreePineIcon, 
   TrainIcon, 
   SparklesIcon, 
