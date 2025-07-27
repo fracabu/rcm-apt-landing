@@ -64,11 +64,11 @@
           </div>
           <div class="flex items-center space-x-2">
             <HomeIcon class="w-5 h-5 text-amber-400" />
-            <span class="text-sm md:text-base">Appartamento 85m²</span>
+            <span class="text-sm md:text-base">Appartamento 55m²</span>
           </div>
           <div class="flex items-center space-x-2">
             <UsersIcon class="w-5 h-5 text-amber-400" />
-            <span class="text-sm md:text-base">Fino a 4 ospiti</span>
+            <span class="text-sm md:text-base">Fino a 3 ospiti</span>
           </div>
         </div>
       </div>
