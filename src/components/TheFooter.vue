@@ -20,10 +20,11 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Link Utili</h3>
           <ul class="space-y-2">
-            <li><a href="#servizi" class="text-roma-200 hover:text-gold-400 transition-colors">Servizi</a></li>
-            <li><a href="#gallery" class="text-roma-200 hover:text-gold-400 transition-colors">Galleria Foto</a></li>
-            <li><a href="#recensioni" class="text-roma-200 hover:text-gold-400 transition-colors">Recensioni</a></li>
-            <li><a href="#contatti" class="text-roma-200 hover:text-gold-400 transition-colors">Contatti</a></li>
+            <li><router-link to="/servizi" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Servizi</router-link></li>
+            <li><router-link to="/galleria" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Galleria Foto</router-link></li>
+            <li><router-link to="/recensioni" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Recensioni</router-link></li>
+            <li><router-link to="/concerti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Concerti Roma</router-link></li>
+            <li><router-link to="/contatti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Contatti</router-link></li>
             <li><router-link to="/privacy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Privacy Policy</router-link></li>
             <li><a href="#cancellation-policy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Termini di Cancellazione</a></li>
             <li><router-link to="/admin" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Area Admin</router-link></li>

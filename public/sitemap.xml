@@ -39,6 +39,46 @@
     </image:image>
   </url>
 
+  <!-- Servizi -->
+  <url>
+    <loc>https://romacaputmundiapt.it/servizi</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Galleria -->
+  <url>
+    <loc>https://romacaputmundiapt.it/galleria</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Recensioni -->
+  <url>
+    <loc>https://romacaputmundiapt.it/recensioni</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Concerti Roma 2025-2026 -->
+  <url>
+    <loc>https://romacaputmundiapt.it/concerti</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contatti -->
+  <url>
+    <loc>https://romacaputmundiapt.it/contatti</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://romacaputmundiapt.it/privacy</loc>

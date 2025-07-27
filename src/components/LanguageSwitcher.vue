@@ -67,10 +67,10 @@ const switchLanguage = (langCode: string) => {
 const updatePageTitle = (lang: string) => {
   const titles = {
     // NUOVO TITOLO IN ITALIANO
-    it: 'Casa Vacanze Roma Vaticano | Appartamento con Parcheggio Gratuito',
+    it: 'Casa Vacanze Roma Vaticano | Appartamento San Pietro',
     
     // NUOVO TITOLO IN INGLESE
-    en: 'Rome Apartment Near Vatican | with Free Parking & WiFi'
+    en: 'Rome Apartment Near Vatican | 2 Stops from St. Peter'
   }
   document.title = titles[lang as keyof typeof titles] || titles.it
 }

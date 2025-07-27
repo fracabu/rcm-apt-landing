@@ -9,11 +9,11 @@
   "hero": {
     "title": "Rome Vacation Rental Near Vatican",
     "subtitle": "Holiday Apartment with WiFi Netflix Sky - 2 stops from St. Peter's",
-    "description": "Holiday apartment Rome near Vatican. 50m² vacation rental in quiet Balduina with free parking, WiFi, Netflix, Sky. Perfect for tourists visiting St. Peter's Basilica and Vatican Museums.",
+    "description": "Holiday apartment Rome near Vatican. 50m² vacation rental in quiet Balduina with WiFi, Netflix, Sky. Perfect for tourists visiting St. Peter's Basilica and Vatican Museums.",
     "features": {
       "station": "100m from FS Station",
       "streaming": "Netflix & Sky Included",
-      "parking": "Free Street Parking"
+      "location": "2 Stops from St. Peter's"
     },
     "cta": "Book Direct - Best Rates",
     "guarantee": "Best price guaranteed - Direct booking saves money",
@@ -43,9 +43,9 @@
         "title": "Air Conditioning & Heating",
         "description": "Climate control for maximum comfort during your Rome holiday"
       },
-      "parking": {
-        "title": "Free Street Parking Rome",
-        "description": "Free parking for your car near the vacation rental"
+      "location": {
+        "title": "2 Stops from St. Peter's",
+        "description": "Direct connection to St. Peter's Basilica in just 2 train stops"
       },
       "balcony": {
         "title": "Private Garden View Balcony",

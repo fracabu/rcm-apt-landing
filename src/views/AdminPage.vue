@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <div class="min-h-screen bg-gray-50 flex flex-col">
     <!-- Header -->
     <header class="bg-white shadow-sm border-b">
       <div class="container mx-auto px-4 py-4">
@@ -19,7 +19,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="flex-1 container mx-auto px-4 py-8">
       <!-- Login Form -->
       <div v-if="!isAuthenticated" class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
         <div class="text-center mb-6">

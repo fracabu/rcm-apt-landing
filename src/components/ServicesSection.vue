@@ -101,9 +101,9 @@ const services: Service[] = [
   },
   {
     id: '5',
-    titleKey: 'services.items.parking.title',
-    descriptionKey: 'services.items.parking.description',
-    icon: CarIcon
+    titleKey: 'services.items.location.title',
+    descriptionKey: 'services.items.location.description',
+    icon: TrainIcon
   },
   {
     id: '6',

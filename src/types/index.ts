@@ -3,11 +3,12 @@ export interface Booking {
   name: string
   email: string
   phone: string
-  message: string
+  message?: string
   checkIn: string
   checkOut: string
   guests: number
   createdAt: Date
+  status?: 'pending' | 'confirmed' | 'cancelled'
 }
 
 export interface Testimonial {

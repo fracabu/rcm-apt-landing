@@ -241,10 +241,14 @@
 
               <button
                 type="submit"
-                :disabled="!form.acceptPolicy"
+                :disabled="!form.acceptPolicy || isSubmitting"
                 class="w-full btn-3d btn-3d-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
-                <span class="flex items-center">
+                <span v-if="isSubmitting" class="flex items-center">
+                  <LoaderIcon class="mr-2 h-4 w-4 animate-spin" />
+                  Invio in corso...
+                </span>
+                <span v-else class="flex items-center">
                   <RocketIcon class="mr-2 h-4 w-4" />
                   Invia Richiesta
                 </span>
@@ -256,8 +260,19 @@
               <div class="flex items-center text-sm">
                 <CheckCircleIcon class="text-green-500 h-5 w-5 mr-2" />
                 <div>
-                  <p class="text-green-800 font-semibold">Email aperta!</p>
-                  <p class="text-green-700 text-xs">Completa l'invio dal tuo client email.</p>
+                  <p class="text-green-800 font-semibold">Richiesta salvata con successo!</p>
+                  <p class="text-green-700 text-xs">Ti risponderemo entro 2 ore tramite email o WhatsApp (+39 320 49 33 807).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Error Message -->
+            <div v-if="showError" class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+              <div class="flex items-center text-sm">
+                <AlertTriangleIcon class="text-red-500 h-5 w-5 mr-2" />
+                <div>
+                  <p class="text-red-800 font-semibold">Errore nell'invio</p>
+                  <p class="text-red-700 text-xs">Riprova o contattaci direttamente via WhatsApp.</p>
                 </div>
               </div>
             </div>
@@ -442,8 +457,10 @@ import {
   ShieldIcon,
   CheckIcon,
   AlertTriangleIcon,
-  XIcon
+  XIcon,
+  LoaderIcon
 } from 'lucide-vue-next'
+import { submitBooking, sendBookingEmail } from '../services/bookings'
 
 const form = ref({
   name: '',
@@ -457,6 +474,8 @@ const form = ref({
 })
 
 const showSuccess = ref(false)
+const showError = ref(false)
+const isSubmitting = ref(false)
 const showCancellationPolicy = ref(false)
 
 const minDate = computed(() => {
@@ -464,49 +483,76 @@ const minDate = computed(() => {
   return today.toISOString().split('T')[0]
 })
 
-const submitForm = () => {
-  // Crea oggetto e corpo email
-  const subject = `Richiesta disponibilità - ${form.value.name}`
-  const body = `
-RICHIESTA DISPONIBILITÀ
-
-Nome: ${form.value.name}
-Email: ${form.value.email}
-Telefono: ${form.value.phone}
-
-Check-in: ${form.value.checkIn}
-Check-out: ${form.value.checkOut}
-Ospiti: ${form.value.guests}
-
-Messaggio:
-${form.value.message}
-
----
-Inviato da romacaputmundiapt.it
-  `.trim()
-
-  // Crea link mailto
-  const mailtoLink = `mailto:info@romacaputmundiapt.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+const submitForm = async () => {
+  if (isSubmitting.value) return
   
-  // Apri client email
-  window.location.href = mailtoLink
-  
-  // Mostra messaggio di successo
-  showSuccess.value = true
-  
-  // Reset form dopo 3 secondi
-  setTimeout(() => {
-    form.value = {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      checkIn: '',
-      checkOut: '',
-      guests: 2,
-      acceptPolicy: false
-    }
+  try {
+    isSubmitting.value = true
+    showError.value = false
     showSuccess.value = false
-  }, 3000)
+
+    // Valida i dati del form
+    if (!form.value.name || !form.value.email || !form.value.phone || 
+        !form.value.checkIn || !form.value.checkOut || !form.value.acceptPolicy) {
+      throw new Error('Compila tutti i campi obbligatori')
+    }
+
+    // Salva la prenotazione nel database
+    const bookingId = await submitBooking({
+      name: form.value.name,
+      email: form.value.email,
+      phone: form.value.phone,
+      checkIn: form.value.checkIn,
+      checkOut: form.value.checkOut,
+      guests: form.value.guests,
+      message: form.value.message || ''
+    })
+
+    // Prova a inviare email (non blocca se fallisce)
+    try {
+      await sendBookingEmail({
+        name: form.value.name,
+        email: form.value.email,
+        phone: form.value.phone,
+        checkIn: form.value.checkIn,
+        checkOut: form.value.checkOut,
+        guests: form.value.guests,
+        message: form.value.message || '',
+        createdAt: new Date(),
+        status: 'pending'
+      })
+      console.log('✅ Email inviata con successo')
+    } catch (emailError) {
+      console.warn('⚠️ Email fallita ma prenotazione salvata:', emailError)
+    }
+
+    // Mostra messaggio di successo
+    showSuccess.value = true
+    
+    // Reset form dopo 3 secondi
+    setTimeout(() => {
+      form.value = {
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        checkIn: '',
+        checkOut: '',
+        guests: 2,
+        acceptPolicy: false
+      }
+      showSuccess.value = false
+    }, 3000)
+
+  } catch (error) {
+    console.error('Errore invio richiesta:', error)
+    showError.value = true
+    
+    setTimeout(() => {
+      showError.value = false
+    }, 5000)
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>

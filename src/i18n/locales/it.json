@@ -9,11 +9,11 @@
   "hero": {
     "title": "Casa Vacanze Roma Appartamento Vaticano",
     "subtitle": "Affitto Breve Balduina - WiFi Netflix Sky - 2 fermate San Pietro",
-    "description": "Casa vacanze Roma vicino Vaticano. Appartamento turistico 50m² in affitto breve nella tranquilla Balduina con parcheggio gratuito, WiFi, Netflix, Sky. Perfetto per turisti che visitano San Pietro e Musei Vaticani.",
+    "description": "Casa vacanze Roma vicino Vaticano. Appartamento turistico 50m² in affitto breve nella tranquilla Balduina, WiFi, Netflix, Sky. Perfetto per turisti che visitano San Pietro e Musei Vaticani.",
     "features": {
       "station": "100m da Stazione FS",
       "streaming": "Netflix & Sky Inclusi",
-      "parking": "Parcheggio Gratuito Roma"
+      "location": "2 Fermate da San Pietro"
     },
     "cta": "Prenota Diretto - Miglior Prezzo",
     "guarantee": "Miglior prezzo garantito - Prenotazione diretta risparmia",
@@ -43,9 +43,9 @@
         "title": "Aria Condizionata & Riscaldamento",
         "description": "Climatizzazione per il massimo comfort durante il soggiorno Roma"
       },
-      "parking": {
-        "title": "Parcheggio Gratuito Roma Centro",
-        "description": "Parcheggio gratuito per la tua auto vicino alla casa vacanze"
+      "location": {
+        "title": "2 Fermate da San Pietro",
+        "description": "Collegamento diretto con la Basilica di San Pietro in soli 2 fermate di treno"
       },
       "balcony": {
         "title": "Balcone Privato Vista Giardino",

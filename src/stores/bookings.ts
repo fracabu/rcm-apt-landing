@@ -11,6 +11,7 @@ export const addBooking = async (booking: Omit<Booking, 'id' | 'createdAt'>) => 
     isLoading.value = true
     const docRef = await addDoc(collection(db, 'bookings'), {
       ...booking,
+      status: booking.status || 'pending',
       createdAt: new Date()
     })
     return docRef.id

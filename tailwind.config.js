@@ -8,6 +8,9 @@ export default {
     extend: {
       backgroundImage: {
         'gradient-modern': 'linear-gradient(135deg, #ffffff 0%, #fdf2f8 25%, #f5f5f4 100%)',
+        'gradient-elegant': 'linear-gradient(135deg, #fdf2f4 0%, #f9f7ff 30%, #faf7f5 60%, #f8fafc 100%)',
+        'gradient-roma': 'linear-gradient(135deg, #fdf2f4 0%, #fce7ea 20%, #f9f7ff 40%, #faf7f5 70%, #f8fafc 100%)',
+        'gradient-warm': 'linear-gradient(135deg, #fdfbf7 0%, #fff9f5 30%, #fef7f0 60%, #fdf4f0 100%)',
       },
       colors: {
         // AS Roma inspired palette
@@ -69,8 +72,8 @@ export default {
           500: '#78716c',
           600: '#57534e',
           700: '#44403c',
-          800: '#2E2E2E', // Testo principale
-          900: '#1F1F1F', // Testo scuro
+          800: '#2C2C2C', // Testo principale (più scuro)
+          900: '#1A1A1A', // Testo scuro (più scuro)
         },
         primary: {
           50: '#fdf2f2',

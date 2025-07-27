@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <div class="min-h-screen bg-gray-50 flex flex-col">
     <!-- Header -->
     <header class="bg-white shadow-sm">
       <div class="container mx-auto px-4 py-6">
@@ -13,7 +13,7 @@
     </header>
 
     <!-- Content -->
-    <main class="container mx-auto px-4 py-12">
+    <main class="flex-1 container mx-auto px-4 py-12">
       <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
         <div class="prose prose-lg max-w-none">
           <h1 class="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
