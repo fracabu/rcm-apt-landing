@@ -1,0 +1,93 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ======================================
+    // COLLEZIONE BOOKINGS (Prenotazioni)
+    // ======================================
+    
+    match /bookings/{bookingId} {
+      // Lettura: Solo admin autenticati
+      allow read: if isAdmin();
+      
+      // Scrittura: Chiunque può creare nuove prenotazioni (form pubblico)
+      // Solo admin possono modificare/eliminare
+      allow create: if isValidBooking() && request.resource.data.status == 'pending';
+      allow update, delete: if isAdmin();
+    }
+    
+    // ======================================
+    // COLLEZIONE ADMIN (Accesso amministrativo)
+    // ======================================
+    
+    match /admin/{document} {
+      // Solo admin autenticati possono accedere
+      allow read, write: if isAdmin();
+    }
+    
+    // ======================================
+    // COLLEZIONE VISITORS (Statistiche visite)
+    // ======================================
+    
+    match /visitors/{visitorId} {
+      // Lettura: Solo admin
+      allow read: if isAdmin();
+      
+      // Scrittura: Chiunque può registrare visite (tracking pubblico)
+      allow create: if isValidVisitor();
+      allow update, delete: if isAdmin();
+    }
+    
+    // ======================================
+    // COLLEZIONE STATISTICS (Metriche del sito)
+    // ======================================
+    
+    match /statistics/{statId} {
+      // Solo admin possono leggere/scrivere statistiche
+      allow read, write: if isAdmin();
+    }
+    
+    // ======================================
+    // DEFAULT: Nega tutto il resto
+    // ======================================
+    
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+  
+  // ======================================
+  // FUNZIONI HELPER
+  // ======================================
+  
+  // Verifica se l'utente è un amministratore
+  function isAdmin() {
+    return request.auth != null 
+           && request.auth.token.email_verified == true
+           && (request.auth.token.email == 'fracabu@gmail.com' || 
+               request.auth.token.email == 'info@romacaputmundiapt.it');
+  }
+  
+  // Valida i dati di una prenotazione
+  function isValidBooking() {
+    let data = request.resource.data;
+    return data.keys().hasAll(['name', 'email', 'phone', 'checkIn', 'checkOut', 'guests', 'status', 'createdAt'])
+           && data.name is string && data.name.size() > 0
+           && data.email is string && data.email.size() > 0 && data.email.matches('.*@.*')
+           && data.phone is string && data.phone.size() > 0
+           && data.checkIn is string && data.checkIn.size() > 0
+           && data.checkOut is string && data.checkOut.size() > 0
+           && data.guests is number && data.guests > 0 && data.guests <= 10
+           && data.status is string && data.status in ['pending', 'confirmed', 'cancelled']
+           && data.createdAt is timestamp;
+  }
+  
+  // Valida i dati di un visitatore
+  function isValidVisitor() {
+    let data = request.resource.data;
+    return data.keys().hasAll(['timestamp', 'userAgent'])
+           && data.timestamp is timestamp
+           && data.userAgent is string;
+  }
+}
