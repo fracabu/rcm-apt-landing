@@ -507,6 +507,8 @@ const submitForm = async () => {
       guests: form.value.guests,
       message: form.value.message || ''
     })
+    
+    console.log('✅ Prenotazione salvata con ID:', bookingId)
 
     // Prova a inviare email (non blocca se fallisce)
     try {

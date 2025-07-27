@@ -33,7 +33,7 @@
                 :alt="image.alt"
                 :class="[
                   'absolute transition-all duration-700 ease-in-out',
-                  getImageClasses(image, index),
+                  getImageClasses(image),
                   index === currentIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
                 ]"
                 @load="onImageLoad"
@@ -376,7 +376,7 @@ onMounted(() => {
 })
 
 // Handle different image orientations
-const getImageClasses = (image: any, index: number) => {
+const getImageClasses = (image: any) => {
   if (image.orientation === 'portrait') {
     return 'h-full w-auto object-contain max-w-full'
   } else {
