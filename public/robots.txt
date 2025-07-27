@@ -4,13 +4,33 @@ Allow: /
 # Sitemap
 Sitemap: https://romacaputmundiapt.it/sitemap.xml
 
-# Disallow admin area (privato)
+# Disallow admin area e file privati
 Disallow: /admin
+Disallow: /.git
+Disallow: /node_modules
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.ts$
 
-# Allow important pages (esplicito)
+# Allow important pages e risorse
 Allow: /
 Allow: /privacy
 Allow: /images/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.css$
+Allow: /*.js$
 
-# Crawl-delay for respectful crawling
+# Specifiche per Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specifiche per Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# General crawl-delay
 Crawl-delay: 1
