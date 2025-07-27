@@ -4,10 +4,9 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <!-- Company Info -->
         <div>
-          <h3 class="text-xl font-serif font-bold mb-4">Rome Apartment Appiano FS</h3>
+          <h3 class="text-xl font-serif font-bold mb-4">{{ $t('footer.company_name') }}</h3>
           <p class="text-roma-200 mb-4">
-            Bilocale 50m² nella tranquilla Balduina. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. 
-            WiFi veloce, Netflix, Sky e tutti i comfort per un soggiorno perfetto.
+            {{ $t('footer.description') }}
           </p>
           <div class="flex space-x-4">
             <a href="#" class="text-roma-300 hover:text-gold-400 transition-colors">
@@ -18,22 +17,22 @@
 
         <!-- Quick Links -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">Link Utili</h3>
+          <h3 class="text-lg font-semibold mb-4">{{ $t('footer.links.title') }}</h3>
           <ul class="space-y-2">
-            <li><router-link to="/servizi" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Servizi</router-link></li>
-            <li><router-link to="/galleria" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Galleria Foto</router-link></li>
-            <li><router-link to="/recensioni" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Recensioni</router-link></li>
-            <li><router-link to="/concerti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Concerti Roma</router-link></li>
-            <li><router-link to="/contatti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Contatti</router-link></li>
-            <li><router-link to="/privacy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Privacy Policy</router-link></li>
-            <li><a href="#cancellation-policy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Termini di Cancellazione</a></li>
-            <li><router-link to="/admin" class="text-roma-200 hover:text-roma-gold-400 transition-colors">Area Admin</router-link></li>
+            <li><router-link to="/servizi" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.services') }}</router-link></li>
+            <li><router-link to="/galleria" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.gallery') }}</router-link></li>
+            <li><router-link to="/recensioni" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.reviews') }}</router-link></li>
+            <li><router-link to="/concerti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.concerts') }}</router-link></li>
+            <li><router-link to="/contatti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.contacts') }}</router-link></li>
+            <li><router-link to="/privacy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.privacy') }}</router-link></li>
+            <li><a href="#cancellation-policy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.cancellation') }}</a></li>
+            <li><router-link to="/admin" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.admin') }}</router-link></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">Contatti</h3>
+          <h3 class="text-lg font-semibold mb-4">{{ $t('footer.contact.title') }}</h3>
           <div class="space-y-2 text-roma-200">
             <div class="flex items-center">
               <MailIcon class="mr-2 h-4 w-4" />
@@ -53,11 +52,11 @@
             </div>
             <div class="flex items-center">
               <ClockIcon class="mr-2 h-4 w-4" />
-              <span>Check-in 15:00-22:00</span>
+              <span>{{ $t('footer.contact.checkin') }}</span>
             </div>
             <div class="flex items-center">
               <Clock3Icon class="mr-2 h-4 w-4" />
-              <span>Check-out entro le 11:00</span>
+              <span>{{ $t('footer.contact.checkout') }}</span>
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@
         <div class="flex items-center space-x-4 text-sm text-roma-300">
           <router-link to="/privacy" class="hover:text-roma-gold-400 transition-colors">Privacy Policy</router-link>
           <span>•</span>
-          <a href="#cancellation-policy" class="hover:text-roma-gold-400 transition-colors">Cancellazione</a>
+          <a href="#cancellation-policy" class="hover:text-roma-gold-400 transition-colors">{{ $t('footer.legal.cancellation') }}</a>
           <span>•</span>
           <router-link to="/admin" class="hover:text-roma-gold-400 transition-colors">Admin</router-link>
         </div>
@@ -82,9 +81,9 @@
     <div class="text-center mt-6 space-y-2">
       <div class="text-roma-400 text-xs">
         <UsersIcon class="inline h-3 w-3 mr-1" />
-        {{ formatVisitorCount(visitorCount) }} visitatori totali · 
-        <span class="text-roma-gold-400">{{ todayVisitors }}</span> oggi ·
-        <span class="text-roma-gold-400">{{ formatVisitorCount(monthlyVisitors) }}</span> questo mese
+        {{ formatVisitorCount(visitorCount) }} {{ $t('footer.stats.visitors_total') }} · 
+        <span class="text-roma-gold-400">{{ todayVisitors }}</span> {{ $t('footer.stats.today') }} ·
+        <span class="text-roma-gold-400">{{ formatVisitorCount(monthlyVisitors) }}</span> {{ $t('footer.stats.this_month') }}
       </div>
       <div class="text-roma-300 text-sm">
         {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong> ·

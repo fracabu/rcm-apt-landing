@@ -4,10 +4,10 @@
       <!-- Section Header -->
       <div class="text-center mb-6 md:mb-8">
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-roma-800 mb-3">
-          Scopri il Bilocale
+          {{ $t('gallery.title') }}
         </h2>
         <p class="text-neutral-600 max-w-2xl mx-auto text-sm md:text-base">
-          50m² di comfort nella tranquilla Balduina - Camera matrimoniale, soggiorno e balcone vista giardino
+          {{ $t('gallery.subtitle') }}
         </p>
       </div>
 
@@ -160,7 +160,7 @@
             class="flex items-center space-x-2 bg-roma-600 hover:bg-roma-700 text-white px-4 py-2 rounded-full transition-colors duration-300"
           >
             <component :is="isPlaying ? PauseIcon : PlayIcon" class="w-4 h-4" />
-            <span class="text-sm font-medium">{{ isPlaying ? 'Pausa' : 'Play' }}</span>
+            <span class="text-sm font-medium">{{ isPlaying ? $t('common.pause') : $t('common.play') }}</span>
           </button>
           
           <div class="flex space-x-1">
@@ -177,7 +177,7 @@
       <!-- Call to Action -->
       <div class="text-center">
         <router-link to="/contatti" class="btn-3d btn-3d-lg bg-roma-600 hover:bg-roma-700">
-          Prenota il Tuo Soggiorno
+          {{ $t('gallery.cta') }}
         </router-link>
       </div>
     </div>

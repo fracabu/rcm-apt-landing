@@ -50,10 +50,10 @@
           >
             Prenota Ora
           </router-link>
-          <p class="text-gray-200 text-base md:text-lg">
+          <!-- <p class="text-gray-200 text-base md:text-lg">
             <DollarSignIcon class="inline h-5 w-5 text-amber-400 mr-2" />
             Miglior prezzo garantito • Cancellazione gratuita
-          </p>
+          </p> -->
         </div>
 
         <!-- Trust Indicators -->
@@ -84,5 +84,5 @@
 </template>
 
 <script setup lang="ts">
-import { TrainIcon, TvIcon, HomeIcon, UsersIcon, ChevronDownIcon, DollarSignIcon } from 'lucide-vue-next'
+import { TrainIcon, TvIcon, HomeIcon, UsersIcon, ChevronDownIcon } from 'lucide-vue-next'
 </script>

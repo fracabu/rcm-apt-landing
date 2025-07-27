@@ -24,6 +24,16 @@
     }
   },
   "services": {
+    "hero": {
+      "title": "Servizi e Comfort",
+      "subtitle": "Tutto per il Tuo Benessere",
+      "description": "WiFi veloce, Netflix, Sky, aria condizionata e tutti i comfort per un soggiorno perfetto nel cuore di Roma",
+      "benefits": {
+        "wifi": "WiFi Veloce",
+        "streaming": "Netflix & Sky",
+        "ac": "Aria Condizionata"
+      }
+    },
     "title": "Appartamento Roma Servizi e Dotazioni",
     "subtitle": "Casa vacanze Roma con tutti i comfort nella tranquilla Balduina vicino Vaticano",
     "items": {
@@ -76,6 +86,16 @@
     }
   },
   "gallery": {
+    "hero": {
+      "title": "Galleria Fotografica",
+      "subtitle": "Scopri il Tuo Futuro Soggiorno",
+      "description": "Esplora ogni angolo del nostro appartamento: dalla camera matrimoniale al balcone con vista giardino",
+      "benefits": {
+        "real_photos": "Foto Reali",
+        "size": "50m² di Comfort",
+        "renovated": "Recentemente Rinnovato"
+      }
+    },
     "title": "Casa Vacanze Roma Galleria Foto",
     "subtitle": "50m² appartamento turistico Balduina - Camera matrimoniale, soggiorno e balcone vista giardino",
     "cta": "Prenota la Tua Vacanza Roma",
@@ -89,6 +109,16 @@
     }
   },
   "reviews": {
+    "hero": {
+      "title": "Recensioni Ospiti",
+      "subtitle": "Punteggio 9.4/10 Eccellente",
+      "description": "Leggi le recensioni reali dei nostri ospiti e scopri perché scelgono sempre Roma Caput Mundi",
+      "benefits": {
+        "rating": "9.4/10 Booking.com",
+        "count": "12 Recensioni",
+        "verified": "Verificate"
+      }
+    },
     "title": "Recensioni Ospiti Reali - Casa Vacanze Roma",
     "subtitle": "Punteggio 9.2/10 Eccellente su Booking.com - 12 recensioni verificate visitatori Roma",
     "badges": {
@@ -101,6 +131,7 @@
       "verified_label": "Verificate da Booking.com"
     },
     "cta": "Prenota la Tua Vacanza Roma Ora",
+    "no_comment": "Recensione eccellente senza commento scritto",
     "trip_types": {
       "couple": "Coppia",
       "family": "Famiglia", 
@@ -109,6 +140,16 @@
     }
   },
   "contact": {
+    "hero": {
+      "title": "Prenota Ora",
+      "subtitle": "Il Tuo Soggiorno da Sogno",
+      "description": "Contattaci per prenotare il tuo soggiorno perfetto nel cuore di Roma. Risposta garantita entro 2 ore",
+      "benefits": {
+        "response": "Risposta in 2h",
+        "direct": "Prenotazione Diretta",
+        "location": "Centro Roma"
+      }
+    },
     "title": "Verifica Disponibilità Appartamento Roma",
     "subtitle": "Contattaci direttamente per le <strong>migliori tariffe casa vacanze</strong> e opzioni pagamento sicure.",
     "checkin_info": "Check-in 15:00-22:00, Check-out 08:00-11:00.",
@@ -162,10 +203,10 @@
       "paypal_refund": "Rimborsi PayPal processati entro 24-48 ore"
     },
     "direct": {
-      "title": "Contatto Diretto Host Roma",
+      "title": "Contatti Diretti",
       "email": "info@romacaputmundiapt.it",
       "whatsapp": "WhatsApp: +39 320 49 33 807",
-      "support": "Supporto Vacanza Roma 24/7"
+      "support": "Assistenza 24/7"
     },
     "platforms": {
       "title": "Disponibile anche su piattaforme prenotazione:",
@@ -186,21 +227,31 @@
     }
   },
   "footer": {
-    "description": "Casa vacanze Roma vicino Vaticano. Appartamento turistico 50m² in Balduina tranquilla, 100m da stazione Appiano FS, 2 fermate San Pietro. WiFi veloce, Netflix, Sky e tutti i comfort per la tua perfetta vacanza Roma.",
+    "company_name": "Rome Apartment Appiano FS",
+    "description": "Bilocale 50m² nella tranquilla Balduina. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. WiFi veloce, Netflix, Sky e tutti i comfort per un soggiorno perfetto.",
     "links": {
-      "title": "Link Casa Vacanze Roma",
-      "services": "Servizi Appartamento",
-      "gallery": "Foto Appartamento Roma",
-      "reviews": "Recensioni Ospiti", 
-      "contacts": "Contatti Host Roma",
+      "title": "Link Utili",
+      "services": "Servizi",
+      "gallery": "Galleria Foto",
+      "reviews": "Recensioni",
+      "concerts": "Concerti Roma",
+      "contacts": "Contatti",
       "privacy": "Privacy Policy",
-      "admin": "Gestione Proprietà"
+      "cancellation": "Termini di Cancellazione",
+      "admin": "Area Admin"
     },
     "contact": {
-      "title": "Contatti Appartamento Roma",
-      "location": "Balduina, Roma, Italia",
+      "title": "Contatti",
       "checkin": "Check-in 15:00-22:00",
       "checkout": "Check-out entro le 11:00"
+    },
+    "stats": {
+      "visitors_total": "visitatori totali",
+      "today": "oggi",
+      "this_month": "questo mese"
+    },
+    "legal": {
+      "cancellation": "Cancellazione"
     },
     "copyright": "© 2024 Rome Apartment Appiano FS. Licenza Ufficiale: 058091-CAV-12914, IT058091B4DGY9ABNC",
     "visitors": "visitatori casa vacanze Roma",
@@ -246,6 +297,150 @@
       }
     }
   },
+  "concerts": {
+    "title": "Concerti Roma 2025-2026",
+    "subtitle": "Sconto Esclusivo 20% per i Nostri Ospiti",
+    "description": "Scopri tutti i concerti a Roma con vantaggi esclusivi: sconto 20% per Auditorium e Santa Cecilia",
+    "benefits": {
+      "auditorium_discount": "Sconto 20% Auditorium",
+      "santa_cecilia_discount": "Sconto 20% Santa Cecilia",
+      "transport_info": "Info Trasporti Incluse"
+    },
+    "cta": "Prenota & Ottieni Sconto",
+    "venues": {
+      "auditorium": {
+        "name": "Auditorium Parco della Musica",
+        "description": "Il principale centro musicale di Roma con tre sale da concerto e una programmazione internazionale.",
+        "distance": "25 min con Metro",
+        "transport": "Metro A + Bus",
+        "discount": "20% di sconto per i nostri ospiti"
+      },
+      "santa_cecilia": {
+        "name": "Accademia Nazionale di Santa Cecilia",
+        "description": "Una delle più antiche istituzioni musicali del mondo, fondata nel 1585.",
+        "distance": "20 min con Metro",
+        "transport": "Metro A diretta",
+        "discount": "20% di sconto per i nostri ospiti"
+      }
+    },
+    "filters": {
+      "all": "Tutti i Concerti",
+      "auditorium": "Auditorium",
+      "santa_cecilia": "Santa Cecilia",
+      "circo_massimo": "Circo Massimo",
+      "olimpico": "Stadio Olimpico",
+      "altri": "Altri Venue"
+    },
+    "discount_banner": {
+      "title": "Sconto fino al 20%",
+      "description": "Disponibile per ospiti del nostro appartamento, solo su richiesta preventiva e in base alla disponibilità",
+      "auditorium_text": "Contattaci prima dell'acquisto per verificare disponibilità sconto",
+      "santa_cecilia_text": "Sconto applicabile solo se confermato dalla biglietteria ufficiale"
+    },
+    "status": {
+      "available": "Disponibile",
+      "sold_out": "Sold Out",
+      "few_tickets": "Ultimi Posti"
+    },
+    "card": {
+      "contact_for_discount": "Contattaci per info sconto",
+      "see_tickets": "Vedi Info Biglietti",
+      "check_official": "Prezzi sul sito ufficiale"
+    },
+    "how_to_get_discount": {
+      "title": "Come Richiedere lo Sconto",
+      "step1": {
+        "title": "Contattaci Prima",
+        "description": "PRIMA di acquistare biglietti, contattaci per verificare se lo sconto è disponibile"
+      },
+      "step2": {
+        "title": "Verifica Disponibilità",
+        "description": "Controlliamo con la biglietteria ufficiale se ci sono posti disponibili con sconto"
+      },
+      "step3": {
+        "title": "Conferma e Prenota",
+        "description": "Se confermato, prenoti l'appartamento e noi procediamo con l'acquisto scontato"
+      },
+      "how_it_works": {
+        "title": "⚠️ IMPORTANTE - Procedura Obbligatoria:",
+        "contact_first": "1. Contattaci PRIMA di qualsiasi acquisto tramite WhatsApp (+39 320 49 33 807) o email",
+        "specify_event": "2. Specifica concerto, data e settore desiderato",
+        "verify_availability": "3. Verifichiamo disponibilità sconto presso biglietteria ufficiale Auditorium",
+        "confirm_booking": "4. Solo se confermato, procedi con prenotazione appartamento + acquisto biglietti",
+        "no_guarantee": "Lo sconto NON è garantito e dipende dalla disponibilità presso la biglietteria ufficiale"
+      },
+      "cta": "Contattaci per Verificare Disponibilità Sconto"
+    },
+    "transport": {
+      "title": "Come Arrivare dall'Appartamento",
+      "auditorium": {
+        "title": "Auditorium & Santa Cecilia",
+        "metro": "🚇 Metro A: Flaminio (15 min) + Tram 2",
+        "bus": "🚌 Bus 53 diretto dall'appartamento",
+        "time": "⏱️ Tempo totale: 25-30 minuti"
+      },
+      "stadiums": {
+        "title": "Circo Massimo & Olimpico",
+        "metro1": "🚇 Metro A: Termini → Circo Massimo",
+        "metro2": "🚇 Metro A: Flaminio → Olimpico",
+        "time": "⏱️ Tempo totale: 30-40 minuti"
+      }
+    }
+  },
+  "museums": {
+    "title": "Musei e Siti Archeologici",
+    "subtitle": "Scopri i Tesori di Roma",
+    "description": "Dai Musei Vaticani al Colosseo, dai Musei Capitolini alle Terme di Caracalla. Prenota online e salta la fila!",
+    "benefits": {
+      "skip_line": "Skip the Line",
+      "nearby": "Vicinissimi",
+      "online_booking": "Prenotazione Online"
+    },
+    "categories": {
+      "all": "Tutti",
+      "vatican": "Vaticani",
+      "ancient": "Antichi",
+      "capitoline": "Capitolini",
+      "archaeological": "Archeologici"
+    },
+    "items": {
+      "vatican_museums": {
+        "name": "Musei Vaticani",
+        "description": "Una delle collezioni d'arte più importanti al mondo, con la Cappella Sistina di Michelangelo.",
+        "duration": "3-4 ore",
+        "distance": "2 fermate di treno",
+        "price": "€20-25",
+        "booking_url": "https://biglietteriamusei.vatican.va"
+      },
+      "colosseum": {
+        "name": "Colosseo",
+        "description": "L'anfiteatro più famoso del mondo, simbolo di Roma e dell'Impero Romano.",
+        "duration": "2-3 ore",
+        "distance": "30 min con Metro",
+        "price": "€16-22",
+        "booking_url": "https://colosseo.it"
+      },
+      "capitoline_museums": {
+        "name": "Musei Capitolini",
+        "description": "I più antichi musei pubblici del mondo, con capolavori dell'arte antica e rinascimentale.",
+        "duration": "2-3 ore",
+        "distance": "25 min con Metro",
+        "price": "€15",
+        "booking_url": "https://museicapitolini.org"
+      }
+    }
+  },
+  "pages": {
+    "restaurants": "Ristoranti",
+    "concerts": "Concerti",
+    "museums": "Musei",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "reviews": "Recensioni",
+    "contact": "Contatti",
+    "privacy": "Privacy",
+    "admin": "Admin"
+  },
   "common": {
     "required": "Campo obbligatorio *",
     "loading": "Caricamento info appartamento Roma...",
@@ -253,6 +448,8 @@
     "success": "Prenotazione Successo",
     "close": "Chiudi",
     "next": "Avanti",
-    "previous": "Indietro"
+    "previous": "Indietro",
+    "play": "Play",
+    "pause": "Pausa"
   }
 }

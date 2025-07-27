@@ -4,11 +4,12 @@
       <!-- Section Header -->
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-roma-800 mb-4">
-          Richiedi Disponibilità
+          {{ $t('contact.title') }}
         </h2>
-        <p class="text-neutral-700 max-w-4xl mx-auto text-lg">
-          Contattaci direttamente per ricevere la <strong>miglior tariffa</strong> e pagare con bonifico bancario. 
-          <span class="text-roma-600 font-semibold block mt-2">Check-in 15:00-22:00, Check-out 08:00-11:00.</span>
+        <p class="text-neutral-700 max-w-4xl mx-auto text-lg" v-html="$t('contact.subtitle')">
+        </p>
+        <p class="text-roma-600 font-semibold mt-2">
+          {{ $t('contact.checkin_info') }}
         </p>
       </div>
 
@@ -18,19 +19,19 @@
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
             <div class="flex items-center">
               <DollarSignIcon class="text-roma-gold-400 mr-2 h-5 w-5 flex-shrink-0" />
-              <span><strong>Miglior prezzo</strong> garantito</span>
+              <span v-html="$t('contact.benefits.price')"></span>
             </div>
             <div class="flex items-center">
               <CreditCardIcon class="text-roma-red-600 mr-2 h-5 w-5 flex-shrink-0" />
-              <span><strong>Pagamenti</strong> flessibili</span>
+              <span v-html="$t('contact.benefits.payment')"></span>
             </div>
             <div class="flex items-center">
               <ZapIcon class="text-roma-gold-400 mr-2 h-5 w-5 flex-shrink-0" />
-              <span><strong>Host</strong> multilingue</span>
+              <span v-html="$t('contact.benefits.multilingual')"></span>
             </div>
             <div class="flex items-center">
               <HomeIcon class="text-roma-red-600 mr-2 h-5 w-5 flex-shrink-0" />
-              <span><strong>Gestione</strong> familiare</span>
+              <span v-html="$t('contact.benefits.family')"></span>
             </div>
           </div>
         </div>
@@ -46,7 +47,7 @@
             <div class="bg-white p-6 rounded-2xl shadow-lg">
               <h3 class="text-lg font-semibold text-roma-800 mb-4 flex items-center">
                 <CreditCardIcon class="mr-2 h-5 w-5 text-roma-600" />
-                Metodi di Pagamento
+                {{ $t('contact.payment.title') }}
               </h3>
               
               <!-- Bank Transfer -->
@@ -54,8 +55,8 @@
                 <div class="flex items-start">
                   <BuildingIcon class="mr-2 h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 class="font-semibold text-green-800 text-sm">Bonifico - Sconto 3%</h4>
-                    <p class="text-xs text-green-700">Nessuna commissione</p>
+                    <h4 class="font-semibold text-green-800 text-sm">{{ $t('contact.payment.bank_transfer.title') }}</h4>
+                    <p class="text-xs text-green-700">{{ $t('contact.payment.bank_transfer.benefit') }}</p>
                   </div>
                 </div>
               </div>
@@ -69,8 +70,8 @@
                     </svg>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-blue-800 text-sm">PayPal</h4>
-                    <p class="text-xs text-blue-700">Protezione acquirente</p>
+                    <h4 class="font-semibold text-blue-800 text-sm">{{ $t('contact.payment.paypal.title') }}</h4>
+                    <p class="text-xs text-blue-700">{{ $t('contact.payment.paypal.benefits') }}</p>
                   </div>
                 </div>
               </div>
@@ -78,14 +79,14 @@
               <div class="mt-3 p-2 bg-neutral-50 rounded-lg">
                 <p class="text-xs text-neutral-600 flex items-center">
                   <ShieldCheckIcon class="mr-1 h-3 w-3 text-green-600" />
-                  <strong>100% Sicuro</strong>
+                  <strong>{{ $t('contact.payment.security') }}</strong>
                 </p>
               </div>
             </div>
 
             <!-- Direct Contact -->
             <div class="bg-white p-6 rounded-2xl shadow-lg">
-              <h3 class="text-lg font-semibold text-roma-800 mb-4">Contatti Diretti</h3>
+              <h3 class="text-lg font-semibold text-roma-800 mb-4">{{ $t('contact.direct.title') }}</h3>
               <div class="space-y-3 text-sm">
                 <a href="mailto:info@romacaputmundiapt.it" class="flex items-center text-roma-600 hover:underline">
                   <MailIcon class="mr-2 h-4 w-4" />
@@ -97,14 +98,14 @@
                 </a>
                 <div class="flex items-center text-neutral-700">
                   <ClockIcon class="mr-2 h-4 w-4 text-roma-600" />
-                  Assistenza 24/7
+                  {{ $t('contact.direct.support') }}
                 </div>
               </div>
             </div>
 
             <!-- Alternative Platforms -->
             <div class="bg-neutral-100 p-4 rounded-2xl">
-              <h4 class="text-sm font-semibold text-neutral-800 mb-3">Ci trovi anche su:</h4>
+              <h4 class="text-sm font-semibold text-neutral-800 mb-3">{{ $t('contact.platforms.title') }}</h4>
               <div class="space-y-2">
                 <a href="https://www.booking.com/hotel/it/roma-caput-mundi-guest-house.it.html" target="_blank" 
                    class="flex items-center justify-center bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">
@@ -116,31 +117,31 @@
                 </a>
               </div>
               <p class="text-xs text-neutral-600 mt-2 text-center">
-                Licenza: 058091-CAV-12914
+                {{ $t('contact.platforms.license') }}
               </p>
             </div>
           </div>
 
           <!-- Center Column - Contact Form -->
           <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg">
-            <h3 class="text-2xl font-semibold text-roma-800 mb-6">Richiedi Disponibilità</h3>
+            <h3 class="text-2xl font-semibold text-roma-800 mb-6">{{ $t('contact.form.title') }}</h3>
             
             <form @submit.prevent="submitForm" class="space-y-4">
               <!-- Personal Info - Side by side -->
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label for="name" class="block text-xs font-medium text-neutral-700 mb-1">Nome *</label>
+                  <label for="name" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.name') }} *</label>
                   <input
                     id="name"
                     v-model="form.name"
                     type="text"
                     required
                     class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
-                    placeholder="Il tuo nome"
+                    :placeholder="$t('contact.form.name')"
                   >
                 </div>
                 <div>
-                  <label for="phone" class="block text-xs font-medium text-neutral-700 mb-1">Telefono *</label>
+                  <label for="phone" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.phone') }} *</label>
                   <input
                     id="phone"
                     v-model="form.phone"
@@ -153,21 +154,21 @@
               </div>
 
               <div>
-                <label for="email" class="block text-xs font-medium text-neutral-700 mb-1">Email *</label>
+                <label for="email" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.email') }} *</label>
                 <input
                   id="email"
                   v-model="form.email"
                   type="email"
                   required
                   class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
-                  placeholder="tua@email.com"
+                  :placeholder="$t('contact.form.email')"
                 >
               </div>
 
               <!-- Stay Details - 3 columns -->
               <div class="grid grid-cols-3 gap-3">
                 <div>
-                  <label for="checkin" class="block text-xs font-medium text-neutral-700 mb-1">Check-in *</label>
+                  <label for="checkin" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.checkin') }} *</label>
                   <input
                     id="checkin"
                     v-model="form.checkIn"
@@ -178,7 +179,7 @@
                   >
                 </div>
                 <div>
-                  <label for="checkout" class="block text-xs font-medium text-neutral-700 mb-1">Check-out *</label>
+                  <label for="checkout" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.checkout') }} *</label>
                   <input
                     id="checkout"
                     v-model="form.checkOut"
@@ -189,7 +190,7 @@
                   >
                 </div>
                 <div>
-                  <label for="guests" class="block text-xs font-medium text-neutral-700 mb-1">Ospiti *</label>
+                  <label for="guests" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.guests') }} *</label>
                   <select
                     id="guests"
                     v-model="form.guests"

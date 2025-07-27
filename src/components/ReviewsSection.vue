@@ -4,10 +4,10 @@
       <!-- Section Header -->
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-roma-800 mb-4">
-          Recensioni Reali dei Nostri Ospiti
+          {{ $t('reviews.title') }}
         </h2>
         <p class="text-neutral-600 max-w-2xl mx-auto">
-          Punteggio 9.4/10 Eccellente - 12 recensioni verificate su Booking.com
+          {{ $t('reviews.subtitle') }}
         </p>
       </div>
 
@@ -45,7 +45,7 @@
             "{{ review.comment }}"
           </blockquote>
           <div v-else class="text-neutral-500 text-sm italic">
-            Recensione eccellente senza commento scritto
+            {{ $t('reviews.no_comment') }}
           </div>
         </div>
       </div>

@@ -20,8 +20,8 @@
           <router-link to="/servizi" class="nav-link">{{ $t('nav.services') }}</router-link>
           <router-link to="/galleria" class="nav-link">{{ $t('nav.photos') }}</router-link>
           <router-link to="/recensioni" class="nav-link">{{ $t('nav.reviews') }}</router-link>
-          <router-link to="/concerti" class="nav-link">Concerti</router-link>
-          <router-link to="/musei" class="nav-link">Musei</router-link>
+          <router-link to="/concerti" class="nav-link">{{ $t('pages.concerts') }}</router-link>
+          <router-link to="/musei" class="nav-link">{{ $t('pages.museums') }}</router-link>
           <router-link to="/contatti" class="nav-link">{{ $t('nav.contacts') }}</router-link>
           <LanguageSwitcher />
           <router-link to="/contatti" class="btn-primary">
@@ -42,8 +42,8 @@
           <router-link to="/servizi" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.services') }}</router-link>
           <router-link to="/galleria" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.photos') }}</router-link>
           <router-link to="/recensioni" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.reviews') }}</router-link>
-          <router-link to="/concerti" @click="closeMobileMenu" class="nav-link-mobile">Concerti</router-link>
-          <router-link to="/musei" @click="closeMobileMenu" class="nav-link-mobile">Musei</router-link>
+          <router-link to="/concerti" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('pages.concerts') }}</router-link>
+          <router-link to="/musei" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('pages.museums') }}</router-link>
           <router-link to="/contatti" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.contacts') }}</router-link>
           <div class="flex justify-center">
             <LanguageSwitcher />

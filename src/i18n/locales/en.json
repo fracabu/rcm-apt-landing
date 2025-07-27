@@ -24,6 +24,16 @@
     }
   },
   "services": {
+    "hero": {
+      "title": "Services & Comfort",
+      "subtitle": "Everything for Your Wellbeing",
+      "description": "High-speed WiFi, Netflix, Sky, air conditioning and all amenities for a perfect stay in the heart of Rome",
+      "benefits": {
+        "wifi": "High-Speed WiFi",
+        "streaming": "Netflix & Sky",
+        "ac": "Air Conditioning"
+      }
+    },
     "title": "Rome Apartment Amenities & Services",
     "subtitle": "Everything you need for your Rome vacation in quiet Balduina near Vatican",
     "items": {
@@ -76,6 +86,16 @@
     }
   },
   "gallery": {
+    "hero": {
+      "title": "Photo Gallery",
+      "subtitle": "Discover Your Future Stay",
+      "description": "Explore every corner of our apartment: from the master bedroom to the garden view balcony",
+      "benefits": {
+        "real_photos": "Real Photos",
+        "size": "50m² of Comfort",
+        "renovated": "Recently Renovated"
+      }
+    },
     "title": "Rome Vacation Rental Photo Gallery",
     "subtitle": "50m² holiday apartment in quiet Balduina - Double bedroom, living room and garden view balcony",
     "cta": "Book Your Rome Holiday",
@@ -89,6 +109,16 @@
     }
   },
   "reviews": {
+    "hero": {
+      "title": "Guest Reviews",
+      "subtitle": "9.4/10 Excellent Rating",
+      "description": "Read real reviews from our guests and discover why they always choose Roma Caput Mundi",
+      "benefits": {
+        "rating": "9.4/10 Booking.com",
+        "count": "12 Reviews",
+        "verified": "Verified"
+      }
+    },
     "title": "Real Guest Reviews - Rome Vacation Rental",
     "subtitle": "9.2/10 Excellent rating on Booking.com - 12 verified reviews from Rome visitors",
     "badges": {
@@ -101,6 +131,7 @@
       "verified_label": "Verified by Booking.com"
     },
     "cta": "Book Your Rome Vacation Now",
+    "no_comment": "Excellent review without written comment",
     "trip_types": {
       "couple": "Couple",
       "family": "Family",
@@ -109,6 +140,16 @@
     }
   },
   "contact": {
+    "hero": {
+      "title": "Book Now",
+      "subtitle": "Your Dream Stay",
+      "description": "Contact us to book your perfect stay in the heart of Rome. Guaranteed response within 2 hours",
+      "benefits": {
+        "response": "Reply in 2h",
+        "direct": "Direct Booking",
+        "location": "Rome Center"
+      }
+    },
     "title": "Check Rome Apartment Availability",
     "subtitle": "Contact us directly for the <strong>best vacation rental rates</strong> and secure payment options.",
     "checkin_info": "Check-in 3:00 PM-10:00 PM, Check-out 8:00 AM-11:00 AM.",
@@ -162,10 +203,10 @@
       "paypal_refund": "PayPal refunds processed within 24-48 hours"
     },
     "direct": {
-      "title": "Direct Contact Rome Hosts",
+      "title": "Direct Contacts",
       "email": "info@romacaputmundiapt.it",
       "whatsapp": "WhatsApp: +39 320 49 33 807",
-      "support": "24/7 Rome Vacation Support"
+      "support": "24/7 Support"
     },
     "platforms": {
       "title": "Also available on booking platforms:",
@@ -186,21 +227,31 @@
     }
   },
   "footer": {
-    "description": "Rome vacation rental near Vatican. 50m² holiday apartment in quiet Balduina, 100m from Appiano FS station, 2 stops from St. Peter's. High-speed WiFi, Netflix, Sky and all amenities for your perfect Rome holiday.",
+    "company_name": "Rome Apartment Appiano FS",
+    "description": "50m² apartment in quiet Balduina. 100m from Appiano FS station, 2 stops from St. Peter's. High-speed WiFi, Netflix, Sky and all amenities for a perfect stay.",
     "links": {
-      "title": "Rome Vacation Rental Links",
-      "services": "Apartment Services",
-      "gallery": "Rome Apartment Photos",
-      "reviews": "Guest Reviews",
-      "contacts": "Contact Rome Hosts",
+      "title": "Quick Links",
+      "services": "Services",
+      "gallery": "Photo Gallery",
+      "reviews": "Reviews",
+      "concerts": "Rome Concerts",
+      "contacts": "Contacts",
       "privacy": "Privacy Policy",
-      "admin": "Property Management"
+      "cancellation": "Cancellation Terms",
+      "admin": "Admin Area"
     },
     "contact": {
-      "title": "Rome Accommodation Contact",
-      "location": "Balduina, Rome, Italy",
+      "title": "Contacts",
       "checkin": "Check-in 3:00 PM-10:00 PM",
       "checkout": "Check-out by 11:00 AM"
+    },
+    "stats": {
+      "visitors_total": "total visitors",
+      "today": "today",
+      "this_month": "this month"
+    },
+    "legal": {
+      "cancellation": "Cancellation"
     },
     "copyright": "© 2024 Rome Apartment Appiano FS. Official License: 058091-CAV-12914, IT058091B4DGY9ABNC",
     "visitors": "visitors to our Rome vacation rental",
@@ -246,6 +297,150 @@
       }
     }
   },
+  "concerts": {
+    "title": "Rome Concerts 2025-2026",
+    "subtitle": "Exclusive 20% Discount for Our Guests",
+    "description": "Discover all Rome concerts with exclusive benefits: 20% discount for Auditorium and Santa Cecilia",
+    "benefits": {
+      "auditorium_discount": "20% Discount Auditorium",
+      "santa_cecilia_discount": "20% Discount Santa Cecilia",
+      "transport_info": "Transport Info Included"
+    },
+    "cta": "Book & Get Discount",
+    "venues": {
+      "auditorium": {
+        "name": "Auditorium Parco della Musica",
+        "description": "Rome's main music center with three concert halls and international programming.",
+        "distance": "25 min by Metro",
+        "transport": "Metro A + Bus",
+        "discount": "20% discount for our guests"
+      },
+      "santa_cecilia": {
+        "name": "Accademia Nazionale di Santa Cecilia",
+        "description": "One of the world's oldest musical institutions, founded in 1585.",
+        "distance": "20 min by Metro",
+        "transport": "Direct Metro A",
+        "discount": "20% discount for our guests"
+      }
+    },
+    "filters": {
+      "all": "All Concerts",
+      "auditorium": "Auditorium",
+      "santa_cecilia": "Santa Cecilia",
+      "circo_massimo": "Circo Massimo",
+      "olimpico": "Olympic Stadium",
+      "altri": "Other Venues"
+    },
+    "discount_banner": {
+      "title": "Up to 20% Discount",
+      "description": "Available for our apartment guests, only upon prior request and subject to availability",
+      "auditorium_text": "Contact us before purchase to verify discount availability",
+      "santa_cecilia_text": "Discount applicable only if confirmed by official box office"
+    },
+    "status": {
+      "available": "Available",
+      "sold_out": "Sold Out",
+      "few_tickets": "Few Tickets Left"
+    },
+    "card": {
+      "contact_for_discount": "Contact us for discount info",
+      "see_tickets": "See Ticket Info",
+      "check_official": "Prices on official website"
+    },
+    "how_to_get_discount": {
+      "title": "How to Request Discount",
+      "step1": {
+        "title": "Contact Us First",
+        "description": "BEFORE buying tickets, contact us to verify if discount is available"
+      },
+      "step2": {
+        "title": "Check Availability",
+        "description": "We check with official box office if discounted seats are available"
+      },
+      "step3": {
+        "title": "Confirm and Book",
+        "description": "If confirmed, book the apartment and we proceed with discounted purchase"
+      },
+      "how_it_works": {
+        "title": "⚠️ IMPORTANT - Mandatory Procedure:",
+        "contact_first": "1. Contact us BEFORE any purchase via WhatsApp (+39 320 49 33 807) or email",
+        "specify_event": "2. Specify concert, date and desired sector",
+        "verify_availability": "3. We verify discount availability with official Auditorium box office",
+        "confirm_booking": "4. Only if confirmed, proceed with apartment booking + ticket purchase",
+        "no_guarantee": "Discount is NOT guaranteed and depends on availability at official box office"
+      },
+      "cta": "Contact Us to Verify Discount Availability"
+    },
+    "transport": {
+      "title": "How to Get There from the Apartment",
+      "auditorium": {
+        "title": "Auditorium & Santa Cecilia",
+        "metro": "🚇 Metro A: Flaminio (15 min) + Tram 2",
+        "bus": "🚌 Bus 53 direct from apartment",
+        "time": "⏱️ Total time: 25-30 minutes"
+      },
+      "stadiums": {
+        "title": "Circo Massimo & Olympic",
+        "metro1": "🚇 Metro A: Termini → Circo Massimo",
+        "metro2": "🚇 Metro A: Flaminio → Olympic",
+        "time": "⏱️ Total time: 30-40 minutes"
+      }
+    }
+  },
+  "museums": {
+    "title": "Museums and Archaeological Sites",
+    "subtitle": "Discover Rome's Treasures",
+    "description": "From Vatican Museums to Colosseum, from Capitoline Museums to Baths of Caracalla. Book online and skip the line!",
+    "benefits": {
+      "skip_line": "Skip the Line",
+      "nearby": "Very Close",
+      "online_booking": "Online Booking"
+    },
+    "categories": {
+      "all": "All",
+      "vatican": "Vatican",
+      "ancient": "Ancient",
+      "capitoline": "Capitoline",
+      "archaeological": "Archaeological"
+    },
+    "items": {
+      "vatican_museums": {
+        "name": "Vatican Museums",
+        "description": "One of the world's most important art collections, including Michelangelo's Sistine Chapel.",
+        "duration": "3-4 hours",
+        "distance": "2 train stops",
+        "price": "€20-25",
+        "booking_url": "https://biglietteriamusei.vatican.va"
+      },
+      "colosseum": {
+        "name": "Colosseum",
+        "description": "The world's most famous amphitheater, symbol of Rome and the Roman Empire.",
+        "duration": "2-3 hours",
+        "distance": "30 min by Metro",
+        "price": "€16-22",
+        "booking_url": "https://colosseo.it"
+      },
+      "capitoline_museums": {
+        "name": "Capitoline Museums",
+        "description": "The world's oldest public museums with masterpieces of ancient and Renaissance art.",
+        "duration": "2-3 hours",
+        "distance": "25 min by Metro",
+        "price": "€15",
+        "booking_url": "https://museicapitolini.org"
+      }
+    }
+  },
+  "pages": {
+    "restaurants": "Restaurants",
+    "concerts": "Concerts",
+    "museums": "Museums",
+    "services": "Services",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "admin": "Admin"
+  },
   "common": {
     "required": "Required field *",
     "loading": "Loading Rome apartment info...",
@@ -253,6 +448,8 @@
     "success": "Booking Success",
     "close": "Close",
     "next": "Next",
-    "previous": "Previous"
+    "previous": "Previous",
+    "play": "Play",
+    "pause": "Pause"
   }
 }
