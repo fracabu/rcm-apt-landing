@@ -64,8 +64,11 @@ service cloud.firestore {
   // Verifica se l'utente è un amministratore
   function isAdmin() {
     return request.auth != null 
+           && request.auth.uid != null
            && (request.auth.token.email == 'fracabu@gmail.com' || 
-               request.auth.token.email == 'info@romacaputmundiapt.it');
+               request.auth.token.email == 'info@romacaputmundiapt.it' ||
+               request.auth.token.firebase.identities.email[0] == 'fracabu@gmail.com' ||
+               request.auth.token.firebase.identities.email[0] == 'info@romacaputmundiapt.it');
   }
   
   // Valida i dati di una prenotazione
