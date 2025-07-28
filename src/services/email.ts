@@ -1,81 +1,82 @@
-import { functions } from '../firebase/config'
-import { httpsCallable } from 'firebase/functions'
+import emailjs from '@emailjs/browser'
 import type { Booking } from '../types'
 
-// Cloud Function per invio email
-const sendBookingNotificationFunction = httpsCallable(functions, 'sendBookingNotification')
+// Configurazione EmailJS
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 export const initEmailJS = () => {
-  console.log('✅ Firebase Functions configurato per invio email')
+  if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
+    console.error('❌ EmailJS configuration missing')
+    return false
+  }
+  
+  emailjs.init(EMAILJS_PUBLIC_KEY)
+  console.log('✅ EmailJS configurato per invio email')
+  return true
 }
 
 export const sendBookingNotification = async (bookingData: Booking): Promise<boolean> => {
   try {
-    console.log('📧 Invio email tramite Firebase Functions:', bookingData)
-
-    // Prepara i dati per la Cloud Function
-    const functionData = {
-      name: bookingData.name,
-      email: bookingData.email,
-      phone: bookingData.phone,
-      checkIn: bookingData.checkIn,
-      checkOut: bookingData.checkOut,
-      guests: bookingData.guests,
-      message: bookingData.message || ''
+    if (!initEmailJS()) {
+      throw new Error('EmailJS not configured')
     }
 
-    // Chiama la Cloud Function
-    const result = await sendBookingNotificationFunction(functionData)
+    console.log('📧 Invio email tramite EmailJS:', bookingData)
+
+    // Calcola numero di notti
+    const nights = calculateNights(bookingData.checkIn, bookingData.checkOut)
     
-    console.log('✅ Email inviata con successo tramite Firebase:', result.data)
+    // Prepara i dati per EmailJS template
+    const templateData = {
+      from_name: bookingData.name,
+      from_email: bookingData.email,
+      phone: bookingData.phone,
+      phone_clean: bookingData.phone.replace(/\D/g, ''), // Solo numeri per WhatsApp
+      checkin_date: new Date(bookingData.checkIn).toLocaleDateString('it-IT'),
+      checkout_date: new Date(bookingData.checkOut).toLocaleDateString('it-IT'),
+      guests: bookingData.guests,
+      nights: `${nights} ${nights === 1 ? 'notte' : 'notti'}`,
+      message: bookingData.message || 'Nessun messaggio aggiuntivo',
+      booking_date: new Date().toLocaleDateString('it-IT', {
+        year: 'numeric',
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })
+    }
+
+    // Debug: log dei dati che stiamo inviando
+    console.log('📧 Dati template EmailJS:', templateData)
+    console.log('📧 Config EmailJS:', { 
+      serviceId: EMAILJS_SERVICE_ID, 
+      templateId: EMAILJS_TEMPLATE_ID,
+      publicKey: EMAILJS_PUBLIC_KEY 
+    })
+
+    // Invia email tramite EmailJS
+    const result = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateData
+    )
+    
+    console.log('✅ Email inviata con successo tramite EmailJS:', result.status, result.text)
     return true
 
   } catch (error) {
-    console.error('❌ Errore invio email tramite Firebase:', error)
+    console.error('❌ Errore invio email tramite EmailJS:', error)
     
-    // Fallback: prova con EmailJS diretto alla tua email
-    try {
-      console.log('🔄 Tentativo con metodo alternativo...')
-      
-      // Invio email diretto a info@romacaputmundiapt.it
-      const emailData = {
-        to_email: 'info@romacaputmundiapt.it',
-        from_name: 'Roma Caput Mundi Website',
-        reply_to: bookingData.email,
-        subject: `🏛️ Nuova Prenotazione - ${bookingData.name} (${bookingData.checkIn} - ${bookingData.checkOut})`,
-        message: `
-NUOVA PRENOTAZIONE RICEVUTA
-
-👤 CLIENTE:
-Nome: ${bookingData.name}
-Email: ${bookingData.email}
-Telefono: ${bookingData.phone}
-
-🗓️ SOGGIORNO:
-Check-in: ${bookingData.checkIn}
-Check-out: ${bookingData.checkOut}
-Ospiti: ${bookingData.guests}
-
-💬 MESSAGGIO:
-${bookingData.message || 'Nessun messaggio'}
-
-⚡ AZIONE RICHIESTA:
-Rispondere entro 2 ore tramite email o WhatsApp
-
----
-Inviato automaticamente dal sito romacaputmundiapt.it
-        `.trim()
-      }
-
-      // Simulazione invio (sostituire con EmailJS quando configurato)
-      console.log('📧 Email preparata per invio:', emailData)
-      console.log('✅ Email alternativa "inviata" (simulata)')
-      
-      return true
-    } catch (fallbackError) {
-      console.warn('⚠️ Anche il metodo alternativo è fallito, ma prenotazione salvata:', fallbackError)
-      return true
+    // Log dettagliato dell'errore per debug
+    if (error instanceof Error) {
+      console.error('Error details:', error.message)
     }
+    
+    // Anche se l'email fallisce, la prenotazione è salvata nel database
+    console.warn('⚠️ Email fallita ma prenotazione salvata nel database')
+    return false
   }
 }
 

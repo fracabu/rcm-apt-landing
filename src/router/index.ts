@@ -6,6 +6,7 @@ import ReviewsPage from '../views/ReviewsPage.vue'
 import ContactPage from '../views/ContactPage.vue'
 import ConcertiPage from '../views/ConcertiPage.vue'
 import MuseiPage from '../views/MuseiPage.vue'
+import RestaurantsPage from '../views/RestaurantsPage.vue'
 import AdminPage from '../views/AdminPage.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
 
@@ -55,6 +56,16 @@ const router = createRouter({
         title: 'Musei e Siti Archeologici Roma | Biglietti e Visite',
         description: 'Scopri i principali musei di Roma: Vaticani, Colosseo, Capitolini, Galleria Borghese. Prenota biglietti e salta la fila!',
         keywords: 'musei roma, musei vaticani, colosseo, pantheon, galleria borghese, capitolini, biglietti musei roma'
+      }
+    },
+    {
+      path: '/ristoranti',
+      name: 'restaurants',
+      component: RestaurantsPage,
+      meta: {
+        title: 'Ristoranti e Trattorie Romane | Cucina Autentica',
+        description: 'Scopri le migliori trattorie romane vicine al nostro appartamento. Carbonara, amatriciana, cacio e pepe: i veri sapori di Roma.',
+        keywords: 'ristoranti roma, trattorie romane, carbonara, amatriciana, cacio e pepe, cucina romana'
       }
     },
     {

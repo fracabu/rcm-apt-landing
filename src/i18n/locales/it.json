@@ -430,6 +430,50 @@
       }
     }
   },
+  "restaurants": {
+    "hero": {
+      "title": "Ristoranti e Trattorie Romane",
+      "subtitle": "I Sapori Autentici della Capitale",
+      "description": "Scopri le migliori trattorie romane vicine al nostro appartamento. Dalla carbonara alla cacio e pepe, vivi i veri sapori di Roma",
+      "benefits": {
+        "authentic": "Cucina Autentica",
+        "nearby": "Vicino all'Appartamento",
+        "local_tips": "Consigli Locali"
+      }
+    },
+    "intro": {
+      "title": "Le Nostre Trattorie Preferite",
+      "description": "Una selezione delle migliori trattorie romane, dalla vicinissima Mastica ai grandi classici del centro storico"
+    },
+    "categories": {
+      "all": "Tutti",
+      "centro": "Centro Storico",
+      "trastevere": "Trastevere",
+      "prati": "Prati/Vaticano",
+      "tradizionale": "Tradizionale",
+      "moderna": "Moderna"
+    },
+    "card": {
+      "specialties": "Specialità",
+      "view_map": "Vedi Mappa",
+      "website": "Sito Web"
+    },
+    "tips": {
+      "title": "Consigli per Mangiare a Roma",
+      "timing": {
+        "title": "Orari dei Pasti",
+        "lunch": "Pranzo: 12:30-15:00 (molti locali chiudono alle 14:30)",
+        "dinner": "Cena: 19:30-23:00 (i romani cenano tardi)",
+        "booking": "Prenotazione consigliata, soprattutto nei weekend"
+      },
+      "payment": {
+        "title": "Pagamenti e Mance",
+        "cash": "Contanti sempre accettati, molti locali tradizionali li preferiscono",
+        "cards": "Carte accettate nella maggior parte dei ristoranti",
+        "tip": "Mancia: 5-10% se il servizio è buono (non obbligatoria)"
+      }
+    }
+  },
   "pages": {
     "restaurants": "Ristoranti",
     "concerts": "Concerti",

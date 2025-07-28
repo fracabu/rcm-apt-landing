@@ -430,6 +430,50 @@
       }
     }
   },
+  "restaurants": {
+    "hero": {
+      "title": "Roman Restaurants and Trattorias",
+      "subtitle": "Authentic Flavors of the Capital",
+      "description": "Discover the best Roman trattorias near our apartment. From carbonara to cacio e pepe, experience the true flavors of Rome",
+      "benefits": {
+        "authentic": "Authentic Cuisine",
+        "nearby": "Near the Apartment",
+        "local_tips": "Local Tips"
+      }
+    },
+    "intro": {
+      "title": "Our Favorite Trattorias",
+      "description": "A selection of the best Roman trattorias, from the nearby Mastica to the great classics of the historic center"
+    },
+    "categories": {
+      "all": "All",
+      "centro": "Historic Center",
+      "trastevere": "Trastevere",
+      "prati": "Prati/Vatican",
+      "tradizionale": "Traditional",
+      "moderna": "Modern"
+    },
+    "card": {
+      "specialties": "Specialties",
+      "view_map": "View Map",
+      "website": "Website"
+    },
+    "tips": {
+      "title": "Tips for Dining in Rome",
+      "timing": {
+        "title": "Meal Times",
+        "lunch": "Lunch: 12:30-3:00 PM (many places close at 2:30 PM)",
+        "dinner": "Dinner: 7:30-11:00 PM (Romans dine late)",
+        "booking": "Reservations recommended, especially on weekends"
+      },
+      "payment": {
+        "title": "Payment and Tips",
+        "cash": "Cash always accepted, many traditional places prefer it",
+        "cards": "Cards accepted in most restaurants",
+        "tip": "Tip: 5-10% if service is good (not mandatory)"
+      }
+    }
+  },
   "pages": {
     "restaurants": "Restaurants",
     "concerts": "Concerts",

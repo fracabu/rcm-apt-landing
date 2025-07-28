@@ -23,6 +23,7 @@
             <li><router-link to="/galleria" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.gallery') }}</router-link></li>
             <li><router-link to="/recensioni" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.reviews') }}</router-link></li>
             <li><router-link to="/concerti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.concerts') }}</router-link></li>
+            <li><router-link to="/ristoranti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('pages.restaurants') }}</router-link></li>
             <li><router-link to="/contatti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.contacts') }}</router-link></li>
             <li><router-link to="/privacy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.privacy') }}</router-link></li>
             <li><a href="#cancellation-policy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.cancellation') }}</a></li>
