@@ -7,7 +7,7 @@ export interface Booking {
   checkIn: string
   checkOut: string
   guests: number
-  createdAt: Date
+  createdAt: Date | { toDate(): Date } | any
   status?: 'pending' | 'confirmed' | 'cancelled'
 }
 

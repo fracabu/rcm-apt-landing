@@ -243,7 +243,7 @@ const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('it-IT')
 }
 
-const formatDateTime = (date: Date | any) => {
+const formatDateTime = (date: Date | { toDate(): Date } | any) => {
   if (!date) return 'N/A'
   
   try {
