@@ -7,8 +7,22 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 export const initEmailJS = () => {
+  console.log('🔍 EmailJS Configuration Check:', {
+    hasPublicKey: !!EMAILJS_PUBLIC_KEY,
+    hasServiceId: !!EMAILJS_SERVICE_ID,
+    hasTemplateId: !!EMAILJS_TEMPLATE_ID,
+    environment: import.meta.env.MODE,
+    publicKey: EMAILJS_PUBLIC_KEY ? `${EMAILJS_PUBLIC_KEY.substring(0, 8)}...` : 'MISSING',
+    serviceId: EMAILJS_SERVICE_ID || 'MISSING',
+    templateId: EMAILJS_TEMPLATE_ID || 'MISSING'
+  })
+  
   if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
-    console.error('❌ EmailJS configuration missing')
+    console.error('❌ EmailJS configuration missing:', {
+      EMAILJS_PUBLIC_KEY: !!EMAILJS_PUBLIC_KEY,
+      EMAILJS_SERVICE_ID: !!EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID: !!EMAILJS_TEMPLATE_ID
+    })
     return false
   }
   

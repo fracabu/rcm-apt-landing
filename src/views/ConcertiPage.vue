@@ -3,7 +3,7 @@
     <TheHeader />
     
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
           src="/images/concerto.jpg" 
@@ -12,29 +12,29 @@
         />
         <div class="absolute inset-0 bg-black/60"></div>
       </div>
-      <div class="container mx-auto px-4 py-8 relative mt-24 md:mt-28">
+      <div class="container mx-auto px-4 py-12 relative mt-16 md:mt-20 lg:mt-24">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 animate-fade-in drop-shadow-2xl">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-4 lg:mb-6 animate-fade-in drop-shadow-2xl">
             {{ $t('concerts.title') }}
-            <span class="block text-2xl md:text-4xl lg:text-5xl text-amber-200 mt-4 font-light">
+            <span class="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-amber-200 mt-2 lg:mt-4 font-light">
               {{ $t('concerts.subtitle') }}
             </span>
           </h1>
-          <p class="text-lg md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+          <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 lg:mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
             {{ $t('concerts.description') }}
           </p>
           <!-- Benefits -->
-          <div class="flex flex-wrap justify-center gap-4 mb-12 text-sm md:text-base">
-            <span class="bg-green-500/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-medium shadow-lg border border-green-400/30 flex items-center gap-2">
-              <TicketIcon class="w-4 h-4" />
+          <div class="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-6 lg:mb-12 text-xs sm:text-sm md:text-base">
+            <span class="bg-green-500/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-green-400/30 flex items-center gap-2">
+              <TicketIcon class="w-3 h-3 sm:w-4 sm:h-4" />
               <span>{{ $t('concerts.benefits.auditorium_discount') }}</span>
             </span>
-            <span class="bg-green-500/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-medium shadow-lg border border-green-400/30 flex items-center gap-2">
-              <MusicIcon class="w-4 h-4" />
+            <span class="bg-green-500/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-green-400/30 flex items-center gap-2">
+              <MusicIcon class="w-3 h-3 sm:w-4 sm:h-4" />
               <span>{{ $t('concerts.benefits.santa_cecilia_discount') }}</span>
             </span>
-            <span class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-medium shadow-lg border border-white/30 flex items-center gap-2">
-              <MapPinIcon class="w-4 h-4" />
+            <span class="bg-white/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-white/30 flex items-center gap-2">
+              <MapPinIcon class="w-3 h-3 sm:w-4 sm:h-4" />
               <span>{{ $t('concerts.benefits.transport_info') }}</span>
             </span>
           </div>
