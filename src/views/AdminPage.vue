@@ -111,8 +111,16 @@
 
         <!-- Bookings Table -->
         <div class="bg-white rounded-lg shadow">
-          <div class="px-6 py-4 border-b border-gray-200">
+          <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
             <h3 class="text-lg font-medium text-gray-900">Prenotazioni Recenti</h3>
+            <button 
+              @click="refreshBookings"
+              :disabled="bookingsLoading"
+              class="bg-roma-600 text-white px-4 py-2 rounded-lg hover:bg-roma-700 disabled:opacity-50 transition-colors flex items-center gap-2"
+            >
+              <LoaderIcon v-if="bookingsLoading" class="w-4 h-4 animate-spin" />
+              <span>{{ bookingsLoading ? 'Aggiornamento...' : 'Aggiorna' }}</span>
+            </button>
           </div>
 
           <div v-if="bookingsLoading" class="p-8 text-center">
@@ -241,9 +249,12 @@ const calculateNights = (checkIn: string, checkOut: string) => {
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24))
 }
 
-onMounted(async () => {
+const refreshBookings = async () => {
   if (isAuthenticated.value) {
     await fetchBookings()
   }
-})
+}
+
+// Remove automatic fetchBookings on mount to avoid permission errors
+// fetchBookings will be called after successful login in handleLogin
 </script>
