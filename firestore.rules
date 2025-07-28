@@ -61,10 +61,13 @@ service cloud.firestore {
   // FUNZIONI HELPER
   // ======================================
   
-  // Verifica se l'utente è un amministratore (versione debug)
+  // Verifica se l'utente è un amministratore
   function isAdmin() {
-    // Temporaneamente permetti a tutti gli utenti autenticati per debug
-    return request.auth != null && request.auth.uid != null;
+    return request.auth != null 
+           && request.auth.uid != null
+           && (request.auth.token.email == 'fracabu@gmail.com' || 
+               request.auth.token.email == 'info@romacaputmundiapt.it' ||
+               request.auth.token.email == 'admin@admin.it');
   }
   
   // Valida i dati di una prenotazione

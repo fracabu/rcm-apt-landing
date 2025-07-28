@@ -219,8 +219,19 @@ const currentMonthBookings = computed(() => {
   const currentYear = now.getFullYear()
   
   return bookings.value.filter(booking => {
-    const bookingDate = new Date(booking.createdAt)
-    return bookingDate.getMonth() === currentMonth && bookingDate.getFullYear() === currentYear
+    if (!booking.createdAt) return false
+    
+    try {
+      // Gestisce sia Date objects che Firestore Timestamps
+      const dateObj = booking.createdAt.toDate ? booking.createdAt.toDate() : new Date(booking.createdAt)
+      
+      if (isNaN(dateObj.getTime())) return false
+      
+      return dateObj.getMonth() === currentMonth && dateObj.getFullYear() === currentYear
+    } catch (error) {
+      console.warn('Errore calcolo mese corrente:', error, booking.createdAt)
+      return false
+    }
   }).length
 })
 
@@ -232,14 +243,26 @@ const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('it-IT')
 }
 
-const formatDateTime = (date: Date) => {
-  return new Date(date).toLocaleDateString('it-IT', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
-  })
+const formatDateTime = (date: Date | any) => {
+  if (!date) return 'N/A'
+  
+  try {
+    // Gestisce sia Date objects che Firestore Timestamps
+    const dateObj = date.toDate ? date.toDate() : new Date(date)
+    
+    if (isNaN(dateObj.getTime())) return 'Data non valida'
+    
+    return dateObj.toLocaleDateString('it-IT', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
+  } catch (error) {
+    console.warn('Errore formattazione data:', error, date)
+    return 'Data non valida'
+  }
 }
 
 const calculateNights = (checkIn: string, checkOut: string) => {
