@@ -64,7 +64,6 @@ service cloud.firestore {
   // Verifica se l'utente è un amministratore
   function isAdmin() {
     return request.auth != null 
-           && request.auth.token.email_verified == true
            && (request.auth.token.email == 'fracabu@gmail.com' || 
                request.auth.token.email == 'info@romacaputmundiapt.it');
   }
