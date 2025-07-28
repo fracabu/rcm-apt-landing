@@ -222,8 +222,24 @@ const currentMonthBookings = computed(() => {
     if (!booking.createdAt) return false
     
     try {
-      // Gestisce sia Date objects che Firestore Timestamps
-      const dateObj = booking.createdAt.toDate ? booking.createdAt.toDate() : new Date(booking.createdAt)
+      let dateObj: Date
+      
+      // Gestisce Firestore Timestamp
+      if (booking.createdAt.toDate && typeof booking.createdAt.toDate === 'function') {
+        dateObj = booking.createdAt.toDate()
+      }
+      // Gestisce oggetti con seconds e nanoseconds
+      else if (booking.createdAt.seconds && typeof booking.createdAt.seconds === 'number') {
+        dateObj = new Date(booking.createdAt.seconds * 1000)
+      }
+      // Gestisce Date objects normali
+      else if (booking.createdAt instanceof Date) {
+        dateObj = booking.createdAt
+      }
+      // Gestisce stringhe/numeri
+      else {
+        dateObj = new Date(booking.createdAt)
+      }
       
       if (isNaN(dateObj.getTime())) return false
       
@@ -247,10 +263,29 @@ const formatDateTime = (date: Date | { toDate(): Date } | any) => {
   if (!date) return 'N/A'
   
   try {
-    // Gestisce sia Date objects che Firestore Timestamps
-    const dateObj = date.toDate ? date.toDate() : new Date(date)
+    let dateObj: Date
     
-    if (isNaN(dateObj.getTime())) return 'Data non valida'
+    // Gestisce Firestore Timestamp
+    if (date.toDate && typeof date.toDate === 'function') {
+      dateObj = date.toDate()
+    }
+    // Gestisce oggetti con seconds e nanoseconds (Firestore Timestamp serializzato)
+    else if (date.seconds && typeof date.seconds === 'number') {
+      dateObj = new Date(date.seconds * 1000)
+    }
+    // Gestisce Date objects normali
+    else if (date instanceof Date) {
+      dateObj = date
+    }
+    // Gestisce stringhe/numeri
+    else {
+      dateObj = new Date(date)
+    }
+    
+    if (isNaN(dateObj.getTime())) {
+      console.warn('Data non valida:', date)
+      return 'Data non valida'
+    }
     
     return dateObj.toLocaleDateString('it-IT', {
       day: '2-digit',
