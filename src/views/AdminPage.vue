@@ -177,7 +177,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { LoaderIcon, FileTextIcon, CalendarIcon, TrendingUpIcon, UsersIcon } from 'lucide-vue-next'
 import { login, logout, isAuthenticated, isLoading as authLoading } from '../stores/auth'
