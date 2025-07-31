@@ -33,8 +33,11 @@ export const initEmailJS = () => {
 
 export const sendBookingNotification = async (bookingData: Booking): Promise<boolean> => {
   try {
+    console.log('🔍 Starting email send process...')
+    
     if (!initEmailJS()) {
-      throw new Error('EmailJS not configured')
+      console.error('❌ EmailJS configuration failed')
+      throw new Error('EmailJS service not available. Please check configuration.')
     }
 
     console.log('📧 Invio email tramite EmailJS:', bookingData)
@@ -85,8 +88,31 @@ export const sendBookingNotification = async (bookingData: Booking): Promise<boo
     
     // Log dettagliato dell'errore per debug
     if (error instanceof Error) {
-      console.error('Error details:', error.message)
+      console.error('Error details:', {
+        message: error.message,
+        name: error.name,
+        stack: error.stack
+      })
     }
+    
+    // Log specifico per errori EmailJS
+    if (error && typeof error === 'object' && 'status' in error) {
+      console.error('EmailJS Error Status:', error.status)
+      console.error('EmailJS Error Text:', error.text)
+    }
+    
+    // Log della configurazione per debug
+    console.error('Configuration debug:', {
+      hasServiceId: !!EMAILJS_SERVICE_ID,
+      hasTemplateId: !!EMAILJS_TEMPLATE_ID,
+      hasPublicKey: !!EMAILJS_PUBLIC_KEY,
+      serviceId: EMAILJS_SERVICE_ID,
+      templateId: EMAILJS_TEMPLATE_ID,
+      env: import.meta.env.MODE
+    })
+    
+    // Log del payload inviato
+    console.error('Template data sent:', templateData)
     
     // Anche se l'email fallisce, la prenotazione è salvata nel database
     console.warn('⚠️ Email fallita ma prenotazione salvata nel database')

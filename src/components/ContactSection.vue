@@ -349,6 +349,12 @@ const submitForm = async () => {
       console.log('✅ Email inviata con successo')
     } catch (emailError) {
       console.warn('⚠️ Email fallita ma prenotazione salvata:', emailError)
+      // Log dell'errore specifico per debugging
+      console.error('Dettagli errore email:', {
+        error: emailError,
+        timestamp: new Date().toISOString(),
+        formData: form.value
+      })
     }
 
     // Mostra messaggio di successo
@@ -369,11 +375,21 @@ const submitForm = async () => {
 
   } catch (error) {
     console.error('Errore invio richiesta:', error)
+    
+    // Log dettagliato per debugging
+    if (error instanceof Error) {
+      console.error('Error details:', {
+        message: error.message,
+        stack: error.stack,
+        formData: form.value
+      })
+    }
+    
     showError.value = true
     
     setTimeout(() => {
       showError.value = false
-    }, 5000)
+    }, 8000) // Tempo più lungo per leggere l'errore
   } finally {
     isSubmitting.value = false
   }
