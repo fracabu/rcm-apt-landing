@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { collection, addDoc, getDocs, orderBy, query } from 'firebase/firestore'
+import { collection, addDoc, getDocs, deleteDoc, doc, orderBy, query } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import type { Booking } from '../types'
 
@@ -34,6 +34,23 @@ export const fetchBookings = async () => {
     })) as Booking[]
   } catch (error) {
     console.error('Errore nel recuperare le prenotazioni:', error)
+    throw error
+  } finally {
+    isLoading.value = false
+  }
+}
+
+export const deleteBooking = async (bookingId: string) => {
+  try {
+    isLoading.value = true
+    await deleteDoc(doc(db, 'bookings', bookingId))
+    
+    // Rimuovi la prenotazione dalla lista locale
+    bookings.value = bookings.value.filter(booking => booking.id !== bookingId)
+    
+    console.log('Prenotazione eliminata con successo:', bookingId)
+  } catch (error) {
+    console.error('Errore nell\'eliminare la prenotazione:', error)
     throw error
   } finally {
     isLoading.value = false

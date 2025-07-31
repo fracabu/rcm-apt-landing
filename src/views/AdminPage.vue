@@ -142,6 +142,7 @@
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ospiti</th>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contatto</th>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Richiesta</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Azioni</th>
                 </tr>
               </thead>
               <tbody class="bg-white divide-y divide-gray-200">
@@ -165,6 +166,16 @@
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {{ formatDateTime(booking.createdAt) }}
                   </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button
+                      @click="handleDeleteBooking(booking.id!, booking.name)"
+                      :disabled="bookingsLoading"
+                      class="bg-red-600 text-white px-3 py-1 rounded text-xs hover:bg-red-700 disabled:opacity-50 transition-colors flex items-center gap-1"
+                    >
+                      <TrashIcon class="w-3 h-3" />
+                      Elimina
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -178,9 +189,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { LoaderIcon, FileTextIcon, CalendarIcon, TrendingUpIcon, UsersIcon } from 'lucide-vue-next'
+import { LoaderIcon, FileTextIcon, CalendarIcon, TrendingUpIcon, UsersIcon, TrashIcon } from 'lucide-vue-next'
 import { login, logout, isAuthenticated, isLoading as authLoading } from '../stores/auth'
-import { fetchBookings, bookings, isLoading as bookingsLoading } from '../stores/bookings'
+import { fetchBookings, deleteBooking, bookings, isLoading as bookingsLoading } from '../stores/bookings'
 
 const router = useRouter()
 
@@ -309,6 +320,20 @@ const calculateNights = (checkIn: string, checkOut: string) => {
 const refreshBookings = async () => {
   if (isAuthenticated.value) {
     await fetchBookings()
+  }
+}
+
+const handleDeleteBooking = async (bookingId: string, customerName: string) => {
+  if (!confirm(`Sei sicuro di voler eliminare la prenotazione di ${customerName}?`)) {
+    return
+  }
+  
+  try {
+    await deleteBooking(bookingId)
+    console.log(`Prenotazione di ${customerName} eliminata con successo`)
+  } catch (error) {
+    console.error('Errore nell\'eliminare la prenotazione:', error)
+    alert('Errore nell\'eliminare la prenotazione. Riprova.')
   }
 }
 
