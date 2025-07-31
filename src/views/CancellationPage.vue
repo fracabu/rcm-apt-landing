@@ -120,7 +120,7 @@ import {
   ShieldCheckIcon
 } from 'lucide-vue-next'
 
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 
 const currentDate = computed(() => {
   return new Date().toLocaleDateString(locale.value === 'it' ? 'it-IT' : 'en-US', {

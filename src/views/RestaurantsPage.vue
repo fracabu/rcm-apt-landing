@@ -190,7 +190,7 @@ import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
 import { 
   UtensilsIcon, 
-  MapPinIcon, 
+  // MapPinIcon, 
   HeartIcon,
   ClockIcon,
   CreditCardIcon,
@@ -214,7 +214,7 @@ interface Restaurant {
   mapUrl: string
 }
 
-const { t, tm } = useI18n()
+const { tm } = useI18n()
 
 const selectedCategory = ref('all')
 
@@ -247,7 +247,7 @@ const restaurants = computed(() => {
   const restaurantItems = tm('restaurants.items')
   if (!restaurantItems || typeof restaurantItems !== 'object') return []
   
-  return Object.entries(restaurantItems).map(([key, restaurant]: [string, any], index) => ({
+  return Object.entries(restaurantItems).map(([key, restaurant]: [string, any]) => ({
     id: key,
     name: restaurant.name,
     category: restaurant.category,

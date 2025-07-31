@@ -37,7 +37,7 @@
             <!-- Dots Indicator -->
             <div class="flex space-x-2">
               <button
-                v-for="(image, index) in featuredImages"
+                v-for="(_, index) in featuredImages"
                 :key="index"
                 @click="setCurrentImage(index)"
                 class="w-2 h-2 rounded-full transition-all duration-300 focus:outline-none"
@@ -132,7 +132,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { 
-  PlayIcon, 
+  // PlayIcon, 
   HomeIcon, 
   TvIcon,
   TreePineIcon,
@@ -142,7 +142,7 @@ import {
 import { ChefHat as ChefHatIcon } from 'lucide-vue-next'
 
 const currentImageIndex = ref(0)
-const totalPhotos = ref(12)
+// const totalPhotos = ref(12)
 
 const featuredImages = [
   {

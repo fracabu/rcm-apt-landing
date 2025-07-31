@@ -110,7 +110,7 @@ import { StarIcon, CheckCircleIcon, MapPinIcon, UsersIcon } from 'lucide-vue-nex
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 
-const { t, tm } = useI18n()
+const { tm } = useI18n()
 
 const reviews = computed(() => {
   const data = tm('reviews.data')

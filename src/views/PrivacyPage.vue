@@ -146,7 +146,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 
 const currentDate = computed(() => {
   return new Date().toLocaleDateString(locale.value === 'it' ? 'it-IT' : 'en-US', {

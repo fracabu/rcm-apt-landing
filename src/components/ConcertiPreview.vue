@@ -110,7 +110,6 @@
 import { 
   MusicIcon, 
   TicketIcon, 
-  CalendarIcon,
-  MapPinIcon
+  CalendarIcon
 } from 'lucide-vue-next'
 </script>

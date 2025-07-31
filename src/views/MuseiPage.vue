@@ -99,7 +99,7 @@
                 <h4 class="text-sm font-semibold text-roma-700 mb-2">🌟 Highlights:</h4>
                 <div class="flex flex-wrap gap-1">
                   <span
-                    v-for="(highlight, index) in museum.highlights"
+                    v-for="(_, index) in museum.highlights"
                     :key="index"
                     class="bg-roma-50 text-roma-700 px-2 py-1 rounded-full text-xs"
                   >
@@ -213,11 +213,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { TicketIcon, MapPinIcon, ClockIcon } from 'lucide-vue-next'
+// import { TicketIcon, MapPinIcon, ClockIcon } from 'lucide-vue-next' // Unused in current implementation
 import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
 
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 const selectedCategory = ref('all')
 
 // Computed properties for reactive translations

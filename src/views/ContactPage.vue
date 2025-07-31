@@ -49,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import { PhoneIcon, MailIcon, MapPinIcon } from 'lucide-vue-next'
+// import { PhoneIcon, MailIcon, MapPinIcon } from 'lucide-vue-next' // Unused in current implementation
 import TheHeader from '../components/TheHeader.vue'
 import ContactSection from '../components/ContactSection.vue'
 import TheFooter from '../components/TheFooter.vue'

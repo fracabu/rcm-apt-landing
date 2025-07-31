@@ -49,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import { WifiIcon, TvIcon, SnowflakeIcon } from 'lucide-vue-next'
+// import { WifiIcon, TvIcon, SnowflakeIcon } from 'lucide-vue-next' // Unused in current implementation
 import TheHeader from '../components/TheHeader.vue'
 import ServicesSection from '../components/ServicesSection.vue'
 import TheFooter from '../components/TheFooter.vue'

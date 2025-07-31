@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-import { CameraIcon, HomeIcon, SparklesIcon } from 'lucide-vue-next'
+// import { CameraIcon, HomeIcon, SparklesIcon } from 'lucide-vue-next' // Unused in current implementation
 import TheHeader from '../components/TheHeader.vue'
 import GallerySection from '../components/GallerySection.vue'
 import TheFooter from '../components/TheFooter.vue'

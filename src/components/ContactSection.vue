@@ -161,26 +161,11 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, nextTick } from 'vue'
 import { 
-  RocketIcon, 
   CheckCircleIcon, 
-  DollarSignIcon, 
-  CreditCardIcon,
-  BuildingIcon,
-  ZapIcon, 
-  HomeIcon, 
   MailIcon, 
   MessageCircleIcon, 
-  ClockIcon,
-  ShieldCheckIcon,
-  ShieldIcon,
-  CheckIcon,
   AlertTriangleIcon,
-  XIcon,
-  LoaderIcon,
-  MapPinIcon,
-  TrainIcon,
-  ChurchIcon,
-  NavigationIcon
+  LoaderIcon
 } from 'lucide-vue-next'
 import { submitBooking, sendBookingEmail } from '../services/bookings'
 
@@ -196,7 +181,7 @@ const form = ref({
 const showSuccess = ref(false)
 const showError = ref(false)
 const isSubmitting = ref(false)
-const showCancellationPolicy = ref(false)
+// const showCancellationPolicy = ref(false)
 
 // Map variables
 const mapContainer = ref<HTMLDivElement>()
@@ -232,7 +217,7 @@ const initMap = async () => {
       zoomControl: true,
       scrollWheelZoom: true,
       dragging: true,
-      tap: true,
+      // tap: true,
       touchZoom: true
     }).setView(apartmentCoords, 15)
 
@@ -310,11 +295,11 @@ const initMap = async () => {
   }
 }
 
-const centerMap = () => {
-  if (map) {
-    map.setView(apartmentCoords, 15, { animate: true })
-  }
-}
+// const centerMap = () => {
+//   if (map) {
+//     map.setView(apartmentCoords, 15, { animate: true })
+//   }
+// }
 
 // Initialize map on component mount
 onMounted(() => {

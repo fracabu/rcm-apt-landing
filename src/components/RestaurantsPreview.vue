@@ -118,7 +118,7 @@ import { ChefHat as ChefHatIcon } from 'lucide-vue-next'
 import { 
   UtensilsIcon,
   MapPinIcon,
-  HeartIcon,
+  // HeartIcon,
   Wine as WineIcon
 } from 'lucide-vue-next'
 </script>

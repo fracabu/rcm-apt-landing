@@ -71,7 +71,7 @@
             <!-- Dots Indicator -->
             <div class="flex space-x-2">
               <button
-                v-for="(review, index) in allReviews"
+                v-for="(_, index) in allReviews"
                 :key="index"
                 @click="goToReview(index)"
                 class="w-2 h-2 rounded-full transition-all duration-300 focus:outline-none"
@@ -116,22 +116,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref } from 'vue'
+// import { useI18n } from 'vue-i18n' // Unused in current implementation
 import { 
   StarIcon, 
-  CheckCircleIcon, 
-  MapPinIcon, 
-  UsersIcon,
-  QuoteIcon,
+  // CheckCircleIcon, 
+  // MapPinIcon, 
+  // UsersIcon,
+  // QuoteIcon,
   UserIcon,
   ChevronLeftIcon,
   ChevronRightIcon
 } from 'lucide-vue-next'
 
-const { t, tm } = useI18n()
+// const { tm } = useI18n()
 
-const totalReviews = 12
+// const totalReviews = 12
 const currentReviewIndex = ref(0)
 
 // Auto-advance reviews every 4 seconds

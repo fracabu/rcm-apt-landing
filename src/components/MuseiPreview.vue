@@ -76,10 +76,6 @@
 import { 
   ChurchIcon,
   LandmarkIcon, 
-  PaletteIcon,
-  ColumnsIcon,
-  TicketIcon,
-  MapPinIcon,
-  ClockIcon
+  PaletteIcon
 } from 'lucide-vue-next'
 </script>

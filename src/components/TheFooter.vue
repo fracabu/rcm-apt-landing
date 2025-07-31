@@ -113,8 +113,8 @@ import {
   MapPinIcon, 
   ClockIcon, 
   Clock3Icon, 
-  UsersIcon, 
-  HomeIcon 
+  UsersIcon
+  // HomeIcon 
 } from 'lucide-vue-next'
 import { 
   visitorCount, 
