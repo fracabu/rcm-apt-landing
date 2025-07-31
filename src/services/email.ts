@@ -32,6 +32,29 @@ export const initEmailJS = () => {
 }
 
 export const sendBookingNotification = async (bookingData: Booking): Promise<boolean> => {
+  // Calcola numero di notti
+  const nights = calculateNights(bookingData.checkIn, bookingData.checkOut)
+  
+  // Prepara i dati per EmailJS template (dichiarato fuori dal try per essere accessibile nel catch)
+  const templateData = {
+    from_name: bookingData.name,
+    from_email: bookingData.email,
+    phone: bookingData.phone,
+    phone_clean: bookingData.phone.replace(/\D/g, ''), // Solo numeri per WhatsApp
+    checkin_date: new Date(bookingData.checkIn).toLocaleDateString('it-IT'),
+    checkout_date: new Date(bookingData.checkOut).toLocaleDateString('it-IT'),
+    guests: bookingData.guests,
+    nights: `${nights} ${nights === 1 ? 'notte' : 'notti'}`,
+    message: bookingData.message || 'Nessun messaggio aggiuntivo',
+    booking_date: new Date().toLocaleDateString('it-IT', {
+      year: 'numeric',
+      month: 'long', 
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
+  }
+
   try {
     console.log('🔍 Starting email send process...')
     
@@ -50,29 +73,6 @@ export const sendBookingNotification = async (bookingData: Booking): Promise<boo
     }
 
     console.log('📧 Invio email tramite EmailJS:', bookingData)
-
-    // Calcola numero di notti
-    const nights = calculateNights(bookingData.checkIn, bookingData.checkOut)
-    
-    // Prepara i dati per EmailJS template
-    const templateData = {
-      from_name: bookingData.name,
-      from_email: bookingData.email,
-      phone: bookingData.phone,
-      phone_clean: bookingData.phone.replace(/\D/g, ''), // Solo numeri per WhatsApp
-      checkin_date: new Date(bookingData.checkIn).toLocaleDateString('it-IT'),
-      checkout_date: new Date(bookingData.checkOut).toLocaleDateString('it-IT'),
-      guests: bookingData.guests,
-      nights: `${nights} ${nights === 1 ? 'notte' : 'notti'}`,
-      message: bookingData.message || 'Nessun messaggio aggiuntivo',
-      booking_date: new Date().toLocaleDateString('it-IT', {
-        year: 'numeric',
-        month: 'long', 
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-      })
-    }
 
     // Debug: log dei dati che stiamo inviando
     console.log('📧 Dati template EmailJS:', templateData)
@@ -106,15 +106,15 @@ export const sendBookingNotification = async (bookingData: Booking): Promise<boo
     
     // Log specifico per errori EmailJS
     if (error && typeof error === 'object' && 'status' in error) {
-      console.error('EmailJS Error Status:', error.status)
-      console.error('EmailJS Error Text:', error.text)
+      console.error('EmailJS Error Status:', (error as any).status)
+      console.error('EmailJS Error Text:', (error as any).text)
       
       // Messaggio specifico per domini problematici
       const email = bookingData.email.toLowerCase()
       const problematicDomains = ['hotmail.com', 'hotmail.it', 'live.com', 'outlook.com', 'outlook.it']
       const isProblematicDomain = problematicDomains.some(domain => email.includes(domain))
       
-      if (isProblematicDomain && error.status === 400) {
+      if (isProblematicDomain && (error as any).status === 400) {
         console.error('🚨 PROBLEMA DOMINIO EMAIL: EmailJS ha difficoltà con domini Hotmail/Outlook/Live')
         console.error('💡 SOLUZIONE: Il cliente può usare Gmail, Yahoo o altri domini')
       }
