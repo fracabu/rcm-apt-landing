@@ -71,6 +71,10 @@
                   class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white placeholder-orange-200 focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
                   :placeholder="$t('contact.form.email') + ' *'"
                 >
+                <!-- Avviso per domini problematici -->
+                <div v-if="form.email && isProblematicEmailDomain" class="mt-1 text-xs text-orange-200">
+                  ⚠️ I domini Hotmail/Outlook potrebbero avere problemi. Consigliamo Gmail o Yahoo.
+                </div>
               </div>
 
               <!-- Stay Details -->
@@ -194,6 +198,13 @@ const apartmentCoords = [41.9142171, 12.4392226] as [number, number]
 const minDate = computed(() => {
   const today = new Date()
   return today.toISOString().split('T')[0]
+})
+
+const isProblematicEmailDomain = computed(() => {
+  if (!form.value.email) return false
+  const email = form.value.email.toLowerCase()
+  const problematicDomains = ['hotmail.com', 'hotmail.it', 'live.com', 'outlook.com', 'outlook.it']
+  return problematicDomains.some(domain => email.includes(domain))
 })
 
 // Map functions

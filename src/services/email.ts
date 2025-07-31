@@ -35,6 +35,15 @@ export const sendBookingNotification = async (bookingData: Booking): Promise<boo
   try {
     console.log('🔍 Starting email send process...')
     
+    // Check for problematic email domains
+    const email = bookingData.email.toLowerCase()
+    const problematicDomains = ['hotmail.com', 'hotmail.it', 'live.com', 'outlook.com', 'outlook.it']
+    const isProblematicDomain = problematicDomains.some(domain => email.includes(domain))
+    
+    if (isProblematicDomain) {
+      console.warn('⚠️ Email con dominio potenzialmente problematico per EmailJS:', email)
+    }
+    
     if (!initEmailJS()) {
       console.error('❌ EmailJS configuration failed')
       throw new Error('EmailJS service not available. Please check configuration.')
@@ -99,6 +108,16 @@ export const sendBookingNotification = async (bookingData: Booking): Promise<boo
     if (error && typeof error === 'object' && 'status' in error) {
       console.error('EmailJS Error Status:', error.status)
       console.error('EmailJS Error Text:', error.text)
+      
+      // Messaggio specifico per domini problematici
+      const email = bookingData.email.toLowerCase()
+      const problematicDomains = ['hotmail.com', 'hotmail.it', 'live.com', 'outlook.com', 'outlook.it']
+      const isProblematicDomain = problematicDomains.some(domain => email.includes(domain))
+      
+      if (isProblematicDomain && error.status === 400) {
+        console.error('🚨 PROBLEMA DOMINIO EMAIL: EmailJS ha difficoltà con domini Hotmail/Outlook/Live')
+        console.error('💡 SOLUZIONE: Il cliente può usare Gmail, Yahoo o altri domini')
+      }
     }
     
     // Log della configurazione per debug
