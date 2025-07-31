@@ -160,8 +160,7 @@
                     {{ booking.guests }}
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    <div>{{ booking.phone }}</div>
-                    <a :href="`mailto:${booking.email}`" class="text-roman-600 hover:text-roman-800">Invia Email</a>
+                    {{ booking.phone }}
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {{ formatDateTime(booking.createdAt) }}

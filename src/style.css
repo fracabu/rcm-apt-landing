@@ -34,86 +34,194 @@ html {
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #c41e3a;
 }
 
-/* 3D Button Styles - Joshua Comeau inspired */
+/* 3D Button Styles - Corretta struttura Josh Comeau */
 .btn-3d {
   position: relative;
-  background: linear-gradient(135deg, #8E1F2F 0%, #7a1a28 100%); /* Rosso Roma */
   border: none;
-  border-radius: 12px;
-  color: white;
-  font-weight: 600;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
   text-decoration: none;
-  display: inline-flex;
+  display: inline-block;
+}
+
+.btn-3d .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: rgba(152, 20, 43, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.btn-3d .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left,
+    #6B0E1F 0%,
+    #98142B 8%,
+    #98142B 92%,
+    #6B0E1F 100%);
+}
+
+.btn-3d .front {
+  display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  box-shadow: 
-    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
-    0 4px 8px rgba(142, 31, 47, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
+  position: relative;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white !important;
+  background: #C41E3A;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Assicura che tutto il testo nei pulsanti 3D sia bianco */
+.btn-3d .front,
+.btn-3d .front *,
+.btn-3d .front span,
+.btn-3d .front span * {
+  color: white !important;
+}
+
+/* Forza il colore bianco anche sui pulsanti disabled */
+.btn-3d:disabled .front,
+.btn-3d:disabled .front *,
+.btn-3d:disabled .front span,
+.btn-3d:disabled .front span * {
+  color: white !important;
+}
+
+/* Specifico per quando il pulsante ha opacity ridotta */
+.btn-3d.opacity-50 .front,
+.btn-3d.opacity-50 .front *,
+.btn-3d.opacity-50 .front span,
+.btn-3d.opacity-50 .front span * {
+  color: white !important;
+}
+
+/* Forza specificamente il pulsante del form contatti */
+button[type="submit"] .front,
+button[type="submit"] .front *,
+button[type="submit"] .front span,
+button[type="submit"] .front span * {
+  color: white !important;
+}
+
+/* Ultimo tentativo - massima specificità */
+#contatti button[type="submit"].btn-3d .front,
+#contatti button[type="submit"].btn-3d .front *,
+#contatti button[type="submit"].btn-3d .front span,
+#contatti button[type="submit"].btn-3d .front span * {
+  color: white !important;
+}
+
+/* Forza il colore bianco per le icone e testo specifico */
+.btn-3d .front svg,
+.btn-3d .front .lucide,
+.btn-3d .front .text-white {
+  color: white !important;
+  fill: currentColor !important;
 }
 
 .btn-3d:hover {
-  filter: brightness(1.05);
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 
-    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
-    0 6px 12px rgba(142, 31, 47, 0.4),
-    0 4px 8px rgba(0, 0, 0, 0.15);
+  filter: brightness(110%);
 }
 
-.btn-3d:active {
-  transform: translateY(2px) scale(0.97);
-  box-shadow: 
-    inset 0 -2px 0 rgba(0, 0, 0, 0.15),
-    0 2px 4px rgba(142, 31, 47, 0.2),
-    0 1px 2px rgba(0, 0, 0, 0.1);
+.btn-3d:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.btn-3d:focus-visible {
-  outline: 3px solid rgba(142, 31, 47, 0.5);
-  outline-offset: 2px;
+.btn-3d:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.btn-3d:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.btn-3d:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.btn-3d:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Size variants */
-.btn-3d-lg {
+.btn-3d-lg .front {
   padding: 16px 32px;
   font-size: 1.125rem;
+  min-height: 48px;
 }
 
-.btn-3d-md {
-  padding: 12px 24px;
+.btn-3d-md .front {
+  padding: 14px 28px;
   font-size: 1rem;
+  min-height: 44px;
 }
 
-.btn-3d-sm {
-  padding: 8px 16px;
+.btn-3d-sm .front {
+  padding: 10px 20px;
   font-size: 0.875rem;
+  min-height: 36px;
 }
 
-/* Secondary 3D Button */
-.btn-3d-secondary {
-  background: linear-gradient(135deg, #F0BC42 0%, #d97706 100%); /* Giallo Roma */
-  box-shadow: 
-    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
-    0 4px 8px rgba(240, 188, 66, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+/* Secondary 3D Button - Roma Red */
+.btn-3d-secondary .shadow {
+  background: rgba(152, 20, 43, 0.25);
 }
 
-.btn-3d-secondary:hover {
-  box-shadow: 
-    inset 0 -4px 0 rgba(0, 0, 0, 0.15),
-    0 6px 12px rgba(240, 188, 66, 0.4),
-    0 4px 8px rgba(0, 0, 0, 0.15);
+.btn-3d-secondary .edge {
+  background: linear-gradient(to left,
+    #7A1024 0%,
+    #98142B 8%,
+    #98142B 92%,
+    #7A1024 100%);
 }
 
-.btn-3d-secondary:active {
-  box-shadow: 
-    inset 0 -2px 0 rgba(0, 0, 0, 0.15),
-    0 2px 4px rgba(240, 188, 66, 0.2),
-    0 1px 2px rgba(0, 0, 0, 0.1);
+.btn-3d-secondary .front {
+  background: #98142B;
+  color: white !important; /* White text for consistency */
+}
+
+/* Assicura che tutto il testo nei pulsanti secondari sia bianco */
+.btn-3d-secondary .front * {
+  color: white !important;
+}
+
+/* Forza il colore bianco anche sui pulsanti secondari disabled */
+.btn-3d-secondary:disabled .front,
+.btn-3d-secondary:disabled .front * {
+  color: white !important;
+}
+
+/* Forza il colore bianco per le icone nei pulsanti secondari */
+.btn-3d-secondary .front svg {
+  color: white !important;
+  fill: currentColor !important;
+}
+
+.btn-3d-secondary:focus-visible {
+  outline: 3px solid #98142B;
 }
 
 /* Animations */
@@ -160,13 +268,57 @@ html {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-  .btn-3d-lg {
-    padding: 14px 28px;
+  .btn-3d-lg .front {
+    padding: 12px 24px;
     font-size: 1rem;
+    min-height: 40px;
   }
   
-  .btn-3d-md {
+  .btn-3d-md .front {
     padding: 10px 20px;
     font-size: 0.9rem;
+    min-height: 36px;
+  }
+  
+  .btn-3d-sm .front {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    min-height: 32px;
+  }
+}
+
+/* Tablet optimizations */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .btn-3d-lg .front {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    min-height: 46px;
+  }
+  
+  .btn-3d-md .front {
+    padding: 12px 24px;
+    font-size: 1rem;
+    min-height: 42px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .btn-3d-lg .front {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    min-height: 36px;
+  }
+  
+  .btn-3d-md .front {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    min-height: 32px;
+  }
+  
+  .btn-3d-sm .front {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    min-height: 28px;
   }
 }

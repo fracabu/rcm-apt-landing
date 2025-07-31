@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-br from-neutral-50 via-roma-50 to-neutral-100">
+  <div style="background: linear-gradient(135deg, rgba(152, 20, 43, 0.92) 0%, rgba(122, 16, 36, 0.92) 50%, rgba(152, 20, 43, 0.92) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
     <TheHeader />
     
     <!-- Hero Section -->
@@ -14,35 +14,24 @@
       </div>
       <div class="container mx-auto px-4 py-12 relative mt-16 md:mt-20 lg:mt-24">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-4 lg:mb-6 animate-fade-in drop-shadow-2xl">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-6 lg:mb-8 animate-fade-in drop-shadow-2xl">
             {{ $t('concerts.title') }}
             <span class="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-amber-200 mt-2 lg:mt-4 font-light">
               {{ $t('concerts.subtitle') }}
             </span>
           </h1>
-          <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 lg:mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-            {{ $t('concerts.description') }}
-          </p>
-          <!-- Benefits -->
-          <div class="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-6 lg:mb-12 text-xs sm:text-sm md:text-base">
-            <span class="bg-green-500/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-green-400/30 flex items-center gap-2">
-              <TicketIcon class="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{{ $t('concerts.benefits.auditorium_discount') }}</span>
-            </span>
-            <span class="bg-green-500/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-green-400/30 flex items-center gap-2">
-              <MusicIcon class="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{{ $t('concerts.benefits.santa_cecilia_discount') }}</span>
-            </span>
-            <span class="bg-white/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-white/30 flex items-center gap-2">
-              <MapPinIcon class="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{{ $t('concerts.benefits.transport_info') }}</span>
-            </span>
+          <!-- Key Benefits - Simple Text -->
+          <div class="mb-8 lg:mb-12">
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-200 font-light max-w-2xl mx-auto">
+              {{ $t('concerts.benefits.auditorium_discount') }} • {{ $t('concerts.benefits.santa_cecilia_discount') }} • {{ $t('concerts.benefits.transport_info') }}
+            </p>
           </div>
-          <router-link 
-            to="/contatti" 
-            class="inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 px-12 rounded-full text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
-          >
-            {{ $t('concerts.cta') }}
+          <router-link to="/concerti" class="btn-3d btn-3d-md">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              {{ $t('concerts.cta.discover') }}
+            </span>
           </router-link>
         </div>
       </div>
@@ -125,7 +114,7 @@
                 </div>
               </div>
               <div class="bg-white p-6 rounded-b-2xl border-t-0">
-                <p class="text-gray-600 mb-4">{{ concert.description }}</p>
+                <p class="text-gray-600 mb-4">{{ $t(`concerts.descriptions.${concert.id}`) }}</p>
                 
                 <div class="flex justify-between items-center">
                   <div class="text-sm text-gray-500">
@@ -133,10 +122,14 @@
                     {{ concert.location }}
                   </div>
                   <button 
-                    class="btn-3d btn-3d-sm bg-roma-600 hover:bg-roma-700"
+                    class="btn-3d btn-3d-sm"
                     @click="openBooking(concert)"
                   >
-                    {{ $t('concerts.card.see_tickets') }}
+                    <span class="shadow"></span>
+                    <span class="edge"></span>
+                    <span class="front">
+                      {{ $t('concerts.card.see_tickets') }}
+                    </span>
                   </button>
                 </div>
               </div>
@@ -186,8 +179,12 @@
             </ul>
           </div>
           <div class="text-center mt-8">
-            <router-link to="/contatti" class="btn-3d btn-3d-lg bg-red-600 hover:bg-red-700">
-              {{ $t('concerts.how_to_get_discount.cta') }}
+            <router-link to="/contatti" class="btn-3d btn-3d-lg">
+              <span class="shadow"></span>
+              <span class="edge"></span>
+              <span class="front">
+                {{ $t('concerts.how_to_get_discount.cta') }}
+              </span>
             </router-link>
           </div>
         </section>
@@ -226,6 +223,7 @@
 </template>
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
 import { 
@@ -254,14 +252,15 @@ interface Venue {
   name: string
   icon: any
 }
+const { locale } = useI18n()
 const selectedVenue = ref('all')
 const venues: Venue[] = [
-  { id: 'all', name: 'Tutti i Concerti', icon: MusicIcon },
+  { id: 'all', name: 'All Concerts', icon: MusicIcon },
   { id: 'auditorium', name: 'Auditorium', icon: StarIcon },
-  { id: 'santa-cecilia', name: 'Santa Cecilia', icon: MusicIcon },
-  { id: 'circo-massimo', name: 'Circo Massimo', icon: HomeIcon },
-  { id: 'olimpico', name: 'Stadio Olimpico', icon: UsersIcon },
-  { id: 'altri', name: 'Altri Venue', icon: MapPinIcon }
+  { id: 'santa_cecilia', name: 'Santa Cecilia', icon: MusicIcon },
+  { id: 'circo_massimo', name: 'Circo Massimo', icon: HomeIcon },
+  { id: 'olimpico', name: 'Olympic Stadium', icon: UsersIcon },
+  { id: 'altri', name: 'Other Venues', icon: MapPinIcon }
 ]
 const concerts: Concert[] = [
   // Roma Summer Fest 2025 (Auditorium)
@@ -442,7 +441,8 @@ const filteredConcerts = computed(() => {
 })
 const formatDate = (dateString: string) => {
   const date = new Date(dateString)
-  return date.toLocaleDateString('it-IT', { 
+  const currentLocale = locale.value === 'en' ? 'en-US' : 'it-IT'
+  return date.toLocaleDateString(currentLocale, { 
     day: 'numeric', 
     month: 'long', 
     year: 'numeric' 
@@ -466,14 +466,5 @@ const openBooking = (concert: Concert) => {
 }
 .status-badge {
   @apply px-3 py-1 rounded-full text-white text-xs font-bold;
-}
-.btn-3d {
-  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg;
-}
-.btn-3d-sm {
-  @apply text-sm px-3 py-2;
-}
-.btn-3d-lg {
-  @apply text-lg px-8 py-4;
 }
 </style>

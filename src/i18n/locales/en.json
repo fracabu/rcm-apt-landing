@@ -7,15 +7,15 @@
     "availability": "Check Availability"
   },
   "hero": {
-    "title": "Rome Vacation Rental Near Vatican",
-    "subtitle": "Holiday Apartment with WiFi Netflix Sky - 2 stops from St. Peter's",
+    "title": "Roma Caput Mundi",
+    "subtitle": "Exclusive Apartment Near Vatican",
     "description": "Holiday apartment Rome near Vatican. 50m² vacation rental in quiet Balduina with WiFi, Netflix, Sky. Perfect for tourists visiting St. Peter's Basilica and Vatican Museums.",
     "features": {
-      "station": "100m from FS Station",
+      "station": "100m from Appiano FS",
       "streaming": "Netflix & Sky Included",
-      "location": "2 Stops from St. Peter's"
+      "location": "St. Peter's in 10 minutes"
     },
-    "cta": "Book Direct - Best Rates",
+    "cta": "Book Now",
     "guarantee": "Best price guaranteed - Direct booking saves money",
     "trust": {
       "rating": "9.2/10 Excellent Reviews",
@@ -26,16 +26,26 @@
   "services": {
     "hero": {
       "title": "Services & Comfort",
-      "subtitle": "Everything for Your Wellbeing",
-      "description": "High-speed WiFi, Netflix, Sky, air conditioning and all amenities for a perfect stay in the heart of Rome",
-      "benefits": {
-        "wifi": "High-Speed WiFi",
-        "streaming": "Netflix & Sky",
-        "ac": "Air Conditioning"
-      }
+      "subtitle": "Everything for Your Stay",
+      "features": "High-speed WiFi • Netflix & Sky • Air conditioning",
+      "cta": "Discover All Services"
     },
     "title": "Rome Apartment Amenities & Services",
     "subtitle": "Everything you need for your Rome vacation in quiet Balduina near Vatican",
+    "preview": {
+      "checkin": {
+        "title": "Flexible Check-in",
+        "description": "Personal welcome from 3:00 PM to 10:00 PM"
+      },
+      "guide": {
+        "title": "Free Rome Guide",
+        "description": "Exclusive tips on museums, restaurants and concerts"
+      },
+      "discounts": {
+        "title": "Exclusive Discounts",
+        "description": "20% off Auditorium and Santa Cecilia concerts"
+      }
+    },
     "items": {
       "wifi": {
         "title": "Free High-Speed WiFi Internet",
@@ -83,6 +93,9 @@
         "museums": "Vatican Museums",
         "airport": "Rome Fiumicino Airport"
       }
+    },
+    "cta": {
+      "discover": "Discover All Services"
     }
   },
   "gallery": {
@@ -98,52 +111,373 @@
     },
     "title": "Rome Vacation Rental Photo Gallery",
     "subtitle": "50m² holiday apartment in quiet Balduina - Double bedroom, living room and garden view balcony",
-    "cta": "Book Your Rome Holiday",
+    "cta": {
+      "view_all": "View All Photos",
+      "book_stay": "Book Your Stay"
+    },
     "images": {
-      "living": "Living room with sofa bed and Smart TV with Netflix and Sky",
-      "bedroom": "Comfortable double bedroom in Rome apartment",
-      "kitchen": "Equipped kitchen with refrigerator and Italian coffee machine",
-      "bathroom": "Clean bathroom with shower and bidet",
-      "balcony": "Private balcony with garden view",
-      "dining": "Dining area perfect for Rome vacation meals"
+      "bedroom": {
+        "title": "Master Bedroom",
+        "description": "Spacious master bedroom with comfortable bed, large wardrobe and relaxing atmosphere for your rest after a day in Rome."
+      },
+      "living": {
+        "title": "Cozy Living Room",
+        "description": "Bright living room with sofa bed, Smart TV with Netflix and Sky, perfect for relaxing and accommodating up to 4 people."
+      },
+      "living_alt": {
+        "title": "Living Room - Alternative View",
+        "description": "Another perspective of the living room showing the spaciousness and furniture arrangement for maximum comfort."
+      },
+      "kitchen": {
+        "title": "Fully Equipped Kitchen",
+        "description": "Modern kitchen with refrigerator, Italian coffee machine and all utensils needed to prepare your meals."
+      },
+      "bathroom": {
+        "title": "Modern and Functional Bathroom",
+        "description": "Clean and modern bathroom with spacious shower, bidet and all amenities needed for your stay."
+      },
+      "bathroom_alt": {
+        "title": "Bathroom - Furniture Detail",
+        "description": "Detailed view of bathroom furnishings highlighting the quality of fixtures and space organization."
+      },
+      "balcony": {
+        "title": "Private Garden View Balcony",
+        "description": "Relax on the private balcony overlooking the quiet condominium garden, perfect for a morning coffee break."
+      },
+      "dining": {
+        "title": "Dining and Relaxation Area",
+        "description": "Welcoming dining area where you can enjoy your meals together, with living room view and family atmosphere."
+      }
     }
   },
   "reviews": {
-    "hero": {
-      "title": "Guest Reviews",
-      "subtitle": "9.4/10 Excellent Rating",
-      "description": "Read real reviews from our guests and discover why they always choose Roma Caput Mundi",
-      "benefits": {
-        "rating": "9.4/10 Booking.com",
-        "count": "12 Reviews",
-        "verified": "Verified"
-      }
-    },
     "title": "Real Guest Reviews - Rome Vacation Rental",
     "subtitle": "9.2/10 Excellent rating on Booking.com - 12 verified reviews from Rome visitors",
+    "nights": "nights",
     "badges": {
-      "booking": "Booking.com Verified",
-      "cleanliness": "Cleanliness 10/10",
-      "location": "Location 9.7/10",
-      "verified": "12 Verified Reviews",
-      "impeccable": "Impeccable",
+      "staff": "Staff 10/10",
       "excellent": "Excellent",
-      "verified_label": "Verified by Booking.com"
+      "cleanliness": "Cleanliness 10/10",
+      "impeccable": "Impeccable",
+      "location": "Location 9.7/10",
+      "verified": "12 Reviews",
+      "verified_label": "Verified"
     },
-    "cta": "Book Your Rome Vacation Now",
     "no_comment": "Excellent review without written comment",
     "trip_types": {
       "couple": "Couple",
       "family": "Family",
       "solo": "Solo Traveler",
       "business": "Business Travel"
+    },
+    "countries": {
+      "italia": "Italy",
+      "svezia": "Sweden", 
+      "iran": "Iran",
+      "ucraina": "Ukraine"
+    },
+    "data": [
+      {
+        "id": 1,
+        "name": "Frigerio",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "June 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "HIGHLY RECOMMENDED: We really loved everything about the apartment. From the convenient location with all transport services, there's even a bike path that goes to the Vatican. Very convenient for those who want to visit the center of Rome and to reach the Olympic stadium. New apartment, with all services, very clean. The owner very welcoming and kind.",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "name": "Federica",
+        "country": "italia", 
+        "rating": 10,
+        "score": 10,
+        "date": "June 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "We fell in love with this apartment as soon as we entered. Bright, super clean and well furnished. Not to mention Francesco's availability, the owner, who satisfied our every need."
+      },
+      {
+        "id": 3,
+        "name": "Alessandra",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "April 2025", 
+        "nights": "1",
+        "type": "solo",
+        "comment": "The apartment is new, very clean and equipped with every comfort. It also has a large balcony from which we enjoyed the fresh and crisp evening air. The owner, very nice and helpful, welcomed us personally. The house is located in a very central but quiet position."
+      },
+      {
+        "id": 4,
+        "name": "Janaka",
+        "country": "svezia",
+        "rating": 10,
+        "score": 10,
+        "date": "June 2025",
+        "nights": "6",
+        "type": "family",
+        "comment": "The best accommodation we have stayed in. Very clean and newly renovated apartment. Quite large apartment. You felt at home immediately. There was everything you needed in the apartment. The landlords were helpful and arrange everything you need. BEST ACCOMMODATION in ROME!"
+      },
+      {
+        "id": 5,
+        "name": "Motlagh",
+        "country": "iran",
+        "rating": 9,
+        "score": 9.0,
+        "date": "May 2025",
+        "nights": "6",
+        "type": "solo",
+        "comment": "I had a wonderful stay at Roma Caput Mundi Apartment. The location is great! Within just 5 minutes of walking, you can reach the train station. There's also a lovely square nearby with easy access to a pharmacy, ice cream shops, restaurants. The hosts were kind and welcoming—especially Francesco, who was so helpful."
+      },
+      {
+        "id": 6,
+        "name": "Fabio", 
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "March 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "Excellent apartment location because quite close to the Appiano Proba Petronia railway station. Very cordial and affable owner in requests. Functional and very clean apartment that definitely exceeded our expectations."
+      },
+      {
+        "id": 7,
+        "name": "Roberto",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "May 2025", 
+        "nights": "1",
+        "type": "solo",
+        "comment": "Cozy, clean, quiet, well-kept apartment with all the necessary comforts for a perfect stay in Rome."
+      },
+      {
+        "id": 8,
+        "name": "Giorgio",
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "May 2025",
+        "nights": "3", 
+        "type": "family",
+        "comment": "Cleanliness, spaces and courtesy of the owner. House equipped with everything needed for a comfortable stay."
+      },
+      {
+        "id": 9,
+        "name": "Mazzariol", 
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "May 2025",
+        "nights": "1",
+        "type": "family", 
+        "comment": "Carefully furnished, thorough cleaning, very kind and punctual staff. Really positive experience, we highly recommend it."
+      },
+      {
+        "id": 10,
+        "name": "Mirko",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "May 2025",
+        "nights": "2",
+        "type": "family",
+        "comment": null
+      },
+      {
+        "id": 11,
+        "name": "Ciari", 
+        "country": "italia",
+        "rating": 7,
+        "score": 7.0,
+        "date": "June 2025",
+        "nights": "1",
+        "type": "couple",
+        "comment": null
+      },
+      {
+        "id": 12,
+        "name": "Victoriia",
+        "country": "ucraina", 
+        "rating": 10,
+        "score": 10,
+        "date": "April 2025",
+        "nights": "2",
+        "type": "family",
+        "comment": "Everything was very good, very nice owner"
+      }
+    ],
+    "data": [
+      {
+        "id": 1,
+        "name": "Frigerio",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "June 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "HIGHLY RECOMMENDED: We really loved everything about the apartment. From the convenient location with all transport services, there's even a bike path that goes to the Vatican. Very convenient for those who want to visit the center of Rome and to reach the Olympic stadium. New apartment, with all services, very clean. The owner very welcoming and kind.",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "name": "Federica",
+        "country": "italia", 
+        "rating": 10,
+        "score": 10,
+        "date": "June 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "We fell in love with this apartment as soon as we entered. Bright, super clean and well furnished. Not to mention Francesco's availability, the owner, who satisfied our every need."
+      },
+      {
+        "id": 3,
+        "name": "Alessandra",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "April 2025", 
+        "nights": "1",
+        "type": "solo",
+        "comment": "The apartment is new, very clean and equipped with every comfort. It also has a large balcony from which we enjoyed the fresh and crisp evening air. The owner, very nice and helpful, welcomed us personally. The house is located in a very central but quiet position."
+      },
+      {
+        "id": 4,
+        "name": "Janaka",
+        "country": "svezia",
+        "rating": 10,
+        "score": 10,
+        "date": "June 2025",
+        "nights": "6",
+        "type": "family",
+        "comment": "The best accommodation we have stayed in. Very clean and newly renovated apartment. Quite large apartment. You felt at home immediately. There was everything you needed in the apartment. The landlords were helpful and arrange everything you need. BEST ACCOMMODATION in ROME!"
+      },
+      {
+        "id": 5,
+        "name": "Motlagh",
+        "country": "iran",
+        "rating": 9,
+        "score": 9.0,
+        "date": "May 2025",
+        "nights": "6",
+        "type": "solo",
+        "comment": "I had a wonderful stay at Roma Caput Mundi Apartment. The location is great! Within just 5 minutes of walking, you can reach the train station. There's also a lovely square nearby with easy access to a pharmacy, ice cream shops, restaurants. The hosts were kind and welcoming—especially Francesco, who was so helpful."
+      },
+      {
+        "id": 6,
+        "name": "Fabio", 
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "March 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "Excellent apartment location because quite close to the Appiano Proba Petronia railway station. Very cordial and affable owner in requests. Functional and very clean apartment that definitely exceeded our expectations."
+      },
+      {
+        "id": 7,
+        "name": "Roberto",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "May 2025", 
+        "nights": "1",
+        "type": "solo",
+        "comment": "Cozy, clean, quiet, well-kept apartment with all the necessary comforts for a perfect stay in Rome."
+      },
+      {
+        "id": 8,
+        "name": "Giorgio",
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "May 2025",
+        "nights": "3", 
+        "type": "family",
+        "comment": "Cleanliness, spaces and courtesy of the owner. House equipped with everything needed for a comfortable stay."
+      },
+      {
+        "id": 9,
+        "name": "Mazzariol", 
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "May 2025",
+        "nights": "1",
+        "type": "family", 
+        "comment": "Carefully furnished, thorough cleaning, very kind and punctual staff. Really positive experience, we highly recommend it."
+      },
+      {
+        "id": 10,
+        "name": "Mirko",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "May 2025",
+        "nights": "2",
+        "type": "family",
+        "comment": null
+      },
+      {
+        "id": 11,
+        "name": "Ciari", 
+        "country": "italia",
+        "rating": 7,
+        "score": 7.0,
+        "date": "June 2025",
+        "nights": "1",
+        "type": "couple",
+        "comment": null
+      },
+      {
+        "id": 12,
+        "name": "Victoriia",
+        "country": "ucraina", 
+        "rating": 10,
+        "score": 10,
+        "date": "April 2025",
+        "nights": "2",
+        "type": "family",
+        "comment": "Everything was very good, very nice owner"
+      }
+    ],
+    "hero": {
+      "title": "Guest Reviews",
+      "subtitle": "Rating 9.4/10 Excellent",
+      "features": "12 verified reviews Booking.com",
+      "cta": "Read Reviews"
+    },
+    "cta": {
+      "read_all": "Read All Reviews",
+      "become_guest": "Become Our Next Happy Guest"
+    },
+    "preview": {
+      "rating": {
+        "description": "12 verified reviews Booking.com"
+      },
+      "fallback": {
+        "guest": "Guest",
+        "country": "Italy",
+        "comment": "Excellent review"
+      },
+      "loading": {
+        "title": "Loading reviews...",
+        "description": "Our excellent reviews are coming"
+      }
     }
   },
   "contact": {
     "hero": {
       "title": "Book Now",
-      "subtitle": "Your Dream Stay",
+      "subtitle": "Your Dream Stay", 
       "description": "Contact us to book your perfect stay in the heart of Rome. Guaranteed response within 2 hours",
+      "features": "Quick response • Direct contact • 100m Appiano FS",
+      "cta": "Contact Us Now",
       "benefits": {
         "response": "Reply in 2h",
         "direct": "Direct Booking",
@@ -153,6 +487,10 @@
     "title": "Check Rome Apartment Availability",
     "subtitle": "Contact us directly for the <strong>best vacation rental rates</strong> and secure payment options.",
     "checkin_info": "Check-in 3:00 PM-10:00 PM, Check-out 8:00 AM-11:00 AM.",
+    "preview": {
+      "title": "Check Availability",
+      "subtitle": "Verify if we are available on your dates"
+    },
     "form": {
       "title": "Book Rome Vacation Rental",
       "name": "Full Name",
@@ -211,23 +549,10 @@
     "platforms": {
       "title": "Also available on booking platforms:",
       "license": "Official License: 058091-CAV-12914, IT058091B4DGY9ABNC"
-    },
-    "cancellation": {
-      "title": "Rome Vacation Rental Cancellation Policy",
-      "checkbox": "I accept the cancellation policy for this Rome accommodation.",
-      "full_refund": "Full Refund (100%)",
-      "full_refund_desc": "Bank transfer payments fully refunded up to 7 days before your Rome arrival.",
-      "penalty": "Cancellation Fee",
-      "penalty_desc": "Cancellations within 7 days: first night retained as penalty.",
-      "how_to_refund": "How to Request Refund",
-      "how_to_refund_desc": "Contact our Rome vacation rental team via:",
-      "legal_protection": "Legal Protection",
-      "legal_protection_desc": "This policy protects your Rome vacation booking and ensures transparent cancellation process.",
-      "understood": "I Understand"
     }
   },
   "footer": {
-    "company_name": "Rome Apartment Appiano FS",
+    "company_name": "Roma Caput Mundi Apartment",
     "description": "50m² apartment in quiet Balduina. 100m from Appiano FS station, 2 stops from St. Peter's. High-speed WiFi, Netflix, Sky and all amenities for a perfect stay.",
     "links": {
       "title": "Quick Links",
@@ -260,9 +585,89 @@
     "tagline": "Your perfect Rome vacation rental near Vatican"
   },
   "privacy": {
-    "title": "Rome Vacation Rental Privacy Policy",
+    "title": "Privacy Policy",
     "effective_date": "Effective date:",
-    "back_to_home": "← Back to Rome Apartment"
+    "back_to_home": "← Roma Caput Mundi",
+    "sections": {
+      "data_collection": {
+        "title": "1. Information we collect",
+        "description": "We collect the following information when you use our website or request a booking:",
+        "items": {
+          "personal": "Personal data: name, surname, email address, phone number",
+          "stay": "Stay data: check-in and check-out dates, number of guests",
+          "communications": "Communications: messages and requests sent through the contact form",
+          "technical": "Technical data: IP address, browser type, operating system, pages visited"
+        }
+      },
+      "data_usage": {
+        "title": "2. How we use your information",
+        "description": "We use the collected information to:",
+        "items": {
+          "bookings": "Process and manage booking requests",
+          "communication": "Communicate with you regarding your booking",
+          "support": "Provide customer support",
+          "improvements": "Improve our services and website",
+          "legal": "Comply with legal obligations"
+        }
+      },
+      "cookies": {
+        "title": "3. Cookies and similar technologies",
+        "description": "We use cookies and similar technologies for:",
+        "items": {
+          "essential": "Essential cookies: necessary for website operation",
+          "performance": "Performance cookies: to analyze website usage",
+          "functionality": "Functionality cookies: to remember your preferences"
+        },
+        "management": "You can manage your cookie preferences through the cookie banner on the site."
+      },
+      "data_sharing": {
+        "title": "4. Information sharing",
+        "description": "We do not sell, rent or share your personal information with third parties, except in the following cases:",
+        "items": {
+          "legal": "When required by law",
+          "protection": "To protect our legal rights",
+          "providers": "With trusted service providers who assist us in site operations"
+        }
+      },
+      "gdpr_rights": {
+        "title": "5. Your rights (GDPR)",
+        "description": "In compliance with GDPR, you have the following rights:",
+        "items": {
+          "access": "Right of access: obtain information about the data we process",
+          "rectification": "Right of rectification: correct inaccurate or incomplete data",
+          "erasure": "Right of erasure: request deletion of your data",
+          "restriction": "Right of restriction: limit the processing of your data",
+          "portability": "Right of portability: obtain your data in structured format",
+          "objection": "Right of objection: object to the processing of your data"
+        }
+      },
+      "data_security": {
+        "title": "6. Data security",
+        "description": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure or destruction. We use SSL encryption and updated security systems."
+      },
+      "data_retention": {
+        "title": "7. Data retention",
+        "description": "We retain your personal information only for the time necessary for the purposes for which it was collected or as required by law. Booking information is retained for a maximum of 5 years for accounting and tax purposes."
+      },
+      "minors": {
+        "title": "8. Minors",
+        "description": "Our services are not directed at minors under 18 years of age. We do not knowingly collect personal information from minors under 18 years of age."
+      },
+      "policy_changes": {
+        "title": "9. Changes to Privacy Policy",
+        "description": "We reserve the right to modify this Privacy Policy at any time. We will notify you of any significant changes by posting the new Privacy Policy on this page with a new effective date."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "description": "For any questions regarding this Privacy Policy or to exercise your rights, please contact us:",
+        "details": {
+          "email": "Email: info@romacaputmundiapt.it",
+          "phone": "Phone: +39 320 49 33 807",
+          "address": "Address: Via R.R. Pereira n. 33"
+        }
+      },
+      "compliance": "This Privacy Policy complies with the General Data Protection Regulation (GDPR) of the European Union and Italian privacy legislation."
+    }
   },
   "admin": {
     "title": "Rome Vacation Rental Admin",
@@ -306,7 +711,35 @@
       "santa_cecilia_discount": "20% Discount Santa Cecilia",
       "transport_info": "Transport Info Included"
     },
-    "cta": "Book & Get Discount",
+    "cta": {
+      "discover": "Discover All Concerts"
+    },
+    "preview": {
+      "featured": {
+        "title": "Rome Concerts 2025-2026",
+        "venues": "Auditorium, Circo Massimo, Olympic Stadium"
+      },
+      "discount": {
+        "label": "Auditorium Discount"
+      },
+      "season": {
+        "label": "Concert Season"
+      },
+      "venues": {
+        "auditorium": {
+          "name": "Auditorium Parco della Musica",
+          "description": "Rome's main music center with three concert halls and international programming"
+        },
+        "santa_cecilia": {
+          "name": "Santa Cecilia Academy",
+          "description": "World-famous orchestra and classical music concerts"
+        },
+        "stadiums": {
+          "name": "Circo Massimo & Olympic Stadium",
+          "description": "Major events and international concerts in Rome's iconic venues"
+        }
+      }
+    },
     "venues": {
       "auditorium": {
         "name": "Auditorium Parco della Musica",
@@ -371,6 +804,23 @@
       },
       "cta": "Contact Us to Verify Discount Availability"
     },
+    "descriptions": {
+      "1": "The legendary rock poetess in concert in the evocative setting of the Auditorium.",
+      "2": "The Welsh rock giants return to Rome with their unmistakable sound.",
+      "3": "The former Smiths frontman in an exclusive and unmissable concert.",
+      "4": "The most famous saxophonist of the moment in a magical evening under the stars.",
+      "5": "Wagner's immortal Opera conducted by Antonio Pappano with international cast.",
+      "6": "Mahler's monumental Third Symphony with the Santa Cecilia Orchestra.",
+      "7": "Händel's masterpiece in the traditional Christmas performance.",
+      "8": "The world's most famous Chinese pianist in solo recital.",
+      "9": "The Bologna singer-songwriter returns live with his new 'Live 26' tour.",
+      "10": "The phenomenon of new Italian songwriting in his 'Stadium Tour 2025'.",
+      "11": "The legends of English new wave in double Roman date (June 15-16).",
+      "12": "Sugar Fornaciari in the 'Overdose d'Amore' tour with double date (June 23-24).",
+      "13": "The former 883 in the 'Max Forever - The Golden Years - Stadiums 2026' tour.",
+      "14": "The 'Grand National Tour' with the two giants of contemporary hip-hop and R&B.",
+      "15": "The 'Mathematics European Tour' of the world's most beloved English singer-songwriter."
+    },
     "transport": {
       "title": "How to Get There from the Apartment",
       "auditorium": {
@@ -387,59 +837,12 @@
       }
     }
   },
-  "museums": {
-    "title": "Museums and Archaeological Sites",
-    "subtitle": "Discover Rome's Treasures",
-    "description": "From Vatican Museums to Colosseum, from Capitoline Museums to Baths of Caracalla. Book online and skip the line!",
-    "benefits": {
-      "skip_line": "Skip the Line",
-      "nearby": "Very Close",
-      "online_booking": "Online Booking"
-    },
-    "categories": {
-      "all": "All",
-      "vatican": "Vatican",
-      "ancient": "Ancient",
-      "capitoline": "Capitoline",
-      "archaeological": "Archaeological"
-    },
-    "items": {
-      "vatican_museums": {
-        "name": "Vatican Museums",
-        "description": "One of the world's most important art collections, including Michelangelo's Sistine Chapel.",
-        "duration": "3-4 hours",
-        "distance": "2 train stops",
-        "price": "€20-25",
-        "booking_url": "https://biglietteriamusei.vatican.va"
-      },
-      "colosseum": {
-        "name": "Colosseum",
-        "description": "The world's most famous amphitheater, symbol of Rome and the Roman Empire.",
-        "duration": "2-3 hours",
-        "distance": "30 min by Metro",
-        "price": "€16-22",
-        "booking_url": "https://colosseo.it"
-      },
-      "capitoline_museums": {
-        "name": "Capitoline Museums",
-        "description": "The world's oldest public museums with masterpieces of ancient and Renaissance art.",
-        "duration": "2-3 hours",
-        "distance": "25 min by Metro",
-        "price": "€15",
-        "booking_url": "https://museicapitolini.org"
-      }
-    }
-  },
   "restaurants": {
     "hero": {
       "title": "Roman Restaurants and Trattorias",
       "subtitle": "Authentic Flavors of the Capital",
-      "description": "Discover the best Roman trattorias near our apartment. From carbonara to cacio e pepe, experience the true flavors of Rome",
-      "benefits": {
-        "authentic": "Authentic Cuisine",
-        "nearby": "Near the Apartment",
-        "local_tips": "Local Tips"
-      }
+      "features": "Authentic Roman cuisine • Neighborhood trattorias • Exclusive local tips",
+      "cta": "Explore Restaurants"
     },
     "intro": {
       "title": "Our Favorite Trattorias",
@@ -458,6 +861,113 @@
       "view_map": "View Map",
       "website": "Website"
     },
+    "items": {
+      "mastica": {
+        "name": "Mastica",
+        "category": "moderna",
+        "area": "Prati/Vatican",
+        "address": "Largo Giorgio Maccagno 13",
+        "phone": "+39 06 3975 0433",
+        "description": "Small modern trattoria offering Italian and Roman cuisine with Mediterranean influence. Also suitable for vegetarians, simple and welcoming atmosphere.",
+        "specialties": ["Fresh pasta", "Seasonal dishes", "Tiramisu"],
+        "distance": "50m from apartment",
+        "mapUrl": "https://www.google.it/maps/place/Mastica/@41.9160405,12.4361161,16z/data=!3m1!4b1!4m6!3m5!1s0x132f61aad363de81:0x133c091a2384a194!8m2!3d41.9160365!4d12.438691!16s%2Fg%2F11jmk2czfx?hl=it&entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "tonino": {
+        "name": "Da Tonino (Bassetti)",
+        "category": "tradizionale",
+        "area": "Historic Center",
+        "address": "Via del Governo Vecchio 18-19",
+        "phone": "+39 333 587 0779",
+        "description": "Historic intimate and spartan trattoria offering traditional Roman cuisine. Does not accept reservations, better to arrive early. Family atmosphere.",
+        "specialties": ["Carbonara", "Amatriciana", "Eggplant pasta", "Hunter's rabbit"],
+        "distance": "2.5km",
+        "mapUrl": "https://maps.google.com/maps?q=Via+del+Governo+Vecchio+18,+Roma"
+      },
+      "armando": {
+        "name": "Armando al Pantheon",
+        "category": "tradizionale",
+        "area": "Historic Center",
+        "address": "Salita dei Crescenzi 31",
+        "phone": "+39 06 6880 3034",
+        "description": "Managed by the Gargioli family since 1961, this place with wooden paneling has become an institution of Roman cuisine. Offers two menus.",
+        "specialties": ["Carbonara", "Amatriciana", "Cacio e pepe", "Tripe", "Saltimbocca", "Lamb"],
+        "distance": "3km",
+        "website": "https://www.armandoalpantheon.it/",
+        "mapUrl": "https://www.google.com/maps/place/Armando+al+Pantheon/@41.8990931,12.4713773,17z/data=!3m1!4b1!4m6!3m5!1s0x132f6051d8fd0673:0x91fde7e0e4de70fe!8m2!3d41.8990932!4d12.4762429!16s%2Fg%2F11ckvg1dmb?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "grappolo": {
+        "name": "Hosteria Grappolo d'Oro",
+        "category": "tradizionale",
+        "area": "Historic Center",
+        "address": "Piazza della Cancelleria 80",
+        "phone": "+39 06 6897080",
+        "description": "Recognized by the Michelin Bib Gourmand, uses local and seasonal products. Offers a tasting journey called 'Roman Path'.",
+        "specialties": ["Amatriciana", "Carbonara", "Cacio e pepe", "Boiled meat balls", "Maritozzo"],
+        "distance": "2.8km",
+        "website": "https://www.hosteriagrappolodoro.it/",
+        "mapUrl": "https://www.google.it/maps/place/Hosteria+Grappolo+D'Oro/@41.8962859,12.4696943,17z/data=!3m2!4b1!5s0x132f604588c1978b:0xcc28a0f872583501!4m6!3m5!1s0x132f6045886be65f:0x265bb42dcf454112!8m2!3d41.8962819!4d12.4722692!16s%2Fg%2F1tj70vmw?hl=it&entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "alfredo": {
+        "name": "Alfredo alla Scrofa",
+        "category": "tradizionale",
+        "area": "Historic Center",
+        "address": "Via della Scrofa 104/a",
+        "phone": "+39 06 68806163",
+        "description": "Historic restaurant (over 110 years) known for inventing Fettuccine Alfredo. Frequented by celebrities.",
+        "specialties": ["Fettuccine Alfredo", "Tiramisu", "Fried artichokes", "Meatballs", "Saltimbocca"],
+        "distance": "2.2km",
+        "website": "https://www.alfredoallascrofa.com/",
+        "mapUrl": "https://www.google.com/maps/place/Ristorante+Alfredo+alla+Scrofa/@41.9022693,12.4699621,16z/data=!3m1!4b1!4m6!3m5!1s0x132f6050fbfdbdf9:0x8f8d9d9c566ad09c!8m2!3d41.9022694!4d12.4748277!16s%2Fg%2F1v6k2l24?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "quercia": {
+        "name": "Osteria La Quercia",
+        "category": "tradizionale",
+        "area": "Historic Center",
+        "address": "Piazza della Quercia 23",
+        "phone": "+39 06 6830 0932",
+        "description": "Osteria featured by Slow Food in a quiet square. Offers traditional seasonal dishes with local ingredients.",
+        "specialties": ["Genovese pasta", "Carbonara", "Gnocchi with turnip tops"],
+        "distance": "2.7km",
+        "website": "https://www.osterialaquercia.com/",
+        "mapUrl": "https://www.google.com/maps/place/Osteria+La+Quercia/@41.8945896,12.4668264,17z/data=!3m1!4b1!4m6!3m5!1s0x132f604607994ac1:0x7889da825d2926e6!8m2!3d41.8945897!4d12.471692!16s%2Fg%2F1th547kx?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "pigna": {
+        "name": "La Pigna",
+        "category": "tradizionale",
+        "area": "Historic Center",
+        "address": "Piazza della Pigna 54",
+        "phone": "+39 06 678 5555",
+        "description": "Restaurant with outdoor tables, Italian and Mediterranean cuisine. Near the basilica of Santa Maria Sopra Minerva.",
+        "specialties": ["Carbonara", "Amatriciana", "Cacio e pepe", "Bubi's roast"],
+        "distance": "3.2km",
+        "mapUrl": "https://www.google.com/maps/place/La+Pigna+Roma+Cocktail+Bar+and+Restaurant/@41.8971662,12.4733661,17z/data=!3m1!4b1!4m6!3m5!1s0x132f604e76be4d73:0x438226f3b35fee46!8m2!3d41.8971663!4d12.4782317!16s%2Fg%2F1hc36rs_3?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "enzo": {
+        "name": "Enzo al 29",
+        "category": "tradizionale",
+        "area": "Trastevere",
+        "address": "Via dei Vascellari 29",
+        "phone": "+39 06 5812260",
+        "description": "Small family-run trattoria managed by three brothers. Faithful to traditions, there's often a line outside.",
+        "specialties": ["Jewish-style artichokes", "Lamb", "Amatriciana", "Oxtail stew"],
+        "distance": "4km",
+        "website": "https://www.daenzoal29.com/",
+        "mapUrl": "https://www.google.it/maps/place/Trattoria+Da+Enzo+al+29/@41.8880887,12.4752805,17z/data=!3m1!4b1!4m6!3m5!1s0x132f6038ddb52e7f:0xb5824e3488f5aaf8!8m2!3d41.8880847!4d12.4778554!16s%2Fg%2F1hg4xpgmj?hl=it&entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "teo": {
+        "name": "Trattoria da Teo",
+        "category": "trastevere",
+        "area": "Trastevere",
+        "address": "Piazza dei Ponziani 7A",
+        "phone": "+39 06 5818355",
+        "description": "Fish trattoria with informal atmosphere, perfect for families. Offers outdoor tables and seasonal menu.",
+        "specialties": ["Cacio e pepe", "Amatriciana", "Fried squid", "Jewish-style artichokes"],
+        "distance": "4.2km",
+        "website": "https://www.trattoriadateo.it/",
+        "mapUrl": "https://maps.google.com/maps?q=Piazza+dei+Ponziani+7A,+Roma"
+      }
+    },
     "tips": {
       "title": "Tips for Dining in Rome",
       "timing": {
@@ -471,6 +981,86 @@
         "cash": "Cash always accepted, many traditional places prefer it",
         "cards": "Cards accepted in most restaurants",
         "tip": "Tip: 5-10% if service is good (not mandatory)"
+      }
+    },
+    "cta": {
+      "discover": "Discover All Restaurants"
+    },
+    "preview": {
+      "featured": {
+        "title": "Authentic Roman Cuisine",
+        "dishes": "Carbonara, Amatriciana, Cacio e Pepe"
+      },
+      "highlights": {
+        "trattorias": {
+          "title": "Trattorias",
+          "subtitle": "Authentic"
+        },
+        "specialties": {
+          "title": "Specialties",
+          "subtitle": "Roman"
+        }
+      },
+      "dishes": {
+        "carbonara": "Traditional Carbonara",
+        "others": "Amatriciana & Cacio e Pepe",
+        "trattorias": "Neighborhood Trattorias",
+        "wines": "Lazio Wines"
+      }
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Photo Gallery",
+      "subtitle": "Complete Apartment",
+      "features": "Real photos • 55m² • Fully renovated",
+      "cta": "Explore Gallery"
+    },
+    "title": "Rome Holiday Apartment Photo Gallery",
+    "subtitle": "55m² tourist apartment Balduina - Master bedroom, living room and garden view balcony",
+    "cta": {
+      "view_all": "View All Photos",
+      "book_stay": "Book Your Stay"
+    },
+    "preview": {
+      "rooms": {
+        "bedroom": "Master Bedroom",
+        "living": "Living Room with Smart TV",
+        "kitchen": "Equipped Kitchen", 
+        "balcony": "Garden View Balcony"
+      }
+    }
+  },
+  "museums": {
+    "title": "Museums and Archaeological Sites",
+    "subtitle": "Discover Rome's Treasures",
+    "hero": {
+      "title": "Museums & Archaeological Sites",
+      "subtitle": "Treasures of Rome",
+      "features": "Free Caravaggio churches tour • Near Vatican • Info included",
+      "cta": "Discover Museums & Sites"
+    },
+    "cta": {
+      "discover": "Discover All Museums & Sites"
+    },
+    "preview": {
+      "top": {
+        "vatican": {
+          "name": "Vatican Museums",
+          "highlight": "Sistine Chapel"
+        },
+        "colosseum": {
+          "name": "Colosseum",
+          "highlight": "Symbol of Rome"
+        },
+        "borghese": {
+          "name": "Borghese Gallery",
+          "highlight": "Bernini & Caravaggio"
+        }
+      },
+      "featured": {
+        "title": "Rome Museums",
+        "description": "2000 years of history await you"
       }
     }
   },
@@ -495,5 +1085,44 @@
     "previous": "Previous",
     "play": "Play",
     "pause": "Pause"
+  },
+  "cancellation": {
+    "title": "Cancellation Policy",
+    "back_to_home": "← Roma Caput Mundi",
+    "effective_date": "Effective date:",
+    "sections": {
+      "full_refund": {
+        "title": "Full Refund (100%)",
+        "description": "In case of cancellation after payment by bank transfer, the amount paid will be fully refunded up to 7 days before arrival."
+      },
+      "cancellation_penalty": {
+        "title": "Cancellation Penalty",
+        "description": "For cancellations made beyond this term, the first night will be retained as penalty."
+      },
+      "refund_request": {
+        "title": "How to Request a Refund",
+        "description": "To request a refund, contact us via:",
+        "contacts": {
+          "whatsapp": "WhatsApp: +39 320 49 33 807",
+          "email": "Email: info@romacaputmundiapt.it"
+        },
+        "paypal_note": "PayPal refunds are processed within 24-48 hours of the request."
+      },
+      "legal_protection": {
+        "title": "Legal Protection",
+        "description": "This policy protects you in case of disputes and ensures transparency in the booking and cancellation process. The property is registered with license 058091-CAV-12914 and CIN IT058091B4DGY9ABNC."
+      },
+      "booking_process": {
+        "title": "Booking Process",
+        "steps": {
+          "availability": "Availability request via form or direct contact",
+          "confirmation": "Availability confirmation within 2 hours",
+          "payment": "Payment via bank transfer or PayPal",
+          "final_confirmation": "Final booking confirmation",
+          "checkin_info": "Send check-in information"
+        }
+      },
+      "contact_cta": "Contact Us for Questions"
+    }
   }
 }

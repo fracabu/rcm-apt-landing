@@ -17,6 +17,7 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-6">
+          <router-link to="/" class="nav-link">Home</router-link>
           <router-link to="/servizi" class="nav-link">{{ $t('nav.services') }}</router-link>
           <router-link to="/galleria" class="nav-link">{{ $t('nav.photos') }}</router-link>
           <router-link to="/recensioni" class="nav-link">{{ $t('nav.reviews') }}</router-link>
@@ -25,8 +26,12 @@
           <router-link to="/ristoranti" class="nav-link">{{ $t('pages.restaurants') }}</router-link>
           <router-link to="/contatti" class="nav-link">{{ $t('nav.contacts') }}</router-link>
           <LanguageSwitcher />
-          <router-link to="/contatti" class="btn-primary">
-            {{ $t('nav.availability') }}
+          <router-link to="/contatti" class="btn-3d btn-3d-md">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              {{ $t('nav.availability') }}
+            </span>
           </router-link>
         </div>
 
@@ -40,6 +45,7 @@
       <!-- Mobile Menu -->
       <div v-if="isMobileMenuOpen" class="md:hidden mt-4 pb-4 border-t pt-4">
         <div class="flex flex-col space-y-4">
+          <router-link to="/" @click="closeMobileMenu" class="nav-link-mobile">Home</router-link>
           <router-link to="/servizi" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.services') }}</router-link>
           <router-link to="/galleria" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.photos') }}</router-link>
           <router-link to="/recensioni" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.reviews') }}</router-link>
@@ -50,8 +56,12 @@
           <div class="flex justify-center">
             <LanguageSwitcher />
           </div>
-          <router-link to="/contatti" @click="closeMobileMenu" class="btn-primary w-full text-center">
-            {{ $t('nav.availability') }}
+          <router-link to="/contatti" @click="closeMobileMenu" class="btn-3d btn-3d-md w-full">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front text-center">
+              {{ $t('nav.availability') }}
+            </span>
           </router-link>
         </div>
       </div>

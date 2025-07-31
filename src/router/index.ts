@@ -9,6 +9,7 @@ import MuseiPage from '../views/MuseiPage.vue'
 import RestaurantsPage from '../views/RestaurantsPage.vue'
 import AdminPage from '../views/AdminPage.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
+import CancellationPage from '../views/CancellationPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -77,6 +78,16 @@ const router = createRouter({
       path: '/privacy',
       name: 'privacy',
       component: PrivacyPage
+    },
+    {
+      path: '/cancellazione',
+      name: 'cancellation',
+      component: CancellationPage,
+      meta: {
+        title: 'Politica di Cancellazione | Roma Caput Mundi Apartment',
+        description: 'Politica di cancellazione trasparente: rimborso 100% fino a 7 giorni prima. Procedura semplice via WhatsApp o email.',
+        keywords: 'cancellazione prenotazione, rimborso, politica cancellazione appartamento roma'
+      }
     }
   ],
   scrollBehavior(to, _, savedPosition) {

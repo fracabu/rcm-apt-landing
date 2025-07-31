@@ -7,15 +7,15 @@
     "availability": "Verifica Disponibilità"
   },
   "hero": {
-    "title": "Casa Vacanze Roma Appartamento Vaticano",
-    "subtitle": "Affitto Breve Balduina - WiFi Netflix Sky - 2 fermate San Pietro",
+    "title": "Roma Caput Mundi",
+    "subtitle": "Appartamento Esclusivo Vicino Vaticano",
     "description": "Casa vacanze Roma vicino Vaticano. Appartamento turistico 50m² in affitto breve nella tranquilla Balduina, WiFi, Netflix, Sky. Perfetto per turisti che visitano San Pietro e Musei Vaticani.",
     "features": {
-      "station": "100m da Stazione FS",
+      "station": "100m da Appiano FS",
       "streaming": "Netflix & Sky Inclusi",
-      "location": "2 Fermate da San Pietro"
+      "location": "San Pietro in 10 minuti"
     },
-    "cta": "Prenota Diretto - Miglior Prezzo",
+    "cta": "Prenota Ora",
     "guarantee": "Miglior prezzo garantito - Prenotazione diretta risparmia",
     "trust": {
       "rating": "9.2/10 Recensioni Eccellenti",
@@ -26,16 +26,26 @@
   "services": {
     "hero": {
       "title": "Servizi e Comfort",
-      "subtitle": "Tutto per il Tuo Benessere",
-      "description": "WiFi veloce, Netflix, Sky, aria condizionata e tutti i comfort per un soggiorno perfetto nel cuore di Roma",
-      "benefits": {
-        "wifi": "WiFi Veloce",
-        "streaming": "Netflix & Sky",
-        "ac": "Aria Condizionata"
-      }
+      "subtitle": "Tutto per il Tuo Soggiorno",
+      "features": "WiFi veloce • Netflix & Sky • Aria condizionata",
+      "cta": "Scopri Tutti i Servizi"
     },
     "title": "Appartamento Roma Servizi e Dotazioni",
     "subtitle": "Casa vacanze Roma con tutti i comfort nella tranquilla Balduina vicino Vaticano",
+    "preview": {
+      "checkin": {
+        "title": "Check-in Flessibile",
+        "description": "Accoglienza personale dalle 15:00 alle 22:00"
+      },
+      "guide": {
+        "title": "Guida Roma Gratuita",
+        "description": "Consigli esclusivi su musei, ristoranti e concerti"
+      },
+      "discounts": {
+        "title": "Sconti Esclusivi",
+        "description": "20% su concerti Auditorium e Santa Cecilia"
+      }
+    },
     "items": {
       "wifi": {
         "title": "WiFi Veloce Gratuito Internet",
@@ -83,22 +93,78 @@
         "museums": "Musei Vaticani",
         "airport": "Aeroporto Roma Fiumicino"
       }
+    },
+    "cta": {
+      "discover": "Scopri Tutti i Servizi"
     }
   },
   "gallery": {
     "hero": {
       "title": "Galleria Fotografica",
-      "subtitle": "Scopri il Tuo Futuro Soggiorno",
-      "description": "Esplora ogni angolo del nostro appartamento: dalla camera matrimoniale al balcone con vista giardino",
-      "benefits": {
-        "real_photos": "Foto Reali",
-        "size": "50m² di Comfort",
-        "renovated": "Recentemente Rinnovato"
-      }
+      "subtitle": "Appartamento Completo",
+      "features": "Foto reali • 55m² • Completamente ristrutturato",
+      "cta": "Esplora la Galleria"
     },
     "title": "Casa Vacanze Roma Galleria Foto",
     "subtitle": "50m² appartamento turistico Balduina - Camera matrimoniale, soggiorno e balcone vista giardino",
-    "cta": "Prenota la Tua Vacanza Roma",
+    "cta": {
+      "view_all": "Vedi Tutte le Foto",
+      "book_stay": "Prenota il Tuo Soggiorno"
+    },
+    "images": {
+      "bedroom": {
+        "title": "Camera da Letto Matrimoniale",
+        "description": "Spaziosa camera matrimoniale con letto comodo, armadio capiente e atmosfera rilassante per il vostro riposo dopo una giornata a Roma."
+      },
+      "living": {
+        "title": "Soggiorno Accogliente",
+        "description": "Soggiorno luminoso con divano letto, Smart TV con Netflix e Sky, perfetto per rilassarsi e per ospitare fino a 4 persone."
+      },
+      "living_alt": {
+        "title": "Soggiorno - Vista Alternativa",
+        "description": "Un'altra prospettiva del soggiorno che mostra l'ampiezza dello spazio e la disposizione degli arredi per il massimo comfort."
+      },
+      "kitchen": {
+        "title": "Cucina Completamente Attrezzata",
+        "description": "Cucina moderna con frigorifero, macchina del caffè italiana e tutti gli utensili necessari per preparare i vostri pasti."
+      },
+      "bathroom": {
+        "title": "Bagno Moderno e Funzionale",
+        "description": "Bagno pulito e moderno con doccia spaziosa, bidet e tutti i comfort necessari per il vostro soggiorno."
+      },
+      "bathroom_alt": {
+        "title": "Bagno - Dettaglio Arredi",
+        "description": "Vista dettagliata degli arredi del bagno che evidenzia la qualità dei sanitari e l'organizzazione degli spazi."
+      },
+      "balcony": {
+        "title": "Balcone Privato Vista Giardino",
+        "description": "Rilassatevi nel balcone privato con vista sul tranquillo giardino condominiale, perfetto per una pausa caffè mattutina."
+      },
+      "dining": {
+        "title": "Zona Pranzo e Relax",
+        "description": "Area pranzo accogliente dove gustare i vostri pasti in compagnia, con vista sul soggiorno e atmosfera familiare."
+      }
+    },
+    "preview": {
+      "rooms": {
+        "bedroom": "Camera Matrimoniale",
+        "living": "Soggiorno con Smart TV", 
+        "kitchen": "Cucina Attrezzata",
+        "balcony": "Balcone Vista Giardino"
+      },
+      "rating": {
+        "description": "12 recensioni verificate Booking.com"
+      },
+      "fallback": {
+        "guest": "Ospite",
+        "country": "Italia",
+        "comment": "Recensione eccellente"
+      },
+      "loading": {
+        "title": "Caricamento recensioni...",
+        "description": "Le nostre eccellenti recensioni stanno arrivando"
+      }
+    },
     "images": {
       "living": "Soggiorno con divano letto e Smart TV con Netflix e Sky",
       "bedroom": "Camera matrimoniale confortevole appartamento Roma",
@@ -112,14 +178,10 @@
     "hero": {
       "title": "Recensioni Ospiti",
       "subtitle": "Punteggio 9.4/10 Eccellente",
-      "description": "Leggi le recensioni reali dei nostri ospiti e scopri perché scelgono sempre Roma Caput Mundi",
-      "benefits": {
-        "rating": "9.4/10 Booking.com",
-        "count": "12 Recensioni",
-        "verified": "Verificate"
-      }
+      "features": "12 recensioni verificate Booking.com",
+      "cta": "Leggi le Recensioni"
     },
-    "title": "Recensioni Ospiti Reali - Casa Vacanze Roma",
+    "title": "Le Nostre Recensioni su Booking",
     "subtitle": "Punteggio 9.2/10 Eccellente su Booking.com - 12 recensioni verificate visitatori Roma",
     "badges": {
       "booking": "Booking.com Verificato",
@@ -130,29 +192,197 @@
       "excellent": "Eccellente",
       "verified_label": "Verificate da Booking.com"
     },
-    "cta": "Prenota la Tua Vacanza Roma Ora",
+    "cta": {
+      "read_all": "Leggi Tutte le Recensioni",
+      "become_guest": "Diventa il Prossimo Ospite Felice"
+    },
+    "preview": {
+      "rating": {
+        "description": "12 recensioni verificate Booking.com"
+      },
+      "fallback": {
+        "guest": "Ospite",
+        "country": "Italia",
+        "comment": "Recensione eccellente"
+      },
+      "loading": {
+        "title": "Caricamento recensioni...",
+        "description": "Le nostre eccellenti recensioni stanno arrivando"
+      }
+    },
+    "nights": "notti",
+    "badges": {
+      "staff": "Staff 10/10",
+      "excellent": "Eccellente",
+      "cleanliness": "Pulizia 10/10",
+      "impeccable": "Impeccabile",
+      "location": "Posizione 9.6/10",
+      "verified": "12 Recensioni",
+      "verified_label": "Verificate"
+    },
     "no_comment": "Recensione eccellente senza commento scritto",
     "trip_types": {
       "couple": "Coppia",
       "family": "Famiglia", 
       "solo": "Viaggiatore Singolo",
       "business": "Viaggio Lavoro"
-    }
+    },
+    "countries": {
+      "italia": "Italia",
+      "svezia": "Svezia", 
+      "iran": "Iran",
+      "ucraina": "Ucraina"
+    },
+    "data": [
+      {
+        "id": 1,
+        "name": "Frigerio",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "Giugno 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "SUPERCONSIGLIATO: Dell'appartamento ci è piaciuto veramente tutto. Dalla posizione comoda con tutti i servizi di trasporto, volendo c'è anche una ciclabile che arriva fino al Vaticano. Comodissimo per chi vuole visitare il centro di Roma e per raggiungere lo stadio Olimpico. Appartamento nuovo, con tutti i servizi, molto pulito. Il proprietario molto accogliente e gentile.",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "name": "Federica",
+        "country": "italia", 
+        "rating": 10,
+        "score": 10,
+        "date": "Giugno 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "Ci siamo innamorati di questo appartamento appena entrati. Luminoso, super pulito e ben arredato. Per non parlare della disponibilità di Francesco, il proprietario, ha soddisfatto ogni nostra esigenza."
+      },
+      {
+        "id": 3,
+        "name": "Alessandra",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "Aprile 2025", 
+        "nights": "1",
+        "type": "solo",
+        "comment": "L'appartamento è nuovo, pulitissimo e dotato di ogni comfort. Ha anche un ampio balcone dal quale abbiamo apprezzato l'aria fresca e fruzzantina della serata. Il proprietario, molto simpatico e disponibile, ci ha accolto di persona. La casa si trova in una posizione molto centrale ma silenziosa."
+      },
+      {
+        "id": 4,
+        "name": "Janaka",
+        "country": "svezia",
+        "rating": 10,
+        "score": 10,
+        "date": "Giugno 2025",
+        "nights": "6",
+        "type": "family",
+        "comment": "Det bästa boendet som vi har bott i. Jätte rent och nu renoverad lägenhet. Ganska stor lägenhet. Man kände hemma direkt. Det fanns allt du behövde i lägenheten. Hyres värdarna var hjälpsamma och ordnar allt du behöver. BÄSTA BOENDET i ROM!"
+      },
+      {
+        "id": 5,
+        "name": "Motlagh",
+        "country": "iran",
+        "rating": 9,
+        "score": 9.0,
+        "date": "Maggio 2025",
+        "nights": "6",
+        "type": "solo",
+        "comment": "I had a wonderful stay at Roma Caput Mundi Apartment. The location is great! Within just 5 minutes of walking, you can reach the train station. There's also a lovely square nearby with easy access to a pharmacy, ice cream shops, restaurants. The hosts were kind and welcoming—especially Francesco, who was so helpful."
+      },
+      {
+        "id": 6,
+        "name": "Fabio", 
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "Marzo 2025",
+        "nights": "1",
+        "type": "family",
+        "comment": "Posizione dell'appartamento ottima perché abbastanza vicina alla stazione ferroviaria Appiano Proba Petronia. Proprietario molto cordiale ed affabile nelle richieste. Appartamento funzionale e molto pulito che ha decisamente soddisfatto le nostre aspettative."
+      },
+      {
+        "id": 7,
+        "name": "Roberto",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "Maggio 2025", 
+        "nights": "1",
+        "type": "solo",
+        "comment": "Appartamento accogliente, pulito, silenzioso, curato e con tutti i comfort necessari per un soggiorno perfetto a Roma."
+      },
+      {
+        "id": 8,
+        "name": "Giorgio",
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "Maggio 2025",
+        "nights": "3", 
+        "type": "family",
+        "comment": "Pulizia, spazi e cortesia del proprietario. Casa accessoriata con tutto quello che serve per un soggiorno confortevole."
+      },
+      {
+        "id": 9,
+        "name": "Mazzariol", 
+        "country": "italia",
+        "rating": 9,
+        "score": 9.0,
+        "date": "Maggio 2025",
+        "nights": "1",
+        "type": "family", 
+        "comment": "Arredato con cura, pulizia approfondita, personale gentilissimo e puntuale. Esperienza davvero positiva, lo consigliamo vivamente."
+      },
+      {
+        "id": 10,
+        "name": "Mirko",
+        "country": "italia",
+        "rating": 10,
+        "score": 10,
+        "date": "Maggio 2025",
+        "nights": "2",
+        "type": "family",
+        "comment": null
+      },
+      {
+        "id": 11,
+        "name": "Ciari", 
+        "country": "italia",
+        "rating": 7,
+        "score": 7.0,
+        "date": "Giugno 2025",
+        "nights": "1",
+        "type": "couple",
+        "comment": null
+      },
+      {
+        "id": 12,
+        "name": "Victoriia",
+        "country": "ucraina", 
+        "rating": 10,
+        "score": 10,
+        "date": "Aprile 2025",
+        "nights": "2",
+        "type": "family",
+        "comment": "Все було дуже добре, дуже милий господар (Tutto è stato molto buono, proprietario molto gentile)"
+      }
+    ]
   },
   "contact": {
     "hero": {
-      "title": "Prenota Ora",
-      "subtitle": "Il Tuo Soggiorno da Sogno",
-      "description": "Contattaci per prenotare il tuo soggiorno perfetto nel cuore di Roma. Risposta garantita entro 2 ore",
-      "benefits": {
-        "response": "Risposta in 2h",
-        "direct": "Prenotazione Diretta",
-        "location": "Centro Roma"
-      }
+      "title": "Contatti e Prenotazioni",
+      "subtitle": "Prenota il Tuo Soggiorno",
+      "features": "Risposta rapida • Contatto diretto • 100m Appiano FS",
+      "cta": "Contattaci Ora"
     },
     "title": "Verifica Disponibilità Appartamento Roma",
     "subtitle": "Contattaci direttamente per le <strong>migliori tariffe casa vacanze</strong> e opzioni pagamento sicure.",
     "checkin_info": "Check-in 15:00-22:00, Check-out 08:00-11:00.",
+    "preview": {
+      "title": "Chiedi Disponibilità",
+      "subtitle": "Verifica se siamo liberi nelle tue date"
+    },
     "form": {
       "title": "Prenota Casa Vacanze Roma",
       "name": "Nome Completo",
@@ -211,23 +441,10 @@
     "platforms": {
       "title": "Disponibile anche su piattaforme prenotazione:",
       "license": "Licenza Ufficiale: 058091-CAV-12914, IT058091B4DGY9ABNC"
-    },
-    "cancellation": {
-      "title": "Politica Cancellazione Casa Vacanze Roma",
-      "checkbox": "Accetto la politica di cancellazione per questo appartamento Roma.",
-      "full_refund": "Rimborso Completo (100%)",
-      "full_refund_desc": "Pagamenti bonifico rimborsati completamente fino a 7 giorni prima arrivo Roma.",
-      "penalty": "Penale Cancellazione", 
-      "penalty_desc": "Cancellazioni entro 7 giorni: prima notte trattenuta come penale.",
-      "how_to_refund": "Come Richiedere Rimborso",
-      "how_to_refund_desc": "Contatta il nostro team casa vacanze Roma tramite:",
-      "legal_protection": "Tutela Legale",
-      "legal_protection_desc": "Questa politica protegge la tua prenotazione vacanza Roma e garantisce processo cancellazione trasparente.",
-      "understood": "Ho Capito"
     }
   },
   "footer": {
-    "company_name": "Rome Apartment Appiano FS",
+    "company_name": "Roma Caput Mundi Apartment",
     "description": "Bilocale 50m² nella tranquilla Balduina. A 100m dalla stazione Appiano FS, 2 fermate da San Pietro. WiFi veloce, Netflix, Sky e tutti i comfort per un soggiorno perfetto.",
     "links": {
       "title": "Link Utili",
@@ -260,9 +477,128 @@
     "tagline": "La tua perfetta casa vacanze Roma vicino Vaticano"
   },
   "privacy": {
-    "title": "Privacy Policy Casa Vacanze Roma",
+    "title": "Privacy Policy",
     "effective_date": "Data di entrata in vigore:",
-    "back_to_home": "← Torna ad Appartamento Roma"
+    "back_to_home": "← Roma Caput Mundi",
+    "sections": {
+      "data_collection": {
+        "title": "1. Informazioni che raccogliamo",
+        "description": "Raccogliamo le seguenti informazioni quando utilizzi il nostro sito web o richiedi una prenotazione:",
+        "items": {
+          "personal": "Dati personali: nome, cognome, indirizzo email, numero di telefono",
+          "stay": "Dati del soggiorno: date di check-in e check-out, numero di ospiti",
+          "communications": "Comunicazioni: messaggi e richieste inviate tramite il modulo di contatto",
+          "technical": "Dati tecnici: indirizzo IP, tipo di browser, sistema operativo, pagine visitate"
+        }
+      },
+      "data_usage": {
+        "title": "2. Come utilizziamo le tue informazioni",
+        "description": "Utilizziamo le informazioni raccolte per:",
+        "items": {
+          "bookings": "Processare e gestire le richieste di prenotazione",
+          "communication": "Comunicare con te riguardo alla tua prenotazione",
+          "support": "Fornire assistenza clienti",
+          "improvements": "Migliorare i nostri servizi e il sito web",
+          "legal": "Rispettare gli obblighi legali"
+        }
+      },
+      "cookies": {
+        "title": "3. Cookie e tecnologie simili",
+        "description": "Utilizziamo cookie e tecnologie simili per:",
+        "items": {
+          "essential": "Cookie essenziali: necessari per il funzionamento del sito",
+          "performance": "Cookie di performance: per analizzare l'utilizzo del sito",
+          "functionality": "Cookie di funzionalità: per ricordare le tue preferenze"
+        },
+        "management": "Puoi gestire le tue preferenze sui cookie tramite il banner dei cookie presente sul sito."
+      },
+      "data_sharing": {
+        "title": "4. Condivisione delle informazioni",
+        "description": "Non vendiamo, affittiamo o condividiamo le tue informazioni personali con terze parti, eccetto nei seguenti casi:",
+        "items": {
+          "legal": "Quando richiesto dalla legge",
+          "protection": "Per proteggere i nostri diritti legali",
+          "providers": "Con fornitori di servizi fidati che ci assistono nelle operazioni del sito"
+        }
+      },
+      "gdpr_rights": {
+        "title": "5. I tuoi diritti (GDPR)",
+        "description": "In conformità al GDPR, hai i seguenti diritti:",
+        "items": {
+          "access": "Diritto di accesso: ottenere informazioni sui dati che trattiamo",
+          "rectification": "Diritto di rettifica: correggere dati inesatti o incompleti",
+          "erasure": "Diritto di cancellazione: richiedere la cancellazione dei tuoi dati",
+          "restriction": "Diritto di limitazione: limitare il trattamento dei tuoi dati",
+          "portability": "Diritto di portabilità: ottenere i tuoi dati in formato strutturato",
+          "objection": "Diritto di opposizione: opporti al trattamento dei tuoi dati"
+        }
+      },
+      "data_security": {
+        "title": "6. Sicurezza dei dati",
+        "description": "Implementiamo misure di sicurezza appropriate per proteggere le tue informazioni personali da accesso non autorizzato, alterazione, divulgazione o distruzione. Utilizziamo crittografia SSL e sistemi di sicurezza aggiornati."
+      },
+      "data_retention": {
+        "title": "7. Conservazione dei dati",
+        "description": "Conserviamo le tue informazioni personali solo per il tempo necessario agli scopi per cui sono state raccolte o come richiesto dalla legge. Le informazioni di prenotazione vengono conservate per un massimo di 5 anni per finalità contabili e fiscali."
+      },
+      "minors": {
+        "title": "8. Minori",
+        "description": "I nostri servizi non sono rivolti a minori di 18 anni. Non raccogliamo consapevolmente informazioni personali da minori di 18 anni."
+      },
+      "policy_changes": {
+        "title": "9. Modifiche alla Privacy Policy",
+        "description": "Ci riserviamo il diritto di modificare questa Privacy Policy in qualsiasi momento. Ti notificheremo eventuali modifiche significative pubblicando la nuova Privacy Policy su questa pagina con una nuova data di entrata in vigore."
+      },
+      "contact": {
+        "title": "10. Contatti",
+        "description": "Per qualsiasi domanda riguardo a questa Privacy Policy o per esercitare i tuoi diritti, puoi contattarci:",
+        "details": {
+          "email": "Email: info@romacaputmundiapt.it",
+          "phone": "Telefono: +39 320 49 33 807",
+          "address": "Indirizzo: Via R.R. Pereira n. 33"
+        }
+      }
+    },
+    "compliance": "Questa Privacy Policy è conforme al Regolamento Generale sulla Protezione dei Dati (GDPR) dell'Unione Europea e alla normativa italiana sulla privacy."
+  },
+  "cancellation": {
+    "title": "Politica di Cancellazione",
+    "effective_date": "Data di entrata in vigore:",
+    "back_to_home": "← Roma Caput Mundi",
+    "sections": {
+      "full_refund": {
+        "title": "Rimborso Completo (100%)",
+        "description": "In caso di disdetta dopo il pagamento con bonifico, l'importo versato verrà interamente rimborsato fino a 7 giorni prima dell'arrivo."
+      },
+      "cancellation_penalty": {
+        "title": "Penale di Cancellazione",
+        "description": "Per cancellazioni effettuate oltre questo termine, sarà trattenuta la prima notte a titolo di penale."
+      },
+      "refund_request": {
+        "title": "Come Richiedere un Rimborso",
+        "description": "Per richiedere un rimborso, contattaci tramite:",
+        "contacts": {
+          "whatsapp": "WhatsApp: +39 320 49 33 807",
+          "email": "Email: info@romacaputmundiapt.it"
+        },
+        "paypal_note": "PayPal: I rimborsi PayPal vengono processati entro 24-48 ore dalla richiesta."
+      },
+      "legal_protection": {
+        "title": "Tutela Legale",
+        "description": "Questa politica ti tutela in caso di contestazioni e garantisce trasparenza nel processo di prenotazione e cancellazione. La struttura è registrata con licenza 058091-CAV-12914 e CIN IT058091B4DGY9ABNC."
+      },
+      "booking_process": {
+        "title": "Processo di Prenotazione",
+        "steps": {
+          "availability": "Richiesta di disponibilità tramite form o contatto diretto",
+          "confirmation": "Conferma della disponibilità entro 2 ore",
+          "payment": "Pagamento tramite bonifico bancario o PayPal",
+          "final_confirmation": "Conferma definitiva della prenotazione",
+          "checkin_info": "Invio delle informazioni per il check-in"
+        }
+      },
+      "contact_cta": "Contattaci per Domande"
+    }
   },
   "admin": {
     "title": "Admin Casa Vacanze Roma",
@@ -306,7 +642,35 @@
       "santa_cecilia_discount": "Sconto 20% Santa Cecilia",
       "transport_info": "Info Trasporti Incluse"
     },
-    "cta": "Prenota & Ottieni Sconto",
+    "cta": {
+      "discover": "Scopri Tutti i Concerti"
+    },
+    "preview": {
+      "featured": {
+        "title": "Concerti Roma 2025-2026",
+        "venues": "Auditorium, Circo Massimo, Stadio Olimpico"
+      },
+      "discount": {
+        "label": "Sconto Auditorium"
+      },
+      "season": {
+        "label": "Stagione Concerti"
+      },
+      "venues": {
+        "auditorium": {
+          "name": "Auditorium Parco della Musica",
+          "description": "Il principale centro musicale di Roma con tre sale da concerto e programmazione internazionale"
+        },
+        "santa_cecilia": {
+          "name": "Accademia Santa Cecilia",
+          "description": "Orchestra e concerti di musica classica di fama mondiale"
+        },
+        "stadiums": {
+          "name": "Circo Massimo & Stadio Olimpico",
+          "description": "Grandi eventi e concerti internazionali nei luoghi iconici di Roma"
+        }
+      }
+    },
     "venues": {
       "auditorium": {
         "name": "Auditorium Parco della Musica",
@@ -371,6 +735,23 @@
       },
       "cta": "Contattaci per Verificare Disponibilità Sconto"
     },
+    "descriptions": {
+      "1": "La leggendaria poetessa del rock in concerto nella suggestiva cornice dell'Auditorium.",
+      "2": "I giganti del rock gallese tornano a Roma con il loro sound inconfondibile.",
+      "3": "L'ex frontman degli Smiths in un concerto esclusivo e imperdibile.",
+      "4": "Il sassofonista più famoso del momento in una serata magica sotto le stelle.",
+      "5": "L'Opera immortale di Wagner diretta da Antonio Pappano con cast internazionale.",
+      "6": "La monumentale Terza Sinfonia di Mahler con l'Orchestra di Santa Cecilia.",
+      "7": "Il capolavoro di Händel nella tradizionale esecuzione natalizia.",
+      "8": "Il pianista cinese più famoso al mondo in recital solistico.",
+      "9": "Il cantautore bolognese torna live con il suo nuovo 'Live 26' tour.",
+      "10": "Il fenomeno del nuovo cantautorato italiano nel suo 'Tour Stadi 2025'.",
+      "11": "Le leggende del new wave inglese in doppia data romana (15-16 giugno).",
+      "12": "Sugar Fornaciari nel tour 'Overdose d'Amore' con doppia data (23-24 giugno).",
+      "13": "L'ex 883 nel tour 'Max Forever - Gli Anni d'Oro - Stadi 2026'.",
+      "14": "Il 'Grand National Tour' con i due giganti dell'hip-hop e R&B contemporaneo.",
+      "15": "Il 'Mathematics European Tour' del cantautore inglese più amato al mondo."
+    },
     "transport": {
       "title": "Come Arrivare dall'Appartamento",
       "auditorium": {
@@ -388,6 +769,12 @@
     }
   },
   "museums": {
+    "hero": {
+      "title": "Musei e Siti Archeologici",
+      "subtitle": "Tesori di Roma",
+      "features": "Giro chiese Caravaggio gratuito • Vicino Vaticani • Info incluse",
+      "cta": "Scopri Musei e Siti"
+    },
     "title": "Musei e Siti Archeologici",
     "subtitle": "Scopri i Tesori di Roma",
     "description": "Dai Musei Vaticani al Colosseo, dai Musei Capitolini alle Terme di Caracalla. Prenota online e salta la fila!",
@@ -398,12 +785,42 @@
     },
     "categories": {
       "all": "Tutti",
-      "vatican": "Vaticani",
-      "ancient": "Antichi",
-      "capitoline": "Capitolini",
-      "archaeological": "Archeologici"
+      "vaticani": "Vaticani",
+      "archeologia": "Archeologia",
+      "arte": "Arte",
+      "storia": "Storia"
     },
     "items": {
+      "musei-vaticani": {
+        "name": "Musei Vaticani & Cappella Sistina",
+        "description": "La più grande collezione d'arte al mondo con la famosa Cappella Sistina affrescata da Michelangelo. Un viaggio attraverso secoli di arte e storia.",
+        "highlights": {
+          "0": "Cappella Sistina",
+          "1": "Stanze di Raffaello",
+          "2": "Galleria delle Carte",
+          "3": "Pinacoteca"
+        }
+      },
+      "basilica-san-pietro": {
+        "name": "Basilica di San Pietro & Cupola",
+        "description": "La basilica più importante della cristianità con la maestosa cupola di Michelangelo. Salita alla cupola per una vista mozzafiato su Roma.",
+        "highlights": {
+          "0": "Cupola di Michelangelo",
+          "1": "Pietà",
+          "2": "Baldacchino del Bernini",
+          "3": "Grotte Vaticane"
+        }
+      },
+      "colosseo": {
+        "name": "Colosseo",
+        "description": "L'anfiteatro più famoso al mondo, simbolo dell'Impero Romano. Scopri la storia dei gladiatori e degli spettacoli dell'antica Roma.",
+        "highlights": {
+          "0": "Arena",
+          "1": "Sotterranei",
+          "2": "Terzo anello",
+          "3": "Museo"
+        }
+      },
       "vatican_museums": {
         "name": "Musei Vaticani",
         "description": "Una delle collezioni d'arte più importanti al mondo, con la Cappella Sistina di Michelangelo.",
@@ -428,18 +845,103 @@
         "price": "€15",
         "booking_url": "https://museicapitolini.org"
       }
+    },
+    "cta": {
+      "discover": "Scopri Tutti i Musei",
+      "book_cultural_stay": "Prenota il Tuo Soggiorno Culturale"
+    },
+    "price_from": "Da",
+    "buttons": {
+      "tickets": "Biglietti",
+      "info": "Info"
+    },
+    "tips": {
+      "title": "Consigli Pratici per le Visite",
+      "book_online": {
+        "title": "Prenota Online",
+        "description": "Evita le code e assicurati l'ingresso prenotando in anticipo online"
+      },
+      "best_times": {
+        "title": "Orari Migliori",
+        "description": "Visita al mattino presto o nel tardo pomeriggio per evitare la folla"
+      },
+      "audioguides": {
+        "title": "Audioguide",
+        "description": "Molti musei offrono audioguide gratuite per arricchire la visita"
+      }
+    },
+    "transport": {
+      "title": "Come Raggiungere i Musei dal Nostro Appartamento",
+      "vatican": {
+        "title": "Musei Vaticani & San Pietro",
+        "metro": "Metro A: Cipro (2 fermate) + 10 min a piedi",
+        "bus": "Bus 49: Diretto in 15 minuti"
+      },
+      "center": {
+        "title": "Centro Storico (Pantheon, Colosseo)",
+        "metro": "Metro A: Lepanto → Flaminio + Bus",
+        "time": "Tempo totale: 30-40 minuti"
+      }
+    },
+    "items": {
+      "musei-vaticani": {
+        "name": "Musei Vaticani & Cappella Sistina",
+        "description": "La più grande collezione d'arte al mondo con la famosa Cappella Sistina affrescata da Michelangelo. Un viaggio attraverso secoli di arte e storia.",
+        "highlights": {
+          "0": "Cappella Sistina",
+          "1": "Stanze di Raffaello",
+          "2": "Galleria delle Carte",
+          "3": "Pinacoteca"
+        }
+      },
+      "basilica-san-pietro": {
+        "name": "Basilica di San Pietro & Cupola",
+        "description": "La basilica più importante della cristianità con la maestosa cupola di Michelangelo. Salita alla cupola per una vista mozzafiato su Roma.",
+        "highlights": {
+          "0": "Cupola di Michelangelo",
+          "1": "Pietà",
+          "2": "Baldacchino del Bernini",
+          "3": "Grotte Vaticane"
+        }
+      },
+      "colosseo": {
+        "name": "Colosseo",
+        "description": "L'anfiteatro più famoso al mondo, simbolo dell'Impero Romano. Scopri la storia dei gladiatori e degli spettacoli dell'antica Roma.",
+        "highlights": {
+          "0": "Arena",
+          "1": "Sotterranei",
+          "2": "Terzo anello",
+          "3": "Museo"
+        }
+      }
+    },
+    "preview": {
+      "top": {
+        "vatican": {
+          "name": "Musei Vaticani",
+          "highlight": "Cappella Sistina"
+        },
+        "colosseum": {
+          "name": "Colosseo",
+          "highlight": "Simbolo di Roma"
+        },
+        "borghese": {
+          "name": "Galleria Borghese",
+          "highlight": "Bernini e Caravaggio"
+        }
+      },
+      "featured": {
+        "title": "Musei di Roma",
+        "description": "2000 anni di storia ti aspettano"
+      }
     }
   },
   "restaurants": {
     "hero": {
       "title": "Ristoranti e Trattorie Romane",
       "subtitle": "I Sapori Autentici della Capitale",
-      "description": "Scopri le migliori trattorie romane vicine al nostro appartamento. Dalla carbonara alla cacio e pepe, vivi i veri sapori di Roma",
-      "benefits": {
-        "authentic": "Cucina Autentica",
-        "nearby": "Vicino all'Appartamento",
-        "local_tips": "Consigli Locali"
-      }
+      "features": "Cucina autentica romana • Trattorie di quartiere • Consigli locali esclusivi",
+      "cta": "Esplora i Ristoranti"
     },
     "intro": {
       "title": "Le Nostre Trattorie Preferite",
@@ -458,6 +960,113 @@
       "view_map": "Vedi Mappa",
       "website": "Sito Web"
     },
+    "items": {
+      "mastica": {
+        "name": "Mastica",
+        "category": "moderna",
+        "area": "Prati/Vaticano",
+        "address": "Largo Giorgio Maccagno 13",
+        "phone": "+39 06 3975 0433",
+        "description": "Piccola trattoria moderna che propone cucina italiana e romana con influenza mediterranea. Adatta anche a vegetariani, atmosfera semplice e accogliente.",
+        "specialties": ["Pasta fresca", "Piatti stagionali", "Tiramisù"],
+        "distance": "50m dall'appartamento",
+        "mapUrl": "https://www.google.it/maps/place/Mastica/@41.9160405,12.4361161,16z/data=!3m1!4b1!4m6!3m5!1s0x132f61aad363de81:0x133c091a2384a194!8m2!3d41.9160365!4d12.438691!16s%2Fg%2F11jmk2czfx?hl=it&entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "tonino": {
+        "name": "Da Tonino (Bassetti)",
+        "category": "tradizionale",
+        "area": "Centro Storico",
+        "address": "Via del Governo Vecchio 18-19",
+        "phone": "+39 333 587 0779",
+        "description": "Trattoria storica intima e spartana che propone cucina romana tradizionale. Non accetta prenotazioni, conviene presentarsi presto. Atmosfera familiare.",
+        "specialties": ["Carbonara", "Amatriciana", "Pasta alle melanzane", "Coniglio alla cacciatora"],
+        "distance": "2.5km",
+        "mapUrl": "https://maps.google.com/maps?q=Via+del+Governo+Vecchio+18,+Roma"
+      },
+      "armando": {
+        "name": "Armando al Pantheon",
+        "category": "tradizionale", 
+        "area": "Centro Storico",
+        "address": "Salita dei Crescenzi 31",
+        "phone": "+39 06 6880 3034",
+        "description": "Gestito dalla famiglia Gargioli dal 1961, questo locale con boiserie in legno è diventato un'istituzione della cucina romana. Offre due menù.",
+        "specialties": ["Carbonara", "Amatriciana", "Cacio e pepe", "Trippa", "Saltimbocca", "Abbacchio"],
+        "distance": "3km",
+        "website": "https://www.armandoalpantheon.it/",
+        "mapUrl": "https://www.google.com/maps/place/Armando+al+Pantheon/@41.8990931,12.4713773,17z/data=!3m1!4b1!4m6!3m5!1s0x132f6051d8fd0673:0x91fde7e0e4de70fe!8m2!3d41.8990932!4d12.4762429!16s%2Fg%2F11ckvg1dmb?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "grappolo": {
+        "name": "Hosteria Grappolo d'Oro",
+        "category": "tradizionale",
+        "area": "Centro Storico", 
+        "address": "Piazza della Cancelleria 80",
+        "phone": "+39 06 6897080",
+        "description": "Riconosciuta dal Bib Gourmand Michelin, usa prodotti locali e stagionali. Offre un percorso degustazione 'Percorso Romano'.",
+        "specialties": ["Amatriciana", "Carbonara", "Cacio e pepe", "Polpette di bollito", "Maritozzo"],
+        "distance": "2.8km",
+        "website": "https://www.hosteriagrappolodoro.it/",
+        "mapUrl": "https://www.google.it/maps/place/Hosteria+Grappolo+D'Oro/@41.8962859,12.4696943,17z/data=!3m2!4b1!5s0x132f604588c1978b:0xcc28a0f872583501!4m6!3m5!1s0x132f6045886be65f:0x265bb42dcf454112!8m2!3d41.8962819!4d12.4722692!16s%2Fg%2F1tj70vmw?hl=it&entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "alfredo": {
+        "name": "Alfredo alla Scrofa",
+        "category": "tradizionale",
+        "area": "Centro Storico",
+        "address": "Via della Scrofa 104/a", 
+        "phone": "+39 06 68806163",
+        "description": "Ristorante storico (oltre 110 anni) noto per aver inventato le Fettuccine Alfredo. Frequentato da celebrità.",
+        "specialties": ["Fettuccine Alfredo", "Tiramisù", "Carciofi fritti", "Polpette", "Saltimbocca"],
+        "distance": "2.2km",
+        "website": "https://www.alfredoallascrofa.com/",
+        "mapUrl": "https://www.google.com/maps/place/Ristorante+Alfredo+alla+Scrofa/@41.9022693,12.4699621,16z/data=!3m1!4b1!4m6!3m5!1s0x132f6050fbfdbdf9:0x8f8d9d9c566ad09c!8m2!3d41.9022694!4d12.4748277!16s%2Fg%2F1v6k2l24?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "quercia": {
+        "name": "Osteria La Quercia",
+        "category": "tradizionale",
+        "area": "Centro Storico",
+        "address": "Piazza della Quercia 23",
+        "phone": "+39 06 6830 0932", 
+        "description": "Osteria segnalata da Slow Food in una piazza tranquilla. Offre piatti stagionali della tradizione con ingredienti locali.",
+        "specialties": ["Pasta alla genovese", "Carbonara", "Gnocchi con cime di rapa"],
+        "distance": "2.7km",
+        "website": "https://www.osterialaquercia.com/",
+        "mapUrl": "https://www.google.com/maps/place/Osteria+La+Quercia/@41.8945896,12.4668264,17z/data=!3m1!4b1!4m6!3m5!1s0x132f604607994ac1:0x7889da825d2926e6!8m2!3d41.8945897!4d12.471692!16s%2Fg%2F1th547kx?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "pigna": {
+        "name": "La Pigna",
+        "category": "tradizionale",
+        "area": "Centro Storico",
+        "address": "Piazza della Pigna 54",
+        "phone": "+39 06 678 5555",
+        "description": "Ristorante con tavoli all'aperto, cucina italiana e mediterranea. Vicino alla basilica di Santa Maria Sopra Minerva.",
+        "specialties": ["Carbonara", "Amatriciana", "Cacio e pepe", "Arrosto Bubi's"],
+        "distance": "3.2km",
+        "mapUrl": "https://www.google.com/maps/place/La+Pigna+Roma+Cocktail+Bar+and+Restaurant/@41.8971662,12.4733661,17z/data=!3m1!4b1!4m6!3m5!1s0x132f604e76be4d73:0x438226f3b35fee46!8m2!3d41.8971663!4d12.4782317!16s%2Fg%2F1hc36rs_3?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "enzo": {
+        "name": "Enzo al 29",
+        "category": "tradizionale",
+        "area": "Trastevere",
+        "address": "Via dei Vascellari 29",
+        "phone": "+39 06 5812260",
+        "description": "Piccola trattoria a conduzione familiare gestita da tre fratelli. Fedele alle tradizioni, spesso c'è la fila fuori.",
+        "specialties": ["Carciofi alla giudia", "Abbacchio", "Amatriciana", "Coda alla vaccinara"],
+        "distance": "4km",
+        "website": "https://www.daenzoal29.com/",
+        "mapUrl": "https://www.google.it/maps/place/Trattoria+Da+Enzo+al+29/@41.8880887,12.4752805,17z/data=!3m1!4b1!4m6!3m5!1s0x132f6038ddb52e7f:0xb5824e3488f5aaf8!8m2!3d41.8880847!4d12.4778554!16s%2Fg%2F1hg4xpgmj?hl=it&entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "teo": {
+        "name": "Trattoria da Teo",
+        "category": "trastevere",
+        "area": "Trastevere",
+        "address": "Piazza dei Ponziani 7A",
+        "phone": "+39 06 5818355",
+        "description": "Trattoria di pesce dal clima informale, perfetta per famiglie. Offre tavoli all'aperto e menu stagionale.",
+        "specialties": ["Cacio e pepe", "Amatriciana", "Frittura di calamari", "Carciofi alla giudia"],
+        "distance": "4.2km",
+        "website": "https://www.trattoriadateo.it/",
+        "mapUrl": "https://maps.google.com/maps?q=Piazza+dei+Ponziani+7A,+Roma"
+      }
+    },
     "tips": {
       "title": "Consigli per Mangiare a Roma",
       "timing": {
@@ -471,6 +1080,31 @@
         "cash": "Contanti sempre accettati, molti locali tradizionali li preferiscono",
         "cards": "Carte accettate nella maggior parte dei ristoranti",
         "tip": "Mancia: 5-10% se il servizio è buono (non obbligatoria)"
+      }
+    },
+    "cta": {
+      "discover": "Scopri Tutti i Ristoranti"
+    },
+    "preview": {
+      "featured": {
+        "title": "Cucina Romana Autentica",
+        "dishes": "Carbonara, Amatriciana, Cacio e Pepe"
+      },
+      "highlights": {
+        "trattorias": {
+          "title": "Trattorie",
+          "subtitle": "Autentiche"
+        },
+        "specialties": {
+          "title": "Specialità",
+          "subtitle": "Romane"
+        }
+      },
+      "dishes": {
+        "carbonara": "Carbonara Tradizionale",
+        "others": "Amatriciana e Cacio e Pepe",
+        "trattorias": "Trattorie di Quartiere",
+        "wines": "Vini del Lazio"
       }
     }
   },

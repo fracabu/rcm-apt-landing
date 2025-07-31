@@ -76,10 +76,10 @@
           <!-- Image Description -->
           <div class="text-center mt-3 md:mt-4">
             <h3 class="text-lg md:text-xl font-semibold text-roma-800 mb-1 md:mb-2">
-              {{ images[currentIndex].title }}
+              {{ getCurrentImageTitle() }}
             </h3>
             <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-              {{ images[currentIndex].description }}
+              {{ getCurrentImageDescription() }}
             </p>
           </div>
         </div>
@@ -176,8 +176,12 @@
 
       <!-- Call to Action -->
       <div class="text-center">
-        <router-link to="/contatti" class="btn-3d btn-3d-lg bg-roma-600 hover:bg-roma-700">
-          {{ $t('gallery.cta') }}
+        <router-link to="/contatti" class="btn-3d btn-3d-lg">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">
+            {{ $t('gallery.cta.book_stay') }}
+          </span>
         </router-link>
       </div>
     </div>
@@ -185,8 +189,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, nextTick, reactive } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, reactive, computed } from 'vue'
 import { ChevronLeftIcon, ChevronRightIcon, PlayIcon, PauseIcon } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
 
 const currentIndex = ref(0)
 const isPlaying = ref(false)
@@ -195,62 +202,119 @@ const thumbnailContainer = ref<HTMLElement>()
 const imageLoaded = reactive<Record<number, boolean>>({})
 let autoplayInterval: NodeJS.Timeout | null = null
 
+// Temporary hardcoded translations to test
+const getCurrentImageTitle = () => {
+  const titles = {
+    it: [
+      'Camera da Letto Matrimoniale',
+      'Soggiorno Accogliente', 
+      'Soggiorno - Vista Alternativa',
+      'Cucina Completamente Attrezzata',
+      'Bagno Moderno e Funzionale',
+      'Bagno - Dettaglio Arredi',
+      'Balcone Privato Vista Giardino',
+      'Zona Pranzo e Relax'
+    ],
+    en: [
+      'Master Bedroom',
+      'Cozy Living Room',
+      'Living Room - Alternative View', 
+      'Fully Equipped Kitchen',
+      'Modern and Functional Bathroom',
+      'Bathroom - Furniture Detail',
+      'Private Garden View Balcony',
+      'Dining and Relaxation Area'
+    ]
+  }
+  // Get current locale from useI18n
+  const currentLocale = locale.value || 'it'
+  return titles[currentLocale as keyof typeof titles]?.[currentIndex.value] || titles.it[currentIndex.value]
+}
+
+const getCurrentImageDescription = () => {
+  const descriptions = {
+    it: [
+      'Spaziosa camera matrimoniale con letto comodo, armadio capiente e atmosfera rilassante per il vostro riposo dopo una giornata a Roma.',
+      'Soggiorno luminoso con divano letto, Smart TV con Netflix e Sky, perfetto per rilassarsi e per ospitare fino a 4 persone.',
+      "Un'altra prospettiva del soggiorno che mostra l'ampiezza dello spazio e la disposizione degli arredi per il massimo comfort.",
+      'Cucina moderna con frigorifero, macchina del caffè italiana e tutti gli utensili necessari per preparare i vostri pasti.',
+      'Bagno pulito e moderno con doccia spaziosa, bidet e tutti i comfort necessari per il vostro soggiorno.',
+      "Vista dettagliata degli arredi del bagno che evidenzia la qualità dei sanitari e l'organizzazione degli spazi.",
+      'Rilassatevi nel balcone privato con vista sul tranquillo giardino condominiale, perfetto per una pausa caffè mattutina.',
+      'Area pranzo accogliente dove gustare i vostri pasti in compagnia, con vista sul soggiorno e atmosfera familiare.'
+    ],
+    en: [
+      'Spacious master bedroom with comfortable bed, large wardrobe and relaxing atmosphere for your rest after a day in Rome.',
+      'Bright living room with sofa bed, Smart TV with Netflix and Sky, perfect for relaxing and accommodating up to 4 people.',
+      'Another perspective of the living room showing the spaciousness and furniture arrangement for maximum comfort.',
+      'Modern kitchen with refrigerator, Italian coffee machine and all utensils needed to prepare your meals.',
+      'Clean and modern bathroom with spacious shower, bidet and all amenities needed for your stay.',
+      'Detailed view of bathroom furnishings highlighting the quality of fixtures and space organization.',
+      'Relax on the private balcony overlooking the quiet condominium garden, perfect for a morning coffee break.',
+      'Welcoming dining area where you can enjoy your meals together, with living room view and family atmosphere.'
+    ]
+  }
+  // Get current locale from useI18n
+  const currentLocale = locale.value || 'it'
+  return descriptions[currentLocale as keyof typeof descriptions]?.[currentIndex.value] || descriptions.it[currentIndex.value]
+}
+
 // Image data with titles, descriptions, and orientation info
 const images = [
   {
     src: '/images/camera.jpg',
     alt: 'Camera da letto matrimoniale',
-    title: 'Camera da Letto Matrimoniale',
-    description: 'Spaziosa camera matrimoniale con letto comodo, armadio capiente e atmosfera rilassante per il vostro riposo dopo una giornata a Roma.',
+    titleKey: 'gallery.images.bedroom.title',
+    descriptionKey: 'gallery.images.bedroom.description',
     orientation: 'landscape'
   },
   {
     src: '/images/soggiorno.jpg',
     alt: 'Soggiorno con divano letto',
-    title: 'Soggiorno Accogliente',
-    description: 'Soggiorno luminoso con divano letto, Smart TV con Netflix e Sky, perfetto per rilassarsi e per ospitare fino a 4 persone.',
+    titleKey: 'gallery.images.living.title',
+    descriptionKey: 'gallery.images.living.description',
     orientation: 'landscape'
   },
   {
     src: '/images/soggiorno1.jpg',
     alt: 'Soggiorno vista alternativa',
-    title: 'Soggiorno - Vista Alternativa',
-    description: 'Un\'altra prospettiva del soggiorno che mostra l\'ampiezza dello spazio e la disposizione degli arredi per il massimo comfort.',
+    titleKey: 'gallery.images.living_alt.title',
+    descriptionKey: 'gallery.images.living_alt.description',
     orientation: 'landscape'
   },
   {
     src: '/images/cucina.jpg',
     alt: 'Cucina completamente attrezzata',
-    title: 'Cucina Completamente Attrezzata',
-    description: 'Cucina moderna con frigorifero, macchina del caffè italiana e tutti gli utensili necessari per preparare i vostri pasti.',
+    titleKey: 'gallery.images.kitchen.title',
+    descriptionKey: 'gallery.images.kitchen.description',
     orientation: 'landscape'
   },
   {
     src: '/images/bagno.jpg',
     alt: 'Bagno moderno',
-    title: 'Bagno Moderno e Funzionale',
-    description: 'Bagno pulito e moderno con doccia spaziosa, bidet e tutti i comfort necessari per il vostro soggiorno.',
+    titleKey: 'gallery.images.bathroom.title',
+    descriptionKey: 'gallery.images.bathroom.description',
     orientation: 'portrait'
   },
   {
     src: '/images/bagno1.jpg',
     alt: 'Bagno vista alternativa',
-    title: 'Bagno - Dettaglio Arredi',
-    description: 'Vista dettagliata degli arredi del bagno che evidenzia la qualità dei sanitari e l\'organizzazione degli spazi.',
+    titleKey: 'gallery.images.bathroom_alt.title',
+    descriptionKey: 'gallery.images.bathroom_alt.description',
     orientation: 'portrait'
   },
   {
     src: '/images/balcone.jpg',
     alt: 'Balcone vista giardino',
-    title: 'Balcone Privato Vista Giardino',
-    description: 'Rilassatevi nel balcone privato con vista sul tranquillo giardino condominiale, perfetto per una pausa caffè mattutina.',
+    titleKey: 'gallery.images.balcony.title',
+    descriptionKey: 'gallery.images.balcony.description',
     orientation: 'portrait'
   },
   {
     src: '/images/pranzo.jpg',
     alt: 'Zona pranzo',
-    title: 'Zona Pranzo e Relax',
-    description: 'Area pranzo accogliente dove gustare i vostri pasti in compagnia, con vista sul soggiorno e atmosfera familiare.',
+    titleKey: 'gallery.images.dining.title',
+    descriptionKey: 'gallery.images.dining.description',
     orientation: 'landscape'
   }
 ]

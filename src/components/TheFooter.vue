@@ -1,7 +1,7 @@
 <template>
-  <footer class="bg-gradient-to-br from-roma-800 via-roma-800 to-roma-900 text-white py-12">
+  <footer class="text-white py-12" style="background: linear-gradient(135deg, rgba(152, 20, 43, 0.92) 0%, rgba(122, 16, 36, 0.92) 50%, rgba(152, 20, 43, 0.92) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <!-- Company Info -->
         <div>
           <h3 class="text-xl font-serif font-bold mb-4">{{ $t('footer.company_name') }}</h3>
@@ -26,7 +26,7 @@
             <li><router-link to="/ristoranti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('pages.restaurants') }}</router-link></li>
             <li><router-link to="/contatti" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.contacts') }}</router-link></li>
             <li><router-link to="/privacy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.privacy') }}</router-link></li>
-            <li><a href="#cancellation-policy" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.cancellation') }}</a></li>
+            <li><router-link to="/cancellazione" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.cancellation') }}</router-link></li>
             <li><router-link to="/admin" class="text-roma-200 hover:text-roma-gold-400 transition-colors">{{ $t('footer.links.admin') }}</router-link></li>
           </ul>
         </div>
@@ -51,6 +51,13 @@
               <MapPinIcon class="mr-2 h-4 w-4" />
               <span>Via Romeo Rodriguez Pereira n.33 00136 Roma</span>
             </div>
+          </div>
+        </div>
+
+        <!-- Hours & Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Orari & Info</h3>
+          <div class="space-y-2 text-roma-200">
             <div class="flex items-center">
               <ClockIcon class="mr-2 h-4 w-4" />
               <span>{{ $t('footer.contact.checkin') }}</span>
@@ -59,6 +66,9 @@
               <Clock3Icon class="mr-2 h-4 w-4" />
               <span>{{ $t('footer.contact.checkout') }}</span>
             </div>
+            <div class="text-sm text-roma-300 mt-3">
+              Licenza: 058091-CAV-12914
+            </div>
           </div>
         </div>
       </div>
@@ -66,12 +76,12 @@
       <!-- Bottom Bar -->
       <div class="border-t border-roma-700 pt-8 flex flex-col md:flex-row justify-between items-center">
         <div class="text-roma-300 text-sm mb-4 md:mb-0">
-          © 2024 Rome Apartment Appiano FS. Licenza: 058091-CAV-12914, IT058091B4DGY9ABNC
+          © 2024 RomaCaputMundiApt. CIN: IT058091B4DGY9ABNC
         </div>
         <div class="flex items-center space-x-4 text-sm text-roma-300">
           <router-link to="/privacy" class="hover:text-roma-gold-400 transition-colors">Privacy Policy</router-link>
           <span>•</span>
-          <a href="#cancellation-policy" class="hover:text-roma-gold-400 transition-colors">{{ $t('footer.legal.cancellation') }}</a>
+          <router-link to="/cancellazione" class="hover:text-roma-gold-400 transition-colors">{{ $t('footer.legal.cancellation') }}</router-link>
           <span>•</span>
           <router-link to="/admin" class="hover:text-roma-gold-400 transition-colors">Admin</router-link>
         </div>
@@ -88,13 +98,7 @@
       </div>
       <div class="text-roma-300 text-sm">
         {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong> ·
-        Photo by <a href="https://www.pexels.com/it-it/foto/persone-in-concerto-1763075/" target="_blank" rel="noopener" class="text-roma-gold-400 hover:text-roma-gold-300">Sebastian Ervi</a> on Pexels
-      </div>
-      <div class="flex items-center justify-center space-x-2">
-        <strong>Rome Apartment Appiano FS</strong>
-        <span>-</span>
-        <em>{{ $t('footer.tagline') }}</em>
-        <HomeIcon class="h-4 w-4 text-roma-gold-400" />
+        
       </div>
     </div>
   </footer>

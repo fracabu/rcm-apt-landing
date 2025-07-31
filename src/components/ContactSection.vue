@@ -1,257 +1,128 @@
 <template>
-  <section id="contatti" class="py-16 bg-gradient-to-br from-neutral-50 via-white to-roma-50">
+  <section id="contatti" class="min-h-screen py-16 flex items-center" style="background: linear-gradient(135deg, rgba(152, 20, 43, 0.92) 0%, rgba(122, 16, 36, 0.92) 50%, rgba(152, 20, 43, 0.92) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
     <div class="container mx-auto px-4">
-      <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold text-roma-800 mb-4">
-          {{ $t('contact.title') }}
-        </h2>
-        <p class="text-neutral-700 max-w-4xl mx-auto text-lg" v-html="$t('contact.subtitle')">
-        </p>
-        <p class="text-roma-600 font-semibold mt-2">
-          {{ $t('contact.checkin_info') }}
-        </p>
-      </div>
-
-      <!-- Benefits Bar -->
-      <div class="max-w-7xl mx-auto mb-8">
-        <div class="bg-white p-4 rounded-2xl shadow-lg">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-            <div class="flex items-center">
-              <DollarSignIcon class="text-roma-gold-400 mr-2 h-5 w-5 flex-shrink-0" />
-              <span v-html="$t('contact.benefits.price')"></span>
-            </div>
-            <div class="flex items-center">
-              <CreditCardIcon class="text-roma-red-600 mr-2 h-5 w-5 flex-shrink-0" />
-              <span v-html="$t('contact.benefits.payment')"></span>
-            </div>
-            <div class="flex items-center">
-              <ZapIcon class="text-roma-gold-400 mr-2 h-5 w-5 flex-shrink-0" />
-              <span v-html="$t('contact.benefits.multilingual')"></span>
-            </div>
-            <div class="flex items-center">
-              <HomeIcon class="text-roma-red-600 mr-2 h-5 w-5 flex-shrink-0" />
-              <span v-html="$t('contact.benefits.family')"></span>
-            </div>
-          </div>
+      
+      <!-- Centered Single Column Layout -->
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+            {{ $t('contact.title') }}
+          </h2>
         </div>
-      </div>
 
-      <!-- Main Content - 3 Columns -->
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          <!-- Left Column - Payment & Contact -->
-          <div class="space-y-6">
-            <!-- Payment Methods -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg">
-              <h3 class="text-lg font-semibold text-roma-800 mb-4 flex items-center">
-                <CreditCardIcon class="mr-2 h-5 w-5 text-roma-600" />
-                {{ $t('contact.payment.title') }}
-              </h3>
-              
-              <!-- Bank Transfer -->
-              <div class="mb-3 p-3 bg-green-50 rounded-lg border border-green-200">
-                <div class="flex items-start">
-                  <BuildingIcon class="mr-2 h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h4 class="font-semibold text-green-800 text-sm">{{ $t('contact.payment.bank_transfer.title') }}</h4>
-                    <p class="text-xs text-green-700">{{ $t('contact.payment.bank_transfer.benefit') }}</p>
-                  </div>
-                </div>
+          <!-- Contact Info -->
+          <div class="space-y-4">
+            <a href="https://wa.me/393204933807" class="flex items-center p-4 rounded-xl transition-colors shadow-lg" style="color: #FFB600; background-color: #7A1024; border: 1px solid #FFB600; hover:color: #FFD966;">
+              <MessageCircleIcon class="mr-3 h-6 w-6" />
+              <div>
+                <div class="font-semibold">WhatsApp</div>
+                <div class="text-sm" style="color: #FFE5B3;">+39 320 49 33 807</div>
               </div>
-              
-              <!-- PayPal -->
-              <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                <div class="flex items-start">
-                  <div class="mr-2 mt-0.5 flex-shrink-0">
-                    <svg class="h-5 w-5 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.26-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.9.9 0 0 0-.895.765l-1.274 8.067a.641.641 0 0 0 .633.74h4.606a.9.9 0 0 0 .895-.765l.792-5.019h2.19c4.292 0 7.658-1.747 8.647-6.797.03-.149.054-.294.077-.437.292-1.867-.002-3.137-1.012-4.287a5.81 5.81 0 0 0-1.683-1.187z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-blue-800 text-sm">{{ $t('contact.payment.paypal.title') }}</h4>
-                    <p class="text-xs text-blue-700">{{ $t('contact.payment.paypal.benefits') }}</p>
-                  </div>
-                </div>
+            </a>
+            <a href="mailto:info@romacaputmundiapt.it" class="flex items-center p-4 rounded-xl transition-colors shadow-lg" style="color: #FFB600; background-color: #7A1024; border: 1px solid #FFB600; hover:color: #FFD966;">
+              <MailIcon class="mr-3 h-6 w-6" />
+              <div>
+                <div class="font-semibold">Email</div>
+                <div class="text-sm" style="color: #FFE5B3;">info@romacaputmundiapt.it</div>
               </div>
-              
-              <div class="mt-3 p-2 bg-neutral-50 rounded-lg">
-                <p class="text-xs text-neutral-600 flex items-center">
-                  <ShieldCheckIcon class="mr-1 h-3 w-3 text-green-600" />
-                  <strong>{{ $t('contact.payment.security') }}</strong>
-                </p>
-              </div>
-            </div>
-
-            <!-- Direct Contact -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg">
-              <h3 class="text-lg font-semibold text-roma-800 mb-4">{{ $t('contact.direct.title') }}</h3>
-              <div class="space-y-3 text-sm">
-                <a href="mailto:info@romacaputmundiapt.it" class="flex items-center text-roma-600 hover:underline">
-                  <MailIcon class="mr-2 h-4 w-4" />
-                  info@romacaputmundiapt.it
-                </a>
-                <a href="https://wa.me/393204933807" class="flex items-center text-roma-600 hover:underline">
-                  <MessageCircleIcon class="mr-2 h-4 w-4" />
-                  +39 320 49 33 807
-                </a>
-                <div class="flex items-center text-neutral-700">
-                  <ClockIcon class="mr-2 h-4 w-4 text-roma-600" />
-                  {{ $t('contact.direct.support') }}
-                </div>
-              </div>
-            </div>
-
-            <!-- Alternative Platforms -->
-            <div class="bg-neutral-100 p-4 rounded-2xl">
-              <h4 class="text-sm font-semibold text-neutral-800 mb-3">{{ $t('contact.platforms.title') }}</h4>
-              <div class="space-y-2">
-                <a href="https://www.booking.com/hotel/it/roma-caput-mundi-guest-house.it.html" target="_blank" 
-                   class="flex items-center justify-center bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">
-                  Booking.com
-                </a>
-                <a href="https://www.airbnb.it/rooms/1381673546089400028" target="_blank" 
-                   class="flex items-center justify-center bg-red-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-red-600 transition-colors">
-                  Airbnb
-                </a>
-              </div>
-              <p class="text-xs text-neutral-600 mt-2 text-center">
-                {{ $t('contact.platforms.license') }}
-              </p>
-            </div>
+            </a>
           </div>
 
-          <!-- Center Column - Contact Form -->
-          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg">
-            <h3 class="text-2xl font-semibold text-roma-800 mb-6">{{ $t('contact.form.title') }}</h3>
+          <!-- Contact Form -->
+          <div class="lg:col-span-2 bg-red-800 p-6 rounded-2xl shadow-lg border border-orange-400">
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-white mb-2">{{ $t('contact.preview.title') }}</h3>
+              <p class="text-sm" style="color: #FFE5B3;">{{ $t('contact.preview.subtitle') }}</p>
+            </div>
             
             <form @submit.prevent="submitForm" class="space-y-4">
-              <!-- Personal Info - Side by side -->
+              <!-- Personal Info -->
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label for="name" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.name') }} *</label>
                   <input
-                    id="name"
                     v-model="form.name"
                     type="text"
                     required
-                    class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
-                    :placeholder="$t('contact.form.name')"
+                    class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white placeholder-orange-200 focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
+                    :placeholder="$t('contact.form.name') + ' *'"
                   >
                 </div>
                 <div>
-                  <label for="phone" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.phone') }} *</label>
                   <input
-                    id="phone"
                     v-model="form.phone"
                     type="tel"
                     required
-                    class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
-                    placeholder="+39 123456789"
+                    class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white placeholder-orange-200 focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
+                    :placeholder="$t('contact.form.phone') + ' *'"
                   >
                 </div>
               </div>
 
               <div>
-                <label for="email" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.email') }} *</label>
                 <input
-                  id="email"
                   v-model="form.email"
                   type="email"
                   required
-                  class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
-                  :placeholder="$t('contact.form.email')"
+                  class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white placeholder-orange-200 focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
+                  :placeholder="$t('contact.form.email') + ' *'"
                 >
               </div>
 
-              <!-- Stay Details - 3 columns -->
+              <!-- Stay Details -->
               <div class="grid grid-cols-3 gap-3">
                 <div>
-                  <label for="checkin" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.checkin') }} *</label>
                   <input
-                    id="checkin"
                     v-model="form.checkIn"
                     type="date"
                     required
                     :min="minDate"
-                    class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
+                    class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white placeholder-orange-200 focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
                   >
                 </div>
                 <div>
-                  <label for="checkout" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.checkout') }} *</label>
                   <input
-                    id="checkout"
                     v-model="form.checkOut"
                     type="date"
                     required
                     :min="form.checkIn || minDate"
-                    class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
+                    class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white placeholder-orange-200 focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
                   >
                 </div>
                 <div>
-                  <label for="guests" class="block text-xs font-medium text-neutral-700 mb-1">{{ $t('contact.form.guests') }} *</label>
                   <select
-                    id="guests"
                     v-model="form.guests"
                     required
-                    class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
+                    class="w-full px-3 py-2 text-sm bg-red-700 border border-orange-400 rounded-lg text-white focus:ring-2 focus:ring-orange-400 focus:border-orange-300 transition-colors"
                   >
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                    <option value="1">{{ $t('contact.form.guests_options.1') }}</option>
+                    <option value="2">{{ $t('contact.form.guests_options.2') }}</option>
+                    <option value="3">{{ $t('contact.form.guests_options.3') }}</option>
                   </select>
-                </div>
-              </div>
-
-              <div>
-                <label for="message" class="block text-xs font-medium text-neutral-700 mb-1">Messaggio</label>
-                <textarea
-                  id="message"
-                  v-model="form.message"
-                  rows="3"
-                  class="w-full px-3 py-2 text-sm border border-neutral-300 rounded-lg focus:ring-2 focus:ring-roma-500 focus:border-roma-500 transition-colors"
-                  placeholder="Richieste speciali..."
-                ></textarea>
-              </div>
-
-              <!-- Cancellation Policy Checkbox -->
-              <div class="bg-neutral-50 p-3 rounded-lg border border-neutral-200">
-                <div class="flex items-start">
-                  <input
-                    id="acceptPolicy"
-                    v-model="form.acceptPolicy"
-                    type="checkbox"
-                    required
-                    class="mt-0.5 h-4 w-4 text-roma-600 focus:ring-roma-500 border-neutral-300 rounded"
-                  >
-                  <label for="acceptPolicy" class="ml-2 text-xs text-neutral-700">
-                    Ho letto e accetto la
-                    <button 
-                      type="button"
-                      @click="showCancellationPolicy = true"
-                      class="text-roma-600 hover:text-roma-700 underline"
-                    >
-                      politica di cancellazione
-                    </button>
-                    *
-                  </label>
                 </div>
               </div>
 
               <button
                 type="submit"
-                :disabled="!form.acceptPolicy || isSubmitting"
-                class="w-full btn-3d btn-3d-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                :disabled="isSubmitting"
+                class="w-full btn-3d btn-3d-md"
+                :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }"
               >
-                <span v-if="isSubmitting" class="flex items-center">
-                  <LoaderIcon class="mr-2 h-4 w-4 animate-spin" />
-                  Invio in corso...
-                </span>
-                <span v-else class="flex items-center">
-                  <RocketIcon class="mr-2 h-4 w-4" />
-                  Invia Richiesta
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text-center">
+                  <span v-if="isSubmitting" class="flex items-center justify-center">
+                    <LoaderIcon class="mr-2 h-4 w-4 animate-spin" />
+                    {{ $t('contact.form.submitting') }}
+                  </span>
+                  <span v-else class="flex items-center justify-center">
+                    <MessageCircleIcon class="mr-2 h-4 w-4" />
+                    {{ $t('contact.form.submit') }}
+                  </span>
                 </span>
               </button>
             </form>
@@ -261,8 +132,8 @@
               <div class="flex items-center text-sm">
                 <CheckCircleIcon class="text-green-500 h-5 w-5 mr-2" />
                 <div>
-                  <p class="text-green-800 font-semibold">Richiesta salvata con successo!</p>
-                  <p class="text-green-700 text-xs">Ti risponderemo entro 2 ore tramite email o WhatsApp (+39 320 49 33 807).</p>
+                  <p class="text-green-800 font-semibold">{{ $t('contact.success.title') }}</p>
+                  <p class="text-green-700 text-sm">{{ $t('contact.success.message') }}</p>
                 </div>
               </div>
             </div>
@@ -272,177 +143,23 @@
               <div class="flex items-center text-sm">
                 <AlertTriangleIcon class="text-red-500 h-5 w-5 mr-2" />
                 <div>
-                  <p class="text-red-800 font-semibold">Errore nell'invio</p>
-                  <p class="text-red-700 text-xs">Riprova o contattaci direttamente via WhatsApp.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column - Cancellation Policy -->
-          <div class="space-y-6">
-            <!-- Cancellation Policy -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg">
-              <h3 class="text-lg font-semibold text-roma-800 mb-4 flex items-center">
-                <ShieldIcon class="mr-2 h-5 w-5 text-roma-600" />
-                Politica di Cancellazione
-              </h3>
-              
-              <div class="space-y-3">
-                <div class="p-3 bg-green-50 rounded-lg border border-green-100">
-                  <div class="flex items-start">
-                    <CheckIcon class="mr-2 h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p class="text-sm font-semibold text-green-800">Rimborso 100%</p>
-                      <p class="text-xs text-green-700">Fino a 7 giorni prima</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="p-3 bg-amber-50 rounded-lg border border-amber-100">
-                  <div class="flex items-start">
-                    <AlertTriangleIcon class="mr-2 h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p class="text-sm font-semibold text-amber-800">Penale 1 notte</p>
-                      <p class="text-xs text-amber-700">Oltre questo termine</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button 
-                  type="button"
-                  @click="showCancellationPolicy = true"
-                  class="w-full text-roma-600 hover:text-roma-700 text-sm underline"
-                >
-                  Leggi politica completa →
-                </button>
-              </div>
-            </div>
-
-            <!-- Security Badge -->
-            <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl border border-green-200">
-              <div class="text-center">
-                <ShieldCheckIcon class="mx-auto h-12 w-12 text-green-600 mb-3" />
-                <h4 class="font-semibold text-green-800 mb-1">Prenotazione Sicura</h4>
-                <p class="text-xs text-green-700">
-                  Pagamento protetto al 100%<br>
-                  Licenza ufficiale verificata
-                </p>
-              </div>
-            </div>
-
-            <!-- Quick Stats -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg">
-              <h4 class="text-lg font-semibold text-roma-800 mb-4">Perché Sceglierci</h4>
-              <div class="space-y-3">
-                <div class="flex items-center justify-between p-3 bg-roma-50 rounded-lg">
-                  <span class="text-sm font-medium text-roma-800">Valutazione Media</span>
-                  <span class="text-2xl font-bold text-roma-600">4.8★</span>
-                </div>
-                <div class="flex items-center justify-between p-3 bg-roma-50 rounded-lg">
-                  <span class="text-sm font-medium text-roma-800">Risposta Veloce</span>
-                  <span class="text-2xl font-bold text-roma-600">&lt;2h</span>
-                </div>
-                <div class="flex items-center justify-between p-3 bg-roma-50 rounded-lg">
-                  <span class="text-sm font-medium text-roma-800">Lingue Parlate</span>
-                  <span class="text-2xl font-bold text-roma-600">4</span>
+                  <p class="text-red-800 font-semibold">{{ $t('contact.error.title') }}</p>
+                  <p class="text-red-700 text-sm">{{ $t('contact.error.message') }}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
-
-      <!-- Cancellation Policy Modal -->
-      <div v-if="showCancellationPolicy" class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" @click="showCancellationPolicy = false">
-        <div class="bg-white rounded-2xl p-6 max-w-2xl max-h-[80vh] overflow-y-auto" @click.stop>
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-roma-800 flex items-center">
-              <ShieldIcon class="mr-2 h-6 w-6 text-roma-600" />
-              Politica di Cancellazione
-            </h3>
-            <button @click="showCancellationPolicy = false" class="text-neutral-500 hover:text-neutral-700">
-              <XIcon class="h-6 w-6" />
-            </button>
-          </div>
-          
-          <div class="space-y-4 text-neutral-700">
-            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-              <h4 class="font-semibold text-green-800 mb-2 flex items-center">
-                <CheckCircleIcon class="mr-2 h-5 w-5" />
-                Rimborso Completo (100%)
-              </h4>
-              <p class="text-green-700">
-                In caso di disdetta dopo il pagamento con bonifico, l'importo versato verrà 
-                <strong>interamente rimborsato</strong> fino a <strong>7 giorni prima</strong> dell'arrivo.
-              </p>
-            </div>
-            
-            <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
-              <h4 class="font-semibold text-amber-800 mb-2 flex items-center">
-                <AlertTriangleIcon class="mr-2 h-5 w-5" />
-                Penale di Cancellazione
-              </h4>
-              <p class="text-amber-700">
-                Per cancellazioni effettuate <strong>oltre questo termine</strong>, sarà trattenuta 
-                <strong>la prima notte a titolo di penale</strong>.
-              </p>
-            </div>
-            
-            <div class="bg-roma-50 p-4 rounded-lg border border-roma-200">
-              <h4 class="font-semibold text-roma-800 mb-2 flex items-center">
-                <MessageCircleIcon class="mr-2 h-5 w-5" />
-                Come Richiedere un Rimborso
-              </h4>
-              <p class="text-roma-700 mb-2">
-                Per richiedere un rimborso, contattaci tramite:
-              </p>
-              <ul class="space-y-1 text-roma-700">
-                <li class="flex items-center">
-                  <MessageCircleIcon class="mr-2 h-4 w-4" />
-                  <strong>WhatsApp:</strong> +39 320 49 33 807
-                </li>
-                <li class="flex items-center">
-                  <MailIcon class="mr-2 h-4 w-4" />
-                  <strong>Email:</strong> info@romacaputmundiapt.it
-                </li>
-              </ul>
-              <div class="mt-3 p-2 bg-blue-50 rounded border border-blue-200">
-                <p class="text-xs text-blue-700">
-                  <strong>PayPal:</strong> I rimborsi PayPal vengono processati entro 24-48 ore
-                </p>
-              </div>
-            </div>
-            
-            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-              <h4 class="font-semibold text-blue-800 mb-2 flex items-center">
-                <ShieldCheckIcon class="mr-2 h-5 w-5" />
-                Tutela Legale
-              </h4>
-              <p class="text-blue-700 text-sm">
-                Questa politica ti tutela in caso di contestazioni e garantisce trasparenza 
-                nel processo di prenotazione e cancellazione.
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-6 flex justify-end">
-            <button 
-              @click="showCancellationPolicy = false"
-              class="btn-3d btn-3d-md"
-            >
-              Ho Capito
-            </button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
+  <!-- Separator border -->
+  <div class="h-1" style="background-color: #FFB600;"></div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import { 
   RocketIcon, 
   CheckCircleIcon, 
@@ -459,7 +176,11 @@ import {
   CheckIcon,
   AlertTriangleIcon,
   XIcon,
-  LoaderIcon
+  LoaderIcon,
+  MapPinIcon,
+  TrainIcon,
+  ChurchIcon,
+  NavigationIcon
 } from 'lucide-vue-next'
 import { submitBooking, sendBookingEmail } from '../services/bookings'
 
@@ -467,11 +188,9 @@ const form = ref({
   name: '',
   email: '',
   phone: '',
-  message: '',
   checkIn: '',
   checkOut: '',
-  guests: 2,
-  acceptPolicy: false
+  guests: 2
 })
 
 const showSuccess = ref(false)
@@ -479,9 +198,127 @@ const showError = ref(false)
 const isSubmitting = ref(false)
 const showCancellationPolicy = ref(false)
 
+// Map variables
+const mapContainer = ref<HTMLDivElement>()
+const mapLoaded = ref(false)
+let map: any = null
+
+// Apartment coordinates (Via Romeo Rodriguez Pereira 33, 00136 Roma - Balduina)
+const apartmentCoords = [41.9142171, 12.4392226] as [number, number]
+
 const minDate = computed(() => {
   const today = new Date()
   return today.toISOString().split('T')[0]
+})
+
+// Map functions
+const initMap = async () => {
+  try {
+    // Dynamic import of Leaflet
+    const L = await import('leaflet')
+    
+    // Import Leaflet CSS
+    const leafletCSS = document.createElement('link')
+    leafletCSS.rel = 'stylesheet'
+    leafletCSS.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'
+    document.head.appendChild(leafletCSS)
+
+    await nextTick()
+
+    if (!mapContainer.value) return
+
+    // Initialize map
+    map = L.map(mapContainer.value, {
+      zoomControl: true,
+      scrollWheelZoom: true,
+      dragging: true,
+      tap: true,
+      touchZoom: true
+    }).setView(apartmentCoords, 15)
+
+    // Add tile layer with nice styling
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(map)
+
+    // Custom icon for the apartment
+    const apartmentIcon = L.divIcon({
+      html: `
+        <div style="
+          background: linear-gradient(135deg, #FFB600 0%, #d97706 100%);
+          border: 3px solid #98142B;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+          animation: bounce 2s infinite;
+        ">
+          <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <style>
+          @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+          }
+        </style>
+      `,
+      className: 'custom-apartment-marker',
+      iconSize: [40, 40],
+      iconAnchor: [20, 40],
+      popupAnchor: [0, -40]
+    })
+
+    // Add apartment marker
+    const marker = L.marker(apartmentCoords, { icon: apartmentIcon }).addTo(map)
+    
+    // Add popup with apartment info
+    marker.bindPopup(`
+      <div style="text-align: center; padding: 8px; min-width: 200px;">
+        <div style="font-weight: bold; color: #98142B; font-size: 16px; margin-bottom: 8px;">
+          🏠 Rome Apartment Appiano FS
+        </div>
+        <div style="color: #666; font-size: 14px; margin-bottom: 8px;">
+          Via Romeo Rodriguez Pereira n.33<br>
+          00136 Roma, Italia
+        </div>
+        <div style="background: linear-gradient(135deg, #FFB600, #d97706); color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; display: inline-block;">
+          ⭐ Appartamento Premium
+        </div>
+      </div>
+    `, {
+      closeButton: true,
+      autoClose: false,
+      closeOnClick: false
+    })
+
+    // Show popup on load
+    marker.openPopup()
+
+    mapLoaded.value = true
+    console.log('✅ Mappa inizializzata con successo')
+
+  } catch (error) {
+    console.error('❌ Errore inizializzazione mappa:', error)
+    mapLoaded.value = true // Show error state
+  }
+}
+
+const centerMap = () => {
+  if (map) {
+    map.setView(apartmentCoords, 15, { animate: true })
+  }
+}
+
+// Initialize map on component mount
+onMounted(() => {
+  setTimeout(initMap, 100) // Small delay to ensure DOM is ready
 })
 
 const submitForm = async () => {
@@ -494,7 +331,7 @@ const submitForm = async () => {
 
     // Valida i dati del form
     if (!form.value.name || !form.value.email || !form.value.phone || 
-        !form.value.checkIn || !form.value.checkOut || !form.value.acceptPolicy) {
+        !form.value.checkIn || !form.value.checkOut) {
       throw new Error('Compila tutti i campi obbligatori')
     }
 
@@ -506,7 +343,7 @@ const submitForm = async () => {
       checkIn: form.value.checkIn,
       checkOut: form.value.checkOut,
       guests: form.value.guests,
-      message: form.value.message || ''
+      message: ''
     })
     
     console.log('✅ Prenotazione salvata con ID:', bookingId)
@@ -520,7 +357,7 @@ const submitForm = async () => {
         checkIn: form.value.checkIn,
         checkOut: form.value.checkOut,
         guests: form.value.guests,
-        message: form.value.message || '',
+        message: '',
         createdAt: new Date(),
         status: 'pending'
       })
@@ -538,11 +375,9 @@ const submitForm = async () => {
         name: '',
         email: '',
         phone: '',
-        message: '',
         checkIn: '',
         checkOut: '',
-        guests: 2,
-        acceptPolicy: false
+        guests: 2
       }
       showSuccess.value = false
     }, 3000)

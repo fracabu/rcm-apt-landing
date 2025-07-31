@@ -15,32 +15,27 @@
 
       <div class="container mx-auto px-4 py-12 relative mt-16 md:mt-20 lg:mt-24">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-4 lg:mb-6 animate-fade-in drop-shadow-2xl">
-            {{ $t('museums.title') }}
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-6 lg:mb-8 animate-fade-in drop-shadow-2xl">
+            {{ $t('museums.hero.title') }}
             <span class="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-amber-200 mt-2 lg:mt-4 font-light">
-              {{ $t('museums.subtitle') }}
+              {{ $t('museums.hero.subtitle') }}
             </span>
           </h1>
 
-          <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 lg:mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-            {{ $t('museums.description') }}
-          </p>
-
-          <!-- Benefits -->
-          <div class="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-6 lg:mb-12 text-xs sm:text-sm md:text-base">
-            <span class="bg-white/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-white/30 flex items-center gap-2">
-              <TicketIcon class="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{{ $t('museums.benefits.skip_line') }}</span>
-            </span>
-            <span class="bg-white/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-white/30 flex items-center gap-2">
-              <MapPinIcon class="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{{ $t('museums.benefits.nearby') }}</span>
-            </span>
-            <span class="bg-white/20 backdrop-blur-sm px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full text-white font-medium shadow-lg border border-white/30 flex items-center gap-2">
-              <ClockIcon class="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{{ $t('museums.benefits.online_booking') }}</span>
-            </span>
+          <!-- Key Features - Simple Text -->
+          <div class="mb-8 lg:mb-12">
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-200 font-light max-w-2xl mx-auto">
+              {{ $t('museums.hero.features') }}
+            </p>
           </div>
+
+          <button onclick="document.querySelector('main').scrollIntoView({behavior: 'smooth'})" class="btn-3d btn-3d-md">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              {{ $t('museums.hero.cta') }}
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -96,19 +91,19 @@
 
             <!-- Museum Info -->
             <div class="p-6">
-              <h3 class="text-xl font-bold text-roma-800 mb-2">{{ museum.name }}</h3>
-              <p class="text-neutral-700 text-sm mb-4 line-clamp-3">{{ museum.description }}</p>
+              <h3 class="text-xl font-bold text-roma-800 mb-2">{{ getTranslatedMuseumName(museum) }}</h3>
+              <p class="text-neutral-700 text-sm mb-4 line-clamp-3">{{ getTranslatedMuseumDescription(museum) }}</p>
               
               <!-- Highlights -->
               <div class="mb-4">
                 <h4 class="text-sm font-semibold text-roma-700 mb-2">🌟 Highlights:</h4>
                 <div class="flex flex-wrap gap-1">
                   <span
-                    v-for="highlight in museum.highlights"
-                    :key="highlight"
+                    v-for="(highlight, index) in museum.highlights"
+                    :key="index"
                     class="bg-roma-50 text-roma-700 px-2 py-1 rounded-full text-xs"
                   >
-                    {{ highlight }}
+                    {{ getTranslatedHighlight(museum, index) }}
                   </span>
                 </div>
               </div>
@@ -116,7 +111,7 @@
               <!-- Price and Info -->
               <div class="flex items-center justify-between mb-4">
                 <div class="text-sm text-neutral-700">
-                  <span class="font-semibold text-roma-700">💰 Da {{ museum.priceFrom }}</span>
+                  <span class="font-semibold text-roma-700">💰 {{ translations.price_from }} {{ museum.priceFrom }}</span>
                 </div>
                 <div class="text-sm text-neutral-700">
                   📍 {{ museum.distance }}
@@ -127,15 +122,23 @@
               <div class="flex gap-2">
                 <button
                   @click="openTickets(museum)"
-                  class="flex-1 bg-roma-600 hover:bg-roma-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center gap-1"
+                  class="flex-1 btn-3d btn-3d-sm"
                 >
-                  🎫 Biglietti
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front">
+                    🎫 {{ translations.buttons.tickets }}
+                  </span>
                 </button>
                 <button
                   @click="openInfo(museum)"
-                  class="px-4 py-2 border border-roma-300 text-roma-600 hover:bg-roma-50 rounded-lg text-sm font-medium transition-colors duration-300"
+                  class="btn-3d btn-3d-secondary btn-3d-sm"
                 >
-                  ℹ️ Info
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front">
+                    ℹ️ {{ translations.buttons.info }}
+                  </span>
                 </button>
               </div>
             </div>
@@ -145,29 +148,29 @@
         <!-- Practical Tips Section -->
         <div class="mt-12 md:mt-16 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-6 md:p-8">
           <h2 class="text-2xl md:text-3xl font-bold text-roma-800 mb-6 text-center">
-            💡 Consigli Pratici per le Visite
+            💡 {{ translations.tips.title }}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="text-center">
               <div class="w-12 h-12 bg-roma-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 🎟️
               </div>
-              <h3 class="font-semibold text-roma-800 mb-2">Prenota Online</h3>
-              <p class="text-gray-600 text-sm">Evita le code e assicurati l'ingresso prenotando in anticipo online</p>
+              <h3 class="font-semibold text-roma-800 mb-2">{{ translations.tips.book_online.title }}</h3>
+              <p class="text-gray-600 text-sm">{{ translations.tips.book_online.description }}</p>
             </div>
             <div class="text-center">
               <div class="w-12 h-12 bg-roma-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 🌅
               </div>
-              <h3 class="font-semibold text-roma-800 mb-2">Orari Migliori</h3>
-              <p class="text-gray-600 text-sm">Visita al mattino presto o nel tardo pomeriggio per evitare la folla</p>
+              <h3 class="font-semibold text-roma-800 mb-2">{{ translations.tips.best_times.title }}</h3>
+              <p class="text-gray-600 text-sm">{{ translations.tips.best_times.description }}</p>
             </div>
             <div class="text-center">
               <div class="w-12 h-12 bg-roma-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 🎧
               </div>
-              <h3 class="font-semibold text-roma-800 mb-2">Audioguide</h3>
-              <p class="text-gray-600 text-sm">Molti musei offrono audioguide gratuite per arricchire la visita</p>
+              <h3 class="font-semibold text-roma-800 mb-2">{{ translations.tips.audioguides.title }}</h3>
+              <p class="text-gray-600 text-sm">{{ translations.tips.audioguides.description }}</p>
             </div>
           </div>
         </div>
@@ -175,26 +178,30 @@
         <!-- Transportation Info -->
         <div class="mt-8 bg-gradient-to-r from-roma-600 to-roma-700 rounded-2xl text-white p-6 md:p-8">
           <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">
-            🚇 Come Raggiungere i Musei dal Nostro Appartamento
+            🚇 {{ translations.transport.title }}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 class="font-semibold mb-2">🚊 Musei Vaticani & San Pietro</h3>
-              <p class="text-roma-100 text-sm mb-1">Metro A: Cipro (2 fermate) + 10 min a piedi</p>
-              <p class="text-roma-100 text-sm">Bus 49: Diretto in 15 minuti</p>
+              <h3 class="font-semibold mb-2">🚊 {{ translations.transport.vatican.title }}</h3>
+              <p class="text-roma-100 text-sm mb-1">{{ translations.transport.vatican.metro }}</p>
+              <p class="text-roma-100 text-sm">{{ translations.transport.vatican.bus }}</p>
             </div>
             <div>
-              <h3 class="font-semibold mb-2">🏛️ Centro Storico (Pantheon, Colosseo)</h3>
-              <p class="text-roma-100 text-sm mb-1">Metro A: Lepanto → Flaminio + Bus</p>
-              <p class="text-roma-100 text-sm">Tempo totale: 30-40 minuti</p>
+              <h3 class="font-semibold mb-2">🏛️ {{ translations.transport.center.title }}</h3>
+              <p class="text-roma-100 text-sm mb-1">{{ translations.transport.center.metro }}</p>
+              <p class="text-roma-100 text-sm">{{ translations.transport.center.time }}</p>
             </div>
           </div>
         </div>
 
         <!-- Call to Action -->
         <div class="text-center mt-8">
-          <router-link to="/contatti" class="btn-3d btn-3d-lg bg-roma-600 hover:bg-roma-700">
-            Prenota il Tuo Soggiorno Culturale
+          <router-link to="/contatti" class="btn-3d btn-3d-lg">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              {{ translations.cta.book_cultural_stay }}
+            </span>
           </router-link>
         </div>
       </div>
@@ -205,11 +212,122 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { TicketIcon, MapPinIcon, ClockIcon } from 'lucide-vue-next'
 import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
 
+const { t, locale } = useI18n()
 const selectedCategory = ref('all')
+
+// Computed properties for reactive translations
+const isEnglish = computed(() => locale.value === 'en')
+
+// Hardcoded translations that work
+const translations = {
+  buttons: {
+    tickets: isEnglish.value ? 'Tickets' : 'Biglietti',
+    info: isEnglish.value ? 'Info' : 'Info'
+  },
+  tips: {
+    title: isEnglish.value ? 'Practical Tips for Visits' : 'Consigli Pratici per le Visite',
+    book_online: {
+      title: isEnglish.value ? 'Book Online' : 'Prenota Online',
+      description: isEnglish.value ? 'Skip the lines and secure entry by booking in advance online' : 'Evita le code e assicurati l\'ingresso prenotando in anticipo online'
+    },
+    best_times: {
+      title: isEnglish.value ? 'Best Times' : 'Orari Migliori',
+      description: isEnglish.value ? 'Visit early morning or late afternoon to avoid crowds' : 'Visita al mattino presto o nel tardo pomeriggio per evitare la folla'
+    },
+    audioguides: {
+      title: isEnglish.value ? 'Audio Guides' : 'Audioguide',
+      description: isEnglish.value ? 'Many museums offer free audio guides to enrich your visit' : 'Molti musei offrono audioguide gratuite per arricchire la visita'
+    }
+  },
+  transport: {
+    title: isEnglish.value ? 'How to Reach Museums from Our Apartment' : 'Come Raggiungere i Musei dal Nostro Appartamento',
+    vatican: {
+      title: isEnglish.value ? 'Vatican Museums & St. Peter\'s' : 'Musei Vaticani & San Pietro',
+      metro: isEnglish.value ? 'Metro A: Cipro (2 stops) + 10 min walk' : 'Metro A: Cipro (2 fermate) + 10 min a piedi',
+      bus: isEnglish.value ? 'Bus 49: Direct in 15 minutes' : 'Bus 49: Diretto in 15 minuti'
+    },
+    center: {
+      title: isEnglish.value ? 'Historic Center (Pantheon, Colosseum)' : 'Centro Storico (Pantheon, Colosseo)',
+      metro: isEnglish.value ? 'Metro A: Lepanto → Flaminio + Bus' : 'Metro A: Lepanto → Flaminio + Bus',
+      time: isEnglish.value ? 'Total time: 30-40 minutes' : 'Tempo totale: 30-40 minuti'
+    }
+  },
+  cta: {
+    book_cultural_stay: isEnglish.value ? 'Book Your Cultural Stay' : 'Prenota il Tuo Soggiorno Culturale'
+  },
+  price_from: isEnglish.value ? 'From' : 'Da'
+}
+
+// Museum translations for ALL 12 museums
+const getTranslatedMuseumName = (museum: Museum) => {
+  if (!isEnglish.value) return museum.name
+  
+  const museumTranslations: Record<string, string> = {
+    'musei-vaticani': 'Vatican Museums & Sistine Chapel',
+    'basilica-san-pietro': 'St. Peter\'s Basilica & Dome',
+    'colosseo': 'Colosseum',
+    'fori-imperiali': 'Imperial Forums & Palatine',
+    'musei-capitolini': 'Capitoline Museums',
+    'pantheon': 'Pantheon',
+    'villa-borghese': 'Borghese Gallery',
+    'terme-caracalla': 'Baths of Caracalla',
+    'castel-santangelo': 'Castel Sant\'Angelo',
+    'palazzo-altemps': 'Palazzo Altemps',
+    'palazzo-massimo': 'Palazzo Massimo',
+    'crypta-balbi': 'Crypta Balbi'
+  }
+  
+  return museumTranslations[museum.id] || museum.name
+}
+
+const getTranslatedMuseumDescription = (museum: Museum) => {
+  if (!isEnglish.value) return museum.description
+  
+  const museumDescriptions: Record<string, string> = {
+    'musei-vaticani': 'The world\'s largest art collection with the famous Sistine Chapel frescoed by Michelangelo. A journey through centuries of art and history.',
+    'basilica-san-pietro': 'The most important basilica of Christianity with Michelangelo\'s majestic dome. Climb the dome for a breathtaking view of Rome.',
+    'colosseo': 'The world\'s most famous amphitheater, symbol of the Roman Empire. Discover the history of gladiators and ancient Roman spectacles.',
+    'fori-imperiali': 'The heart of ancient Rome with the remains of the forums of Caesar, Augustus and Trajan. The Palatine, legendary hill of Rome\'s foundation.',
+    'musei-capitolini': 'The world\'s oldest public museums with masterpieces of ancient sculpture and a panoramic view of the Roman Forum.',
+    'pantheon': 'The best preserved Roman temple in the world, a masterpiece of ancient architecture with its unique dome.',
+    'villa-borghese': 'Extraordinary collection of Bernini sculptures and Caravaggio paintings in a villa surrounded by greenery.',
+    'terme-caracalla': 'One of the largest thermal complexes of Roman antiquity, with advanced heating technologies and breathtaking decorations.',
+    'castel-santangelo': 'Hadrian\'s Mausoleum transformed into a papal fortress, with spectacular views over Rome and the Tiber.',
+    'palazzo-altemps': 'Part of the National Roman Museum, it houses one of the world\'s most important collections of ancient sculptures.',
+    'palazzo-massimo': 'Main seat of the National Roman Museum with extraordinary ancient frescoes and imperial sculptures.',
+    'crypta-balbi': 'Journey through medieval Rome built on the remains of the ancient city, with visible archaeological excavations.'
+  }
+  
+  return museumDescriptions[museum.id] || museum.description
+}
+
+const getTranslatedHighlight = (museum: Museum, index: number) => {
+  if (!isEnglish.value) return museum.highlights[index] || ''
+  
+  const highlightTranslations: Record<string, string[]> = {
+    'musei-vaticani': ['Sistine Chapel', 'Raphael Rooms', 'Gallery of Maps', 'Pinacoteca'],
+    'basilica-san-pietro': ['Michelangelo\'s Dome', 'Pietà', 'Bernini\'s Baldachin', 'Vatican Grottoes'],
+    'colosseo': ['Arena', 'Underground', 'Third Ring', 'Museum'],
+    'fori-imperiali': ['Roman Forum', 'House of Augustus', 'Domus Aurea', 'Trajan\'s Markets'],
+    'musei-capitolini': ['Marcus Aurelius', 'Capitoline Wolf', 'Capitoline Venus', 'Tabularium'],
+    'pantheon': ['Dome with oculus', 'Raphael\'s Tomb', 'High Altar', 'Roman Architecture'],
+    'villa-borghese': ['Apollo and Daphne', 'Caravaggio Works', 'Canova', 'Titian'],
+    'terme-caracalla': ['Frigidarium', 'Tepidarium', 'Mosaics', 'Roman Technologies'],
+    'castel-santangelo': ['Panoramic Terrace', 'Papal Apartments', 'Passetto di Borgo', 'Angel Statue'],
+    'palazzo-altemps': ['Ludovisi Throne', 'Discobolus', 'Renaissance Frescoes', 'Courtyard'],
+    'palazzo-massimo': ['Villa of Livia Frescoes', 'Augustus of Prima Porta', 'Boxer at Rest', 'Anzio Girl'],
+    'crypta-balbi': ['Medieval Excavations', 'Medieval Rome', 'Theater of Balbus', 'Urban Stratification']
+  }
+  
+  return highlightTranslations[museum.id]?.[index] || museum.highlights[index] || ''
+}
+
+// Use i18n directly with better error handling
 
 const categories = ['all', 'vaticani', 'archeologia', 'arte', 'storia']
 
@@ -324,7 +442,7 @@ const museums: Museum[] = [
     name: 'Terme di Caracalla',
     description: 'Uno dei più grandi complessi termali dell\'antichità romana, con tecnologie avanzate di riscaldamento e decorazioni mozzafiato.',
     category: 'archeologia',
-    image: '/images/terme-caracalla.jpg',
+    image: '/images/Room_in_Baths_of_Caracalla,_Rome_(6652987465).jpg',
     duration: '1.5 ore',
     priceFrom: '€8',
     distance: '40 min',
@@ -350,7 +468,7 @@ const museums: Museum[] = [
     name: 'Palazzo Altemps',
     description: 'Parte del Museo Nazionale Romano, ospita una delle più importanti collezioni di sculture antiche al mondo.',
     category: 'arte',
-    image: '/images/palazzo-altemps.jpg',
+    image: '/images/palazzo daltemps.jpg',
     duration: '1.5 ore',
     priceFrom: '€10',
     distance: '25 min',
@@ -363,7 +481,7 @@ const museums: Museum[] = [
     name: 'Palazzo Massimo',
     description: 'Sede principale del Museo Nazionale Romano con straordinari affreschi antichi e sculture di epoca imperiale.',
     category: 'arte',
-    image: '/images/palazzo-massimo.jpg',
+    image: 'https://museonazionaleromano.beniculturali.it/sito/wp-content/uploads/2020/06/Palazzo-Massimo-main-3.jpg',
     duration: '2 ore',
     priceFrom: '€10',
     distance: '30 min',
@@ -376,7 +494,7 @@ const museums: Museum[] = [
     name: 'Crypta Balbi',
     description: 'Viaggio attraverso la Roma medievale costruita sui resti dell\'antica città, con scavi archeologici visibili.',
     category: 'storia',
-    image: '/images/crypta-balbi.jpg',
+    image: 'https://museonazionaleromano.beniculturali.it/sito/wp-content/uploads/2020/06/Crypta-Balbi_main.jpg',
     duration: '1.5 ore',
     priceFrom: '€10',
     distance: '30 min',

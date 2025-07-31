@@ -5,9 +5,9 @@
       <div class="container mx-auto px-4 py-6">
         <div class="flex items-center justify-between">
           <router-link to="/" class="flex items-center space-x-2">
-            <span class="text-xl font-serif font-bold text-roman-700">← Roma Caput Mundi</span>
+            <span class="text-xl font-serif font-bold text-roman-700">{{ $t('privacy.back_to_home') }}</span>
           </router-link>
-          <h1 class="text-2xl font-bold text-gray-900">Privacy Policy</h1>
+          <h1 class="text-2xl font-bold text-gray-900">{{ $t('privacy.title') }}</h1>
         </div>
       </div>
     </header>
@@ -16,134 +16,124 @@
     <main class="flex-1 container mx-auto px-4 py-12">
       <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
         <div class="prose prose-lg max-w-none">
-          <h1 class="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
+          <h1 class="text-3xl font-bold text-gray-900 mb-6">{{ $t('privacy.title') }}</h1>
           
           <p class="text-gray-600 mb-8">
-            <strong>Data di entrata in vigore:</strong> {{ currentDate }}
+            <strong>{{ $t('privacy.effective_date') }}</strong> {{ currentDate }}
           </p>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. Informazioni che raccogliamo</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.data_collection.title') }}</h2>
             <p class="text-gray-700 mb-4">
-              Raccogliamo le seguenti informazioni quando utilizzi il nostro sito web o richiedi una prenotazione:
+              {{ $t('privacy.sections.data_collection.description') }}
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2">
-              <li><strong>Dati personali:</strong> nome, cognome, indirizzo email, numero di telefono</li>
-              <li><strong>Dati del soggiorno:</strong> date di check-in e check-out, numero di ospiti</li>
-              <li><strong>Comunicazioni:</strong> messaggi e richieste inviate tramite il modulo di contatto</li>
-              <li><strong>Dati tecnici:</strong> indirizzo IP, tipo di browser, sistema operativo, pagine visitate</li>
+              <li><strong>{{ $t('privacy.sections.data_collection.items.personal').split(':')[0] }}:</strong> {{ $t('privacy.sections.data_collection.items.personal').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.data_collection.items.stay').split(':')[0] }}:</strong> {{ $t('privacy.sections.data_collection.items.stay').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.data_collection.items.communications').split(':')[0] }}:</strong> {{ $t('privacy.sections.data_collection.items.communications').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.data_collection.items.technical').split(':')[0] }}:</strong> {{ $t('privacy.sections.data_collection.items.technical').split(':')[1] }}</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Come utilizziamo le tue informazioni</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.data_usage.title') }}</h2>
             <p class="text-gray-700 mb-4">
-              Utilizziamo le informazioni raccolte per:
+              {{ $t('privacy.sections.data_usage.description') }}
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Processare e gestire le richieste di prenotazione</li>
-              <li>Comunicare con te riguardo alla tua prenotazione</li>
-              <li>Fornire assistenza clienti</li>
-              <li>Migliorare i nostri servizi e il sito web</li>
-              <li>Rispettare gli obblighi legali</li>
+              <li>{{ $t('privacy.sections.data_usage.items.bookings') }}</li>
+              <li>{{ $t('privacy.sections.data_usage.items.communication') }}</li>
+              <li>{{ $t('privacy.sections.data_usage.items.support') }}</li>
+              <li>{{ $t('privacy.sections.data_usage.items.improvements') }}</li>
+              <li>{{ $t('privacy.sections.data_usage.items.legal') }}</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">3. Cookie e tecnologie simili</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.cookies.title') }}</h2>
             <p class="text-gray-700 mb-4">
-              Utilizziamo cookie e tecnologie simili per:
+              {{ $t('privacy.sections.cookies.description') }}
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2">
-              <li><strong>Cookie essenziali:</strong> necessari per il funzionamento del sito</li>
-              <li><strong>Cookie di performance:</strong> per analizzare l'utilizzo del sito</li>
-              <li><strong>Cookie di funzionalità:</strong> per ricordare le tue preferenze</li>
+              <li><strong>{{ $t('privacy.sections.cookies.items.essential').split(':')[0] }}:</strong> {{ $t('privacy.sections.cookies.items.essential').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.cookies.items.performance').split(':')[0] }}:</strong> {{ $t('privacy.sections.cookies.items.performance').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.cookies.items.functionality').split(':')[0] }}:</strong> {{ $t('privacy.sections.cookies.items.functionality').split(':')[1] }}</li>
             </ul>
             <p class="text-gray-700 mt-4">
-              Puoi gestire le tue preferenze sui cookie tramite il banner dei cookie presente sul sito.
+              {{ $t('privacy.sections.cookies.management') }}
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">4. Condivisione delle informazioni</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.data_sharing.title') }}</h2>
             <p class="text-gray-700 mb-4">
-              Non vendiamo, affittiamo o condividiamo le tue informazioni personali con terze parti, 
-              eccetto nei seguenti casi:
+              {{ $t('privacy.sections.data_sharing.description') }}
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Quando richiesto dalla legge</li>
-              <li>Per proteggere i nostri diritti legali</li>
-              <li>Con fornitori di servizi fidati che ci assistono nelle operazioni del sito</li>
+              <li>{{ $t('privacy.sections.data_sharing.items.legal') }}</li>
+              <li>{{ $t('privacy.sections.data_sharing.items.protection') }}</li>
+              <li>{{ $t('privacy.sections.data_sharing.items.providers') }}</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">5. I tuoi diritti (GDPR)</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.gdpr_rights.title') }}</h2>
             <p class="text-gray-700 mb-4">
-              In conformità al GDPR, hai i seguenti diritti:
+              {{ $t('privacy.sections.gdpr_rights.description') }}
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2">
-              <li><strong>Diritto di accesso:</strong> ottenere informazioni sui dati che trattiamo</li>
-              <li><strong>Diritto di rettifica:</strong> correggere dati inesatti o incompleti</li>
-              <li><strong>Diritto di cancellazione:</strong> richiedere la cancellazione dei tuoi dati</li>
-              <li><strong>Diritto di limitazione:</strong> limitare il trattamento dei tuoi dati</li>
-              <li><strong>Diritto di portabilità:</strong> ottenere i tuoi dati in formato strutturato</li>
-              <li><strong>Diritto di opposizione:</strong> opporti al trattamento dei tuoi dati</li>
+              <li><strong>{{ $t('privacy.sections.gdpr_rights.items.access').split(':')[0] }}:</strong> {{ $t('privacy.sections.gdpr_rights.items.access').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.gdpr_rights.items.rectification').split(':')[0] }}:</strong> {{ $t('privacy.sections.gdpr_rights.items.rectification').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.gdpr_rights.items.erasure').split(':')[0] }}:</strong> {{ $t('privacy.sections.gdpr_rights.items.erasure').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.gdpr_rights.items.restriction').split(':')[0] }}:</strong> {{ $t('privacy.sections.gdpr_rights.items.restriction').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.gdpr_rights.items.portability').split(':')[0] }}:</strong> {{ $t('privacy.sections.gdpr_rights.items.portability').split(':')[1] }}</li>
+              <li><strong>{{ $t('privacy.sections.gdpr_rights.items.objection').split(':')[0] }}:</strong> {{ $t('privacy.sections.gdpr_rights.items.objection').split(':')[1] }}</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">6. Sicurezza dei dati</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.data_security.title') }}</h2>
             <p class="text-gray-700">
-              Implementiamo misure di sicurezza appropriate per proteggere le tue informazioni personali 
-              da accesso non autorizzato, alterazione, divulgazione o distruzione. Utilizziamo crittografia 
-              SSL e sistemi di sicurezza aggiornati.
+              {{ $t('privacy.sections.data_security.description') }}
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">7. Conservazione dei dati</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.data_retention.title') }}</h2>
             <p class="text-gray-700">
-              Conserviamo le tue informazioni personali solo per il tempo necessario agli scopi per cui 
-              sono state raccolte o come richiesto dalla legge. Le informazioni di prenotazione vengono 
-              conservate per un massimo di 5 anni per finalità contabili e fiscali.
+              {{ $t('privacy.sections.data_retention.description') }}
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">8. Minori</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.minors.title') }}</h2>
             <p class="text-gray-700">
-              I nostri servizi non sono rivolti a minori di 18 anni. Non raccogliamo consapevolmente 
-              informazioni personali da minori di 18 anni.
+              {{ $t('privacy.sections.minors.description') }}
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">9. Modifiche alla Privacy Policy</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.policy_changes.title') }}</h2>
             <p class="text-gray-700">
-              Ci riserviamo il diritto di modificare questa Privacy Policy in qualsiasi momento. 
-              Ti notificheremo eventuali modifiche significative pubblicando la nuova Privacy Policy 
-              su questa pagina con una nuova data di entrata in vigore.
+              {{ $t('privacy.sections.policy_changes.description') }}
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">10. Contatti</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('privacy.sections.contact.title') }}</h2>
             <p class="text-gray-700 mb-4">
-              Per qualsiasi domanda riguardo a questa Privacy Policy o per esercitare i tuoi diritti, 
-              puoi contattarci:
+              {{ $t('privacy.sections.contact.description') }}
             </p>
             <div class="bg-gray-50 p-4 rounded-lg">
-              <p class="text-gray-700"><strong>Email:</strong> info@romacaputmundiapt.it</p>
-              <p class="text-gray-700"><strong>Telefono:</strong> +39 320 49 33 807</p>
-              <p class="text-gray-700"><strong>Indirizzo:</strong> Via R.R. Pereira n. 33</p>
+              <p class="text-gray-700"><strong>{{ $t('privacy.sections.contact.details.email').split(':')[0] }}:</strong> {{ $t('privacy.sections.contact.details.email').split(':')[1] }}</p>
+              <p class="text-gray-700"><strong>{{ $t('privacy.sections.contact.details.phone').split(':')[0] }}:</strong> {{ $t('privacy.sections.contact.details.phone').split(':')[1] }}</p>
+              <p class="text-gray-700"><strong>{{ $t('privacy.sections.contact.details.address').split(':')[0] }}:</strong> {{ $t('privacy.sections.contact.details.address').split(':')[1] }}</p>
             </div>
           </section>
 
           <div class="border-t pt-6 mt-8">
             <p class="text-sm text-gray-500">
-              Questa Privacy Policy è conforme al Regolamento Generale sulla Protezione dei Dati (GDPR) 
-              dell'Unione Europea e alla normativa italiana sulla privacy.
+              {{ $t('privacy.sections.compliance') }}
             </p>
           </div>
         </div>
@@ -154,9 +144,12 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
 
 const currentDate = computed(() => {
-  return new Date().toLocaleDateString('it-IT', {
+  return new Date().toLocaleDateString(locale.value === 'it' ? 'it-IT' : 'en-US', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
