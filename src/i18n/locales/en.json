@@ -501,7 +501,7 @@
       "guests": "Number of Guests",
       "message": "Special Requests",
       "message_placeholder": "Tell us about your Rome vacation plans...",
-      "submit": "🚀 Send Booking Request",
+      "submit": "📋 Check Availability",
       "submitting": "Sending Request...",
       "guests_options": {
         "1": "1 Guest",
@@ -511,11 +511,11 @@
       }
     },
     "success": {
-      "title": "Booking Request Sent!",
-      "message": "We will contact you within 2 hours with the best Rome vacation rental offer."
+      "title": "Availability Request Sent!",
+      "message": "We will contact you within 2 hours to check dates and make you the best offer."
     },
     "error": {
-      "title": "Booking Error",
+      "title": "Request Error",
       "message": "An error occurred. Please try again or WhatsApp us directly."
     },
     "benefits": {

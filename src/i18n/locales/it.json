@@ -393,7 +393,7 @@
       "guests": "Numero Ospiti",
       "message": "Richieste Speciali",
       "message_placeholder": "Raccontaci i tuoi piani per la vacanza Roma...",
-      "submit": "🚀 Invia Richiesta Prenotazione",
+      "submit": "📋 Richiedi Disponibilità",
       "submitting": "Invio Richiesta...",
       "guests_options": {
         "1": "1 Ospite",
@@ -403,11 +403,11 @@
       }
     },
     "success": {
-      "title": "Richiesta Prenotazione Inviata!",
-      "message": "Ti contatteremo entro 2 ore con la miglior offerta casa vacanze Roma."
+      "title": "Richiesta Disponibilità Inviata!",
+      "message": "Ti contatteremo entro 2 ore per verificare le date e farti la miglior offerta."
     },
     "error": {
-      "title": "Errore Prenotazione",
+      "title": "Errore Invio Richiesta",
       "message": "Si è verificato un errore. Riprova o contattaci su WhatsApp."
     },
     "benefits": {
