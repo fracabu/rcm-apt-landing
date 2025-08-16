@@ -331,14 +331,26 @@ const submitForm = async () => {
       throw new Error('Compila tutti i campi obbligatori')
     }
 
+    // Safari/iPhone compatibility fixes
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+    console.log('🔍 Browser detection:', { isSafari, userAgent: navigator.userAgent })
+    
+    // Normalize date format for Safari
+    const normalizeDate = (dateStr: string) => {
+      if (!dateStr) return dateStr
+      // Safari sometimes returns dates in different formats
+      const date = new Date(dateStr)
+      return date.toISOString().split('T')[0]
+    }
+
     // Salva la prenotazione nel database
     const bookingId = await submitBooking({
-      name: form.value.name,
-      email: form.value.email,
-      phone: form.value.phone,
-      checkIn: form.value.checkIn,
-      checkOut: form.value.checkOut,
-      guests: form.value.guests,
+      name: form.value.name.trim(),
+      email: form.value.email.trim().toLowerCase(),
+      phone: form.value.phone.trim(),
+      checkIn: normalizeDate(form.value.checkIn),
+      checkOut: normalizeDate(form.value.checkOut),
+      guests: Number(form.value.guests),
       message: ''
     })
     
@@ -347,12 +359,12 @@ const submitForm = async () => {
     // Prova a inviare email (non blocca se fallisce)
     try {
       await sendBookingEmail({
-        name: form.value.name,
-        email: form.value.email,
-        phone: form.value.phone,
-        checkIn: form.value.checkIn,
-        checkOut: form.value.checkOut,
-        guests: form.value.guests,
+        name: form.value.name.trim(),
+        email: form.value.email.trim().toLowerCase(),
+        phone: form.value.phone.trim(),
+        checkIn: normalizeDate(form.value.checkIn),
+        checkOut: normalizeDate(form.value.checkOut),
+        guests: Number(form.value.guests),
         message: '',
         createdAt: new Date(),
         status: 'pending'
@@ -360,6 +372,29 @@ const submitForm = async () => {
       console.log('✅ Email inviata con successo')
     } catch (emailError) {
       console.warn('⚠️ Email fallita ma prenotazione salvata:', emailError)
+      
+      // Retry per Safari con delay
+      if (isSafari) {
+        console.log('🔄 Retry email per Safari...')
+        setTimeout(async () => {
+          try {
+            await sendBookingEmail({
+              name: form.value.name.trim(),
+              email: form.value.email.trim().toLowerCase(),
+              phone: form.value.phone.trim(),
+              checkIn: normalizeDate(form.value.checkIn),
+              checkOut: normalizeDate(form.value.checkOut),
+              guests: Number(form.value.guests),
+              message: '',
+              createdAt: new Date(),
+              status: 'pending'
+            })
+            console.log('✅ Email retry Safari riuscito')
+          } catch (retryError) {
+            console.warn('⚠️ Anche retry Safari fallito:', retryError)
+          }
+        }, 2000)
+      }
       // Log dell'errore specifico per debugging
       console.error('Dettagli errore email:', {
         error: emailError,

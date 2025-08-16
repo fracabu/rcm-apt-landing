@@ -81,7 +81,8 @@ service cloud.firestore {
            && data.checkOut is string && data.checkOut.size() > 0
            && data.guests is number && data.guests > 0 && data.guests <= 10
            && data.status is string && data.status in ['pending', 'confirmed', 'cancelled']
-           && data.createdAt is timestamp;
+           && data.createdAt is timestamp
+           && (!data.keys().hasAny(['message']) || data.message is string);
   }
   
   // Valida i dati di un visitatore
