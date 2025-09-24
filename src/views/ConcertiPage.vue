@@ -56,7 +56,6 @@
     <!-- Concerts Section -->
     <main id="concerti-section" class="py-16">
       <div class="container mx-auto px-4">
-        
         <!-- Concert Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div 
@@ -71,12 +70,12 @@
                     <h3 class="text-xl font-bold">{{ concert.artist }}</h3>
                     <p class="text-roma-200">{{ concert.venue }}</p>
                   </div>
-                  <span 
+                  <span
                     class="status-badge"
                     :class="{
                       'bg-green-500': concert.status === 'available',
                       'bg-red-500': concert.status === 'sold-out',
-                      'bg-yellow-500': concert.status === 'few-tickets'
+                      'bg-orange-500': concert.status === 'few-tickets'
                     }"
                   >
                     {{ $t(`concerts.status.${concert.status}`) }}
@@ -94,7 +93,7 @@
                 </div>
               </div>
               <div class="bg-white p-6 rounded-b-2xl border-t-0">
-                <p class="text-gray-600 mb-4">{{ $t(`concerts.descriptions.${concert.id}`) }}</p>
+                <p class="text-gray-600 mb-6 leading-relaxed">{{ $t(`concerts.descriptions.${concert.id}`) }}</p>
                 
                 <div class="flex justify-between items-center">
                   <div class="text-sm text-gray-500">
@@ -116,34 +115,35 @@
             </div>
           </div>
         </div>
+
         <!-- Transport Info -->
         <section class="mt-16 bg-roma-50 p-8 rounded-2xl">
-          <h2 class="text-2xl font-serif font-bold text-roma-800 text-center mb-6">
-            {{ $t('concerts.transport.title') }}
-          </h2>
-          
-          <div class="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 class="text-lg font-semibold mb-3 flex items-center">
-                <TrainIcon class="w-5 h-5 mr-2 text-roma-600" />
-                {{ $t('concerts.transport.auditorium.title') }}
-              </h3>
-              <p class="text-gray-600 mb-2">{{ $t('concerts.transport.auditorium.metro') }}</p>
-              <p class="text-gray-600 mb-2">{{ $t('concerts.transport.auditorium.bus') }}</p>
-              <p class="text-gray-600">{{ $t('concerts.transport.auditorium.time') }}</p>
+            <h2 class="text-2xl font-serif font-bold text-roma-800 text-center mb-6">
+              {{ $t('concerts.transport.title') }}
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold mb-3 flex items-center">
+                  <TrainIcon class="w-5 h-5 mr-2 text-roma-600" />
+                  {{ $t('concerts.transport.auditorium.title') }}
+                </h3>
+                <p class="text-gray-600 mb-2">{{ $t('concerts.transport.auditorium.metro') }}</p>
+                <p class="text-gray-600 mb-2">{{ $t('concerts.transport.auditorium.bus') }}</p>
+                <p class="text-gray-600">{{ $t('concerts.transport.auditorium.time') }}</p>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold mb-3 flex items-center">
+                  <MapPinIcon class="w-5 h-5 mr-2 text-roma-600" />
+                  {{ $t('concerts.transport.stadiums.title') }}
+                </h3>
+                <p class="text-gray-600 mb-2">{{ $t('concerts.transport.stadiums.metro1') }}</p>
+                <p class="text-gray-600 mb-2">{{ $t('concerts.transport.stadiums.metro2') }}</p>
+                <p class="text-gray-600">{{ $t('concerts.transport.stadiums.time') }}</p>
+              </div>
             </div>
-            
-            <div>
-              <h3 class="text-lg font-semibold mb-3 flex items-center">
-                <MapPinIcon class="w-5 h-5 mr-2 text-roma-600" />
-                {{ $t('concerts.transport.stadiums.title') }}
-              </h3>
-              <p class="text-gray-600 mb-2">{{ $t('concerts.transport.stadiums.metro1') }}</p>
-              <p class="text-gray-600 mb-2">{{ $t('concerts.transport.stadiums.metro2') }}</p>
-              <p class="text-gray-600">{{ $t('concerts.transport.stadiums.time') }}</p>
-            </div>
-          </div>
-        </section>
+          </section>
       </div>
     </main>
     <TheFooter />
@@ -154,16 +154,17 @@ import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
-import { 
-  MusicIcon, 
-  TicketIcon, 
-  MapPinIcon, 
-  CalendarIcon, 
+// import { getAllConcerts, refreshConcerts, type Concert } from '../services/concerts'
+import {
+  MusicIcon,
+  MapPinIcon,
+  CalendarIcon,
   TrainIcon,
   HomeIcon,
   StarIcon,
   UsersIcon
 } from 'lucide-vue-next'
+
 interface Concert {
   id: string
   artist: string
@@ -175,6 +176,7 @@ interface Concert {
   status: 'available' | 'sold-out' | 'few-tickets'
   ticketUrl: string
 }
+
 interface Venue {
   id: string
   name: string
@@ -182,6 +184,7 @@ interface Venue {
 }
 const { locale } = useI18n()
 const selectedVenue = ref('all')
+
 const venues: Venue[] = [
   { id: 'all', name: 'All Concerts', icon: MusicIcon },
   { id: 'auditorium', name: 'Auditorium', icon: StarIcon },
@@ -189,6 +192,8 @@ const venues: Venue[] = [
   { id: 'circo-massimo', name: 'Circo Massimo', icon: HomeIcon },
   { id: 'olimpico', name: 'Olympic Stadium', icon: UsersIcon }
 ]
+
+// Concerti aggiornabili manualmente
 const concerts: Concert[] = [
   // Roma Summer Fest 2025 (Auditorium)
   {
@@ -360,6 +365,7 @@ const concerts: Concert[] = [
     ticketUrl: 'https://www.ticketmaster.it/event/ed-sheeran-mathematics-tour-roma/'
   }
 ]
+
 const filteredConcerts = computed(() => {
   if (selectedVenue.value === 'all') {
     return concerts
@@ -392,6 +398,14 @@ const openBooking = (concert: Concert) => {
   @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden;
 }
 .status-badge {
-  @apply px-3 py-1 rounded-full text-white text-xs font-bold;
+  @apply px-3 py-1 rounded-full text-white text-xs font-bold shadow-md;
+}
+
+.concert-card:hover {
+  @apply shadow-2xl;
+}
+
+.concert-card:hover .status-badge {
+  @apply scale-105;
 }
 </style>

@@ -9,7 +9,7 @@
             {{ $t('footer.description') }}
           </p>
           <div class="flex space-x-4">
-            <a href="#" class="text-roma-300 hover:text-gold-400 transition-colors">
+            <a href="https://www.facebook.com/profile.php?id=61580886698287" target="_blank" class="text-roma-300 hover:text-gold-400 transition-colors">
               <FacebookIcon class="w-5 h-5" />
             </a>
           </div>
