@@ -635,11 +635,9 @@
   },
   "concerts": {
     "title": "Concerti Roma 2025-2026",
-    "subtitle": "Sconto Esclusivo 20% per i Nostri Ospiti",
-    "description": "Scopri tutti i concerti a Roma con vantaggi esclusivi: sconto 20% per Auditorium e Santa Cecilia",
+    "subtitle": "I Migliori Concerti di Roma",
+    "description": "Scopri tutti i concerti a Roma con informazioni complete sui trasporti e i migliori eventi",
     "benefits": {
-      "auditorium_discount": "Sconto 20% Auditorium",
-      "santa_cecilia_discount": "Sconto 20% Santa Cecilia",
       "transport_info": "Info Trasporti Incluse"
     },
     "cta": {
@@ -649,9 +647,6 @@
       "featured": {
         "title": "Concerti Roma 2025-2026",
         "venues": "Auditorium, Circo Massimo, Stadio Olimpico"
-      },
-      "discount": {
-        "label": "Sconto Auditorium"
       },
       "season": {
         "label": "Stagione Concerti"
@@ -677,29 +672,22 @@
         "description": "Il principale centro musicale di Roma con tre sale da concerto e una programmazione internazionale.",
         "distance": "25 min con Metro",
         "transport": "Metro A + Bus",
-        "discount": "20% di sconto per i nostri ospiti"
+        "info": "Info trasporti incluse"
       },
       "santa_cecilia": {
         "name": "Accademia Nazionale di Santa Cecilia",
         "description": "Una delle più antiche istituzioni musicali del mondo, fondata nel 1585.",
         "distance": "20 min con Metro",
         "transport": "Metro A diretta",
-        "discount": "20% di sconto per i nostri ospiti"
+        "info": "Info trasporti incluse"
       }
     },
     "filters": {
       "all": "Tutti i Concerti",
       "auditorium": "Auditorium",
-      "santa_cecilia": "Santa Cecilia",
-      "circo_massimo": "Circo Massimo",
-      "olimpico": "Stadio Olimpico",
-      "altri": "Altri Venue"
-    },
-    "discount_banner": {
-      "title": "Sconto fino al 20%",
-      "description": "Disponibile per ospiti del nostro appartamento, solo su richiesta preventiva e in base alla disponibilità",
-      "auditorium_text": "Contattaci prima dell'acquisto per verificare disponibilità sconto",
-      "santa_cecilia_text": "Sconto applicabile solo se confermato dalla biglietteria ufficiale"
+      "santa-cecilia": "Santa Cecilia",
+      "circo-massimo": "Circo Massimo",
+      "olimpico": "Stadio Olimpico"
     },
     "status": {
       "available": "Disponibile",
@@ -707,33 +695,8 @@
       "few_tickets": "Ultimi Posti"
     },
     "card": {
-      "contact_for_discount": "Contattaci per info sconto",
       "see_tickets": "Vedi Info Biglietti",
       "check_official": "Prezzi sul sito ufficiale"
-    },
-    "how_to_get_discount": {
-      "title": "Come Richiedere lo Sconto",
-      "step1": {
-        "title": "Contattaci Prima",
-        "description": "PRIMA di acquistare biglietti, contattaci per verificare se lo sconto è disponibile"
-      },
-      "step2": {
-        "title": "Verifica Disponibilità",
-        "description": "Controlliamo con la biglietteria ufficiale se ci sono posti disponibili con sconto"
-      },
-      "step3": {
-        "title": "Conferma e Prenota",
-        "description": "Se confermato, prenoti l'appartamento e noi procediamo con l'acquisto scontato"
-      },
-      "how_it_works": {
-        "title": "⚠️ IMPORTANTE - Procedura Obbligatoria:",
-        "contact_first": "1. Contattaci PRIMA di qualsiasi acquisto tramite WhatsApp (+39 320 49 33 807) o email",
-        "specify_event": "2. Specifica concerto, data e settore desiderato",
-        "verify_availability": "3. Verifichiamo disponibilità sconto presso biglietteria ufficiale Auditorium",
-        "confirm_booking": "4. Solo se confermato, procedi con prenotazione appartamento + acquisto biglietti",
-        "no_guarantee": "Lo sconto NON è garantito e dipende dalla disponibilità presso la biglietteria ufficiale"
-      },
-      "cta": "Contattaci per Verificare Disponibilità Sconto"
     },
     "descriptions": {
       "1": "La leggendaria poetessa del rock in concerto nella suggestiva cornice dell'Auditorium.",

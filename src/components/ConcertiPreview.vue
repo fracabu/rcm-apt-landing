@@ -29,9 +29,9 @@
           <!-- Venue highlights grid -->
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-gradient-to-br from-roma-600 to-roma-800 p-4 rounded-xl text-white text-center">
-              <TicketIcon class="w-8 h-8 mx-auto mb-2" />
-              <div class="font-bold text-lg">20%</div>
-              <div class="text-xs opacity-90">{{ $t('concerts.preview.discount.label') }}</div>
+              <MusicIcon class="w-8 h-8 mx-auto mb-2" />
+              <div class="font-bold text-lg">Live</div>
+              <div class="text-xs opacity-90">Concerti</div>
             </div>
             <div class="bg-gradient-to-br from-roma-gold-500 to-roma-gold-600 p-4 rounded-xl text-white text-center">
               <CalendarIcon class="w-8 h-8 mx-auto mb-2" />

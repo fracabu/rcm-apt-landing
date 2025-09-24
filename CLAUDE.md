@@ -13,6 +13,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Firebase Commands
 - **Deploy functions**: `cd functions && npm run build && cd .. && npx firebase-tools deploy --only functions`
 - **Check function config**: `npx firebase-tools functions:config:get`
+- **Function logs**: `npx firebase-tools functions:log`
+- **Functions development**: `cd functions && npm run serve`
 
 ## Architecture Overview
 
@@ -24,6 +26,7 @@ This is a Vue 3 + TypeScript single-page application for a luxury apartment rent
 - **Email**: EmailJS for client-side email sending with Firebase Functions as backup
 - **Routing**: Vue Router with Italian route names
 - **Build**: Vite with vue-tsc for TypeScript checking
+- **I18n**: Vue-i18n with Italian (primary) and English support
 
 ### Data Flow Architecture
 1. **Contact Form** → Firebase Firestore (always saved) + EmailJS (notification)
@@ -39,9 +42,9 @@ The app uses composable stores in `src/stores/`:
 ### Email System Architecture
 Dual email system for reliability:
 1. **Primary**: EmailJS (client-side, immediate feedback)
-2. **Backup**: Firebase Functions with Gmail SMTP (server-side)
+2. **Backup**: Firebase Functions with Aruba SMTP (server-side)
 
-Both systems use the same template structure and handle problematic email domains (Hotmail/Outlook).
+Both systems use the same template structure and handle problematic email domains (Hotmail/Outlook/Live) with special compatibility handling.
 
 ### Route Structure
 - Italian route names (`/servizi`, `/galleria`, `/recensioni`, `/contatti`)
@@ -53,6 +56,8 @@ Both systems use the same template structure and handle problematic email domain
 - **Page Components**: Views in `src/views/` for each route
 - **Reusable Components**: `src/components/` with specific sections (Hero, Services, Gallery, etc.)
 - **Preview Components**: Specialized components for home page previews of other sections
+- **Composition API**: Exclusively uses `<script setup lang="ts">` syntax
+- **Props/Emits**: TypeScript interfaces for component communication
 
 ### Firebase Configuration
 - **Authentication**: Email/password for admin access
@@ -63,12 +68,15 @@ Both systems use the same template structure and handle problematic email domain
 - **Tailwind**: Extended with Roma/Roman color scheme (red/gold AS Roma colors)
 - **Custom gradients**: Roma-themed background gradients
 - **Responsive**: Mobile-first design with desktop enhancements
+- **Mobile Optimization**: Safari/iPhone compatibility fixes for forms and touch interactions
 
 ### Critical Files
 - `src/firebase/config.ts`: Firebase setup (credentials are public/exposed)
 - `src/services/email.ts`: EmailJS integration with detailed error logging
 - `src/services/bookings.ts`: Firestore operations for booking management
 - `src/router/index.ts`: Route definitions with SEO meta
+- `src/i18n/index.ts`: Vue-i18n configuration with browser detection
+- `src/i18n/locales/`: Translation files (it.json, en.json)
 
 ### Environment Variables (VITE_)
 Required for EmailJS functionality:
@@ -84,14 +92,26 @@ Note: VITE_ variables are publicly exposed in the build.
 - Admin authentication failures redirect to login
 - Database operations have try/catch with user feedback
 
+### I18n Implementation
+- **Languages**: Italian (primary), English (secondary)
+- **Detection**: Browser language detection with localStorage persistence
+- **Fallback**: Italian as default language
+- **SEO**: HTML lang attribute updates, hreflang meta tags for search engines
+- **Components**: Reactive language switching with composable `useI18n()`
+
 ### Deployment Notes
 - Built for static hosting (Vercel/Netlify)
 - Uses `_redirects` file for SPA routing support
 - Firebase Functions require separate deployment
 - All environment variables must be configured in hosting platform
 
+### Development Notes
+- **No linting/formatting tools**: ESLint/Prettier not currently configured
+- **No testing framework**: Consider adding Vitest for component testing
+- **TypeScript strict mode**: Enabled with unused locals/parameters checking
+
 ## Important Files to Review
 - `EMAILJS_SETUP.md`: Complete EmailJS configuration guide
 - `FIREBASE_EMAIL_SETUP.md`: Firebase Functions email setup
 - `src/types/index.ts`: TypeScript interfaces for Booking and other models
-- `firestore.rules`: Database security rules
+- `firestore.rules`: Database security rules with admin email whitelist

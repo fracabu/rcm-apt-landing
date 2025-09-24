@@ -704,11 +704,9 @@
   },
   "concerts": {
     "title": "Rome Concerts 2025-2026",
-    "subtitle": "Exclusive 20% Discount for Our Guests",
-    "description": "Discover all Rome concerts with exclusive benefits: 20% discount for Auditorium and Santa Cecilia",
+    "subtitle": "The Best Rome Concerts",
+    "description": "Discover all Rome concerts with complete transport information and the best events",
     "benefits": {
-      "auditorium_discount": "20% Discount Auditorium",
-      "santa_cecilia_discount": "20% Discount Santa Cecilia",
       "transport_info": "Transport Info Included"
     },
     "cta": {
@@ -718,9 +716,6 @@
       "featured": {
         "title": "Rome Concerts 2025-2026",
         "venues": "Auditorium, Circo Massimo, Olympic Stadium"
-      },
-      "discount": {
-        "label": "Auditorium Discount"
       },
       "season": {
         "label": "Concert Season"
@@ -746,29 +741,22 @@
         "description": "Rome's main music center with three concert halls and international programming.",
         "distance": "25 min by Metro",
         "transport": "Metro A + Bus",
-        "discount": "20% discount for our guests"
+        "info": "Transport info included"
       },
       "santa_cecilia": {
         "name": "Accademia Nazionale di Santa Cecilia",
         "description": "One of the world's oldest musical institutions, founded in 1585.",
         "distance": "20 min by Metro",
         "transport": "Direct Metro A",
-        "discount": "20% discount for our guests"
+        "info": "Transport info included"
       }
     },
     "filters": {
       "all": "All Concerts",
       "auditorium": "Auditorium",
-      "santa_cecilia": "Santa Cecilia",
-      "circo_massimo": "Circo Massimo",
-      "olimpico": "Olympic Stadium",
-      "altri": "Other Venues"
-    },
-    "discount_banner": {
-      "title": "Up to 20% Discount",
-      "description": "Available for our apartment guests, only upon prior request and subject to availability",
-      "auditorium_text": "Contact us before purchase to verify discount availability",
-      "santa_cecilia_text": "Discount applicable only if confirmed by official box office"
+      "santa-cecilia": "Santa Cecilia",
+      "circo-massimo": "Circo Massimo",
+      "olimpico": "Olympic Stadium"
     },
     "status": {
       "available": "Available",
@@ -776,33 +764,8 @@
       "few_tickets": "Few Tickets Left"
     },
     "card": {
-      "contact_for_discount": "Contact us for discount info",
       "see_tickets": "See Ticket Info",
       "check_official": "Prices on official website"
-    },
-    "how_to_get_discount": {
-      "title": "How to Request Discount",
-      "step1": {
-        "title": "Contact Us First",
-        "description": "BEFORE buying tickets, contact us to verify if discount is available"
-      },
-      "step2": {
-        "title": "Check Availability",
-        "description": "We check with official box office if discounted seats are available"
-      },
-      "step3": {
-        "title": "Confirm and Book",
-        "description": "If confirmed, book the apartment and we proceed with discounted purchase"
-      },
-      "how_it_works": {
-        "title": "⚠️ IMPORTANT - Mandatory Procedure:",
-        "contact_first": "1. Contact us BEFORE any purchase via WhatsApp (+39 320 49 33 807) or email",
-        "specify_event": "2. Specify concert, date and desired sector",
-        "verify_availability": "3. We verify discount availability with official Auditorium box office",
-        "confirm_booking": "4. Only if confirmed, proceed with apartment booking + ticket purchase",
-        "no_guarantee": "Discount is NOT guaranteed and depends on availability at official box office"
-      },
-      "cta": "Contact Us to Verify Discount Availability"
     },
     "descriptions": {
       "1": "The legendary rock poetess in concert in the evocative setting of the Auditorium.",

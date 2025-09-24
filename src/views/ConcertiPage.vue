@@ -23,21 +23,21 @@
           <!-- Key Benefits - Simple Text -->
           <div class="mb-8 lg:mb-12">
             <p class="text-lg sm:text-xl md:text-2xl text-amber-200 font-light max-w-2xl mx-auto">
-              {{ $t('concerts.benefits.auditorium_discount') }} • {{ $t('concerts.benefits.santa_cecilia_discount') }} • {{ $t('concerts.benefits.transport_info') }}
+              {{ $t('concerts.benefits.transport_info') }}
             </p>
           </div>
-          <router-link to="/concerti" class="btn-3d btn-3d-md">
+          <a href="#filters-section" class="btn-3d btn-3d-md">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
               {{ $t('concerts.cta.discover') }}
             </span>
-          </router-link>
+          </a>
         </div>
       </div>
     </section>
     <!-- Filters Section -->
-    <section class="py-8 bg-white shadow-sm">
+    <section id="filters-section" class="py-8 bg-white shadow-sm">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center gap-4">
           <button
@@ -54,28 +54,9 @@
       </div>
     </section>
     <!-- Concerts Section -->
-    <main class="py-16">
+    <main id="concerti-section" class="py-16">
       <div class="container mx-auto px-4">
         
-        <!-- Discount Info Banner -->
-        <div v-if="selectedVenue === 'all' || selectedVenue === 'auditorium' || selectedVenue === 'santa-cecilia'" 
-             class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl mb-12 text-center">
-          <div class="flex items-center justify-center mb-4">
-            <TicketIcon class="w-8 h-8 mr-3" />
-            <h2 class="text-2xl font-bold">{{ $t('concerts.discount_banner.title') }}</h2>
-          </div>
-          <p class="text-lg mb-4">{{ $t('concerts.discount_banner.description') }}</p>
-          <div class="grid md:grid-cols-2 gap-4 text-sm">
-            <div class="bg-white/20 p-4 rounded-lg">
-              <h3 class="font-semibold mb-2">🎼 Auditorium Parco della Musica</h3>
-              <p>{{ $t('concerts.discount_banner.auditorium_text') }}</p>
-            </div>
-            <div class="bg-white/20 p-4 rounded-lg">
-              <h3 class="font-semibold mb-2">🎻 Accademia Santa Cecilia</h3>
-              <p>{{ $t('concerts.discount_banner.santa_cecilia_text') }}</p>
-            </div>
-          </div>
-        </div>
         <!-- Concert Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div 
@@ -108,8 +89,7 @@
                 </div>
                 <div class="mb-4">
                   <div class="bg-white/20 backdrop-blur-sm p-3 rounded-lg">
-                    <p class="text-xs text-white/90 mb-1">{{ $t('concerts.card.check_official') }}</p>
-                    <p class="text-xs text-green-300">{{ $t('concerts.card.contact_for_discount') }}</p>
+                    <p class="text-xs text-white/90">{{ $t('concerts.card.check_official') }}</p>
                   </div>
                 </div>
               </div>
@@ -136,58 +116,6 @@
             </div>
           </div>
         </div>
-        <!-- How to Get Discount Section -->
-        <section v-if="selectedVenue === 'all' || selectedVenue === 'auditorium' || selectedVenue === 'santa-cecilia'" 
-                 class="mt-16 bg-white p-8 rounded-2xl shadow-lg">
-          <h2 class="text-3xl font-serif font-bold text-roma-800 text-center mb-8">
-            {{ $t('concerts.how_to_get_discount.title') }}
-          </h2>
-          
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="w-16 h-16 bg-roma-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">1</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">{{ $t('concerts.how_to_get_discount.step1.title') }}</h3>
-              <p class="text-gray-600">{{ $t('concerts.how_to_get_discount.step1.description') }}</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="w-16 h-16 bg-roma-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">2</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">{{ $t('concerts.how_to_get_discount.step2.title') }}</h3>
-              <p class="text-gray-600">{{ $t('concerts.how_to_get_discount.step2.description') }}</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="w-16 h-16 bg-roma-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">3</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">{{ $t('concerts.how_to_get_discount.step3.title') }}</h3>
-              <p class="text-gray-600">{{ $t('concerts.how_to_get_discount.step3.description') }}</p>
-            </div>
-          </div>
-          <div class="bg-red-50 p-6 rounded-lg mt-8 border-2 border-red-200">
-            <h4 class="text-lg font-semibold text-red-800 mb-2">{{ $t('concerts.how_to_get_discount.how_it_works.title') }}</h4>
-            <ul class="text-sm text-red-700 space-y-2">
-              <li>• {{ $t('concerts.how_to_get_discount.how_it_works.contact_first') }}</li>
-              <li>• {{ $t('concerts.how_to_get_discount.how_it_works.specify_event') }}</li>
-              <li>• {{ $t('concerts.how_to_get_discount.how_it_works.verify_availability') }}</li>
-              <li>• {{ $t('concerts.how_to_get_discount.how_it_works.confirm_booking') }}</li>
-              <li class="font-bold">⚠️ {{ $t('concerts.how_to_get_discount.how_it_works.no_guarantee') }}</li>
-            </ul>
-          </div>
-          <div class="text-center mt-8">
-            <router-link to="/contatti" class="btn-3d btn-3d-lg">
-              <span class="shadow"></span>
-              <span class="edge"></span>
-              <span class="front">
-                {{ $t('concerts.how_to_get_discount.cta') }}
-              </span>
-            </router-link>
-          </div>
-        </section>
         <!-- Transport Info -->
         <section class="mt-16 bg-roma-50 p-8 rounded-2xl">
           <h2 class="text-2xl font-serif font-bold text-roma-800 text-center mb-6">
@@ -257,10 +185,9 @@ const selectedVenue = ref('all')
 const venues: Venue[] = [
   { id: 'all', name: 'All Concerts', icon: MusicIcon },
   { id: 'auditorium', name: 'Auditorium', icon: StarIcon },
-  { id: 'santa_cecilia', name: 'Santa Cecilia', icon: MusicIcon },
-  { id: 'circo_massimo', name: 'Circo Massimo', icon: HomeIcon },
-  { id: 'olimpico', name: 'Olympic Stadium', icon: UsersIcon },
-  { id: 'altri', name: 'Other Venues', icon: MapPinIcon }
+  { id: 'santa-cecilia', name: 'Santa Cecilia', icon: MusicIcon },
+  { id: 'circo-massimo', name: 'Circo Massimo', icon: HomeIcon },
+  { id: 'olimpico', name: 'Olympic Stadium', icon: UsersIcon }
 ]
 const concerts: Concert[] = [
   // Roma Summer Fest 2025 (Auditorium)
