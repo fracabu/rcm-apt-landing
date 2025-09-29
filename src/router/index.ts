@@ -8,8 +8,9 @@ import ConcertiPage from '../views/ConcertiPage.vue'
 import MuseiPage from '../views/MuseiPage.vue'
 import RestaurantsPage from '../views/RestaurantsPage.vue'
 import AdminPage from '../views/AdminPage.vue'
-import PrivacyPage from '../views/PrivacyPage.vue'
-import CancellationPage from '../views/CancellationPage.vue'
+// Lazy load privacy/cancellation to avoid build issues
+const PrivacyPage = () => import('../views/PrivacyPage.vue')
+const CancellationPage = () => import('../views/CancellationPage.vue')
 
 const router = createRouter({
   history: createWebHistory(),
