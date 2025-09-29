@@ -133,7 +133,7 @@
 
           <div class="border-t pt-6 mt-8">
             <p class="text-sm text-gray-500">
-              {{ $t('privacy.sections.compliance') }}
+              {{ $t('privacy.compliance') }}
             </p>
           </div>
         </div>
