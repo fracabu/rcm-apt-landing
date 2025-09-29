@@ -7,24 +7,27 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-modern': 'linear-gradient(135deg, #ffffff 0%, #fdf2f8 25%, #f5f5f4 100%)',
-        'gradient-elegant': 'linear-gradient(135deg, #fdf2f4 0%, #f9f7ff 30%, #faf7f5 60%, #f8fafc 100%)',
-        'gradient-roma': 'linear-gradient(135deg, #fdf2f4 0%, #fce7ea 20%, #f9f7ff 40%, #faf7f5 70%, #f8fafc 100%)',
-        'gradient-warm': 'linear-gradient(135deg, #fdfbf7 0%, #fff9f5 30%, #fef7f0 60%, #fdf4f0 100%)',
+        // Gradienti morbidi aggiornati
+        'gradient-modern': 'linear-gradient(135deg, #ffffff 0%, #fafaf9 25%, #f5f5f4 100%)',
+        'gradient-elegant': 'linear-gradient(135deg, #fefefe 0%, #fdf2f4 30%, #fefcf6 60%, #f6f7f6 100%)',
+        'gradient-roma': 'linear-gradient(135deg, #fefefe 0%, #fdf2f4 20%, #fce7ea 40%, #fefcf6 70%, #f6f7f6 100%)',
+        'gradient-warm': 'linear-gradient(135deg, #fefefe 0%, #fefcf6 30%, #fef9ed 60%, #fdf4e0 100%)',
+        'gradient-hero': 'linear-gradient(135deg, rgba(224, 72, 110, 0.05) 0%, rgba(240, 188, 66, 0.05) 100%)',
+        'gradient-section': 'linear-gradient(135deg, #fefefe 0%, #fafaf9 50%, #f5f5f4 100%)',
       },
       colors: {
-        // AS Roma inspired palette
+        // AS Roma inspired palette (versione morbida)
         roma: {
           50: '#fdf2f4',
           100: '#fce7ea',
           200: '#f9d0d7',
           300: '#f4a8b6',
           400: '#ec7590',
-          500: '#e0486e',
-          600: '#cc2d56',
-          700: '#ab1f47',
-          800: '#8E1F2F', // Rosso granata primario
-          900: '#7a1a28',
+          500: '#e0486e', // Rosso principale (più morbido)
+          600: '#cc2d56', // Rosso medio
+          700: '#ab1f47', // Rosso intenso
+          800: '#8E1F2F', // Rosso granata originale
+          900: '#7a1a28', // Rosso più scuro
         },
         gold: {
           50: '#fffbeb',
@@ -64,16 +67,41 @@ export default {
           900: '#78350f',
         },
         neutral: {
-          50: '#FDF9F5', // Sfondo principale caldo
-          100: '#FAF9F7', // Sfondo alternativo
-          200: '#f5f5f4',
-          300: '#e7e5e4',
-          400: '#a8a29e',
-          500: '#78716c',
-          600: '#57534e',
-          700: '#44403c',
-          800: '#2C2C2C', // Testo principale (più scuro)
-          900: '#1A1A1A', // Testo scuro (più scuro)
+          50: '#fefefe', // Bianco puro
+          100: '#fafaf9', // Sfondo principale molto chiaro
+          200: '#f5f5f4', // Sfondo sezioni
+          300: '#e7e5e4', // Bordi chiari
+          400: '#a8a29e', // Testo secondario
+          500: '#78716c', // Testo normale
+          600: '#57534e', // Testo importante
+          700: '#44403c', // Testo scuro
+          800: '#292524', // Testo principale
+          900: '#1c1917', // Nero
+        },
+        // Nuovi colori morbidi
+        cream: {
+          50: '#fefdfb',
+          100: '#fefcf6',
+          200: '#fef9ed',
+          300: '#fdf4e0',
+          400: '#faedc4',
+          500: '#f6e4a6', // Crema principale
+          600: '#e6d289',
+          700: '#d4c06d',
+          800: '#c2ae52',
+          900: '#b09c38',
+        },
+        sage: {
+          50: '#f6f7f6',
+          100: '#e3e8e3',
+          200: '#c7d2c7',
+          300: '#a4b8a4',
+          400: '#819a81',
+          500: '#6b8068', // Verde salvia morbido
+          600: '#5a6b57',
+          700: '#4a5748',
+          800: '#3c463a',
+          900: '#2f372e',
         },
         primary: {
           50: '#fdf2f2',

@@ -113,14 +113,24 @@
         <div class="bg-white rounded-lg shadow">
           <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
             <h3 class="text-lg font-medium text-gray-900">Prenotazioni Recenti</h3>
-            <button 
-              @click="refreshBookings"
-              :disabled="bookingsLoading"
-              class="bg-roma-600 text-white px-4 py-2 rounded-lg hover:bg-roma-700 disabled:opacity-50 transition-colors flex items-center gap-2"
-            >
-              <LoaderIcon v-if="bookingsLoading" class="w-4 h-4 animate-spin" />
-              <span>{{ bookingsLoading ? 'Aggiornamento...' : 'Aggiorna' }}</span>
-            </button>
+            <div class="flex gap-3">
+              <button
+                @click="handleDeleteAllBookings"
+                :disabled="bookingsLoading || bookings.length === 0"
+                class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 disabled:opacity-50 transition-colors flex items-center gap-2"
+              >
+                <TrashIcon class="w-4 h-4" />
+                <span>Cancella tutto</span>
+              </button>
+              <button
+                @click="refreshBookings"
+                :disabled="bookingsLoading"
+                class="bg-roma-600 text-white px-4 py-2 rounded-lg hover:bg-roma-700 disabled:opacity-50 transition-colors flex items-center gap-2"
+              >
+                <LoaderIcon v-if="bookingsLoading" class="w-4 h-4 animate-spin" />
+                <span>{{ bookingsLoading ? 'Aggiornamento...' : 'Aggiorna' }}</span>
+              </button>
+            </div>
           </div>
 
           <div v-if="bookingsLoading" class="p-8 text-center">
@@ -327,13 +337,52 @@ const handleDeleteBooking = async (bookingId: string, customerName: string) => {
   if (!confirm(`Sei sicuro di voler eliminare la prenotazione di ${customerName}?`)) {
     return
   }
-  
+
   try {
     await deleteBooking(bookingId)
     console.log(`Prenotazione di ${customerName} eliminata con successo`)
   } catch (error) {
     console.error('Errore nell\'eliminare la prenotazione:', error)
     alert('Errore nell\'eliminare la prenotazione. Riprova.')
+  }
+}
+
+const handleDeleteAllBookings = async () => {
+  const bookingCount = bookings.value.length
+
+  if (bookingCount === 0) {
+    alert('Non ci sono prenotazioni da eliminare.')
+    return
+  }
+
+  const confirmMessage = `⚠️ ATTENZIONE!\n\nStai per eliminare TUTTE le ${bookingCount} prenotazioni presenti nel sistema.\n\nQuesta operazione è IRREVERSIBILE!\n\nSei assolutamente sicuro di voler continuare?\n\nScrivi "ELIMINA TUTTO" per confermare:`
+
+  const userInput = prompt(confirmMessage)
+
+  if (userInput !== 'ELIMINA TUTTO') {
+    alert('Operazione annullata. Le prenotazioni sono al sicuro.')
+    return
+  }
+
+  try {
+    console.log(`🗑️ Inizio eliminazione di ${bookingCount} prenotazioni...`)
+
+    // Elimina tutte le prenotazioni una per una
+    const deletePromises = bookings.value.map(booking =>
+      booking.id ? deleteBooking(booking.id) : Promise.resolve()
+    )
+
+    await Promise.all(deletePromises)
+
+    console.log('✅ Tutte le prenotazioni sono state eliminate con successo')
+    alert(`✅ Operazione completata!\n\nTutte le ${bookingCount} prenotazioni sono state eliminate dal sistema.`)
+
+    // Ricarica la lista per aggiornare l'interfaccia
+    await fetchBookings()
+
+  } catch (error) {
+    console.error('❌ Errore durante l\'eliminazione di tutte le prenotazioni:', error)
+    alert('❌ Errore durante l\'eliminazione delle prenotazioni. Alcune potrebbero non essere state eliminate. Ricarica la pagina e riprova.')
   }
 }
 

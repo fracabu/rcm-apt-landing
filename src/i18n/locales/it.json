@@ -691,8 +691,8 @@
     },
     "status": {
       "available": "Disponibile",
-      "sold_out": "Sold Out",
-      "few_tickets": "Ultimi Posti"
+      "sold-out": "Sold Out",
+      "few-tickets": "Ultimi Posti"
     },
     "card": {
       "see_tickets": "Vedi Info Biglietti",

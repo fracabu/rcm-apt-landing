@@ -760,8 +760,8 @@
     },
     "status": {
       "available": "Available",
-      "sold_out": "Sold Out",
-      "few_tickets": "Few Tickets Left"
+      "sold-out": "Sold Out",
+      "few-tickets": "Few Tickets Left"
     },
     "card": {
       "see_tickets": "See Ticket Info",

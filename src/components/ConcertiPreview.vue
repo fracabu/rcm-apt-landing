@@ -1,5 +1,5 @@
 <template>
-  <section id="concerti" class="min-h-screen py-16 flex items-center" style="background: linear-gradient(135deg, rgba(152, 20, 43, 0.92) 0%, rgba(122, 16, 36, 0.92) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
+  <section id="concerti" class="min-h-screen py-16 flex items-center" style="background: linear-gradient(135deg, rgba(224, 72, 110, 0.85) 0%, rgba(204, 45, 86, 0.85) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
     <div class="container mx-auto px-4">
       <!-- Two Column Layout - Images Left, Text Right -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
@@ -28,7 +28,7 @@
           
           <!-- Venue highlights grid -->
           <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gradient-to-br from-roma-600 to-roma-800 p-4 rounded-xl text-white text-center">
+            <div class="bg-gradient-to-br from-roma-500 to-roma-600 p-4 rounded-xl text-white text-center">
               <MusicIcon class="w-8 h-8 mx-auto mb-2" />
               <div class="font-bold text-lg">Live</div>
               <div class="text-xs opacity-90">Concerti</div>

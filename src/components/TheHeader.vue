@@ -10,7 +10,7 @@
             class="h-16 w-16 md:h-20 md:w-20 rounded-full shadow-md border-2 border-roma-200"
           >
           <div class="hidden md:block">
-            <h1 class="text-xl font-serif font-bold text-roma-800">Roma Caput Mundi</h1>
+            <h1 class="text-xl font-serif font-bold text-roma-700">Roma Caput Mundi</h1>
             <p class="text-sm text-roma-600">Appartamento Vaticano</p>
           </div>
         </router-link>

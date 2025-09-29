@@ -28,7 +28,7 @@
           
           <!-- Specialties highlights grid -->
           <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gradient-to-br from-roma-600 to-roma-800 p-4 rounded-xl text-white text-center">
+            <div class="bg-gradient-to-br from-roma-500 to-roma-600 p-4 rounded-xl text-white text-center">
               <ChefHatIcon class="w-8 h-8 mx-auto mb-2" />
               <div class="font-bold text-sm">{{ $t('restaurants.preview.highlights.trattorias.title') }}</div>
               <div class="text-xs opacity-90">{{ $t('restaurants.preview.highlights.trattorias.subtitle') }}</div>

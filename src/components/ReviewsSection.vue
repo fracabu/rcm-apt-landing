@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold text-roma-800 mb-4">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-roma-700 mb-4">
           {{ $t('reviews.title') }}
         </h2>
         <p class="text-neutral-600 max-w-2xl mx-auto">
@@ -22,7 +22,7 @@
           <!-- Header with name and rating -->
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center space-x-2">
-              <div class="font-semibold text-roma-800">{{ review.name }}</div>
+              <div class="font-semibold text-roma-600">{{ review.name }}</div>
               <span class="text-xs bg-roma-100 text-roma-700 px-2 py-1 rounded-full">{{ $t(`reviews.countries.${review.country}`) }}</span>
             </div>
             <div class="flex">

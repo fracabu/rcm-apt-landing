@@ -11,10 +11,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **TypeScript check**: `vue-tsc -b` (part of build process)
 
 ### Firebase Commands
-- **Deploy functions**: `cd functions && npm run build && cd .. && npx firebase-tools deploy --only functions`
+- **Deploy functions**: `cd functions && npm run deploy`
+- **Build and serve functions locally**: `cd functions && npm run serve`
+- **Function logs**: `cd functions && npm run logs`
 - **Check function config**: `npx firebase-tools functions:config:get`
-- **Function logs**: `npx firebase-tools functions:log`
-- **Functions development**: `cd functions && npm run serve`
 
 ## Architecture Overview
 
@@ -39,6 +39,15 @@ The app uses composable stores in `src/stores/`:
 - `auth.ts`: Firebase authentication state
 - `visitors.ts`: Visitor tracking
 
+### Concert Management System
+New concert feature with full data management:
+- `src/services/concerts.ts`: Concert data fetching from Firestore with 5-minute caching
+- Firestore collection: `concerts` with real-time updates
+- Fallback system: Static concerts if Firestore fails
+- Components: `ConcertiPreview.vue`, `ConcertiPage.vue`
+- Auto-filtering: Expires past concerts automatically
+- Concert venues: Auditorium, Santa Cecilia with venue-based filtering
+
 ### Email System Architecture
 Dual email system for reliability:
 1. **Primary**: EmailJS (client-side, immediate feedback)
@@ -47,9 +56,10 @@ Dual email system for reliability:
 Both systems use the same template structure and handle problematic email domains (Hotmail/Outlook/Live) with special compatibility handling.
 
 ### Route Structure
-- Italian route names (`/servizi`, `/galleria`, `/recensioni`, `/contatti`)
+- Italian route names (`/servizi`, `/galleria`, `/recensioni`, `/contatti`, `/concerti`, `/musei`, `/ristoranti`)
 - SEO meta tags configured per route for content pages
 - Admin area at `/admin` with authentication guard
+- Legal pages: `/privacy`, `/cancellation` for compliance
 - Smooth scroll behavior and hash navigation support
 
 ### Component Architecture
@@ -74,6 +84,7 @@ Both systems use the same template structure and handle problematic email domain
 - `src/firebase/config.ts`: Firebase setup (credentials are public/exposed)
 - `src/services/email.ts`: EmailJS integration with detailed error logging
 - `src/services/bookings.ts`: Firestore operations for booking management
+- `src/services/concerts.ts`: Concert data management with caching and Firestore integration
 - `src/router/index.ts`: Route definitions with SEO meta
 - `src/i18n/index.ts`: Vue-i18n configuration with browser detection
 - `src/i18n/locales/`: Translation files (it.json, en.json)

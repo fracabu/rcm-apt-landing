@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-white py-12" style="background: linear-gradient(135deg, rgba(152, 20, 43, 0.92) 0%, rgba(122, 16, 36, 0.92) 50%, rgba(152, 20, 43, 0.92) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
+  <footer class="text-white py-12" style="background: linear-gradient(135deg, rgba(224, 72, 110, 0.85) 0%, rgba(204, 45, 86, 0.85) 50%, rgba(224, 72, 110, 0.85) 100%), url('/images/sfondo.png'); background-size: 500px 500px; background-repeat: repeat; background-position: center; background-attachment: fixed;">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <!-- Company Info -->
@@ -88,43 +88,22 @@
       </div>
     </div>
     
-    <!-- Visitor Counter & Credits -->
-    <div class="text-center mt-6 space-y-2">
-      <div class="text-roma-400 text-xs">
-        <UsersIcon class="inline h-3 w-3 mr-1" />
-        {{ formatVisitorCount(visitorCount) }} {{ $t('footer.stats.visitors_total') }} · 
-        <span class="text-roma-gold-400">{{ todayVisitors }}</span> {{ $t('footer.stats.today') }} ·
-        <span class="text-roma-gold-400">{{ formatVisitorCount(monthlyVisitors) }}</span> {{ $t('footer.stats.this_month') }}
-      </div>
+    <!-- Credits -->
+    <div class="text-center mt-6">
       <div class="text-roma-300 text-sm">
-        {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong> ·
-        
+        {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { 
-  FacebookIcon, 
-  MailIcon, 
-  PhoneIcon, 
-  MapPinIcon, 
-  ClockIcon, 
-  Clock3Icon, 
-  UsersIcon
-  // HomeIcon 
+import {
+  FacebookIcon,
+  MailIcon,
+  PhoneIcon,
+  MapPinIcon,
+  ClockIcon,
+  Clock3Icon
 } from 'lucide-vue-next'
-import { 
-  visitorCount, 
-  todayVisitors,
-  monthlyVisitors,
-  initVisitorCounter, 
-  formatVisitorCount
-} from '../stores/visitors'
-
-onMounted(() => {
-  initVisitorCounter() // Solo contatore reale, nessuna simulazione
-})
 </script>

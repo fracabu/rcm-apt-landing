@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-roma-800 mb-4">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-roma-700 mb-4">
           {{ $t('services.title') }}
         </h2>
         <p class="text-neutral-600 max-w-2xl mx-auto">
@@ -21,7 +21,7 @@
           <div class="w-12 h-12 bg-roma-50 rounded-full flex items-center justify-center mb-4">
             <component :is="service.icon" class="w-6 h-6 text-roma-red-600" />
           </div>
-          <h3 class="text-xl font-semibold text-roma-800 mb-2">{{ $t(service.titleKey) }}</h3>
+          <h3 class="text-xl font-semibold text-roma-600 mb-2">{{ $t(service.titleKey) }}</h3>
           <p class="text-neutral-600 text-sm">{{ $t(service.descriptionKey) }}</p>
         </div>
       </div>
@@ -29,7 +29,7 @@
       <!-- Location Highlight -->
       <div class="mt-16 bg-gradient-to-r from-white via-roma-50 to-neutral-100 rounded-2xl p-8 max-w-4xl mx-auto border border-roma-100">
         <div class="text-center">
-          <h3 class="text-3xl md:text-4xl font-serif font-bold text-roma-800 mb-4">
+          <h3 class="text-3xl md:text-4xl font-serif font-bold text-roma-700 mb-4">
             {{ $t('services.location.title') }}
           </h3>
           <p class="text-neutral-700 mb-6">

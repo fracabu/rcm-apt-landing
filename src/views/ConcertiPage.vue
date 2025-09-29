@@ -64,7 +64,7 @@
             class="concert-card"
           >
             <div class="relative">
-              <div class="bg-gradient-to-br from-roma-600 to-roma-800 p-6 rounded-t-2xl text-white">
+              <div class="bg-gradient-to-br from-roma-500 to-roma-600 p-6 rounded-t-2xl text-white">
                 <div class="flex justify-between items-start mb-4">
                   <div>
                     <h3 class="text-xl font-bold">{{ concert.artist }}</h3>
