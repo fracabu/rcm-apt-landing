@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Essential Commands
 - **Development server**: `npm run dev`
-- **Build for production**: `npm run build` 
+- **Build for production**: `npm run build`
 - **Preview build**: `npm run preview`
 - **TypeScript check**: `vue-tsc -b` (part of build process)
 
@@ -18,111 +18,243 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-This is a Vue 3 + TypeScript single-page application for a luxury apartment rental in Rome. The app focuses on direct bookings through an integrated contact system.
+This is a Vue 3 + TypeScript single-page application for a luxury apartment rental in Rome. The app focuses on direct bookings through an integrated contact system with dual email notifications.
 
 ### Key Technologies
-- **Frontend**: Vue 3 with Composition API, TypeScript, Tailwind CSS
+- **Frontend**: Vue 3 (Composition API only), TypeScript, Tailwind CSS
 - **Backend**: Firebase (Auth, Firestore, Functions)
-- **Email**: EmailJS for client-side email sending with Firebase Functions as backup
+- **Email**: EmailJS (primary) with Firebase Functions as backup
 - **Routing**: Vue Router with Italian route names
 - **Build**: Vite with vue-tsc for TypeScript checking
 - **I18n**: Vue-i18n with Italian (primary) and English support
 
-### Data Flow Architecture
-1. **Contact Form** → Firebase Firestore (always saved) + EmailJS (notification)
-2. **Admin Authentication** → Firebase Auth → Admin dashboard access
-3. **Booking Management** → Firebase Firestore with real-time updates
+### Critical Constraint
+**All components MUST use `<script setup lang="ts">` syntax exclusively.** Never use Options API.
 
-### Core Store Pattern
-The app uses composable stores in `src/stores/`:
-- `bookings.ts`: Reactive booking management with Firestore integration
-- `auth.ts`: Firebase authentication state
-- `visitors.ts`: Visitor tracking
+## Data Flow Architecture
 
-### Concert Management System
-New concert feature with full data management:
-- `src/services/concerts.ts`: Concert data fetching from Firestore with 5-minute caching
-- Firestore collection: `concerts` with real-time updates
-- Fallback system: Static concerts if Firestore fails
-- Components: `ConcertiPreview.vue`, `ConcertiPage.vue`
-- Auto-filtering: Expires past concerts automatically
-- Concert venues: Auditorium, Santa Cecilia with venue-based filtering
+1. **Contact Form Submission**:
+   - User submits form → Validation
+   - Save to Firestore `bookings` collection (always, even if email fails)
+   - Send dual emails via EmailJS (admin notification + customer confirmation)
+   - Show success/error feedback to user
 
-### Email System Architecture
-Dual email system for reliability:
-1. **Primary**: EmailJS (client-side, immediate feedback)
-2. **Backup**: Firebase Functions with Aruba SMTP (server-side)
+2. **Admin Authentication**:
+   - Firebase Auth with email/password
+   - Protected route at `/admin` with navigation guard
+   - Admin dashboard for viewing/deleting bookings
 
-Both systems use the same template structure and handle problematic email domains (Hotmail/Outlook/Live) with special compatibility handling.
+3. **Concert Management**:
+   - Firestore `concerts` collection (primary source)
+   - 5-minute cache in `src/services/concerts.ts`
+   - Automatic filtering of expired concerts (date < today)
+   - Fallback to static concerts if Firestore unavailable
 
-### Route Structure
-- Italian route names (`/servizi`, `/galleria`, `/recensioni`, `/contatti`, `/concerti`, `/musei`, `/ristoranti`)
-- SEO meta tags configured per route for content pages
-- Admin area at `/admin` with authentication guard
-- Legal pages: `/privacy`, `/cancellation` for compliance
-- Smooth scroll behavior and hash navigation support
+## Core Services & Stores
 
-### Component Architecture
-- **Page Components**: Views in `src/views/` for each route
-- **Reusable Components**: `src/components/` with specific sections (Hero, Services, Gallery, etc.)
-- **Preview Components**: Specialized components for home page previews of other sections
-- **Composition API**: Exclusively uses `<script setup lang="ts">` syntax
-- **Props/Emits**: TypeScript interfaces for component communication
+### Stores (`src/stores/`)
+Composable stores using Vue 3 reactivity:
+- `bookings.ts`: CRUD operations for bookings with Firestore
+  - `addBooking()`: Creates booking in Firestore
+  - `fetchBookings()`: Retrieves all bookings sorted by date
+  - `deleteBooking()`: Removes booking from Firestore
+- `auth.ts`: Firebase authentication state management
+- `visitors.ts`: Visitor tracking for analytics
 
-### Firebase Configuration
-- **Authentication**: Email/password for admin access
-- **Firestore**: `bookings` collection with automatic timestamps
-- **Functions**: Email notification system (optional, EmailJS is primary)
+### Services (`src/services/`)
+- `email.ts`: Dual EmailJS email system
+  - Admin notification email (required)
+  - Customer confirmation email (optional, configured via `VITE_EMAILJS_CUSTOMER_TEMPLATE_ID`)
+  - Special handling for problematic domains (Hotmail/Outlook/Live)
+  - Detailed error logging for debugging
+- `bookings.ts`: Wrapper around Firestore operations
+- `concerts.ts`: Concert data with caching
+  - `getAllConcerts()`: Fetch with 5-min cache
+  - `getConcertsByVenue()`: Filter by venue ID
+  - `refreshConcerts()`: Force cache invalidation
 
-### Styling System
-- **Tailwind**: Extended with Roma/Roman color scheme (red/gold AS Roma colors)
-- **Custom gradients**: Roma-themed background gradients
-- **Responsive**: Mobile-first design with desktop enhancements
-- **Mobile Optimization**: Safari/iPhone compatibility fixes for forms and touch interactions
+## Email System Architecture
 
-### Critical Files
-- `src/firebase/config.ts`: Firebase setup (credentials are public/exposed)
-- `src/services/email.ts`: EmailJS integration with detailed error logging
-- `src/services/bookings.ts`: Firestore operations for booking management
-- `src/services/concerts.ts`: Concert data management with caching and Firestore integration
-- `src/router/index.ts`: Route definitions with SEO meta
-- `src/i18n/index.ts`: Vue-i18n configuration with browser detection
-- `src/i18n/locales/`: Translation files (it.json, en.json)
+**Dual email system for reliability:**
 
-### Environment Variables (VITE_)
-Required for EmailJS functionality:
-- `VITE_EMAILJS_SERVICE_ID`
-- `VITE_EMAILJS_TEMPLATE_ID` 
-- `VITE_EMAILJS_PUBLIC_KEY`
+1. **Primary: EmailJS** (client-side)
+   - Immediate feedback to user
+   - Two templates: admin notification + customer confirmation
+   - Known issue: Hotmail/Outlook/Live domains may fail (400 error)
+   - Configuration in `.env`: `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_CUSTOMER_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY`
 
-Note: VITE_ variables are publicly exposed in the build.
+2. **Backup: Firebase Functions** (server-side)
+   - Nodemailer with Aruba SMTP or Gmail
+   - More reliable but requires Firebase deployment
+   - Configuration via `firebase functions:config:set`
 
-### Error Handling Patterns
-- EmailJS failures are logged but don't prevent booking save
-- Problematic email domains (Hotmail/Outlook) have special handling
+**Important**: Booking is always saved to Firestore regardless of email success/failure.
+
+## Route Structure
+
+Italian route names (SEO optimized):
+- `/` - Home page
+- `/servizi` - Services
+- `/galleria` - Gallery
+- `/recensioni` - Reviews
+- `/contatti` - Contact form
+- `/concerti` - Concerts (with SEO meta)
+- `/musei` - Museums (with SEO meta)
+- `/ristoranti` - Restaurants (with SEO meta)
+- `/admin` - Admin dashboard (protected)
+- `/privacy` - Privacy policy
+- `/cancellazione` - Cancellation policy (with SEO meta)
+
+**Scroll behavior**: Smooth scroll with hash navigation support (`scrollBehavior` in router)
+
+## Component Architecture
+
+### Component Types
+1. **Page Components** (`src/views/`): One per route
+2. **Section Components** (`src/components/`): Reusable sections (Hero, Services, Gallery, Reviews, Contact, Footer, Header)
+3. **Preview Components** (`src/components/`): Home page previews (ServicesPreview, GalleryPreview, ReviewsPreview, ConcertiPreview, MuseiPreview, RestaurantsPreview)
+
+### Composition API Pattern
+All components use `<script setup lang="ts">`:
+```vue
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+// Define props with TypeScript
+interface Props {
+  title: string
+  count?: number
+}
+const props = withDefaults(defineProps<Props>(), {
+  count: 0
+})
+
+// Define emits with TypeScript
+const emit = defineEmits<{
+  submit: [value: string]
+}>()
+
+// Composables
+const { t, locale } = useI18n()
+
+// Reactive state
+const isOpen = ref(false)
+</script>
+```
+
+## Firebase Configuration
+
+### Firestore Collections
+- `bookings`: Contact form submissions
+  - Fields: `name`, `email`, `phone`, `checkIn`, `checkOut`, `guests`, `message`, `status`, `createdAt`
+  - Status: `'pending' | 'confirmed' | 'cancelled'`
+- `concerts`: Concert listings
+  - Fields: `artist`, `venue`, `venueId`, `date`, `location`, `description`, `status`, `ticketUrl`, `imageUrl?`, `price?`, `lastUpdated`
+  - Automatically filtered by date (past concerts hidden)
+
+### Firebase Auth
+- Email/password authentication for admin access
+- Single admin user (no user registration)
+
+### Firebase Functions (Optional)
+- `sendBookingEmail`: Backup email notification
+- Uses Nodemailer with SMTP (Aruba or Gmail)
+
+## Styling System
+
+### Tailwind Configuration
+Custom color palette inspired by AS Roma:
+- `roma` / `roma-red`: Red shades (primary brand color #8E1F2F)
+- `gold` / `roma-gold`: Gold accents (#F0BC42)
+- `neutral`: Grayscale palette
+- `cream`: Soft cream tones
+- `sage`: Muted green accents
+
+### Custom Gradients
+- `bg-gradient-roma`: Main brand gradient
+- `bg-gradient-hero`: Subtle hero section overlay
+- `bg-gradient-warm`: Warm section backgrounds
+
+### Mobile Optimization
+- Safari/iPhone compatibility fixes in form components
+- Touch-friendly interactions
+- Responsive design with Tailwind breakpoints
+
+## I18n Implementation
+
+### Language Detection
+1. Check `localStorage.getItem('preferred-language')`
+2. Fallback to browser language (`navigator.language`)
+3. Default to Italian if neither available
+
+### Translation Files
+- `src/i18n/locales/it.json`: Italian (primary)
+- `src/i18n/locales/en.json`: English (secondary)
+
+### Usage in Components
+```vue
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
+</script>
+
+<template>
+  <h1>{{ t('hero.title') }}</h1>
+  <button @click="locale = locale === 'it' ? 'en' : 'it'">
+    {{ locale === 'it' ? 'EN' : 'IT' }}
+  </button>
+</template>
+```
+
+## Environment Variables
+
+Required for EmailJS (all `VITE_*` variables are publicly exposed in build):
+```bash
+VITE_EMAILJS_SERVICE_ID=service_rcm_booking
+VITE_EMAILJS_TEMPLATE_ID=template_booking
+VITE_EMAILJS_CUSTOMER_TEMPLATE_ID=template_customer_confirmation  # Optional
+VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+```
+
+**Security Note**: Firebase config in `src/firebase/config.ts` is intentionally public (required for client-side Firebase SDK).
+
+## Error Handling Patterns
+
+### EmailJS Errors
+- All errors logged to console with detailed context
+- Problematic domains (Hotmail/Outlook/Live) detected and logged
+- Email failure does NOT prevent booking save
+- User sees generic success message (booking saved) even if email fails
+
+### Firestore Errors
+- Try/catch blocks with user-friendly error messages
+- Loading states managed via `isLoading` refs
 - Admin authentication failures redirect to login
-- Database operations have try/catch with user feedback
 
-### I18n Implementation
-- **Languages**: Italian (primary), English (secondary)
-- **Detection**: Browser language detection with localStorage persistence
-- **Fallback**: Italian as default language
-- **SEO**: HTML lang attribute updates, hreflang meta tags for search engines
-- **Components**: Reactive language switching with composable `useI18n()`
+## Deployment
 
-### Deployment Notes
-- Built for static hosting (Vercel/Netlify)
-- Uses `_redirects` file for SPA routing support
-- Firebase Functions require separate deployment
-- All environment variables must be configured in hosting platform
+### Static Hosting (Vercel/Netlify)
+1. Build: `npm run build`
+2. Deploy `dist/` folder
+3. Configure environment variables in hosting platform
+4. Add `_redirects` file for SPA routing: `/* /index.html 200`
 
-### Development Notes
-- **No linting/formatting tools**: ESLint/Prettier not currently configured
-- **No testing framework**: Consider adding Vitest for component testing
-- **TypeScript strict mode**: Enabled with unused locals/parameters checking
+### Firebase Functions (Optional)
+1. Build: `cd functions && npm run build`
+2. Deploy: `cd functions && npm run deploy`
+3. Configure: `npx firebase-tools functions:config:set gmail.email="your-email" gmail.password="app-password"`
 
-## Important Files to Review
-- `EMAILJS_SETUP.md`: Complete EmailJS configuration guide
-- `FIREBASE_EMAIL_SETUP.md`: Firebase Functions email setup
-- `src/types/index.ts`: TypeScript interfaces for Booking and other models
-- `firestore.rules`: Database security rules with admin email whitelist
+## Development Notes
+
+- **No ESLint/Prettier**: Not currently configured
+- **No tests**: Consider adding Vitest for component testing
+- **TypeScript strict mode**: Enabled with unused variable checking
+- **Git branch**: `main` (use for PRs)
+
+## Important Reference Files
+
+- `EMAILJS_SETUP.md`: Step-by-step EmailJS configuration with template HTML
+- `FIREBASE_EMAIL_SETUP.md`: Firebase Functions email setup with Gmail app password
+- `src/types/index.ts`: TypeScript interfaces (`Booking`, `Concert`, `Service`, `Testimonial`)
+- `tailwind.config.js`: Complete color palette and custom utilities
