@@ -90,8 +90,13 @@
     
     <!-- Credits -->
     <div class="text-center mt-6">
-      <div class="text-roma-300 text-sm">
-        {{ $t('footer.developed') }} <strong class="text-roma-gold-400">CodeCraftStudio</strong>
+      <div class="flex items-center justify-center gap-2 text-sm">
+        <span class="text-white">Sviluppato con ❤️ da</span>
+        <a href="https://www.codecraft.it" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+          <div class="bg-black rounded px-2 py-1">
+            <img src="/logo-code2.png" alt="CodeCraft Studio" class="h-9 w-auto" />
+          </div>
+        </a>
       </div>
     </div>
   </footer>
