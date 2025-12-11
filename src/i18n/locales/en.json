@@ -560,6 +560,7 @@
       "gallery": "Photo Gallery",
       "reviews": "Reviews",
       "concerts": "Rome Concerts",
+      "news": "News & Curiosities",
       "contacts": "Contacts",
       "privacy": "Privacy Policy",
       "cancellation": "Cancellation Terms",
@@ -1031,12 +1032,35 @@
     "restaurants": "Restaurants",
     "concerts": "Concerts",
     "museums": "Museums",
+    "news": "News",
     "services": "Services",
     "gallery": "Gallery",
     "reviews": "Reviews",
     "contact": "Contact",
     "privacy": "Privacy",
     "admin": "Admin"
+  },
+  "news": {
+    "title": "News & Curiosities",
+    "subtitle": "Discover Rome with Us",
+    "description": "News, curiosities and useful tips about Rome and our apartment to make your stay unique",
+    "featured": "Featured",
+    "empty": "No news available in this category",
+    "not_found": "Article not found",
+    "gallery": "Image Gallery",
+    "related": "Related Articles",
+    "categories": {
+      "all": "All News",
+      "roma": "Rome",
+      "appartamento": "Apartment",
+      "eventi": "Events",
+      "consigli": "Tips"
+    },
+    "cta": {
+      "explore": "Explore News",
+      "read_more": "Read more",
+      "back_to_news": "Back to News"
+    }
   },
   "common": {
     "required": "Required field *",

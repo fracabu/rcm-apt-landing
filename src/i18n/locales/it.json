@@ -452,6 +452,7 @@
       "gallery": "Galleria Foto",
       "reviews": "Recensioni",
       "concerts": "Concerti Roma",
+      "news": "News e Curiosità",
       "contacts": "Contatti",
       "privacy": "Privacy Policy",
       "cancellation": "Termini di Cancellazione",
@@ -1075,12 +1076,35 @@
     "restaurants": "Ristoranti",
     "concerts": "Concerti",
     "museums": "Musei",
+    "news": "News",
     "services": "Servizi",
     "gallery": "Galleria",
     "reviews": "Recensioni",
     "contact": "Contatti",
     "privacy": "Privacy",
     "admin": "Admin"
+  },
+  "news": {
+    "title": "News e Curiosità",
+    "subtitle": "Scopri Roma con Noi",
+    "description": "Notizie, curiosità e consigli utili su Roma e sul nostro appartamento per rendere unico il tuo soggiorno",
+    "featured": "In Evidenza",
+    "empty": "Nessuna news disponibile in questa categoria",
+    "not_found": "Articolo non trovato",
+    "gallery": "Galleria Immagini",
+    "related": "Articoli Correlati",
+    "categories": {
+      "all": "Tutte le News",
+      "roma": "Roma",
+      "appartamento": "Appartamento",
+      "eventi": "Eventi",
+      "consigli": "Consigli"
+    },
+    "cta": {
+      "explore": "Esplora le News",
+      "read_more": "Leggi di più",
+      "back_to_news": "Torna alle News"
+    }
   },
   "common": {
     "required": "Campo obbligatorio *",

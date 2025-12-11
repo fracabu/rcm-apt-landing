@@ -30,3 +30,20 @@ export interface Service {
   descriptionKey: string
   icon: any
 }
+
+export interface NewsArticle {
+  id: string
+  slug: string
+  titleIt: string
+  titleEn: string
+  excerptIt: string
+  excerptEn: string
+  contentIt: string
+  contentEn: string
+  category: 'roma' | 'appartamento' | 'eventi' | 'consigli'
+  imageUrl: string
+  images?: string[]
+  publishedAt: string
+  author?: string
+  featured?: boolean
+}

@@ -24,6 +24,7 @@
           <router-link to="/concerti" class="nav-link">{{ $t('pages.concerts') }}</router-link>
           <router-link to="/musei" class="nav-link">{{ $t('pages.museums') }}</router-link>
           <router-link to="/ristoranti" class="nav-link">{{ $t('pages.restaurants') }}</router-link>
+          <router-link to="/news" class="nav-link">{{ $t('pages.news') }}</router-link>
           <router-link to="/contatti" class="nav-link">{{ $t('nav.contacts') }}</router-link>
           <LanguageSwitcher />
           <router-link to="/contatti" class="btn-3d btn-3d-md">
@@ -52,6 +53,7 @@
           <router-link to="/concerti" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('pages.concerts') }}</router-link>
           <router-link to="/musei" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('pages.museums') }}</router-link>
           <router-link to="/ristoranti" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('pages.restaurants') }}</router-link>
+          <router-link to="/news" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('pages.news') }}</router-link>
           <router-link to="/contatti" @click="closeMobileMenu" class="nav-link-mobile">{{ $t('nav.contacts') }}</router-link>
           <div class="flex justify-center">
             <LanguageSwitcher />

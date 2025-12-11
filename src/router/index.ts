@@ -7,6 +7,8 @@ import ContactPage from '../views/ContactPage.vue'
 import ConcertiPage from '../views/ConcertiPage.vue'
 import MuseiPage from '../views/MuseiPage.vue'
 import RestaurantsPage from '../views/RestaurantsPage.vue'
+import NewsPage from '../views/NewsPage.vue'
+import NewsArticlePage from '../views/NewsArticlePage.vue'
 import AdminPage from '../views/AdminPage.vue'
 // Lazy load privacy/cancellation to avoid build issues
 const PrivacyPage = () => import('../views/PrivacyPage.vue')
@@ -69,6 +71,21 @@ const router = createRouter({
         description: 'Scopri le migliori trattorie romane vicine al nostro appartamento. Carbonara, amatriciana, cacio e pepe: i veri sapori di Roma.',
         keywords: 'ristoranti roma, trattorie romane, carbonara, amatriciana, cacio e pepe, cucina romana'
       }
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: NewsPage,
+      meta: {
+        title: 'News e Curiosità su Roma | Roma Caput Mundi Apartment',
+        description: 'Scopri notizie, curiosità e consigli su Roma e il nostro appartamento. Guide, eventi e suggerimenti per il tuo soggiorno nella Città Eterna.',
+        keywords: 'news roma, curiosità roma, eventi roma, consigli roma, giubileo 2025, appartamento roma'
+      }
+    },
+    {
+      path: '/news/:slug',
+      name: 'news-article',
+      component: NewsArticlePage
     },
     {
       path: '/admin',
